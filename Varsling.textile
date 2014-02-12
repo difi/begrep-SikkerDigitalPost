@@ -1,0 +1,48 @@
+---
+layout: default
+title: Varsling
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SDP/Objekt
+---
+
+h3. Varsling
+
+- Identifikator := http://begrep.difi.no/SDP/Varsling
+- Term := Varsling
+- Definisjon := Tilpasset varsling knyttet til forsendelsen
+- Kjelde := SDP
+- Kommentar := Varsling styrer informasjon til Innbygger utover det Innbygger selv har valgt av varslinger i sin postkasse. Varsling gir Avsender mulighet for å tilpasse varslingsinnstillingene i forhold til Avsender sine plikter.
+
+h4. Eigenskapar
+
+|_. Identifikator |_. Term |_. Granularitet |_. Datatype |
+| "#VarslingsType":VarslingsType.html | VarslingsType | 1-1 | xs:string |
+| "#VarslingsTekst":VarslingsTekst.html | VarslingsTekst | 1-1 | xs:date |
+| "#VarslingsKanal":VarslingsKanal.html | VarslingsKanal | 1-1 | xs:date |
+| "#VarslingsTittel":VarslingsTittel.html | VarslingsTittel | 1-1 | xs:date |
+| "#epostadresse":epostadresse.html | epostadresse | 1-1 | sdp:epostadresse |
+| "#mobiltelefonnummer":mobiltelefonnummer.html | mobiltelefonnummer | 1-1 | sdp:mobiltelefonnummer |
+
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+<Varsling>
+	<xs:annotation>
+		<xs:documentation>http://begrep.difi.no/SDP/Varsling</xs:documentation>
+	</xs:annotation>
+	<xs:complexType>
+        <xs:sequence>
+	      <xs:element name="VarslingsType" type="xs:string"/>
+	      <xs:element name="VarslingsTekst" type="xs:string"/>
+		  <xs:element name="VarslingsKanal" type="xs:string"/>
+		  <xs:element name="VarslingsTekst" type="xs:string"/>
+		  <xs:element name="VarslingsTittel" type="xs:string"/>
+		  <xs:element name="epostadresse" type="xs:string"/>
+		  <xs:element name="mobiltelefonnummer" type="xs:string"/>
+    	</xs:sequence>
+	</xs:complexType>
+</Varsling>
+</pre>
+
+

@@ -1,0 +1,47 @@
+---
+layout: default
+title: Avsender
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SDP/Objekt
+---
+
+h3. Avsender
+
+- Identifikator := http://begrep.difi.no/SDP/Avsender
+- Term := Avsender
+- Definisjon := Juridisk organisasjon/entitet som sender/har sendt ein digital post
+- Kjelde := NOARK 5
+- Kommentar := Avsender er den som er ansvarleg for innholdet i forsendelsen. Ikkje gitt at dette er det same som teknisk avsender (t.d. KS SvarUT kan vera avsendar på vegne av ein kommune) 
+
+h4. Eigenskapar
+
+|_. Identifikator |_. Term |_. Granularitet |_. Datatype |_. Definisjon |
+| "#OrgNr":http://begrep.difi.no/SDP/Avsender#OrgNr | Orgnr | 1-1 | "sdp:orgnr":orgnr.html | Organisasjonsnummer, landkode frå "ISO6523":http://www.iso.org/iso/search.htm?qt=6523&sort=rel&type=simple&published=true dersom aktuelt |
+| "#VisningsNavn":http://begrep.difi.no/SDP/Avsender#VisningsNavn | Navn | 1-1 | xs:string | Visningsnavn for presentasjon av avsender i grensesnitt |
+
+h4. Xml skjema 
+
+<pre class="brush: xml; toolbar: false">
+<xs:element name="Avsender">
+	<xs:annotation>
+		<xs:documentation>http://begrep.difi.no/SDP/Avsender</xs:documentation>
+	</xs:annotation>
+	<xs:complexType>
+        <xs:sequence>
+	      <xs:element name="Orgnr" type="sdp:"/>
+	      <xs:element name="Navn" type="xs:string"/>
+    	</xs:sequence>
+	</xs:complexType>
+</xs:element>
+</pre>
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+<Avsender>
+	<Orgnr>9908:991825827</Orgnr>
+	<Navn>Direktoratet for forfaltning og IKT</Navn>
+</Avsender>
+</pre>
+
+

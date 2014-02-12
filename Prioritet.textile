@@ -1,0 +1,47 @@
+---
+layout: default
+title: Prioritet
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SDP/Objekt
+---
+
+h3. Prioritet
+
+- Identifikator := http://begrep.difi.no/SDP/Prioritet
+- Term := Prioritet
+- Definisjon := Prioriteten for denne meldingen i forbindelse med meldingsutvekslingen
+- Kjelde := SDP
+- Kommentar := Prioritet blir brukt av Meldingsutveksler og Meldingsformidler for å styre viktigheten av meldingen under transport. 
+
+h4. Eigenskapar
+
+|_. Identifikator |_. Term |_. Granularitet |_. Datatype |
+| "#PrioritetType":PrioritetType.html | PrioritetType | 1-1 | xs:string |
+| "#VisningsDato":VisningsDato.html | VisningsDato | 1-1 | xs:date |
+
+h4. Xml skjema 
+
+<pre class="brush: xml; toolbar: false">
+<xs:element name="Prioritet">
+	<xs:annotation>
+		<xs:documentation>http://begrep.difi.no/SDP/Prioritet</xs:documentation>
+	</xs:annotation>
+	<xs:complexType>
+        <xs:sequence>
+	      <xs:element name="PrioritetType" type="xs:string"/>
+	      <xs:element name="VisningsDato" type="xs:date"/>
+    	</xs:sequence>
+	</xs:complexType>
+</xs:element>
+</pre>
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+<Prioritet>
+	<PrioritetType>2</PrioritetType>
+	<VisningsDato>2013-12-11T08:20:59.320Z</VisningsDato>
+</Prioritet>
+</pre>
+
+
