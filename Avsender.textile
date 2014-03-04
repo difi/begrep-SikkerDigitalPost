@@ -7,41 +7,27 @@ group: SDP/Objekt
 
 h3. Avsender
 
-- Identifikator := http://begrep.difi.no/SDP/Avsender
+- Identifikator := http://begrep.difi.no/SikkerDigialPost/Avsender
 - Term := Avsender
-- Definisjon := Juridisk organisasjon/entitet som sender/har sendt ein digital post
-- Kjelde := NOARK 5
-- Kommentar := Avsender er den som er ansvarleg for innholdet i forsendelsen. Ikkje gitt at dette er det same som teknisk avsender (t.d. KS SvarUT kan vera avsendar på vegne av ein kommune) 
+- Definisjon := Juridisk organisasjon/entitet som er ansvarlig for innholdet i den digitale posten
+- Kilde := DIFI/
+- Kommentar := Avsender er den som er ansvarlig for innholdet i forsendelsen. Kan være forskjellige frå teknisk avsender (for eksempel kan SvarUT være teknisk avsender på vegne av en kommune)
 
-h4. Eigenskapar
+h4. Egenskaper
 
-|_. Identifikator |_. Term |_. Granularitet |_. Datatype |_. Definisjon |
-| "#OrgNr":http://begrep.difi.no/SDP/Avsender#OrgNr | Orgnr | 1-1 | "sdp:orgnr":orgnr.html | Organisasjonsnummer, landkode frå "ISO6523":http://www.iso.org/iso/search.htm?qt=6523&sort=rel&type=simple&published=true dersom aktuelt |
-| "#VisningsNavn":http://begrep.difi.no/SDP/Avsender#VisningsNavn | Navn | 1-1 | xs:string | Visningsnavn for presentasjon av avsender i grensesnitt |
-
-h4. Xml skjema 
-
-<pre class="brush: xml; toolbar: false">
-<xs:element name="Avsender">
-	<xs:annotation>
-		<xs:documentation>http://begrep.difi.no/SDP/Avsender</xs:documentation>
-	</xs:annotation>
-	<xs:complexType>
-        <xs:sequence>
-	      <xs:element name="Orgnr" type="sdp:"/>
-	      <xs:element name="Navn" type="xs:string"/>
-    	</xs:sequence>
-	</xs:complexType>
-</xs:element>
-</pre>
+|_. Identifikator |_. Term |_. Kardinalitet |
+| "Identifikator":/Felles/virksomhetsIdentifikator | Orgnr, Identifikator | 1-1 |
+| "Navn":Felles/VirksomhetsNavn | Navn, Organisasjon | 1-1 |
 
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
-<Avsender>
-	<Orgnr>9908:991825827</Orgnr>
-	<Navn>Direktoratet for forfaltning og IKT</Navn>
-</Avsender>
+	<sdp:Avsender>
+		<sdp:Identifikator autoritet="iso6523-actorid-upis">0088:4562458856624</sdp:Identifikator>
+		<sdp:Navn> 
+			<sdp:Tekst lang="no">Leikanger kommune</sdp:Tekst>
+		</sdp:Navn> 
+	</sdp:Avsender>
 </pre>
 
 
