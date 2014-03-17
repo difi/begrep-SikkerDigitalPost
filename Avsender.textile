@@ -2,7 +2,7 @@
 layout: default
 title: Avsender
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SDP/Objekt
+group: SikkerDigitalPost/complexType
 ---
 
 h3. Avsender

@@ -1,0 +1,29 @@
+---
+layout: default
+title: Sikker digital post
+headtitle: Oppslagstjenesten for kontakt og reservasjonsregisteret
+---
+h3. Integrasjonsguide:
+
+* Integrasjonsguide
+
+h3. Tjenestespesifikasjonen:
+
+* Relevante WSDL og XSD filer
+
+h3. Datamodell:
+
+* Illustrasjon
+
+h3. Klassedefinisjonen:
+
+<ul class='nav'>
+	{% assign pages_list = site.pages %}
+	{% assign group = "SikkerDigitalPost/complexType" %}
+	{% include menu.html %}
+</ul>
+
+
+h3. Eksempler:
+
+* Relevante eksempelmeldinger
