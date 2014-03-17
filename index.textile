@@ -7,6 +7,8 @@ h3. Integrasjonsguide:
 
 * Integrasjonsguide
 
+Sikker Digital Post benytter 
+
 h3. Tjenestespesifikasjonen:
 
 * Relevante WSDL og XSD filer

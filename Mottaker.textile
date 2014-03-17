@@ -1,0 +1,21 @@
+---
+layout: default
+title: Mottaker
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/complexType
+---
+
+h3. Mottaker
+
+- Identifikator := http://begrep.difi.no/SikkerDigialPost/Mottaker
+- Term := Mottaker
+- Definisjon := Person som er mottaker av en sikker digital post
+- Kilde := DIFI
+- Kommentar := Anbefalingen er å bruke hele Person-xml'en slik som den blir returnert fra oppslagstjenesten når det er snakk om digital formidling
+
+h4. Egenskaper
+
+|_. Identifikator |_. Term |_. Kardinalitet |
+| "Person":/Oppslagstjenesten/Person | Person | 1-1 |
+| "PostAdresse":/Felles/PostAdresse | Postadresse, adresse | 0-1 |
+
