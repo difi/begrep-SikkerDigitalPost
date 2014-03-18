@@ -5,10 +5,9 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/complexType
 ---
 
-h3. DokumentDato
 
-- Identifikator := http://begrep.difi.no/SikkerDigialPost/DokumentDato
-- Term := Dokument dato
+- Identifikator := http://begrep.difi.no/SikkerDigialPost/{{page.title}}
+- Term := {{page.title}}
 - Datatype := xs:date
 - Definisjon := Dato dokumentet skal gjøres tilgjengelig for sluttbruker
 - Kilde := DIFI

@@ -5,16 +5,15 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/complexType
 ---
 
-h3. Tittel
-
-- Identifikator := http://begrep.difi.no/SikkerDigialPost/Tittel
-- Term := Tittel
+- Identifikator := http://begrep.difi.no/SikkerDigialPost/{{page.title}}
+- Term := {{page.title}}
 - Definisjon := Beskrivende tittel for den sikre digitale posten. Skal kunne benyttes til å informere sluttbruker om meldingen
+- Datatype := complexType
 - Kilde := DIFI
 - Kommentar := Må kunne brukes uten sikker autentisering (for eksempel til varsling)
 
 h4. Egenskaper
 
 |_. Identifikator |_. Term |_. Kardinalitet |
-| "Tekst":/Felles/tekst | Tekst, Tittel | 1-mange |
+| "tekst":/Felles/tekst | Tekst, Tittel | 1..* |
 

@@ -7,17 +7,20 @@ group: SikkerDigitalPost/complexType
 
 h3. Varsel
 
-- Identifikator := http://begrep.difi.no/SikkerDigitalPost/Varsel
-- Term := Varsel
+- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+- Term := {{page.title}}
 - Definisjon := Informasjon om hvordan man skal varsle sluttbruker om at det er mottatt en melding
+- Datatype := complexType
 - Kjelde := DIFI
 - Kommentar := Retningsgivende så lenge det ikke er en varslingsform pålagt ved forskrift/lov
 
 h4. Eigenskapar
 
 |_. Identifikator |_. Granularitet |_. Datatype |
-|VarslingsProfil | 1..1 | xs:string (kodeverk) |
+| VarslingsProfil | 1..1 | xs:string (kodeverk) |
 |"Kanaler":Kanal| 1..mange | |
+
+
 
 h4. Xml eksempel
 

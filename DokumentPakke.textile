@@ -5,17 +5,19 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/complexType
 ---
 
-h3. DokumentPakke
 
-- Identifikator := http://begrep.difi.no/SikkerDigitalPost/DokumentPakke
-- Term := DokumentPakke
+- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+- Term := {{page.title}}
 - Definisjon := Informasjon om kryptering og innhold i dokumentpakken som utgjør vedlegget i meldingen
+- Datatype := complexType
 - Kjelde := DIFI
 
 h4. Eigenskapar
 
 |_. Identifikator |_. Granularitet |_. Datatype |
-|EncryptedKey | 1..1 | "http://www.w3.org/2001/04/xmlenc#":http://www.w3.org/2001/04/xmlenc# |
+| "EncryptedKey":http://www.w3.org/2001/04/xmlenc# | 1..1 | "http://www.w3.org/2001/04/xmlenc#":http://www.w3.org/2001/04/xmlenc# |
+| "Dokument":Dokument | 1..1 |  |
+| "VedleggsListe"":VedleggsListe | 0..1 |  |
 
 h4. Xml eksempel
 

@@ -5,12 +5,11 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/complexType
 ---
 
-h3. Avsender
-
-- Identifikator := http://begrep.difi.no/SikkerDigialPost/Avsender
-- Term := Avsender
-- Definisjon := Juridisk organisasjon/entitet som er ansvarlig for innholdet i den digitale posten
-- Kilde := DIFI/
+- Identifikator := http://begrep.difi.no/SikkerDigialPost/{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Juridisk organisasjon/entitet som er ansvarlig for innholdet i den digitale posten,
+- Datatype := complexType
+- Kilde := DIFI
 - Kommentar := Avsender er den som er ansvarlig for innholdet i forsendelsen. Kan være forskjellige frå teknisk avsender (for eksempel kan SvarUT være teknisk avsender på vegne av en kommune)
 
 h4. Egenskaper
