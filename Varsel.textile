@@ -5,8 +5,6 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/complexType
 ---
 
-h3. Varsel
-
 - Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
 - Term := {{page.title}}
 - Definisjon := Informasjon om hvordan man skal varsle sluttbruker om at det er mottatt en melding

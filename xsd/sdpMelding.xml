@@ -1,45 +1,66 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- legg inn versjon i namespace for skjema -->
 <sdp:Melding xmlns:sdp="http://begrep.difi.no/sdp/schema" xmlns:dk="http://begrep.difi.no/dk/schema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:enc="http://www.w3.org/2001/04/xmlenc#">
+ <!--
+   MELDINGSID for meldingen GUID, hvor skal den legges?
+   PRIORITET for meldingen legges inn i StandardBusinessDocument eller i ebMS 3.0
+   
+ -->
+
   <sdp:Mottaker>
+    <!-- sikre at det er en choice for å utvide med virksomheter som Mottaker -->    
     <dk:Person>
       <!-- gjenbruke svaret frå kontaktregisteret, evt supplert med adresseinfo for fysisk post -->
     </dk:Person>
     <sdp:PostAdresse>
-
+      <!-- Posten gir et forslag til dataformat for adressering til PRINT -->
 		</sdp:PostAdresse>
   </sdp:Mottaker>
+
+
   <sdp:Avsender>
-    <!-- Primært for visning - kan avvike frå sender i SBDH, men må korrospondere med org i payload/melding -->
-    <sdp:Identifikator autoritet="iso6523-actorid-upis">0088:4562458856624</sdp:Identifikator>
-    <sdp:Navn>
-      <sdp:Tekst lang="no">Leikanger kommune</sdp:Tekst>
-    </sdp:Navn>
+<!---
+   Avsender:
+      - støtte for at en Avsender kan sende på veien av en annen
+          - virksomhet-X kan sende på veiene avsenderID-Y
+          - virksomhet X har ikke akseptert bruksvilkår og ikke opprettet i Sikker Digital Post
+          - virksomhet X sitt OrgNr hentes fra sertifikatet som har signert meldingen, og dermed ikke en del av sdpMelding.
+      - Avsender skal ikke har et forhold til postkasse interne adresser
+      - Avsender skal identifisere seg med Avsenderid 
+        -- får opprettet en offentlig AvsenderID/AktørID i SDP opprettet av Difi
+             - 
+      - Avsender skal ha et felt for faktureringsid, 0..1, kan det være ehfID, sjekk med ehfFaktura
+-->  
+    <sdp:Identifikator>2q342134fdasdfewa453q5#dsavasg</sdp:Identifikator>
+    <sdp:ehfFakturaRef>min faktura referanse</sdp:ehfFakturaRef>
+
   </sdp:Avsender>
-  <sdp:Tittel>
-    <!-- Har tatt vekk offentlig tittel - må passe på at denne ikkje inneheld data som må skjermast... -->
-    <sdp:Tekst lang="no">Vedtak om barnehageplass til Ola</sdp:Tekst>
-    <sdp:Tekst lang="ny">Vedtak om barnehageplass til Ola</sdp:Tekst>
-    <sdp:Tekst lang="en">Ola's application for childcare</sdp:Tekst>
-  </sdp:Tittel>
-  <sdp:DokumentDato>2013-02-19T05:10:10Z</sdp:DokumentDato>
-  <!-- Åpningstidspunkt  -->
-  <sdp:Sikkerhetsnivaa>3</sdp:Sikkerhetsnivaa>
+  <!-- Åpningstidspunkt  -->  
+  <!-- er tidligste tidspunkt for publisering. Publisering skjer så raskt som mulig etter dette -->
+  <!-- -SLA avgjør hvor lang tid postkassene har på å publisere dette etter tidspunktet -->
+  <!-- - Tidspunkt fjernes, bare dato  -->
+  <!-- -Ikke obligatoriske -->
+  <!-- viktig å spesifisere tydelig også i forhold til SLA kravene -->
+  <!-- spesifisere avvikshåndtering dersom Innbygger har stengt sin postkasse i perioden før virkningsdato -->
+  <sdp:virkningsdato>2013-02-19</sdp:virkningsdato>
+  <sdp:sikkerhetsnivaa>3</sdp:sikkerhetsnivaa>
   <sdp:Varsel>
-    <sdp:VarslingsProfil>NormalKanAkkumulere</sdp:VarslingsProfil>
+    <!--
+    
+   --
+    - kanal: SMS eller EPOST
+    - Tidspunkt: dager, antall dager etter virkningsdato, 0 = samme dag som tilgjengeliggjøring
+    - varslinger på epost kan slåes sammen med andre varslinger
+    - definere en maks lengde på epost/sms tekster, 255 maks lengde
+    - teksten kommer i tillegg til avsender navn og ikkeSensitivTittel ihvertfall på epost
+-->
+    <sdp:Varsel  kanal="EPOST" tidspunkt="0,1,3,5,30">Vedtak om mitt vedtak...</sdp:Varsel>   
+    <sdp:Varsel  kanal="SMS " tidspunkt="3,9">tekst på sms varsling...</sdp:Varsel>   
+ 
     <!-- Må inn med kodeverk -->
-    <sdp:Kanaler>
-      <sdp:Kanal type="mobil">
-        <sdp:Tekst lang="no">Vedtak om ***** til *****</sdp:Tekst>
-        <sdp:Tekst lang="ny">Vedtak om ***** til *****</sdp:Tekst>
-        <sdp:Tekst lang="en">*****'s application for childcare</sdp:Tekst>
-      </sdp:Kanal>
-      <sdp:Kanal type="epost">
-        <sdp:Tekst lang="no">Vedtak om ***** til *****</sdp:Tekst>
-        <sdp:Tekst lang="ny">Vedtak om ***** til *****</sdp:Tekst>
-        <sdp:Tekst lang="en">*****'s application for childcare</sdp:Tekst>
-      </sdp:Kanal>
-    </sdp:Kanaler>
-  </sdp:Varsel>
+    </sdp:Varsel>
+    <sdp:aapningskvittering>JA</sdp:aapningskvittering>
+
   <sdp:DokumentPakke>
     <!-- Krypteringsinfo om payload pakke -->
     <enc:EncryptedKey>
@@ -56,21 +77,16 @@
       <enc:CipherData>
         <enc:CipherValue>HreaWUt7EANxxQJeamkmDhUubKDwGPUrRYOUSO7cNdhV4irzL8ntuQVnEcb37+2UbU2ymvZrwuBL9dweevyMGpVRYUSjAqxO0M9gB38wgzltQqkqYo0HtLdOyfnxDBuRjyRCH8+dgNfVK0PSgVTyNnawDrQaZqTHxwCf7e5vqz5LWJLo16k6G17ldBzmet0xbBSJ3YD5y+AK/5EJjyDZGYMEJ8+nmEY7OTDd/JdrWPhL62LGdMP2EH3qSqjMOm84MLiLOvdiMNlv152BjVf+8JXEirUM7BBu+nmaZrpKvrVGIfhKXpvLMkSZlkb2zZfNOAg8OL5wIn0qqYtF+3U5sw==</enc:CipherValue>
       </enc:CipherData>
-    </enc:EncryptedKey>
-    <sdp:Dokument href="melding.pdf" media="all" mime="application/pdf">
-      <sdp:Tittel>
-        <!-- Har tatt vekk offentlig tittel - må passe på at denne ikkje inneheld data som må skjermast... -->
-        <sdp:Tekst lang="no">Vedtak om barnehageplass til Ola</sdp:Tekst>
-        <sdp:Tekst lang="ny">Vedtak om barnehageplass til Ola</sdp:Tekst>
-        <sdp:Tekst lang="en">Jonathan's application for Ola</sdp:Tekst>
-      </sdp:Tittel>
+    </enc:EncryptedKey> 
+    <sdp:Dokument href="melding.pdf" media="all" mime="application/pdf" >
+      <sdp:IkkeSensitivTittel maxLength="100" >Vedtak om barnehageplass til Ola</sdp:IkkeSensitivTittel>
     </sdp:Dokument>
-    <sdp:VedleggsListe tall="1">
-      <sdp:Dokument href="vedlegg1.pdf" media="all" mime="application/pdf">
-        <sdp:Tittel>
-          <!-- Har tatt vekk offentlig tittel - må passe på at denne ikkje inneheld data som må skjermast... -->
-          <sdp:Tekst lang="no">Opprinnelig søknad</sdp:Tekst>
-        </sdp:Tittel>
+    <sdp:VedleggsListe>
+      <sdp:Dokument href="vedlegg1.html" media="all" mime="text/html">
+        <sdp:Tittel>Opprinnelig søknad</sdp:Tittel>
+      </sdp:Dokument>
+      <sdp:Dokument href="vedlegg2.pdf" media="all" mime="application/pdf">
+        <sdp:Tittel>Opprinnelig søknadsvedlegg</sdp:Tittel>
       </sdp:Dokument>
     </sdp:VedleggsListe>
   </sdp:DokumentPakke>
