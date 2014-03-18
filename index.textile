@@ -10,7 +10,10 @@ h3. Bakgrunn
 
 h3. Tjenestespesifikasjonen:
 
-* Relevante WSDL og XSD filer
+Noen eksempel XML'r:
+* "sdpManifest.xml":xsd/sdpManifest.xml
+* "sdpMelding.xml":xsd/sdpMelding.xml
+* "StandardBusinessDocument.xml":xsd/StandardBusinessDocument.xml
 
 h3. Datamodell:
 

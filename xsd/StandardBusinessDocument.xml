@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+  <StandardBusinessDocumentHeader>
+    <HeaderVersion>1.0</HeaderVersion>
+    <Sender>
+      <!-- orgnr avsender -->
+      <Identifier Authority="iso6523-actorid-upis">0088:7315458756324</Identifier>
+    </Sender>
+    <Receiver>
+      <!-- orgnr mottaker, postboks eller print -->
+      <Identifier Authority="iso6523-actorid-upis">0088:4562458856624</Identifier>
+    </Receiver>
+    <DocumentIdentification>
+      <!-- Unik identifikator i "Sender" sitt scope -->
+      <Standard>urn:no:kommune:leikanger:sdp:barnehage:1.0</Standard>
+      <TypeVersion>1.0</TypeVersion>
+      <InstanceIdentifier>2014/001</InstanceIdentifier>
+      <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
+      <Type>Sikkerpost</Type>
+      <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
+    </DocumentIdentification>
+  </StandardBusinessDocumentHeader>
+</StandardBusinessDocument>
