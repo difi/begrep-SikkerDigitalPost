@@ -1,0 +1,42 @@
+---
+layout: default
+title: Varsel
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/complexType
+---
+
+h3. Varsel
+
+- Identifikator := http://begrep.difi.no/SikkerDigitalPost/Varsel
+- Term := Varsel
+- Definisjon := Informasjon om hvordan man skal varsle sluttbruker om at det er mottatt en melding
+- Kjelde := DIFI
+- Kommentar := Retningsgivende så lenge det ikke er en varslingsform pålagt ved forskrift/lov
+
+h4. Eigenskapar
+
+|_. Identifikator |_. Granularitet |_. Datatype |
+|VarslingsProfil | 1..1 | xs:string (kodeverk) |
+|"Kanaler":Kanal| 1..mange | |
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+	<sdp:Varsel>
+		<sdp:VarslingsProfil>NormalKanAkkumulere</sdp:VarslingsProfil> <!-- Må inn med kodeverk -->
+		<sdp:Kanaler>
+			<sdp:Kanal type="mobil">
+				<sdp:Tekst lang="no">Vedtak om ***** til *****</sdp:Tekst>
+				<sdp:Tekst lang="ny">Vedtak om ***** til *****</sdp:Tekst>
+				<sdp:Tekst lang="en">*****'s application for childcare</sdp:Tekst>	
+			</sdp:Kanal>
+			<sdp:Kanal type="epost">
+				<sdp:Tekst lang="no">Vedtak om ***** til *****</sdp:Tekst>
+				<sdp:Tekst lang="ny">Vedtak om ***** til *****</sdp:Tekst>
+				<sdp:Tekst lang="en">*****'s application for childcare</sdp:Tekst>								
+			</sdp:Kanal>
+		</sdp:Kanaler>
+	</sdp:Varsel>
+</pre>
+
+
