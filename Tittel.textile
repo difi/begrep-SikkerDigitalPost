@@ -16,5 +16,5 @@ h3. Tittel
 h4. Egenskaper
 
 |_. Identifikator |_. Term |_. Kardinalitet |
-| "Tekst":/Felles/Tekst | Tekst, Tittel | 1-mange |
+| "Tekst":/Felles/tekst | Tekst, Tittel | 1-mange |
 
