@@ -1,0 +1,15 @@
+---
+layout: default
+title: Sikkerhetsnivaa
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/complexType
+---
+
+h3. Sikkerhetsnivå
+
+- Identifikator := http://begrep.difi.no/SikkerDigialPost/Sikkerhetsnivaa
+- Term := Sikkerhetsnivå
+- Datatype := xs:int (3 eller 4)
+- Definisjon := Sikkerhetsnivå som kreves av sluttbruker for at han skal få tilgang til innholdet i meldingen
+- Kilde := "Sikkerhetsnivåer for autentisering og uavvislighet":http://www.regjeringen.no/nb/dep/kmd/dok/lover_regler/retningslinjer/2008/rammeverk-for-autentisering-og-uavviseli/4.html?id=505929
+- Kommentar := 

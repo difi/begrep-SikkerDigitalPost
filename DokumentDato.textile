@@ -1,0 +1,15 @@
+---
+layout: default
+title: DokumentDato
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/complexType
+---
+
+h3. DokumentDato
+
+- Identifikator := http://begrep.difi.no/SikkerDigialPost/DokumentDato
+- Term := Dokument dato
+- Datatype := xs:date
+- Definisjon := Dato dokumentet skal gjøres tilgjengelig for sluttbruker
+- Kilde := DIFI
+- Kommentar := Dersom elementet ikke er tilstedes så kan meldingen gjøres tilgjengelig umiddelbart
