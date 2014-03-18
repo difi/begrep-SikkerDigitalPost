@@ -1,29 +1,32 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<!--
+   - Hvordan håndtere konflikt mellom info i sdpManifest og sdpMelding?
+      - Skal håndteres som en feil og gi feilmelding tilbake til avsender.
+   - 
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
 <sdp:Manifest xmlns:sbdh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:sdp="http://begrep.difi.no/sdp/schema">
-  <!-- Ta med heile document headingen? -->
-  <sbdh:DocumentIdentification>
-    <!-- Unik identifikator i "Sender" sitt scope -->
-    <sbdh:Standard>urn:no:kommune:leikanger:sdp:barnehage:1.0</sbdh:Standard>
-    <sbdh:TypeVersion>1.0</sbdh:TypeVersion>
-    <sbdh:InstanceIdentifier>2014/001</sbdh:InstanceIdentifier>
-    <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
-    <sbdh:Type>Sikkerpost</sbdh:Type>
-    <sbdh:CreationDateAndTime>2013-02-19T05:10:10Z</sbdh:CreationDateAndTime>
-  </sbdh:DocumentIdentification>
-  <sdp:Dokument href="melding.pdf" media="all" mime="application/pdf">
-    <sdp:Tittel>
-      <!-- Har tatt vekk offentlig tittel - må passe på at denne ikkje inneheld data som må skjermast... -->
-      <sdp:Tekst lang="no">Vedtak om barnehageplass til Ola</sdp:Tekst>
-      <sdp:Tekst lang="ny">Vedtak om barnehageplass til Ola</sdp:Tekst>
-      <sdp:Tekst lang="en">Ola Norman's application for childcare</sdp:Tekst>
-    </sdp:Tittel>
-  </sdp:Dokument>
-  <sdp:VedleggsListe tall="1">
-    <sdp:Dokument href="vedlegg1.pdf" media="all" mime="application/pdf">
-      <sdp:Tittel>
-        <!-- Har tatt vekk offentlig tittel - må passe på at denne ikkje inneheld data som må skjermast... -->
-        <sdp:Tekst lang="no">Opprinnelig søknad</sdp:Tekst>
-      </sdp:Tittel>
+
+    <sdp:meldingsID>GUID</sdp:meldingsID>
+    <sdp:Avsender>
+         <sdp:Identifikator>2q342134fdasdfewa453q5#dsavasg</sdp:Identifikator>
+    </sdp:Avsender>
+    <sdp:Mottaker>
+           <!-- mulighet for bedriftsidentifikator -->
+           <ds:personidentifikator>010203040506</ds:personidentifikator>
+    </sdp:Mottaker>
+
+    <sdp:Dokument href="melding.pdf" media="all" mime="application/pdf" >
+            <sdp:Tittel>Opprinnelig søknad</sdp:Tittel>
     </sdp:Dokument>
-  </sdp:VedleggsListe>
+    <sdp:VedleggsListe>
+      <sdp:Dokument href="vedlegg1.html" media="all" mime="text/html">
+        <sdp:Tittel>Opprinnelig søknad</sdp:Tittel>
+      </sdp:Dokument>
+      <sdp:Dokument href="vedlegg2.pdf" media="all" mime="application/pdf">
+        <sdp:Tittel>Opprinnelig søknadsvedlegg</sdp:Tittel>
+      </sdp:Dokument>
+    </sdp:VedleggsListe>  
+
+
 </sdp:Manifest>
