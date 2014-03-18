@@ -1,0 +1,34 @@
+---
+layout: default
+title: Dokument
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/complexType
+---
+
+
+- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Informasjon om kryptering og innhold i dokumentpakken som utgjør vedlegget i meldingen
+- Datatype := complexType
+- Kjelde := DIFI
+
+h4. Eigenskapar
+
+|_. Identifikator |_. Granularitet |_. Datatype |
+| href| 1..1 | |
+| media | 1..1 |  |
+| mime | 1..1 |  |
+| "Tittel":Tittel | 1..1 | Tittel |
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+		<sdp:Dokument href="melding.pdf" media="all" mime="application/pdf">
+            <sdp:Tittel> <!-- Har tatt vekk offentlig tittel - må passe på at denne ikkje inneheld data som må skjermast... -->
+                <sdp:Tekst lang="no">Vedtak om barnehageplass til Ola</sdp:Tekst>
+                <sdp:Tekst lang="ny">Vedtak om barnehageplass til Ola</sdp:Tekst>
+                <sdp:Tekst lang="en">Ola's application for childcare</sdp:Tekst>            
+            </sdp:Tittel>             
+        </sdp:Dokument>
+      
+</pre>

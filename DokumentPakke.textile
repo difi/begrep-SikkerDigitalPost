@@ -15,9 +15,9 @@ group: SikkerDigitalPost/complexType
 h4. Eigenskapar
 
 |_. Identifikator |_. Granularitet |_. Datatype |
-| "EncryptedKey":http://www.w3.org/2001/04/xmlenc# | 1..1 | "http://www.w3.org/2001/04/xmlenc#":http://www.w3.org/2001/04/xmlenc# |
+| "EncryptedKey":http://www.w3.org/2001/04/xmlenc | 1..1 | "http://www.w3.org/2001/04/xmlenc":http://www.w3.org/2001/04/xmlenc |
 | "Dokument":Dokument | 1..1 |  |
-| "VedleggsListe"":VedleggsListe | 0..1 |  |
+| "VedleggsListe":VedleggsListe | 0..1 |  |
 
 h4. Xml eksempel
 
