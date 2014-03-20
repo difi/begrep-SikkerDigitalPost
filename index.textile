@@ -30,6 +30,11 @@ h3. Klassedefinisjonen:
 
 h3. Eksempler:
 
+Det er laget et eksempel dokumentpakke-vedlegg som inneholder ASiC og XAdES standardene.
+Dette er vedlegget som innholder de dokumenter som skal overføres. 
+Dette eksemplet er kun signert og ikke kryptert.
+* "Komplett ASiC dokumentpakke-vedlegg med XAdES signatur":eksempler/post.asice.zip
+
 <pre class="brush: xml; toolbar: false">
 <?xml version="1.0" encoding="UTF-8"?>
 <sdp:Melding
