@@ -2,7 +2,7 @@
 layout: default
 title: DokumentPakke
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/complexType
+group: SikkerDigitalPost/Melding
 ---
 
 

@@ -2,7 +2,7 @@
 layout: default
 title: Varsel
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/complexType
+group: SikkerDigitalPost/Melding
 ---
 
 - Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}

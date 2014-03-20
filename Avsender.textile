@@ -2,7 +2,7 @@
 layout: default
 title: Avsender
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/complexType
+group: SikkerDigitalPost/Melding
 ---
 
 - Identifikator := http://begrep.difi.no/SikkerDigialPost/{{page.title}}

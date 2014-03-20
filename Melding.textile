@@ -1,7 +1,30 @@
 ---
 layout: default
-title: Sikker digital post - Melding
-headtitle: Sikker digital post - Melding
+title: Melding
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost
 ---
 
-h2. Intro
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Informasjon relatert til presentasjon og behandling av en sikker digital post melding
+- Kilde := DIFI
+
+h3. Attributer
+
+Følgende liste gir en oversikt over de begreper som er brukt i Melding:
+<ul class='nav'>
+{% assign pages_list = site.pages %}
+{% assign group = "SikkerDigitalPost/Melding" %}
+	{% include menu.html %}
+</ul>
+
+h3. Kommentar
+
+Melding blir brukt som samlebegrep for de data som postboksen trenger for å kunne gjøre en digital post tilgjengelig for sluttbruker, inkludert varsling av at den er blitt gjort tilgjengelig og dekryptering av dokumentpakken ved mottak.
+
+h3. Eksempel
+
+<pre class="brush: xml; toolbar: false">
+{% include eksempler/sdpMelding.xml %}
+</pre>
