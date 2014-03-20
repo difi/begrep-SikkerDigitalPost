@@ -17,11 +17,12 @@ Overføringen av postmeldingen fra avsender til mottaker innvollverer følgende 
 Overføring fra meldingshåndterer til meldingsformidler til postboks skjer gjennom sikre grensesnitt definerte med ebMS 3.0 standarden og implementert etter en AS4 grensesnitt profil. 
 
 Postmeldingen i seg selv består av følgende deler:
-* "Standard Business Document Header":sbdh
-* "Sikker Digital Melding":melding
-* "Sikker Digital Dokumentpakke":dokumentpakke
+* "Standard Business Document Header":Sbdh - inneholder informasjonen som meldingsformidler trenger for å formidle meldingen.
+* "Sikker Digital Melding":Melding - inneholder informasjon som postboksen trenger for å presentere og håndtere dokumentpakken
+* "Sikker Digital Dokumentpakke":DokumentPakke - inneholder posten (brev og evt vedlegg) med informasjon som trengst for å ivareta integritet i meldingen over lang tid
 
 Denne meldingen blir igjen pakket inn i ebMS 3.0 rammeverket, og resultatet blir en melding med følgende struktur:
+
 !{width:80%}meldingsstruktur.jpg!
 
 h3. Tjenestespesifikasjonen:
