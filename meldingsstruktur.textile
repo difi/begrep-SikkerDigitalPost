@@ -8,6 +8,7 @@ h3. Meldingsstruktur
 
 Meldingen som sendes i Sikker Digital Post er basert på følgende standarder:
 * "AS4 profilen":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/profiles/AS4-profile/v1.0/os/AS4-profile-v1.0-os.html av "ebMS 3.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.pdf
+* Meldingen har en "Standard Business Document Header (SBDH)":http://www.gs1.org/docs/gsmp/xml/sbdh/SBDH_v1_3_Technical_Implementation_Guide.pdf
 * vedlagt en "Associated Signature Container (ASiC)":http://www.etsi.org/deliver/etsi_ts/102900_102999/102918/01.03.01_60/ts_102918v010301p.pdf i samsvar med "XAdES":http://www.etsi.org/deliver/etsi_ts%5C101900_101999%5C101903%5C01.04.02_60%5Cts_101903v010402p.pdf
 
 Illustrert på følgende måte:
