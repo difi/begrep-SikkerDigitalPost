@@ -1,12 +1,28 @@
 ---
 layout: default
 title: Sikker digital post
-headtitle: Oppslagstjenesten for kontakt og reservasjonsregisteret
+headtitle: Sikker digital post
 ---
 
-h3. Bakgrunn
+h2. Bakgrunn
 
+Begrepskatalogen for sikker digital post definerer de forskjellige delene av postmeldingen som skal gå fra en offentlig avsender til en privat mottaker sin postboks. 
 
+Overføringen av postmeldingen fra avsender til mottaker innvollverer følgende parter/komponenter:
+* Avsender - offentlig aktør som skal sende en post
+* Meldingshåndterer (avsender eller avtalepart hos avsender) - ansvarlig for pakking og sikring av postmeldingen 
+* Meldingsformidler - ansvarlig for formidling, sporing og rapportering av postmeldinger
+* Postboks - ansvarlig for lagring av post på vegne av innbygger, samt varsling når det kommer nye poster til innbygger.
+
+Overføring fra meldingshåndterer til meldingsformidler til postboks skjer gjennom sikre grensesnitt definerte med ebMS 3.0 standarden og implementert etter en AS4 grensesnitt profil. 
+
+Postmeldingen i seg selv består av følgende deler:
+* "Standard Business Document Header":sbdh
+* "Sikker Digital Melding":melding
+* "Sikker Digital Dokumentpakke":dokumentpakke
+
+Denne meldingen blir igjen pakket inn i ebMS 3.0 rammeverket, og resultatet blir en melding med følgende struktur:
+!{width:80%}meldingsstruktur.jpg!
 
 h3. Tjenestespesifikasjonen:
 
