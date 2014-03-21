@@ -20,7 +20,9 @@ Følgende liste gir en oversikt over de begreper som er brukt i Melding:
 </ul>
 
 h4. Egenskaper
+
 I tillegg har Meldingene følgende egenskaper
+
 |_. Identifikator |_. Granularitet |_. Datatype |
 | virkningsdato | 0..1 | xs:date |
 | "sikkerhetsnivaa":/Felles/sikkerhetsnivaa | 1..1 | xs:int |
