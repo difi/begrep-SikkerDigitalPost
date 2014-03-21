@@ -16,39 +16,27 @@ h4. Eigenskapar
 
 |_. Identifikator |_. Granularitet |_. Datatype |
 | "EncryptedKey":http://www.w3.org/2001/04/xmlenc | 1..1 | "http://www.w3.org/2001/04/xmlenc":http://www.w3.org/2001/04/xmlenc |
-| "Dokument":Dokument | 1..1 |  |
-| "VedleggsListe":VedleggsListe | 0..1 |  |
+
 
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
-	<sdp:DokumentPakke><!-- Krypteringsinfo om payload pakke -->
-		<enc:EncryptedKey>
-			<enc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p">
-				<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-			</enc:EncryptionMethod>
-			<ds:KeyInfo>
-				<ds:X509Data>
+  <sdp:DokumentPakke>
+    <!-- Krypteringsinfo om payload pakke -->
+    <enc:EncryptedKey>
+      <enc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p">
+        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      </enc:EncryptionMethod>
+      <ds:KeyInfo>
+        <ds:X509Data>
+
 		               Sertifikater og slikt
+
 				</ds:X509Data>
-			</ds:KeyInfo>
-			<enc:CipherData>
-				<enc:CipherValue>HreaWUt7EANxxQJeamkmDhUubKDwGPUrRYOUSO7cNdhV4irzL8ntuQVnEcb37+2UbU2ymvZrwuBL9dweevyMGpVRYUSjAqxO0M9gB38wgzltQqkqYo0HtLdOyfnxDBuRjyRCH8+dgNfVK0PSgVTyNnawDrQaZqTHxwCf7e5vqz5LWJLo16k6G17ldBzmet0xbBSJ3YD5y+AK/5EJjyDZGYMEJ8+nmEY7OTDd/JdrWPhL62LGdMP2EH3qSqjMOm84MLiLOvdiMNlv152BjVf+8JXEirUM7BBu+nmaZrpKvrVGIfhKXpvLMkSZlkb2zZfNOAg8OL5wIn0qqYtF+3U5sw==</enc:CipherValue>
-			</enc:CipherData>
-		</enc:EncryptedKey>
-		<sdp:Dokument href="melding.pdf" media="all" mime="application/pdf">
-            <sdp:Tittel> <!-- Har tatt vekk offentlig tittel - må passe på at denne ikkje inneheld data som må skjermast... -->
-                <sdp:Tekst lang="no">Vedtak om barnehageplass til Ola</sdp:Tekst>
-                <sdp:Tekst lang="ny">Vedtak om barnehageplass til Ola</sdp:Tekst>
-                <sdp:Tekst lang="en">Ola's application for childcare</sdp:Tekst>            
-            </sdp:Tittel>             
-        </sdp:Dokument>
-        <sdp:VedleggsListe tall="1">
-            <sdp:Dokument href="vedlegg1.pdf" media="all" mime="application/pdf">
-                <sdp:Tittel> <!-- Har tatt vekk offentlig tittel - må passe på at denne ikkje inneheld data som må skjermast... -->
-                    <sdp:Tekst lang="no">Opprinnelig søknad</sdp:Tekst>
-                </sdp:Tittel>             
-            </sdp:Dokument>
-        </sdp:VedleggsListe>
-   	</sdp:DokumentPakke>
+      </ds:KeyInfo>
+      <enc:CipherData>
+        <enc:CipherValue>HreaWUt7EANxxQJeamkmDhUubKDwGPUrRYOUSO7cNdhV4irzL8ntuQVnEcb37+2UbU2ymvZrwuBL9dweevyMGpVRYUSjAqxO0M9gB38wgzltQqkqYo0HtLdOyfnxDBuRjyRCH8+dgNfVK0PSgVTyNnawDrQaZqTHxwCf7e5vqz5LWJLo16k6G17ldBzmet0xbBSJ3YD5y+AK/5EJjyDZGYMEJ8+nmEY7OTDd/JdrWPhL62LGdMP2EH3qSqjMOm84MLiLOvdiMNlv152BjVf+8JXEirUM7BBu+nmaZrpKvrVGIfhKXpvLMkSZlkb2zZfNOAg8OL5wIn0qqYtF+3U5sw==</enc:CipherValue>
+      </enc:CipherData>
+    </enc:EncryptedKey>
+  </sdp:DokumentPakke>
 </pre>

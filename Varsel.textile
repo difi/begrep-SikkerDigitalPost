@@ -15,29 +15,21 @@ group: SikkerDigitalPost/Melding
 h4. Eigenskapar
 
 |_. Identifikator |_. Granularitet |_. Datatype |
-| VarslingsProfil | 1..1 | xs:string (kodeverk) |
-|"Kanaler":Kanal| 1..mange | |
-
+| tidspunkt | 1..* | xs:int |
+|"Kanaler":Kanal| 1..1 | xs:string |
+|"tekst":/Felles/tekst| 1..1 | |
 
 
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
-	<sdp:Varsel>
-		<sdp:VarslingsProfil>NormalKanAkkumulere</sdp:VarslingsProfil> <!-- Må inn med kodeverk -->
-		<sdp:Kanaler>
-			<sdp:Kanal type="mobil">
-				<sdp:Tekst lang="no">Vedtak om ***** til *****</sdp:Tekst>
-				<sdp:Tekst lang="ny">Vedtak om ***** til *****</sdp:Tekst>
-				<sdp:Tekst lang="en">*****'s application for childcare</sdp:Tekst>	
-			</sdp:Kanal>
-			<sdp:Kanal type="epost">
-				<sdp:Tekst lang="no">Vedtak om ***** til *****</sdp:Tekst>
-				<sdp:Tekst lang="ny">Vedtak om ***** til *****</sdp:Tekst>
-				<sdp:Tekst lang="en">*****'s application for childcare</sdp:Tekst>								
-			</sdp:Kanal>
-		</sdp:Kanaler>
-	</sdp:Varsel>
+<sdp:Varsel kanal="EPOST">
+	<tidspunkt>0</tidspunkt>
+	<tidspunkt>1</tidspunkt>
+	<tidspunkt>3</tidspunkt>
+	<tidspunkt>30</tidspunkt>
+	<tekst>Vedtak om mitt vedtak...</tekst>
+</sdp:Varsel>
 </pre>
 
 

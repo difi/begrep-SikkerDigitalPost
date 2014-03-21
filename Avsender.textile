@@ -15,18 +15,16 @@ group: SikkerDigitalPost/Melding
 h4. Egenskaper
 
 |_. Identifikator |_. Term |_. Kardinalitet |
-| "Identifikator":/Felles/virksomhetsIdentifikator | Orgnr, Identifikator | 1-1 |
-| "Navn":Felles/VirksomhetsNavn | Navn, Organisasjon | 1-1 |
+| "Identifikator":/Felles/virksomhetsIdentifikator | Identifikator | 1-1 |
+| "ehfFakturaRef": | xs:string | 1-1 |
 
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
-	<sdp:Avsender>
-		<sdp:Identifikator autoritet="iso6523-actorid-upis">0088:4562458856624</sdp:Identifikator>
-		<sdp:Navn> 
-			<sdp:Tekst lang="no">Leikanger kommune</sdp:Tekst>
-		</sdp:Navn> 
-	</sdp:Avsender>
+  <sdp:Avsender>
+    <sdp:Identifikator>2q342134fdasdfewa453q5#dsavasg</sdp:Identifikator>
+    <sdp:ehfFakturaRef>min faktura referanse</sdp:ehfFakturaRef>
+  </sdp:Avsender>
 </pre>
 
 

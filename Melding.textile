@@ -19,6 +19,14 @@ Følgende liste gir en oversikt over de begreper som er brukt i Melding:
 	{% include menu.html %}
 </ul>
 
+h4. Egenskaper
+I tillegg har Meldingene følgende egenskaper
+|_. Identifikator |_. Granularitet |_. Datatype |
+| virkningsdato | 0..1 | xs:date |
+| "sikkerhetsnivaa":/Felles/sikkerhetsnivaa | 1..1 | xs:int |
+| aapningskvittering | 0..1 | xs:string |
+| ikkeSensitiveHoveddokumenttittel | 1..1 | xs:string |
+
 h3. Kommentar
 
 Melding blir brukt som samlebegrep for de data som postboksen trenger for å kunne gjøre en digital post tilgjengelig for sluttbruker, inkludert varsling av at den er blitt gjort tilgjengelig og dekryptering av dokumentpakken ved mottak.
