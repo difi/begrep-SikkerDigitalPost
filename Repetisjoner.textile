@@ -1,0 +1,33 @@
+---
+layout: default
+title: Repetisjoner
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/Melding
+---
+
+- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Gjentagelser etter et bestemt tidspunkt
+- Datatype := complexType
+- Kjelde := DIFI
+- Kommentar := Beskriver hvilke dager noe skal repeteres etter en definert dag, der "dagerEtter":/Felles/dagerEtter angir hvor mange dager etter tidspunktet det skal repeteres.
+dagerEtter=0 betyr samme dag. dagerEtter=7 betyr den syvende dagen etter en bestemt dag. 
+
+h4. Eigenskapar
+
+|_. Identifikator |_. Granularitet |_. Datatype |
+| "dagerEtter":/Felles/dagerEtter | 0..10 | xsd:nonNegativeInteger |
+
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+
+      <repetisjoner>
+        <dagerEtter>0</dagerEtter>
+        <dagerEtter>7</dagerEtter>
+      </repetisjoner>
+
+ </pre>
+
+

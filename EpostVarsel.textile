@@ -1,0 +1,35 @@
+---
+layout: default
+title: EpostVarsel
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/Melding
+---
+
+- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Informasjon om hvordan man skal varsle sluttbruker på epost
+- Datatype := complexType
+- Kjelde := DIFI
+- Kommentar := Beskriver når det skal sendes epostvarsel fra postkassen etter at posten er tilgjengeliggjort.
+
+h4. Eigenskapar
+
+|_. Identifikator |_. Granularitet |_. Datatype |
+|varselTekst| 0..1 | xsd:String |
+|"repetisjoner":Repetisjoner | 1..1 | "sdp:Repetisjoner":Repetisjoner |
+
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+    <epostVarsel>
+      <varselTekst>Viktig melding fra Staten</varselTekst>
+      <repetisjoner>
+        <dagerEtter>0</dagerEtter>
+        <dagerEtter>7</dagerEtter>
+      </repetisjoner>
+    </epostVarsel>
+
+ </pre>
+
+

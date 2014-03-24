@@ -10,7 +10,7 @@
 
 	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="xenc-schema.xsd"/> 
-	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslagstjeneste-metadata-14-05_repaired.xsd"/>
+	<xsd:import namespace="http://begrep.difi.no/Oppslagstjenesten/xsd" schemaLocation="oppslagstjeneste-metadata-14-05.xsd"/>
 	
 
 	<xsd:element name="melding" type="sdp:Melding"/>

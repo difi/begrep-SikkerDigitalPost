@@ -1,28 +1,47 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<sdp:Manifest xmlns:sbdh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:sdp="http://begrep.difi.no/sdp/schema" xmlns:dk="http://begrep.difi.no/dk/schema">
-  <!-- Hvordan håndtere konflikt mellom info i sdpManifest og sdpMelding?
+<manifest 
+    xmlns="http://begrep.difi.no/sdp/schema_v10"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    xmlns:tns="http://begrep.difi.no"
+    xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://begrep.difi.no/SikkerDigitalPost/xsd/sdp-manifest.xsd">
 
-      - Skal håndteres som en feil og gi feilmelding tilbake til avsender.
+  <meldingsId>7122e25b-1870-4183-9889-d7a11dde3bf2</meldingsId>
+  
+  <mottaker>
+    <person>
+      <tns:personidentifikator>01234567890</tns:personidentifikator>
+      <tns:reservasjon>NEI</tns:reservasjon>
+      <tns:status>AKTIV</tns:status>
+      <tns:beskrivelse>...</tns:beskrivelse>
+      <tns:Kontaktinformasjon>
+        <tns:Mobiltelefonnummer sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">12345678</tns:Mobiltelefonnummer>
+        <tns:Epostadresse sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">ola@nordmann.no</tns:Epostadresse>
+      </tns:Kontaktinformasjon>
+      <tns:SikkerDigitalPostAdresse>
+        <tns:postkasseadresse>ola.nordmann#0ABC</tns:postkasseadresse>
+        <tns:postkasseleverandoerAdresse>984661185</tns:postkasseleverandoerAdresse>
+      </tns:SikkerDigitalPostAdresse>
+      <tns:X509Certificate>tns:X509Certificate</tns:X509Certificate>
+    </person>
+  </mottaker>
+  
+  <avsender>
+    <avsenderId>0123456789</avsenderId>
+    <fakturaKonto>ØK1</fakturaKonto>
+  </avsender>
+  
+  <hoveddokument href="vedtak_2398324.pdf" mime="application/pdf">
+    <tittel>Vedtak</tittel>
+  </hoveddokument>
+  
+  <vedlegg href="info.html" mime="text/html">
+    <tittel>informasjon</tittel>
+  </vedlegg>
 
-   - 
-
--->
-  <sdp:meldingsID>GUID</sdp:meldingsID>
-  <sdp:Avsender>
-    <sdp:Identifikator>2q342134fdasdfewa453q5#dsavasg</sdp:Identifikator>
-  </sdp:Avsender>
-  <sdp:Mottaker>
-    <dk:personidentifikator>010203040506</dk:personidentifikator>
-  </sdp:Mottaker>
-  <sdp:Dokument href="melding.pdf" media="all" mime="application/pdf">
-    <sdp:Tittel>Opprinnelig søknad</sdp:Tittel>
-  </sdp:Dokument>
-  <sdp:VedleggsListe>
-    <sdp:Dokument href="vedlegg1.html" media="all" mime="text/html">
-      <sdp:Tittel>Opprinnelig søknad</sdp:Tittel>
-    </sdp:Dokument>
-    <sdp:Dokument href="vedlegg2.pdf" media="all" mime="application/pdf">
-      <sdp:Tittel>Opprinnelig søknadsvedlegg</sdp:Tittel>
-    </sdp:Dokument>
-  </sdp:VedleggsListe>
-</sdp:Manifest>
+  <vedlegg href="journal.txt" mime="text/plain">
+    <tittel>journal</tittel>
+  </vedlegg>
+  
+</manifest>

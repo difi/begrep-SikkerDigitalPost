@@ -1,0 +1,28 @@
+---
+layout: default
+title: Manifest
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon :=  inneholder metadata relatert til hver fil i en forsendelse.
+- Datatype := complexType
+- Kilde := DIFI
+
+h3. Attributer
+
+|_. Identifikator |_. Granularitet |_. Datatype |
+| meldingsId | 1..1 | sdp:GUID |
+| "Mottaker":Mottaker | 1..1 | "sdp:Mottaker":Mottaker |
+| "Avsender":Avsender | 1..1 | "sdp:Avsender":Avsender |
+| hoveddokument | 1..1 | "sdp:Dokument":Dokument |
+| vedlegg | 0..99 | "sdp:Dokument":Dokument |
+
+
+h3. Eksempel
+
+<pre class="brush: xml; toolbar: false">
+{% include eksempler/sdpManifest.xml %}
+</pre>
