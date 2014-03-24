@@ -17,8 +17,8 @@ Avsender vil kunne få kostnader knyttet til varslinger på Sms.
 h4. Eigenskapar
 
 |_. Identifikator |_. Granularitet |_. Datatype |
-|"epostVarsel":EpostVarsel| 0..1 | sdp:EpostVarsel":EpostVarsel |
-|"smsVarsel":SmsVarsel | 0..1 | "sdp:EpostVarsel":SmsVarsel |
+|"epostVarsel":EpostVarsel| 0..1 | "sdp:EpostVarsel":EpostVarsel |
+|"smsVarsel":SmsVarsel | 0..1 | "sdp:SmsVarsel":SmsVarsel |
 
 
 h4. Xml eksempel
