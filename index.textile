@@ -8,6 +8,8 @@ h2. Bakgrunn
 
 Begrepskatalogen for sikker digital post definerer de forskjellige delene av postmeldingen som skal gå fra en offentlig avsender til en privat mottaker sin postboks. 
 
+h3. Aktører 
+
 Overføringen av postmeldingen fra avsender til mottaker innvollverer følgende parter/komponenter:
 * Avsender - offentlig aktør som skal sende en post
 * Meldingshåndterer (avsender eller avtalepart hos avsender) - ansvarlig for pakking og sikring av postmeldingen 
@@ -16,12 +18,40 @@ Overføringen av postmeldingen fra avsender til mottaker innvollverer følgende 
 
 Overføring fra meldingshåndterer til meldingsformidler til postboks skjer gjennom sikre grensesnitt definerte med ebMS 3.0 standarden og implementert etter en AS4 grensesnitt profil. 
 
+h3. Meldingen
+
 Postmeldingen i seg selv består av følgende deler:
 * "Standard Business Document Header":Sbdh - inneholder informasjonen som meldingsformidler trenger for å formidle meldingen.
 * "Sikker Digital Melding":Melding - inneholder informasjon som postboksen trenger for å presentere og håndtere dokumentpakken
 * "Sikker Digital ASiC Dokumentpakke":ASiC - inneholder posten (brev og evt vedlegg) med informasjon som trengst for å ivareta integritet i meldingen over lang tid
 
-Denne meldingen blir igjen pakket inn i ebMS 3.0 rammeverket, og resultatet blir en melding med følgende struktur:
+Disse tre delene vil (som hovedregel) oppstå som en del av en ekspederingsprosess hos avsender, enten enkeltvis eller som en samling (batch). Deretter skal disse tre overførest til en ebMS 3.0 Message Service Handler (MSH - meldingshåndterer). MSH'en er virksomhetens tilgangpunkt inn til ebMS 3.0 rammeverket som er ansvarlig for videre transport.
+
+Det er flere forskjellige scenarier for hvordan MSH blir tatt i bruk av (eller integrert inn i) avsender sine løsninger. I utgangspunktet så er denne koblingen utenfor scope for Sikker Digital Post, men det er en målsetning at det skal være mulig å tilrettelegge for løse koblinger mellom avsenders fagsystem og Sikker Digital Post for å gjøre det enkelt å ta tjenesten i bruk uten at dette skal kreve store endringen i eksisterende eller planlagte ekspederingsløsninger.
+
+Det er opp til avsender om man vil fullintegrere MSH inn i eksisterende løsning, benytte seg av en standard "hyllevare" løsning med lokal integrasjon eller benytte seg av tredjepart som MSH. 
+
+h3. ebMS 3.0
+
+ebMS 3.0 er en Oasis standard for kommunikasjonsnøytral utveksling av elektroniske (forretnings)meldinger. ebMS er designet spesielt med tanke på utfordringer relatert til denne kommunikasjonen, uten at man legger føringer på hvordan en melding blir opprettet (hos avsender) eller konsument (hos mottaker). I praksis samordner ebMS 3.0 bruken av en rekke forskjellige W3C standarder for Web Services.
+
+"AS4":http://en.wikipedia.org/wiki/AS4 er en grensesnittprofil som implementerer ebMS 3.0. Profilen er en viderebygging av konseptene i "AS2":http://en.wikipedia.org/wiki/AS2 der man tar i bruk standardene spesifisert i ebMS 3.0.
+
+h3. Identifikatorer
+
+Meldingen har flere identifikatorer. I den grad det er mulig så er det prøvd å benytte åpne og tilgjengelige identifikatorer (for eksempel organisasjonsnummer). Dersom ikke annet er angitt, så er det sterkt anbefalt at man benytter en "GUID":http://en.wikipedia.org/wiki/Guid som verdi for identifikatoren.
+
+* sbdh/Identificator - dette er avsenders unike nøkkel for postmeldingen (og oppstår før avsender kontakter MSH-komponenten). Skal kunne benyttes som sporingsnummer i feilsøk relatert til forsendelsen. Note: Kan benyttes av MSH som eb/conversationID ved å konkatenere med informasjon om avsender (f.eks. idenfificator@avsenderorgnr) 
+* eb/MessageId - dette er den unike identifikatoren for et gitt meldingshopp (for eksempel fra avsender's MSH til meldingsformidler's MSH). Satt av MSH.
+* eb/ConversationId - dette er ebMS's bindeledd i mellom de forskjellige meldinghopp. Skal benyttes ved påfølgende meldingsutvekslinger relatert til den opprinnelige meldingen, for eksempel forskjellige typer kvitteringer eller melding om tilbaketrekking.
+
+* sbdh/Sender - organisasjonsnummer til eier av avsenders MSH. Merk at denne kan avvike fra spm/Avsender.
+* sbdh/Reciever - organisasjonsnummer til endelig mottaker av postmelding. P.t. ett av tre, Digipost, eBoks eller utskriftstjeneste. Hentes fra Oppslagstjenesten.
+* spMelding/Avsender - organisasjonsnummer til den som eier dokumentet/meldingen som blir sendt.
+
+h3. Illustrasjon meldingsstruktur 
+
+SBDH delen av meldingen er tenkt brukt i SOAP-Body. Tanken er at dette skal være den eneste delen som Meldingsformidler trenger å lese for å formidle meldinger (resten av payload skal berre sendes rett videre). Note: Må vurdere om ikke spMelding/Avsender skal inn i SBDH slik at MF kan sjekke at kombinasjonen Sender/Avsender er gyldig... 
 
 !{width:80%}meldingsstruktur.jpg!
 
