@@ -1,0 +1,25 @@
+<S11:Envelope>
+          <S11:Header>
+              <eb:Messaging S11:mustUnderstand="1">
+                  <eb:UserMessage mpc="http://sender.example.com/mpc123">
+                      <eb:MessageInfo>
+                          <eb:Timestamp>2006-10-01T10:02:00</eb:Timestamp>
+                          <eb:MessageId>UUID-5@sender.example.com</eb:MessageId>
+      <eb:RefToMessageId>UUID-4@receiver.example.com</eb:RefToMessageId>
+                      </eb:MessageInfo>
+                      <eb:PartyInfo>
+                          ...
+                      </eb:PartyInfo>
+                      <eb:CollaborationInfo>
+                          ...
+                      </eb:CollaborationInfo>
+                      <eb:PayloadInfo>
+                          ...
+                      </eb:PayloadInfo>
+                  </eb:UserMessage>
+              </eb:Messaging>
+          </S11:Header>
+          <S11:Body>
+              ...
+          </S11:Body>
+      </S11:Envelope>
