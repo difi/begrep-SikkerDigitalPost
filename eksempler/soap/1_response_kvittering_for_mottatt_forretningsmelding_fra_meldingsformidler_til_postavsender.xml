@@ -80,5 +80,7 @@ YojsDbob4kf4aA1n1z2Z65LHQ==</ds:SignatureValue>
       </eb3:SignalMessage>
     </eb3:Messaging>
   </S12:Header>
-  <S12:Body wsu:Id="N10060"/>
+  <S12:Body wsu:Id="N10060">
+    <!-- TODO skal det noe inn her? --> 
+  </S12:Body>
 </S12:Envelope>
