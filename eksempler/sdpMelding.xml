@@ -1,73 +1,72 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<melding
-    xmlns="http://begrep.difi.no/sdp/schema_v10" 
-    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
-    xmlns:tns="http://begrep.difi.no" 
-    xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://begrep.difi.no/SikkerDigitalPost/xsd/sdp-melding.xsd">
-    
-    
-  <mottaker>
-    <person>
-      <tns:personidentifikator>12345678901</tns:personidentifikator>
-      <tns:reservasjon>NEI</tns:reservasjon>
-      <tns:status>AKTIV</tns:status>
-      <tns:beskrivelse>tns:beskrivelse</tns:beskrivelse>
-      <tns:Kontaktinformasjon>
-        <tns:Mobiltelefonnummer sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">12345678</tns:Mobiltelefonnummer>
-        <tns:Epostadresse sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">ola@nordmann.no</tns:Epostadresse>
-      </tns:Kontaktinformasjon>
-      <tns:SikkerDigitalPostAdresse>
-        <tns:postkasseadresse>ola.nordmann#0ABC</tns:postkasseadresse>
-        <tns:postkasseleverandoerAdresse>984661185</tns:postkasseleverandoerAdresse>
-      </tns:SikkerDigitalPostAdresse>
-      <tns:X509Certificate>tns:X509Certificate</tns:X509Certificate>
-    </person>
+<melding xmlns="http://begrep.difi.no/sdp/schema_v10" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:tns="http://begrep.difi.no" xmlns:enc="http://www.w3.org/2001/04/xmlenc#"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 sdp-melding.xsd ">
 
+	<avsender>
+		<identifier authority="iso6523-actorid-upis">9908:123456789</identifier>
+		<avsenderId>12345</avsenderId>
+		<fakturaKonto>ØK1</fakturaKonto>
+	</avsender>
+
+	<digitalMottaker>
+		<person>
+			<tns:personidentifikator>12345678901</tns:personidentifikator>
+			<tns:reservasjon>NEI</tns:reservasjon>
+			<tns:status>AKTIV</tns:status>
+			<tns:beskrivelse>tns:beskrivelse</tns:beskrivelse>
+			<tns:Kontaktinformasjon>
+				<tns:Mobiltelefonnummer sistOppdatert="2001-12-31T12:00:00"
+					sistVerifisert="2001-12-31T12:00:00">12345678</tns:Mobiltelefonnummer>
+				<tns:Epostadresse sistOppdatert="2001-12-31T12:00:00"
+					sistVerifisert="2001-12-31T12:00:00">ola@nordmann.no</tns:Epostadresse>
+			</tns:Kontaktinformasjon>
+			<tns:SikkerDigitalPostAdresse>
+				<tns:postkasseadresse>ola.nordmann#0ABC</tns:postkasseadresse>
+				<tns:postkasseleverandoerAdresse>984661185</tns:postkasseleverandoerAdresse>
+			</tns:SikkerDigitalPostAdresse>
+			<tns:X509Certificate>tns:X509Certificate</tns:X509Certificate>
+		</person>
+	</digitalMottaker>
+
+	<virkningsdato>2014-05-17</virkningsdato>
+	<aapningskvittering>false</aapningskvittering>
+	<sikkerhetsnivaa>3</sikkerhetsnivaa>
+	<ikkeSensitivHoveddokumenttittel>Hurra for 17. mai</ikkeSensitivHoveddokumenttittel>
+
+	<varsler>
+		<epostVarsel>
+			<varselTekst>Viktig melding fra Staten i din digital postkasse</varselTekst>
+			<repetisjoner>
+				<dagerEtter>0</dagerEtter>
+				<dagerEtter>7</dagerEtter>
+			</repetisjoner>
+		</epostVarsel>
+		<smsVarsel>
+			<varselTekst>Viktig melding fra Staten</varselTekst>
+			<repetisjoner>
+				<dagerEtter>1</dagerEtter>
+			</repetisjoner>
+		</smsVarsel>
+	</varsler>
+
+	<dokumentPakke>
+		<encryptedKey Encoding="" MimeType="" Recipient="" Type="">
+			<enc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p">
+				<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+			</enc:EncryptionMethod>
+			<ds:KeyInfo Id="id0001">
+				<ds:KeyName>nøkkelnavn</ds:KeyName>
+				<X509Data>
+				    <X509SubjectName>...</X509SubjectName>
+				    <X509Certificate>...</X509Certificate>
+				</X509Data>
+			</ds:KeyInfo>
+			<enc:CipherData>
+				<enc:CipherValue>Zm9v</enc:CipherValue>
+			</enc:CipherData>
+		</encryptedKey>
+	</dokumentPakke>
 	
-  </mottaker>
-  
-  <avsender>
-    <avsenderId>1234567890</avsenderId>
-    <fakturaKonto>ØK1</fakturaKonto>
-  </avsender>
-  
-  <virkningsdato>2014-05-17</virkningsdato>
-  <aapningskvittering>false</aapningskvittering>
-  <sikkerhetsnivaa>3</sikkerhetsnivaa>
-  <ikkeSensitivHoveddokumenttittel>Hurra for 17. mai</ikkeSensitivHoveddokumenttittel>
-  
-  <varsler>
-    <epostVarsel>
-      <varselTekst>Viktig melding fra Staten</varselTekst>
-      <repetisjoner>
-        <dagerEtter>0</dagerEtter>
-        <dagerEtter>7</dagerEtter>
-      </repetisjoner>
-    </epostVarsel>
-    <smsVarsel>
-      <varselTekst>Viktig melding fra Staten</varselTekst>
-      <repetisjoner>
-        <dagerEtter>1</dagerEtter>
-      </repetisjoner>
-    </smsVarsel>
-  </varsler>
-  
-  <dokumentPakke>
-	<enc:EncryptedKey Encoding=""  MimeType="" Recipient="" Type="">
-		<enc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" Id="idvalue0">
-			<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-		</enc:EncryptionMethod>
-	<ds:KeyInfo>
-		<ds:KeyName>ds:KeyName</ds:KeyName>
-		<ds:X509Data>
-               Sertifikater og slikt
-		</ds:X509Data>
-	</ds:KeyInfo>
-	<enc:CipherData>
-		<enc:CipherValue>HreaWUt7EANxxQJeamkmDhUubKDwGPUrRYOUSO7cNdhV4irzL8ntuQVnEcb37+2UbU2ymvZrwuBL9dweevyMGpVRYUSjAqxO0M9gB38wgzltQqkqYo0HtLdOyfnxDBuRjyRCH8+dgNfVK0PSgVTyNnawDrQaZqTHxwCf7e5vqz5LWJLo16k6G17ldBzmet0xbBSJ3YD5y+AK/5EJjyDZGYMEJ8+nmEY7OTDd/JdrWPhL62LGdMP2EH3qSqjMOm84MLiLOvdiMNlv152BjVf+8JXEirUM7BBu+nmaZrpKvrVGIfhKXpvLMkSZlkb2zZfNOAg8OL5wIn0qqYtF+3U5sw==</enc:CipherValue>
-	</enc:CipherData>
-	</enc:EncryptedKey>
-  </dokumentPakke>
 </melding>

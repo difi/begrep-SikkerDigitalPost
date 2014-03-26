@@ -28,7 +28,7 @@
   </mottaker>
   
   <avsender>
-    <identifier authority="iso6523-actorid-upis">0000:1234567890</identifier>
+    <identifier authority="iso6523-actorid-upis">9908:123456789</identifier>
     <avsenderId>0123456789</avsenderId>
     <fakturaKonto>ØK1</fakturaKonto>
   </avsender>

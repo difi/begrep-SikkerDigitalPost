@@ -156,17 +156,16 @@
 	</xsd:complexType>
 
 
-    <xsd:simpleType name="LandkodeOrgnr">
+    <xsd:simpleType name="Iso6523Identitet">
         <xsd:restriction base="xsd:string">
-        	<!-- hva er mønsteret? -->
-        	<xsd:pattern value="[0-9]{4}:[0-9]{1,20}"/>
+        	<xsd:pattern value="9908:[0-9]{9}"/>
         </xsd:restriction>
     </xsd:simpleType>
 
 
 	<xsd:complexType name="AvsenderOrganisasjon">
 		<xsd:simpleContent>
-			<xsd:extension base="sdp:LandkodeOrgnr">
+			<xsd:extension base="sdp:Iso6523Identitet">
 				<xsd:attribute name="authority" use="optional" default="iso6523-actorid-upis">
 					<xsd:simpleType>
 						<xsd:restriction base="xsd:string">
