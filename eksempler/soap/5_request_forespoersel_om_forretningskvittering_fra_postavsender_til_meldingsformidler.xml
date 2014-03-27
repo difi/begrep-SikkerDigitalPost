@@ -10,11 +10,13 @@
           <eb:MessageId>UUID-4@receiver.example.com</eb:MessageId>
         </eb:MessageInfo>
 	      <!-- TODO ser ikke behov for mpc -->
-        <eb:PullRequest mpc="http://sender.example.com/mpc123"/>
+        <!-- <eb:PullRequest mpc="http://sender.example.com/mpc123"/> -->
+	      <eb:PullRequest/>
       </eb:SignalMessage>
     </eb:Messaging>
   </S12:Header>
   <S12:Body>
 	  <!-- TODO hvordan identifisere avsender -->
+	  <!-- Kan eventuelt detaljere PullRequest -->
 	</S12:Body>
 </S12:Envelope>

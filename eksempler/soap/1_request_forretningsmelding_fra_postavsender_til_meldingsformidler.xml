@@ -65,14 +65,22 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
                     </eb:To>
                 </eb:PartyInfo>
                 <eb:CollaborationInfo>
-                    <eb:AgreementRef>jentrataLoopback</eb:AgreementRef>
+	                  <!-- TODO ser ikke behov for denne - kan utelates ref spec-->
+                    <!-- <eb:AgreementRef>uri:som:identifiserar:samarbeidsprotokollavtalen</eb:AgreementRef> -->
+	                  <!-- TODO default AS4 service -->
                     <eb:Service>http://docs.oasis-open.org/ebxml-msg/as4/200902/service</eb:Service>
+	                  <!-- TODO default AS4 action -->
                     <eb:Action>http://docs.oasis-open.org/ebxml-msg/as4/200902/action</eb:Action>
+	                  <!-- TODO detaljere innholdet av denne -->
                     <eb:ConversationId>2014-0001</eb:ConversationId>
                 </eb:CollaborationInfo>
                 <eb:PayloadInfo>
                     <eb:PartInfo href="#soapBody"/>
                 </eb:PayloadInfo>
+	              <eb:PayloadInfo>
+		                <!-- TODO standardisere cid -->
+		                <eb:PartInfo href="cid:asic"/>
+	              </eb:PayloadInfo>
             </eb:UserMessage>
         </eb:Messaging>
     </S12:Header>
