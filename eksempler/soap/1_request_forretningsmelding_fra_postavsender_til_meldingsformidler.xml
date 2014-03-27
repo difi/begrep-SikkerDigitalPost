@@ -72,7 +72,7 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
             </eb:UserMessage>
         </eb:Messaging>
     </S12:Header>
-    <S12:Body id="soapBody" wsu:Id="id-DE969A773C0E48851A139204210261411" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <S12:Body xml:id="soapBody" wsu:Id="id-DE969A773C0E48851A139204210261411" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
 	    <StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
 		    <StandardBusinessDocumentHeader>
 			    <HeaderVersion>1.0</HeaderVersion>
