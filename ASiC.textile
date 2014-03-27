@@ -12,5 +12,5 @@ Sikker Digital Post har definert et eget begrep "Manifest":Manifest som innehold
 
 h2. Eksempel
 
-* "Mainfest":eksempler/sdpManifest.xml
+* "Manifest":eksempler/sdpManifest.xml
 * "Full dokumentpakke":eksempler/post.asice.zip
