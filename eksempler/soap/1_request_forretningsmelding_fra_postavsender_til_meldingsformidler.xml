@@ -52,12 +52,16 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
                 </eb:MessageInfo>
                 <eb:PartyInfo>
                     <eb:From>
-                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:0088">1234567890</eb:PartyId>
-                        <eb:Role>Buyer</eb:Role>
+	                      <!-- orgnr til avsender -->
+                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">123456789</eb:PartyId>
+	                      <!-- TODO spesifisere denne-->
+                        <eb:Role>uri:som:identifiserar:rollen:postavsender</eb:Role>
                     </eb:From>
                     <eb:To>
-                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:0088">0987654321</eb:PartyId>
-                        <eb:Role>Seller</eb:Role>
+	                      <!-- orgnr til meldingsformidler -->
+                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">234567890</eb:PartyId>
+	                      <!-- TODO spesifisere denne -->
+                        <eb:Role>uri:som:identifiserar:rollen:meldingsformidler</eb:Role>
                     </eb:To>
                 </eb:PartyInfo>
                 <eb:CollaborationInfo>
@@ -78,11 +82,11 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
 			    <HeaderVersion>1.0</HeaderVersion>
 			    <Sender>
 				    <!-- orgnr avsender -->
-				    <Identifier Authority="iso6523-actorid-upis">0088:7315458756324</Identifier>
+				    <Identifier Authority="iso6523-actorid-upis">9908:123456789</Identifier>
 			    </Sender>
 			    <Receiver>
 				    <!-- orgnr mottaker, postboks eller print -->
-				    <Identifier Authority="iso6523-actorid-upis">0088:4562458856624</Identifier>
+				    <Identifier Authority="iso6523-actorid-upis">9908:345678901</Identifier>
 			    </Receiver>
 			    <DocumentIdentification>
 				    <!-- Unik identifikator i "Sender" sitt scope -->
