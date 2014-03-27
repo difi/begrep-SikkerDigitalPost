@@ -4,6 +4,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 sdp-melding.xsd ">
 
+	<meldingsId>7122e25b-1870-4183-9889-d7a11dde3bf2</meldingsId>
+
 	<avsender>
 		<identifier authority="iso6523-actorid-upis">9908:123456789</identifier>
 		<avsenderId>12345</avsenderId>
