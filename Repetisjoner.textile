@@ -15,7 +15,7 @@ dagerEtter=0 betyr samme dag. dagerEtter=7 betyr den syvende dagen etter en best
 
 h4. Eigenskapar
 
-|_. Identifikator |_. Granularitet |_. Datatype |
+|_. Identifikator |_. Kardinalitet |_. Datatype |
 | "dagerEtter":/Felles/dagerEtter | 0..10 | xsd:nonNegativeInteger |
 
 
