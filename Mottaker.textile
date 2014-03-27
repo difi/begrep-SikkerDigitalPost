@@ -16,6 +16,6 @@ h3. Mottaker
 h4. Egenskaper
 
 |_. Identifikator |_. Term |_. Kardinalitet |
-| "Person":/Oppslagstjenesten/Person | Person | 0..1 |
+| "Person":Person | "Person":Person | 0..1 |
 | "PostAdresse":PostAdresse | Postadresse, adresse | 0..1 |
 

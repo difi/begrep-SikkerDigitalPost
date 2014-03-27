@@ -1,0 +1,33 @@
+---
+layout: default
+title: Person
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/Melding
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Person i Sikker digital Post
+- Datatype := complexType
+- Kilde := DIFI
+- Kommentar := Person er en Mottaker som Digital Post skal sendes til.
+
+h4. Attributer
+
+|_. Term |_. Kardinalitet |
+| "personidentifikator":/Felles/personidentifikator  | 1..1 |
+| "postkasseadresse":/Felles/postkasseadresse | 1..1 |
+| "mobiltelefonnummer":/Felles/mobiltelefonnummer | 0..1 |
+| "epostadresse":/Felles/epostadresse | 0..1 |
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+<sdp:Person>
+	<sdp:personidentifikator>01012295312</sdp:personidentifikator>
+    <sdp:mobiltelefonnummer>12121212</sdp:mobiltelefonnummer>
+	<sdp:epostadresse>01012295312_test@minid.difi.no</sdp:epostadresse>
+	<sdp:postkasseadresse>1</sdp:postkasseadresse>
+</sdp:Person>
+</pre>
+
