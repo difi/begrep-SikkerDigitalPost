@@ -41,7 +41,7 @@ h3. Identifikatorer
 
 Meldingen har flere identifikatorer. I den grad det er mulig så er det prøvd å benytte åpne og tilgjengelige identifikatorer (for eksempel organisasjonsnummer). Dersom ikke annet er angitt, så er det sterkt anbefalt at man benytter en "GUID":http://en.wikipedia.org/wiki/Guid som verdi for identifikatoren.
 
-* sbdh/InstanceIdentifier - dette er avsenders unike nøkkel for postmeldingen (og oppstår før avsender kontakter MSH-komponenten). Skal kunne benyttes som sporingsnummer i feilsøk relatert til forsendelsen. Note: Kan benyttes av MSH som eb/conversationID ved å konkatenere med informasjon om avsender (f.eks. InstanceIdentifier@avsenderorgnr) 
+* sbdh/InstanceIdentifier - dette er avsenders unike identifikator for postmeldingen (og oppstår før avsender kontakter MSH-komponenten). Skal kunne benyttes som sporingsnummer i feilsøk relatert til forsendelsen. Note: Kan benyttes av MSH som eb/conversationID ved å konkatenere med informasjon om avsender (f.eks. InstanceIdentifier@avsenderorgnr) 
 * eb/MessageId - dette er den unike identifikatoren for et gitt meldingshopp (for eksempel fra avsender's MSH til meldingsformidler's MSH). Satt av MSH.
 * eb/ConversationId - dette er ebMS's bindeledd i mellom de forskjellige meldinghopp. Skal benyttes ved påfølgende meldingsutvekslinger relatert til den opprinnelige meldingen, for eksempel forskjellige typer kvitteringer eller melding om tilbaketrekking.
 
