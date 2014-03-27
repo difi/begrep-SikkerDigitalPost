@@ -17,7 +17,7 @@ h3. Attributer
 | "Avsender":Avsender | 1..1 | "Avsender":Avsender |
 | "Mottaker":Mottaker | 1..1 | "Mottaker":Mottaker |
 | "Varsler":Varsler | 0..1 | "Varsler":Varsler |
-| "DokumentPakke":DokumentPakke | 1..1 |"DokumentPakke":DokumentPakke |
+| "sdp:Dokumentpakke":Dokumentpakke | 1..1 |"sdp:Dokumentpakke":Dokumentpakke |
 | virkningsdato | 0..1 | xs:date |
 | "sikkerhetsnivaa":/Felles/sikkerhetsnivaa | 1..1 | xs:int |
 | aapningskvittering | 0..1 | xs:string |
