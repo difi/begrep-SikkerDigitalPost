@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema version="1.0" targetNamespace="http://begrep.difi.no/sdp/schema_v10"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tns="http://begrep.difi.no"
+	xmlns:sdp="http://begrep.difi.no/sdp/schema_v10" 
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+	xmlns:enc="http://www.w3.org/2001/04/xmlenc#"
+	elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="sdp-melding.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="xenc-schema.xsd"/> 
+	<xsd:import namespace="http://begrep.difi.no" schemaLocation=""/>
+	
+
+	<xsd:element name="kvittering" type="sdp:Kvittering"/>
+
+
+	<xsd:complexType name="Kvittering">
+		
+		<xsd:sequence>
+			<xsd:element name="refMeldingsId" type="sdp:GUID" minOccurs="1" maxOccurs="1"/>
+			<xsd:choice>
+				<xsd:element name="suksess" type="sdp:Suksess"></xsd:element>
+				<xsd:element name="feil" type="sdp:Feil"></xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Suksess">
+		<!--  TODO: her kan vi vurdere å inkludere tid_levert, e.l. -->
+	</xsd:complexType>
+
+	<xsd:complexType name="Feil">
+		<xsd:sequence>
+			<xsd:element name="feilinformasjon" minOccurs="0" maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1000" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<!-- nedenfor kan være en mulighet dersom vi har en tight SLA på levering og postkasseleverandør er nede						
+			<xsd:element name="kanResendes" type="xsd:boolean" minOccurs="0" maxOccurs="1" dewfault="false"/>
+			-->
+		<∕xsd:sequence> 
+	</xsd:complexType>
+
+
+</xsd:schema>
