@@ -4,7 +4,9 @@
       <!-- TODO  -->
     </wsse:Security>
     <eb:Messaging S12:mustUnderstand="1">
-      <eb:UserMessage mpc="http://sender.example.com/mpc123">
+	    <!-- TODO ser ikke behov for mpc, kan utelates ref spec-->
+      <!--<eb:UserMessage mpc="http://sender.example.com/mpc123">-->
+	    <eb:UserMessage>
         <eb:MessageInfo>
           <eb:Timestamp>2006-10-01T10:02:00</eb:Timestamp>
           <eb:MessageId>UUID-5@sender.example.com</eb:MessageId>
@@ -27,11 +29,11 @@
 			  <HeaderVersion>1.0</HeaderVersion>
 			  <Sender>
 				  <!-- orgnr avsender -->
-				  <Identifier Authority="iso6523-actorid-upis">0088:7315458756324</Identifier>
+				  <Identifier Authority="iso6523-actorid-upis">9908:123456789</Identifier>
 			  </Sender>
 			  <Receiver>
 				  <!-- orgnr mottaker, postboks eller print -->
-				  <Identifier Authority="iso6523-actorid-upis">0088:4562458856624</Identifier>
+				  <Identifier Authority="iso6523-actorid-upis">9908:345678901</Identifier>
 			  </Receiver>
 			  <DocumentIdentification>
 				  <!-- Unik identifikator i "Sender" sitt scope -->

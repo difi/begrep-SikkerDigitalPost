@@ -13,8 +13,8 @@ group: SikkerDigitalPost/complexType
 
 h4. Eigenskapar
 
-|_. Identifikator |_. Granularitet |_. Datatype |
-| "Dokument":Dokument | 1..* |  |
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| "Dokument":Dokument | 1..* | "Dokument":Dokument  |
 
 h4. Xml eksempel
 

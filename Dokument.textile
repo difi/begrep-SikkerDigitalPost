@@ -14,7 +14,7 @@ group: SikkerDigitalPost/complexType
 
 h4. Eigenskapar
 
-|_. Identifikator |_. Granularitet |_. Datatype |
+|_. Identifikator |_. Kardinalitet |_. Datatype |
 | href| 1..1 | |
 | media | 1..1 |  |
 | mime | 1..1 |  |
