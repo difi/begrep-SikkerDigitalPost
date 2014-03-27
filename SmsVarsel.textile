@@ -14,9 +14,9 @@ group: SikkerDigitalPost/Melding
 
 h4. Eigenskapar
 
-|_. Identifikator |_. Granularitet |_. Datatype |
+|_. Identifikator |_. Kardinalitet |_. Datatype |
 |varselTekst| 0..1 | xsd:String |
-|"repetisjoner":Repetisjoner | 1..1 | "sdp:Repetisjoner":Repetisjoner |
+|"Repetisjoner":Repetisjoner | 1..1 | "sdp:Repetisjoner":Repetisjoner |
 
 
 h4. Xml eksempel

@@ -13,7 +13,7 @@ group: SikkerDigitalPost
 
 h3. Attributer
 
-|_. Identifikator |_. Granularitet |_. Datatype |
+|_. Identifikator |_. Kardinalitet |_. Datatype |
 | meldingsId | 1..1 | sdp:GUID |
 | "Mottaker":Mottaker | 1..1 | "sdp:Mottaker":Mottaker |
 | "Avsender":Avsender | 1..1 | "sdp:Avsender":Avsender |
