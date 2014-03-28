@@ -37,17 +37,9 @@ ebMS 3.0 er en Oasis standard for kommunikasjonsnøytral utveksling av elektroni
 
 "AS4":http://en.wikipedia.org/wiki/AS4 er en grensesnittprofil som implementerer ebMS 3.0. Profilen er en viderebygging av konseptene i "AS2":http://en.wikipedia.org/wiki/AS2 der man tar i bruk standardene spesifisert i ebMS 3.0.
 
-h3. Identifikatorer
+h3. "Identifikatorer":Identifikatorer
 
-Meldingen har flere identifikatorer. I den grad det er mulig så er det prøvd å benytte åpne og tilgjengelige identifikatorer (for eksempel organisasjonsnummer). Dersom ikke annet er angitt, så er det sterkt anbefalt at man benytter en "GUID":http://en.wikipedia.org/wiki/Guid som verdi for identifikatoren.
-
-* sbdh/InstanceIdentifier - dette er avsenders unike identifikator for postmeldingen (og oppstår før avsender kontakter MSH-komponenten). Skal kunne benyttes som sporingsnummer i feilsøk relatert til forsendelsen. Note: Kan benyttes av MSH som eb/conversationID ved å konkatenere med informasjon om avsender (f.eks. InstanceIdentifier@avsenderorgnr) 
-* eb/MessageId - dette er den unike identifikatoren for et gitt meldingshopp (for eksempel fra avsender's MSH til meldingsformidler's MSH). Satt av MSH.
-* eb/ConversationId - dette er ebMS's bindeledd i mellom de forskjellige meldinghopp. Skal benyttes ved påfølgende meldingsutvekslinger relatert til den opprinnelige meldingen, for eksempel forskjellige typer kvitteringer eller melding om tilbaketrekking.
-
-* sbdh/Sender - organisasjonsnummer til eier av avsenders MSH. Merk at denne kan avvike fra spMelding/Avsender.
-* sbdh/Reciever - organisasjonsnummer til endelig mottaker av postmelding. P.t. ett av tre, Digipost, eBoks eller utskriftstjeneste. Hentes fra Oppslagstjenesten.
-* spMelding/Avsender - organisasjonsnummer til den som eier dokumentet/meldingen som blir sendt.
+"Informasjon om Aktøridentifikatorer og Meldingsidentifikatorer":Identifikatorer
 
 h3. Illustrasjon meldingsstruktur 
 
