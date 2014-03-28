@@ -1,0 +1,54 @@
+---
+layout: default
+title: Sikker digital post - Aktører og Identifikatorer
+headtitle: Sikker digital post - Aktører og Identifikatorer
+---
+
+h2. Aktører
+
+Aktørene kan visualiseres slik:
+
+"!{width:90%}aktorer.jpg!":aktorer.jpg
+
+Overføringen av postforsendelser fra avsender til mottaker innvolverer følgende parter/komponenter:
+
+
+
+{background:#ddd}.|_. Aktør |_. Beskrivelse |
+|_. Dataansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten ovenfor Innbygger. |
+{background:#ddd}.| Ansvarlig enhet | Er en mulig aktør som er en underenhet hos Dataansvarlig som skal stå som Avsender for posten ovenfor Innbygger. |
+|_. Databehandler  | Avsender eller avtalepart hos avsender, ansvarlig for pakking og sikring av postforsendelser |
+{background:#ddd}.| Teknisk Avsender | Er en mulig aktør som gjennomfører den tekniske forsendelsen av posten på veiene av en databehandler. |
+|_. Meldingsformidlerleverandør | Ansvarlig for formidling, sporing og rapportering av postforsendelser |
+{background:#ddd}.|_. Postkasseleverandør | ansvarlig for lagring av post på vegne av innbygger, samt varsling når det kommer nye poster til innbygger. |
+|_. Mottaker | Mottaker av postforsendelsen, en Innbygger | 
+
+*Ansvarlig enhet* og *Teknisk Avsender* er kun brukt ved behov i spesielle situasjoner. 
+
+- *Ansvarlig enhet* brukes av *Dataansvarlig* virksomheter med et stort virkeområder som ønsker å differensiere Avsendere til Innbygger avhengig av de interne enhetene som sender posten. 
+Eksempel: Dataansvarlig er Nav og Ansvarlig enhet er NAV Hjelpemiddelsentral Oslo og Akershus_.
+
+- *Teknisk Avsender* brukes i de tilfeller der *Databehandler* har en ekstern ebMS 3.0 Message Service Handler (MSH - meldingshåndterer) leverandør.
+
+
+
+h2. Aktøridentifikatorer
+
+Aktørene identifiseres både i forskjellige deler av postforsendelsen og med forskjellige identifikatorer.
+Her er en oversikt over identifikatorene som er bruk i Digital Postforsendelse og hvilken aktør de peker på i forbindelse med Digital Postforsendelse fra Offentlig Virksomhet til Innbygger.
+Ved kvitteringer/meldinger fra Postkasseleverandør eller meldingsformidlerleverandør tilbake til Offentlig virksomhet er identifikatorene  for Sender og Receiver snudd. 
+
+|_. Term |_. Kardinalitet |_. Aktør |_. Datatype |
+{background:#ddd}.| "StandardBusinessDocument.Melding.Mottaker.personidentifikator":/Felles/personidentifikator  | 1..1 | *"Mottaker":Mottaker* | "personidentifikator":/Felles/personidentifikator |
+| "StandardBusinessDocument.Melding.Avsender.identifier":/Felles/virksomhetsIdentifikator | 1..1 | *Dataansvarlig*| "organisasjonsnummer":/Felles/virksomhetsIdentifikator |
+{background:#ddd}.| "StandardBusinessDocument.Melding.Avsender.avsenderidentifikator":/Felles/avsenderidentifikator | 0..1 | *Ansvarlig enhet*  | "xsd:String":/Felles/avsenderidentifikator |
+| "StandardBusinessDocument.Header.Sender.Identifier":/Felles/virksomhetsIdentifikator | 1..1 | *Databehandler* | "organisasjonsnummer":/Felles/virksomhetsIdentifikator |
+{background:#ddd}.| "StandardBusinessDocument.Header.Receiver.Identifier":/Felles/virksomhetsIdentifikator | 1..1 | *Postkasseleverandør*| "organisasjonsnummer":/Felles/virksomhetsIdentifikator |
+| "ebMessaging.PartyInfo.From.PartyId":/Felles/virksomhetsIdentifikator | 1..1 | *Databehandler* eller *Teknisk Avsender* | "organisasjonsnummer":/Felles/virksomhetsIdentifikator |
+{background:#ddd}.| Virksomhetssertifikat | 1..1 | *Databehandler* | X509 med et "organisasjonsnummer":/Felles/virksomhetsIdentifikator |
+
+Aktørene og identifikatorene kan illustreres på følgende måte:
+(Illustrasjonen viser Identifikatoren brukt i forbindelse med Digital Postforsendelse fra Offentlig Virksomhet til Innbygger.
+
+"!{width:100%}aktorer_identifikatorer.jpg!":aktorer_identifikatorer.jpg
+

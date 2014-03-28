@@ -5,26 +5,28 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/Melding
 ---
 
-- Identifikator := http://begrep.difi.no/SikkerDigialPost/{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Juridisk organisasjon/entitet som er ansvarlig for innholdet i den digitale posten,
+- Definisjon := Juridisk organisasjon/entitet som er Dataansvarlig for innholdet i den digitale posten,
 - Datatype := complexType
 - Kilde := DIFI
-- Kommentar := Avsender er den som er ansvarlig for innholdet i forsendelsen. Kan være forskjellige frå teknisk avsender (for eksempel kan SvarUT være teknisk avsender på vegne av en kommune)
+- Kommentar := Avsender er den som er ansvarlig for innholdet i forsendelsen. Kan være forskjellige frå Databehandler og teknisk avsender (for eksempel kan SvarUT være teknisk avsender på vegne av en kommune)
 
 h4. Egenskaper
 
 |_. Identifikator |_. Term |_. Kardinalitet |
-| "Identifikator":/Felles/virksomhetsIdentifikator | Identifikator | 1-1 |
-| "ehfFakturaRef": | xs:string | 1-1 |
+| "identifier":/Felles/virksomhetsidentifikator | Identifikator i henhold til iso6523-actorid-upis | 1..1 |
+| "avsenderidentifikator":/Felles/avsenderidentifikator | xs:string | 0..1 |
+| ehfFakturaRef | xs:string | 0..1 |
 
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
-  <sdp:Avsender>
-    <sdp:Identifikator>2q342134fdasdfewa453q5#dsavasg</sdp:Identifikator>
-    <sdp:ehfFakturaRef>min faktura referanse</sdp:ehfFakturaRef>
-  </sdp:Avsender>
+	<avsender>
+		<identifier authority="iso6523-actorid-upis">9908:123456789</identifier>
+		<avsenderidentifikator>12345</avsenderidentifikator>
+		<fakturaKonto>ØK1</fakturaKonto>
+	</avsender>
 </pre>
 
 

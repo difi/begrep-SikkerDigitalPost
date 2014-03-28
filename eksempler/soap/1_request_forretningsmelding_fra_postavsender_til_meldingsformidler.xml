@@ -95,11 +95,10 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
 				    <Identifier Authority="iso6523-actorid-upis">9908:345678901</Identifier>
 			    </Receiver>
 			    <DocumentIdentification>
-				    <!-- Unik identifikator i "Sender" sitt scope -->
-				    <Standard>urn:no:kommune:leikanger:sdp:barnehage:1.0</Standard>
+				    <Standard>urn:no:difi:sdp:1.0</Standard>
 				    <TypeVersion>1.0</TypeVersion>
-				    <InstanceIdentifier>2014/001</InstanceIdentifier>
 				    <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
+					<InstanceIdentifier>2014/001</InstanceIdentifier>
 				    <Type>Sikkerpost</Type>
 				    <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
 			    </DocumentIdentification>

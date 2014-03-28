@@ -5,17 +5,15 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/Melding
 ---
 
-h3. Mottaker
-
-- Identifikator := http://begrep.difi.no/SikkerDigialPost/{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
 - Definisjon := Person som er mottaker av en sikker digital post
 - Kilde := DIFI
-- Kommentar := Anbefalingen er å bruke hele Person-xml'en slik som den blir returnert fra oppslagstjenesten når det er snakk om digital formidling
+- Kommentar := Skjema i sikker digital post støtter at Mottaker kan være en "Person":Person eller en virksomhet.
 
 h4. Egenskaper
 
 |_. Identifikator |_. Term |_. Kardinalitet |
 | "Person":Person | "Person":Person | 0..1 |
-| "PostAdresse":PostAdresse | Postadresse, adresse | 0..1 |
+| virksomhet | virksomhet | 0..1 |
 

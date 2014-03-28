@@ -1,0 +1,27 @@
+---
+layout: default
+title: Ekspedere Post
+headtitle: Sikker digital post
+---
+
+utdrag fra "Arkitekturbeskrivelse for Sikker Digital Posttjeneste v 1.0":ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf datert 16.08.2013
+
+h2. Detaljering av forretningsprosessen Ekspedere post
+
+Ekspedere post består av følgende steg:
+
+# Motta informasjonen som skal distribueres til mottaker som post. Denne informasjonen produseres i f.eks. fag-, sak- eller arkivsystem
+# Adressere post identifiserer mottaker og henter mottakers kontaktinformasjon ved bruk av Oppslagstjenesten. Kontaktinformasjon legges til forsendelsen og består av mottakers:
+#* reservasjonsstatus
+#* postkasseadresse
+#* varslingsadresse
+#* sertifikatinformasjon (enten postkasseleverandørens eller postmottakerens sertifikat)
+#* postadresse (når mottaker har reservert seg eller ikke har en digital postkasse)
+# Klargjøre post resulterer i en klargjort digital post til mottaker. Prosessen:
+#* tilpasser postforsendelsen til Sikker digital posttjenestens standardformater angitt av Valideringstjenesten
+#* sikrer postforsendelsen mot uautorisert innsyn ved å kryptere posten med sertifikatinformasjon fra Oppslagstjenesten. Reglene for konfidensialitetssikring av postforsendelsen er beskrevet i Sikkerhetstjenestene
+#* signerer postforsendelsen med Avsenders private nøkkel. Dette er også beskrevet i Sikkerhetstjenestene
+# Sende post sender posten videre til Formidlertjenesten
+# Prosessen Ekspedere post avsluttes ved at utgående post loggføres i Ekspederingstjenestens transaksjonslogg. Posttjenestens krav til denne loggen er beskrevet i Sporingstjenesten
+
+"!{width:80%}ekspederepost.png!":ekspederepost.png

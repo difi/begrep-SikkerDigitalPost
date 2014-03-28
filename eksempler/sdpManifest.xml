@@ -7,23 +7,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 sdp-manifest.xsd ">
 
-  <meldingsId>7122e25b-1870-4183-9889-d7a11dde3bf2</meldingsId>
-  
+ 
   <mottaker>
     <person>
-      <tns:personidentifikator>01234567890</tns:personidentifikator>
-      <tns:reservasjon>NEI</tns:reservasjon>
-      <tns:status>AKTIV</tns:status>
-      <tns:beskrivelse>...</tns:beskrivelse>
-      <tns:Kontaktinformasjon>
-        <tns:Mobiltelefonnummer sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">12345678</tns:Mobiltelefonnummer>
-        <tns:Epostadresse sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">ola@nordmann.no</tns:Epostadresse>
-      </tns:Kontaktinformasjon>
-      <tns:SikkerDigitalPostAdresse>
-        <tns:postkasseadresse>ola.nordmann#0ABC</tns:postkasseadresse>
-        <tns:postkasseleverandoerAdresse>984661185</tns:postkasseleverandoerAdresse>
-      </tns:SikkerDigitalPostAdresse>
-      <tns:X509Certificate>tns:X509Certificate</tns:X509Certificate>
+      ....
     </person>
   </mottaker>
   

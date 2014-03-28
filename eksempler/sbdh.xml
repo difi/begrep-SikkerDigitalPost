@@ -10,7 +10,7 @@
 		<Identifier Authority="iso6523-actorid-upis">9908:996460320</Identifier>
 	</Receiver>
 	<DocumentIdentification> <!-- Unik identifikator i "Sender" sitt scope -->
-		<Standard>urn:no:kommune:leikanger:sdp:barnehage:1.0</Standard>
+		<Standard>urn:no:difi.sdp:1.0</Standard>
 		<TypeVersion>1.0</TypeVersion>
 		<InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</InstanceIdentifier> <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
 		<Type>Sikkerpost</Type>

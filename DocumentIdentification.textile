@@ -1,0 +1,76 @@
+---
+layout: default
+title: DocumentIdentification
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := inneholder identifikasjon om dokumentet
+- Kilde := "GS1":http://www.gs1.org/docs/gsmp/xml/sbdh/CEFACT_SBDH_TS_version1.3.pdf
+
+h3. Attributer
+
+{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Verdi |
+| Standard | 1..1 | xs:string | "urn:no:difi.sdp:1.0" |
+{background:#ddd}.| TypeVersion | 1..1 | xs:string | "1.0" |
+| InstanceIdentifier | 1..1 | xs:string | Unik identifikator for forsendelsen. Opprettet av Databehandler. Anbefalt format: GUID |
+{background:#ddd}.| Type | 1..1 | xs:string | Forretningsmeldingstype, se kodeverk |
+| MultipleType | 0..0 | xs:boolean | brukes ikke |
+{background:#ddd}.| CreationDateAndTime | 1..1 | xs:dateTime | Tidspunkt for oppretting av "Standard Business Document":StandardBusinessDocument |
+
+
+h3. Kodeverk: Type
+
+Følgende Forretningsmeldinger er definert:
+
+{background:#ddd}.|_. Type |_. Beskrivelse |
+| DigitalPost | "DigitalPost":DigitalPostMelding |
+{background:#ddd}.| PrioritertDigitalPost | "PrioritertDigitalPost":DigitalPostMelding |
+| Åpning | "Åpning":AapningMelding |
+{background:#ddd}.| Varsling | "Varsling":VarslingMelding |
+| Feil | "Feil":FeilMelding |
+
+Type styrer hvilken Melding som ligger i "Standard Business Document":StandardBusinessDocument og hvilke forretningskvitteringer som eventuelt vil returneres.
+
+h4. xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+
+	<DocumentIdentification>
+		<Standard>urn:no:difi.sdp:1.0</Standard>
+		<TypeVersion>1.0</TypeVersion>
+		<InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</InstanceIdentifier> <!-- Dette er den reelle unike identifikatoren i SDB -->
+		<Type>Sikkerpost</Type>
+		<CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
+	</DocumentIdentification>
+
+</pre>
+
+h4. XSD
+
+<pre class="brush: xml; toolbar: false">
+
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+     targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+     xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+     elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <xs:complexType name="DocumentIdentification">
+    <xs:sequence>
+      <xs:element name="Standard" type="xs:string"/>
+      <xs:element name="TypeVersion" type="xs:string"/>
+      <xs:element name="InstanceIdentifier" type="xs:string"/>
+      <xs:element name="Type" type="xs:string"/>
+      <xs:element name="MultipleType" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="CreationDateAndTime" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
+
+
+
+</pre>
