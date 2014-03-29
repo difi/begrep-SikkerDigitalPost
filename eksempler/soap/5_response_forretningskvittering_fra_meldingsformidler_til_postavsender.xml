@@ -3,7 +3,7 @@
     <wsse:Security S12:mustUnderstand="true">
       <!-- TODO  -->
     </wsse:Security>
-    <eb:Messaging S12:mustUnderstand="1">
+    <eb:Messaging S12:mustUnderstand="true">
 	    <!-- TODO ser ikke behov for mpc, kan utelates ref spec-->
       <!--<eb:UserMessage mpc="http://sender.example.com/mpc123">-->
 	    <eb:UserMessage>
@@ -13,16 +13,30 @@
           <eb:RefToMessageId>UUID-4@receiver.example.com</eb:RefToMessageId>
         </eb:MessageInfo>
         <eb:PartyInfo>
+	        <eb:From>
+		        <eb:PartyId>partyId</eb:PartyId>
+		        <eb:Role>role</eb:Role>
+	        </eb:From>
+	        <eb:To>
+		        <eb:PartyId>partyId</eb:PartyId>
+		        <eb:Role>role</eb:Role>
+	        </eb:To>
           <!-- TODO -->
         </eb:PartyInfo>
-        <eb:CollaborationInfo/>
+        <eb:CollaborationInfo>
+	        <eb:AgreementRef>agreement</eb:AgreementRef>
+	        <eb:Service>service</eb:Service>
+	        <eb:Action>action</eb:Action>
+	        <eb:ConversationId>GUID-Conversation-ID</eb:ConversationId>
+	      </eb:CollaborationInfo>
         <eb:PayloadInfo>
+	        <eb:PartInfo href="#soapBody"/>
           <!-- TODO -->
         </eb:PayloadInfo>
       </eb:UserMessage>
     </eb:Messaging>
   </S12:Header>
-  <S12:Body>
+  <S12:Body xml:id="soapBody">
 	  <!-- TODO er dette ok -->
 	  <StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
 		  <StandardBusinessDocumentHeader>
