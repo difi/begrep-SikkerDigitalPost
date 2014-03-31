@@ -15,9 +15,11 @@ Overføringen av postforsendelser fra avsender til mottaker innvolverer følgend
 
 
 {background:#ddd}.|_. Aktør |_. Beskrivelse |
-|_. Dataansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten ovenfor Innbygger. |
-{background:#ddd}.| Ansvarlig enhet | Er en mulig aktør som er en underenhet hos Dataansvarlig som skal stå som Avsender for posten ovenfor Innbygger. |
-|_. Databehandler  | Avsender eller avtalepart hos avsender, ansvarlig for pakking og sikring av postforsendelser |
+|_. Behandlingsansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten ovenfor Innbygger.
+BØR signere "Standard Business Document":StandardBusinessDocument og "Dokumentpakke (ASiC)":ASiC |
+{background:#ddd}.| Ansvarlig enhet | Er en mulig aktør som er en underenhet hos Behandlingsansvarlig som skal stå som Avsender for posten ovenfor Innbygger. |
+|_. Databehandler  | Avsender eller avtalepart hos avsender, ansvarlig for pakking og sikring av postforsendelser.
+KAN signere "Standard Business Document":StandardBusinessDocument og "Dokumentpakke (ASiC)":ASiC |
 {background:#ddd}.| Teknisk Avsender | Er en mulig aktør som gjennomfører den tekniske forsendelsen av posten på veiene av en databehandler. |
 |_. Meldingsformidlerleverandør | Ansvarlig for formidling, sporing og rapportering av postforsendelser |
 {background:#ddd}.|_. Postkasseleverandør | ansvarlig for lagring av post på vegne av innbygger, samt varsling når det kommer nye poster til innbygger. |
@@ -25,8 +27,8 @@ Overføringen av postforsendelser fra avsender til mottaker innvolverer følgend
 
 *Ansvarlig enhet* og *Teknisk Avsender* er kun brukt ved behov i spesielle situasjoner. 
 
-- *Ansvarlig enhet* brukes av *Dataansvarlig* virksomheter med et stort virkeområder som ønsker å differensiere Avsendere til Innbygger avhengig av de interne enhetene som sender posten. 
-Eksempel: Dataansvarlig er Nav og Ansvarlig enhet er NAV Hjelpemiddelsentral Oslo og Akershus_.
+- *Ansvarlig enhet* brukes av *Behandlingsansvarlig* virksomheter med et stort virkeområder som ønsker å differensiere Avsendere til Innbygger avhengig av de interne enhetene som sender posten. 
+Eksempel: Behandlingsansvarlig er Nav og Ansvarlig enhet er NAV Hjelpemiddelsentral Oslo og Akershus_.
 
 - *Teknisk Avsender* brukes i de tilfeller der *Databehandler* har en ekstern ebMS 3.0 Message Service Handler (MSH - meldingshåndterer) leverandør.
 
@@ -40,7 +42,7 @@ Ved kvitteringer/meldinger fra Postkasseleverandør eller meldingsformidlerlever
 
 |_. Term |_. Kardinalitet |_. Aktør |_. Datatype |
 {background:#ddd}.| "StandardBusinessDocument.Melding.Mottaker.personidentifikator":/Felles/personidentifikator  | 1..1 | *"Mottaker":Mottaker* | "personidentifikator":/Felles/personidentifikator |
-| "StandardBusinessDocument.Melding.Avsender.identifier":/Felles/virksomhetsIdentifikator | 1..1 | *Dataansvarlig*| "organisasjonsnummer":/Felles/virksomhetsIdentifikator |
+| "StandardBusinessDocument.Melding.Avsender.identifier":/Felles/virksomhetsIdentifikator | 1..1 | *Behandlingsansvarlig*| "organisasjonsnummer":/Felles/virksomhetsIdentifikator |
 {background:#ddd}.| "StandardBusinessDocument.Melding.Avsender.avsenderidentifikator":/Felles/avsenderidentifikator | 0..1 | *Ansvarlig enhet*  | "xsd:String":/Felles/avsenderidentifikator |
 | "StandardBusinessDocument.Header.Sender.Identifier":/Felles/virksomhetsIdentifikator | 1..1 | *Databehandler* | "organisasjonsnummer":/Felles/virksomhetsIdentifikator |
 {background:#ddd}.| "StandardBusinessDocument.Header.Receiver.Identifier":/Felles/virksomhetsIdentifikator | 1..1 | *Postkasseleverandør*| "organisasjonsnummer":/Felles/virksomhetsIdentifikator |

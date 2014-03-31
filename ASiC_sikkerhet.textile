@@ -31,6 +31,8 @@ Hoveddokumentet og vedleggene pakkes sammen i en dokumentpakke sammen med noe me
 
 h3. Signatur i dokumentpakken for sikker digital post
 
+Signaturene i dokumentpakken BØR være signert av "Behandlingsansvarlig":AktorIdentifikatorer, men KAN signeres av "Databehandler":AktorIdentifikatorer.
+
 Signaturen skal være i henhold til [3] med basisprofilen definert i [4] (B-Level Conformance). Ytterlige begrensninger følger nedenfor:
 
 [4] krav 5.1 «Algorithm requirements». Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. Fingeravtrykksalgoritmen i CertDigest skal være "http://www.w3.org/2000/09/xmldsig#sha1":http://www.w3.org/2000/09/xmldsig#sha1.. 

@@ -16,6 +16,8 @@ h3. Attributer
 | Forretningsmelding | 1..1 | Melding definert i "StandardBusinessDocumentHeader":StandardBusinessDocumentHeader  |
 {background:#ddd}.| Signatur | 1..1 | ds:Signature |
 
+h3. Forretningsmeldingen
+
 Forretningsmeldingen er definert i "DocumentIdentification":DocumentIdentification og er en av følgende: 
 
 {background:#ddd}.|_. Type |_. Beskrivelse |
@@ -24,3 +26,8 @@ Forretningsmeldingen er definert i "DocumentIdentification":DocumentIdentificati
 | Åpning | "Åpning":AapningMelding |
 {background:#ddd}.| Varsling | "Varsling":VarslingMelding |
 | Feil | "Feil":FeilMelding |
+
+h3. Signatur
+
+Signatur av Forretningsmeldingen og signatur av "StandardBusinessDocumentHeader":StandardBusinessDocumentHeader.
+Disse BØR være signert av "Behandlingsansvarlig":AktorIdentifikatorer, men KAN signeres av "Databehandler":AktorIdentifikatorer.
