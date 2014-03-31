@@ -45,7 +45,8 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
             </ds:Signature>
         </wsse:Security>
         <eb:Messaging S12:mustUnderstand="true" id="ebmsHeader" wsu:Id="id-DE969A773C0E48851A139204210260210" xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xsi:schemaLocation="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/ http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd">
-            <eb:UserMessage>
+            <!--TODO definerer kanal for pull requester -->
+	          <eb:UserMessage mpc="urn:sdp:avsenderid:12345">
                 <eb:MessageInfo>
                     <eb:Timestamp>2014-02-10T14:21:42.520Z</eb:Timestamp>
                     <eb:MessageId>60a3ade5-84d1-46d7-b2cc-5f4fa15f41e5</eb:MessageId>
@@ -65,18 +66,18 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
                     </eb:To>
                 </eb:PartyInfo>
                 <eb:CollaborationInfo>
-	                  <!-- TODO ser ikke behov for denne - kan utelates ref spec-->
-                    <!-- <eb:AgreementRef>uri:som:identifiserar:samarbeidsprotokollavtalen</eb:AgreementRef> -->
+	                  <!-- TODO lik for alle - kan utelates ref spec-->
+                    <eb:AgreementRef>uri:som:identifiserar:samarbeidsprotokollavtalen</eb:AgreementRef>
 	                  <!-- TODO default AS4 service -->
                     <eb:Service>http://docs.oasis-open.org/ebxml-msg/as4/200902/service</eb:Service>
 	                  <!-- TODO default AS4 action -->
                     <eb:Action>http://docs.oasis-open.org/ebxml-msg/as4/200902/action</eb:Action>
 	                  <!-- TODO detaljere innholdet av denne -->
-                    <eb:ConversationId>2014-0001</eb:ConversationId>
+                    <eb:ConversationId>GUID-Conversation-ID</eb:ConversationId>
                 </eb:CollaborationInfo>
                 <eb:PayloadInfo>
                     <eb:PartInfo href="#soapBody"/>
-                    <!-- TODO standardisere cid -->
+                    <!-- TODO standardisere cid ? -->
                     <eb:PartInfo href="cid:asic"/>
 	              </eb:PayloadInfo>
             </eb:UserMessage>
@@ -98,7 +99,7 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
 				    <Standard>urn:no:difi:sdp:1.0</Standard>
 				    <TypeVersion>1.0</TypeVersion>
 				    <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
-					<InstanceIdentifier>2014/001</InstanceIdentifier>
+					<InstanceIdentifier>GUID-Conversation-ID</InstanceIdentifier>
 				    <Type>Sikkerpost</Type>
 				    <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
 			    </DocumentIdentification>

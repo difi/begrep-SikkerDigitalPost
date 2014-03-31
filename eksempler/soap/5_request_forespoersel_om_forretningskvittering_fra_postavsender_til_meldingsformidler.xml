@@ -9,14 +9,11 @@
           <eb:Timestamp>2006-10-01T10:01:00</eb:Timestamp>
           <eb:MessageId>UUID-4@receiver.example.com</eb:MessageId>
         </eb:MessageInfo>
-	      <!-- TODO ser ikke behov for mpc -->
-        <!-- <eb:PullRequest mpc="http://sender.example.com/mpc123"/> -->
-	      <eb:PullRequest/>
+	      <!-- TODO samsvarer med mpc angitt i første user message -->
+	      <!-- Teknisk avsenders tilgang til mpc verifiseres av meldingsformidler-->
+	      <eb:PullRequest mpc="urn:sdp:avsenderid:12345"/>
       </eb:SignalMessage>
     </eb:Messaging>
   </S12:Header>
-  <S12:Body>
-	  <!-- TODO hvordan identifisere avsender -->
-	  <!-- Kan eventuelt detaljere PullRequest -->
-	</S12:Body>
+  <S12:Body/>
 </S12:Envelope>

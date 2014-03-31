@@ -4,9 +4,7 @@
       <!-- TODO  -->
     </wsse:Security>
     <eb:Messaging S12:mustUnderstand="true">
-	    <!-- TODO ser ikke behov for mpc, kan utelates ref spec-->
-      <!--<eb:UserMessage mpc="http://sender.example.com/mpc123">-->
-	    <eb:UserMessage>
+	    <eb:UserMessage mpc="urn:sdp:avsenderid:12345">
         <eb:MessageInfo>
           <eb:Timestamp>2006-10-01T10:02:00</eb:Timestamp>
           <eb:MessageId>UUID-5@sender.example.com</eb:MessageId>
@@ -21,23 +19,20 @@
 		        <eb:PartyId>partyId</eb:PartyId>
 		        <eb:Role>role</eb:Role>
 	        </eb:To>
-          <!-- TODO -->
         </eb:PartyInfo>
         <eb:CollaborationInfo>
 	        <eb:AgreementRef>agreement</eb:AgreementRef>
-	        <eb:Service>service</eb:Service>
-	        <eb:Action>action</eb:Action>
+	        <eb:Service>http://docs.oasis-open.org/ebxml-msg/as4/200902/service</eb:Service>
+	        <eb:Action>http://docs.oasis-open.org/ebxml-msg/as4/200902/action</eb:Action>
 	        <eb:ConversationId>GUID-Conversation-ID</eb:ConversationId>
 	      </eb:CollaborationInfo>
         <eb:PayloadInfo>
 	        <eb:PartInfo href="#soapBody"/>
-          <!-- TODO -->
         </eb:PayloadInfo>
       </eb:UserMessage>
     </eb:Messaging>
   </S12:Header>
   <S12:Body xml:id="soapBody">
-	  <!-- TODO er dette ok -->
 	  <StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
 		  <StandardBusinessDocumentHeader>
 			  <HeaderVersion>1.0</HeaderVersion>
@@ -53,8 +48,8 @@
 				  <!-- Unik identifikator i "Sender" sitt scope -->
 				  <Standard>urn:no:kommune:leikanger:sdp:barnehage:1.0</Standard>
 				  <TypeVersion>1.0</TypeVersion>
-				  <InstanceIdentifier>2014/001</InstanceIdentifier>
 				  <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
+				  <InstanceIdentifier>GUID-Conversation-ID</InstanceIdentifier>
 				  <Type>Sikkerpost</Type>
 				  <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
 			  </DocumentIdentification>
