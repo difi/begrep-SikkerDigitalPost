@@ -1,0 +1,26 @@
+---
+layout: default
+title: Melding
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Standard Forretningsmelding brukt i forsendelsen av digital post. En inpakning for de forskjellige forretningsmeldingen.
+- Kilde := DIFI
+
+h3. Attributer
+
+{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
+| Forretningsmelding | 1..1 | Melding definert i "StandardBusinessDocumentHeader":StandardBusinessDocumentHeader  |
+{background:#ddd}.| Signatur | 1..1 | ds:Signature |
+
+Forretningsmeldingen er definert i "DocumentIdentification":DocumentIdentification og er en av følgende: 
+
+{background:#ddd}.|_. Type |_. Beskrivelse |
+| DigitalPost | "DigitalPost":DigitalPostMelding |
+{background:#ddd}.| PrioritertDigitalPost | "PrioritertDigitalPost":DigitalPostMelding |
+| Åpning | "Åpning":AapningMelding |
+{background:#ddd}.| Varsling | "Varsling":VarslingMelding |
+| Feil | "Feil":FeilMelding |
