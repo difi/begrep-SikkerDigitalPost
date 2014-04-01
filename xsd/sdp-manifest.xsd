@@ -19,7 +19,9 @@
 
 	<xsd:complexType name="Manifest">
 		<xsd:sequence>
+			<!--
 			<xsd:element name="meldingsId" type="sdp:GUID" minOccurs="0" maxOccurs="1"/>
+			-->
 			<xsd:element name="mottaker" type="sdp:Mottaker" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="avsender" type="sdp:Avsender" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="hoveddokument" type="sdp:Dokument" minOccurs="1" maxOccurs="1"/>
