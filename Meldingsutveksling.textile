@@ -28,7 +28,7 @@ Parametere for MSH oppsett mellom avsender og MF
 h5. Generelle parametere
 
 |_. P-Mode |_. Beskrivelse |_. Verdi |
-| PMode.ID | Unik identifikator for paramtersettet | "FormidleDigitalPostForsendelse" |
+| PMode.ID | Unik identifikator for paramtersettet | "FormidleDigitalPostForsendelse" / "Kvitteringsforespørsel" |
 | PMode.Agreement | Unik identifikator for samarbeidsprotokollen | "http://begrep.difi.no/SikkerDigitalPost/Meldingsutveksling" |
 | PMode.MEP | Message Exchange Pattern | "http://www.oasis-open.org/committees/ebxml-msg/one-way" |
 | PMode.MEPbinding | Retning på kommunikasjon, push eller pull | "http://www.oasis-open.org/committees/ebxml-msg/push" |
@@ -73,15 +73,15 @@ h5. Sikkerhet
 | PMode<notextile>[1]</notextile>.Security.X509.Signature.Certificate | support required. | |
 | PMode<notextile>[1]</notextile>.Security.X509.Signature.HashFunction |  support required. | |
 | PMode<notextile>[1]</notextile>.Security.X509.Signature.Algorithm | support required. | |
-| PMode<notextile>[1]</notextile>.Security. X509.Encryption.Encrypt | support not required. | |
-| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Certificate | support not required. | |
-| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Algorithm | support not required. | |
-| PMode<notextile>[1]</notextile>.Security.X509.Encryption.MinimumStrength | support not required | |
-| PMode<notextile>[1]</notextile>.Security.UsernameToken.username | support required. | |
-| PMode<notextile>[1]</notextile>.Security.UsernameToken.password | support required. | |
-| PMode<notextile>[1]</notextile>.Security.UsernameToken.Digest | support required (true/false) | |
-| PMode<notextile>[1]</notextile>.Security.UsernameToken.Nonce |  support not required | |
-| PMode<notextile>[1]</notextile>.Security.UsernameToken.Created | support required. | |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Encrypt | support not required. | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Certificate | support not required. | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Algorithm | support not required. |- ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.MinimumStrength | support not required | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.username | support required. | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.password | support required. | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.Digest | support required (true/false) |- ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.Nonce |  support not required | - ikke relevant -|
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.Created | support required. |- ikke relevant - |
 | PMode<notextile>[1]</notextile>.Security.PModeAuthorize | support required (true/false) | |
 | PMode<notextile>[1]</notextile>.Security.SendReceipt | support required (true/false) | |
 | Pmode<notextile>[1]</notextile>.Security.SendReceipt.ReplyPattern | support required for “response”if PMode.MEPbinding is "push", and for "callback" if PMode.MEPbinding is "pull". | |
