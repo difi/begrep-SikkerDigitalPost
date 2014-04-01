@@ -15,14 +15,14 @@ Overføringen av postforsendelser fra avsender til mottaker innvolverer følgend
 
 
 {background:#ddd}.|_. Aktør |_. Beskrivelse |
-|_. Behandlingsansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten ovenfor Innbygger.
+|_. Behandlingsansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten overfor Innbygger.
 BØR signere "Standard Business Document":StandardBusinessDocument og "Dokumentpakke (ASiC)":ASiC |
-{background:#ddd}.| Ansvarlig enhet | Er en mulig aktør som er en underenhet hos Behandlingsansvarlig som skal stå som Avsender for posten ovenfor Innbygger. |
+{background:#ddd}.| Ansvarlig enhet | Er en mulig aktør som er en underenhet hos Behandlingsansvarlig som skal stå som Avsender for posten overfor Innbygger. |
 |_. Databehandler  | Avsender eller avtalepart hos avsender, ansvarlig for pakking og sikring av postforsendelser.
 KAN signere "Standard Business Document":StandardBusinessDocument og "Dokumentpakke (ASiC)":ASiC |
-{background:#ddd}.| Teknisk Avsender | Er en mulig aktør som gjennomfører den tekniske forsendelsen av posten på veiene av en databehandler. |
+{background:#ddd}.| Teknisk Avsender | Er en mulig aktør som gjennomfører den tekniske forsendelsen av posten på vegne av en databehandler. |
 |_. Meldingsformidlerleverandør | Ansvarlig for formidling, sporing og rapportering av postforsendelser |
-{background:#ddd}.|_. Postkasseleverandør | ansvarlig for lagring av post på vegne av innbygger, samt varsling når det kommer nye poster til innbygger. |
+{background:#ddd}.|_. Postkasseleverandør | Ansvarlig for å tilgjengeliggjøre og oppbevare post til innbygger, samt å varsle innbygger når det er kommet ny post. |
 |_. Mottaker | Mottaker av postforsendelsen, en Innbygger | 
 
 *Ansvarlig enhet* og *Teknisk Avsender* er kun brukt ved behov i spesielle situasjoner. 
