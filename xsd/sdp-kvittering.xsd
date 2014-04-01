@@ -1,51 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema version="1.0" targetNamespace="http://begrep.difi.no/sdp/schema_v10"
+	xmlns="http://begrep.difi.no/sdp/schema_v10"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:tns="http://begrep.difi.no"
-	xmlns:sdp="http://begrep.difi.no/sdp/schema_v10" 
-	xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
-	xmlns:enc="http://www.w3.org/2001/04/xmlenc#"
 	elementFormDefault="qualified">
 
 	<xsd:include schemaLocation="sdp-melding.xsd"/>
-	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
-	<xsd:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="xenc-schema.xsd"/> 
-	<xsd:import namespace="http://begrep.difi.no" schemaLocation=""/>
-	
 
-	<xsd:element name="kvittering" type="sdp:Kvittering"/>
+
+	<xsd:element name="kvittering" type="Kvittering"/>
 
 
 	<xsd:complexType name="Kvittering">
-		
 		<xsd:sequence>
-			<xsd:element name="refMeldingsId" type="sdp:GUID" minOccurs="1" maxOccurs="1"/>
+			<!--
+				<xsd:element name="refMeldingsId" type="GUID" minOccurs="1" maxOccurs="1"/>
+			-->
 			<xsd:choice>
-				<xsd:element name="suksess" type="sdp:Suksess"></xsd:element>
-				<xsd:element name="feil" type="sdp:Feil"></xsd:element>
+				<xsd:element name="levertTilPostkasse" type="LevertTilPostkasse"/>
+				<xsd:element name="aapnetAvMottaker" type="AapnetAvMottaker"/>
+				<xsd:element name="avvistAvMottaker" type="AvvistAvMottaker"/>
+				<xsd:element name="mottakerVarselFeilet" type="MottakerVarselFeilet"/>
+				<xsd:element name="feil" type="Feil"/>
 			</xsd:choice>
 		</xsd:sequence>
 	</xsd:complexType>
-	
-	<xsd:complexType name="Suksess">
+
+
+	<xsd:complexType name="LevertTilPostkasse">
 		<!--  TODO: her kan vi vurdere å inkludere tid_levert, e.l. -->
 	</xsd:complexType>
 
+
 	<xsd:complexType name="Feil">
 		<xsd:sequence>
-			<xsd:element name="feilinformasjon" minOccurs="0" maxOccurs="1">
+			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="AapnetAvMottaker">
+		<!--  TODO: her kan vi vurdere å inkludere tid_åpnet, e.l. -->
+	</xsd:complexType>
+
+
+	<xsd:complexType name="AvvistAvMottaker">
+		<!--  TODO: trenger vi denne? -->
+	</xsd:complexType>
+
+
+	<!--
+	<xsd:complexType name="MottakerVarselSendt">
+		<xsd:element name="type" type="Varseltype" minOccurs="1" maxOccurs="1"/>
+		<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"∕>
+	</xsd:complexType>
+	-->
+
+
+	<xsd:complexType name="MottakerVarselFeilet">
+		<xsd:sequence>
+			<xsd:element name="type" type="Varseltype" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:simpleType name="Varseltype">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="SMS" />
+			<xsd:enumeration value="EPOST" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:complexType name="Feilinformasjon">
+		<xsd:sequence>
+			<xsd:element name="feiltype" minOccurs="1" maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="100" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="detaljer" minOccurs="0" maxOccurs="1">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="1000" />
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<!-- nedenfor kan være en mulighet dersom vi har en tight SLA på levering og postkasseleverandør er nede						
-			<xsd:element name="kanResendes" type="xsd:boolean" minOccurs="0" maxOccurs="1" dewfault="false"/>
-			-->
-		<∕xsd:sequence> 
+		</xsd:sequence>
 	</xsd:complexType>
-
 
 </xsd:schema>
