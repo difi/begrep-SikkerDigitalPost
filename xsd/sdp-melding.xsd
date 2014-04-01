@@ -1,55 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema version="1.0" targetNamespace="http://begrep.difi.no/sdp/schema_v10"
+	xmlns="http://begrep.difi.no/sdp/schema_v10"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:tns="http://begrep.difi.no"
-	xmlns:sdp="http://begrep.difi.no/sdp/schema_v10" 
-	xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+	xmlns:difi="http://begrep.difi.no"
 	xmlns:enc="http://www.w3.org/2001/04/xmlenc#"
 	elementFormDefault="qualified">
 
-	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
-	<xsd:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="xenc-schema.xsd"/> 
-	<xsd:import namespace="http://begrep.difi.no" schemaLocation=""/>
+	<xsd:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="w3/xenc-schema.xsd"/>
+	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslag/oppslagstjeneste-metadata-14-05.xsd"/>
 
 
-	<xsd:element name="melding" type="sdp:Melding"/>
+	<xsd:element name="melding" type="Melding"/>
 
 
 	<xsd:complexType name="Melding">
-		
+
 		<xsd:sequence>
-			<!--
-			<xsd:element name="meldingsId" type="sdp:GUID" minOccurs="0" maxOccurs="1"/>
-			-->
-			<xsd:element name="avsender" type="sdp:Avsender" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1"/>
 			<xsd:choice>
-				<xsd:element name="digitalPostInfo" type="sdp:DigitalPostInfo" minOccurs="1" maxOccurs="1" />
-				<xsd:element name="fysiskPostInfo" type="sdp:FysiskPostInfo" minOccurs="1" maxOccurs="1" />
+				<xsd:sequence>
+					<xsd:element name="digitalMottaker" type="Mottaker" minOccurs="1" maxOccurs="1" />
+					<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="aapningskvittering" type="xsd:boolean" minOccurs="0" maxOccurs="1" default="false"/>
+					<xsd:element name="sikkerhetsnivaa" minOccurs="0"
+						maxOccurs="1">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:integer">
+								<xsd:enumeration value="3" />
+								<xsd:enumeration value="4" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="ikkeSensitivHoveddokumenttittel" minOccurs="0" maxOccurs="1">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="100" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="varsler" type="Varsler" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:element name="fysiskPostInfo" type="FysiskPostInfo" minOccurs="1" maxOccurs="1" />
 			</xsd:choice>
-			<xsd:element name="dokumentPakke" type="sdp:DokumentPakke" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="dokumentPakke" type="DokumentPakke" minOccurs="1" maxOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
 
 
 	<xsd:complexType name="Mottaker">
 		<xsd:choice>
-			<xsd:element name="person" type="tns:Person"/>
-			<xsd:element name="virksomhet" type="sdp:Virksomhet"/>
+			<xsd:element name="person" type="difi:Person"/>
+			<xsd:element name="virksomhet" type="Virksomhet"/>
 		</xsd:choice>
 	</xsd:complexType>
 
 
 	<xsd:complexType name="Avsender">
 		<xsd:sequence>
-			<xsd:element name="identifier" type="sdp:AvsenderOrganisasjon" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="identifier" type="AvsenderOrganisasjon"/>
 			<xsd:element name="avsenderId" minOccurs="0" maxOccurs="1">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="100" />
 					</xsd:restriction>
 				</xsd:simpleType>
-			</xsd:element>			
+			</xsd:element>
 			<xsd:element name="fakturaKonto" minOccurs="0" maxOccurs="1">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
@@ -83,10 +98,10 @@
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="repetisjoner" type="sdp:Repetisjoner"
+			<xsd:element name="repetisjoner" type="Repetisjoner"
 				minOccurs="1" maxOccurs="1" >
 				<xsd:unique name="UnikeEpostVarselRepetisjoner">
-					<xsd:selector xpath="sdp:dagerEtter" />
+					<xsd:selector xpath="dagerEtter" />
 					<xsd:field xpath="." />
 				</xsd:unique>
 			</xsd:element>
@@ -103,10 +118,10 @@
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="repetisjoner" type="sdp:Repetisjoner"
+			<xsd:element name="repetisjoner" type="Repetisjoner"
 				minOccurs="1" maxOccurs="1" >
 				<xsd:unique name="UnikeSmsVarselRepetisjoner">
-					<xsd:selector xpath="sdp:dagerEtter" />
+					<xsd:selector xpath="dagerEtter" />
 					<xsd:field xpath="." />
 				</xsd:unique>
 			</xsd:element>
@@ -116,9 +131,9 @@
 
 	<xsd:complexType name="Varsler">
 		<xsd:sequence>
-			<xsd:element name="epostVarsel" type="sdp:EpostVarsel"
+			<xsd:element name="epostVarsel" type="EpostVarsel"
 				minOccurs="0" maxOccurs="1" />
-			<xsd:element name="smsVarsel" type="sdp:SmsVarsel"
+			<xsd:element name="smsVarsel" type="SmsVarsel"
 				minOccurs="0" maxOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
@@ -126,10 +141,10 @@
 
 	<xsd:complexType name="Virksomhet">
 		<xsd:sequence>
-			<xsd:element name="sikkerDigitalPostAdresse" type="tns:SikkerDigitalPostAdresse"/>
+			<xsd:element name="sikkerDigitalPostAdresse" type="difi:SikkerDigitalPostAdresse"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 
 	<xsd:complexType name="DokumentPakke">
 		<xsd:sequence>
@@ -138,16 +153,17 @@
 	</xsd:complexType>
 
 
-    <xsd:simpleType name="Iso6523Identitet">
+    <xsd:simpleType name="LandkodeOrgnr">
         <xsd:restriction base="xsd:string">
-        	<xsd:pattern value="9908:[0-9]{9}"/>
+        	<!-- hva er mønsteret? -->
+        	<xsd:pattern value="[0-9]{4}:[0-9]{1,20}"/>
         </xsd:restriction>
     </xsd:simpleType>
 
 
 	<xsd:complexType name="AvsenderOrganisasjon">
 		<xsd:simpleContent>
-			<xsd:extension base="sdp:Iso6523Identitet">
+			<xsd:extension base="LandkodeOrgnr">
 				<xsd:attribute name="authority" use="optional" default="iso6523-actorid-upis">
 					<xsd:simpleType>
 						<xsd:restriction base="xsd:string">
@@ -158,32 +174,7 @@
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	
 
-	<xsd:complexType name="DigitalPostInfo">
-		<xsd:sequence>
-			<xsd:element name="digitalMottaker" type="sdp:Mottaker" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="aapningskvittering" type="xsd:boolean" minOccurs="0" maxOccurs="1" default="false"/>
-			<xsd:element name="sikkerhetsnivaa" minOccurs="0"
-				maxOccurs="1">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:integer">
-						<xsd:enumeration value="3" />
-						<xsd:enumeration value="4" />
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
-			<xsd:element name="ikkeSensitivHoveddokumenttittel" minOccurs="0" maxOccurs="1">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:string">
-						<xsd:maxLength value="100" />
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
-			<xsd:element name="varsler" type="sdp:Varsler" minOccurs="0" maxOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
 
 
 	<!-- typer nedenfor er for fysisk post -->
@@ -192,8 +183,8 @@
 	<xsd:complexType name="FysiskPostInfo">
 		<xsd:sequence>
 			<xsd:choice>
-				<xsd:element name="norsk-mottakeradresse" type="sdp:norsk-postadresse" minOccurs="1" maxOccurs="1" />
-				<xsd:element name="utenlandsk-mottakeradresse" type="sdp:utenlandsk-postadresse" minOccurs="1" maxOccurs="1" />
+				<xsd:element name="norsk-mottakeradresse" type="norsk-postadresse" minOccurs="1" maxOccurs="1" />
+				<xsd:element name="utenlandsk-mottakeradresse" type="utenlandsk-postadresse" minOccurs="1" maxOccurs="1" />
 			</xsd:choice>
 			<xsd:element name="posttype" minOccurs="0" maxOccurs="1" default="A">
 				<xsd:simpleType>
@@ -202,42 +193,42 @@
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="retur-postmottaker" type="sdp:postmottaker-navn" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="returadresse" type="sdp:norsk-postadresse" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="retur-postmottaker" type="postmottaker-navn" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="returadresse" type="norsk-postadresse" minOccurs="1" maxOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
 
 
 	<xsd:complexType name="norsk-postadresse">
 		<xsd:sequence>
-			<xsd:element name="adresselinje1" type="sdp:adresselinje" minOccurs="0" maxOccurs="1" />
-			<xsd:element name="adresselinje2" type="sdp:adresselinje" minOccurs="0" maxOccurs="1" />
-			<xsd:element name="postnummer" type="sdp:norsk-postnummer" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="poststed" type="sdp:poststed" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="adresselinje1" type="adresselinje" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="adresselinje2" type="adresselinje" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="postnummer" type="norsk-postnummer" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="poststed" type="poststed" minOccurs="1" maxOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
 
 
 	<xsd:complexType name="utenlandsk-postadresse">
 		<xsd:sequence>
-			<xsd:element name="adresselinje1" type="sdp:adresselinje" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="adresselinje2" type="sdp:adresselinje" minOccurs="0" maxOccurs="1" />
-			<xsd:element name="adresselinje3" type="sdp:adresselinje" minOccurs="0" maxOccurs="1" />
-			<xsd:element name="adresselinje4" type="sdp:adresselinje" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="adresselinje1" type="adresselinje" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="adresselinje2" type="adresselinje" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="adresselinje3" type="adresselinje" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="adresselinje4" type="adresselinje" minOccurs="0" maxOccurs="1" />
 			<xsd:choice>
-				<xsd:element name="land" type="sdp:land" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="land-kode" type="sdp:land-kode" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="land" type="land" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="land-kode" type="land-kode" minOccurs="1" maxOccurs="1"/>
 			</xsd:choice>
 		</xsd:sequence>
 	</xsd:complexType>
-	
-	
+
+
 	<xsd:simpleType name="postmottaker-navn">
 		<xsd:restriction base="xsd:string">
 			<xsd:maxLength value="130" />
 		</xsd:restriction>
 	</xsd:simpleType>
-	
+
 
 	<xsd:simpleType name="norsk-postnummer">
 		<xsd:restriction base="xsd:string" />

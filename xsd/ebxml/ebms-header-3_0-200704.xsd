@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:S11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" targetNamespace="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:S11="http://schemas.xmlsoap.org/soap/envelope/"
+            xmlns:S12="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:tns="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"
+            xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+            jaxb:version="2.0"
+            targetNamespace="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xsd:annotation>
 		<xsd:appinfo>Schema for ebMS-3 XML Infoset</xsd:appinfo>
 		<xsd:documentation xml:lang="en">
@@ -8,24 +15,27 @@
 			message.
 		</xsd:documentation>
 	</xsd:annotation>
-	<xsd:import namespace="http://schemas.xmlsoap.org/soap/envelope/" schemaLocation="http://schemas.xmlsoap.org/soap/envelope/"/>
-	<xsd:import namespace="http://www.w3.org/2003/05/soap-envelope" schemaLocation="http://www.w3.org/2003/05/soap-envelope"/>
-	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
+	<xsd:import namespace="http://schemas.xmlsoap.org/soap/envelope/" schemaLocation="../xmlsoap/envelope.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2003/05/soap-envelope" schemaLocation="../w3/soap-envelope.xsd"/>
+
+	<!-- Endret (lagt til) i forhold til den offisielle XSD-en for å unngå feil i forbindelse med XML parsing -->
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../w3/xml.xsd"/>
+
 	<xsd:element name="Messaging" type="Messaging"/>
 	<xsd:complexType name="Messaging">
 		<xsd:annotation>
 			<xsd:documentation xml:lang="en">
-				The eb:Messaging element is the top element of ebMS-3 headers, and it is
-				placed within the SOAP Header element (either SOAP 1.1 or SOAP 1.2). The
-				eb:Messaging element may contain several instances of eb:SignalMessage
-				and eb:UserMessage elements. However in the core part of the ebMS-3
-				specification, only one instance of either eb:UserMessage or eb:SignalMessage
-				must be present. The second part of ebMS-3 specification may need to include
-				multiple instances of either eb:SignalMessage, eb:UserMessage or both.
-				Therefore, this schema is allowing multiple instances of eb:SignalMessage
-				and eb:UserMessage elements for part 2 of the ebMS-3 specification. Note
-				that the eb:Messaging element cannot be empty (at least one of
-				eb:SignalMessage or eb:UserMessage element must present).
+	The eb:Messaging element is the top element of ebMS-3 headers, and it is
+	placed within the SOAP Header element (either SOAP 1.1 or SOAP 1.2). The
+	eb:Messaging element may contain several instances of eb:SignalMessage
+	and eb:UserMessage elements. However in the core part of the ebMS-3
+	specification, only one instance of either eb:UserMessage or eb:SignalMessage
+	must be present. The second part of ebMS-3 specification may need to include
+	multiple instances of either eb:SignalMessage, eb:UserMessage or both.
+	Therefore, this schema is allowing multiple instances of eb:SignalMessage
+	and eb:UserMessage elements for part 2 of the ebMS-3 specification. Note
+	that the eb:Messaging element cannot be empty (at least one of
+	eb:SignalMessage or eb:UserMessage element must present).
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
@@ -38,12 +48,12 @@
 	<xsd:complexType name="SignalMessage">
 		<xsd:annotation>
 			<xsd:documentation xml:lang="en">
-				In the core part of ebMS-3 specification, an eb:Signal Message is allowed to
-				contain eb:MessageInfo and at most one Receipt Signal, at most one eb:PullRequest
-				element, and/or a series of eb:Error elements. In part 2 of the ebMS-3
-				specification, new signals may be introduced, and for this reason,
-				an extensibility point is added here to the eb:SignalMessage element to
-				allow it to contain any elements.
+	In the core part of ebMS-3 specification, an eb:Signal Message is allowed to
+	contain eb:MessageInfo and at most one Receipt Signal, at most one eb:PullRequest
+	element, and/or a series of eb:Error elements. In part 2 of the ebMS-3
+	specification, new signals may be introduced, and for this reason,
+	an extensibility point is added here to the eb:SignalMessage element to
+	allow it to contain any elements.
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
@@ -182,15 +192,19 @@
 		<xsd:attribute ref="S11:mustUnderstand" use="optional">
 			<xsd:annotation>
 				<xsd:documentation>
-					if SOAP 1.1 is being used, this attribute is required
-				</xsd:documentation>
+	    if SOAP 1.1 is being used, this attribute is required
+			  </xsd:documentation>
 			</xsd:annotation>
 		</xsd:attribute>
 		<xsd:attribute ref="S12:mustUnderstand" use="optional">
 			<xsd:annotation>
 				<xsd:documentation>
-					if SOAP 1.2 is being used, this attribute is required
-				</xsd:documentation>
+	    if SOAP 1.2 is being used, this attribute is required
+			  </xsd:documentation>
+					<!-- Lagt til for at ikke JAXB skulle feile -->
+					<xsd:appinfo>
+							<jaxb:property name="mustUnderstand12"/>
+					</xsd:appinfo>
 			</xsd:annotation>
 		</xsd:attribute>
 		<xsd:anyAttribute namespace="##other" processContents="lax"/>
