@@ -182,8 +182,6 @@ Ingen endringer.
 > Denne filen ligner ikke på noen av xlink.xsd-filene man finner på w3.org.
 > Den refereres til fra
 > http://docs.oasis-open.org/ebxml-bp/2.0.4/OS/signalSchema/documentation/ebxmlbp-v2.0.4-Document-os-SignalSchema-en.html.
-> Filen inneholder bl.a. typisk "tool-generated" initiell dokumentasjon som
-> "Comment describing your root element", noe som ikke er så tillitsvekkende.
 
 > Mer offisielle xlink.xsd-filer finnes på http://www.w3.org/1999/xlink.xsd
 > og http://www.w3.org/XML/2008/06/xlink.xsd. Kan disse brukes istedet? Dersom
