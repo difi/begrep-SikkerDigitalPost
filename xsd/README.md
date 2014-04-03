@@ -1,7 +1,10 @@
 XSD-er
 ===========================
 
-Oversikt over XSD-er.
+Oversikt over XSD-er for [Sikker digital post](http://begrep.difi.no/SikkerDigitalPost/).
+
+Grunnen til at vi lagrer disse lokalt er for å sikre at verktøy ikke trenger å være online for å kunne jobbe med XSD-ene. For at dette skal fungere må også referanser til URLer endres til å peke på lokale filer. For de filene vi har endret på er det inkludert en bash-kommando for å vise hvilke endringer som er gjort. Disse kommandoene kan pastes rett inn i en terminal, og kan kjøres fra katalogen `SikkerDigitalPost/xsd`.
+
 
 
 
@@ -58,9 +61,27 @@ Skjemaer som hører til ebXML-standarden.
 
 #### ebbp-signals-2.0.xsd
 
+Original: http://docs.oasis-open.org/ebxml-bp/2.0.4/ebbp-signals-2.0.4.xsd
+
+Endringer:
+```bash
+curl -Ls http://docs.oasis-open.org/ebxml-bp/2.0.4/ebbp-signals-2.0.4.xsd \
+| diff -uw --strip-trailing-cr - ebxml/ebbp-signals-2.0.xsd | vim -R -
+```
+
 #### ebms-header-3_0-200704.xsd
 
+Original: http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms-header-3_0-200704.xsd
 
+Endringer:
+```bash
+curl -Ls http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms-header-3_0-200704.xsd \
+| diff -uw --strip-trailing-cr - ebxml/ebms-header-3_0-200704.xsd | vim -R -
+```
+
+### Referanser:
+
+- http://docs.oasis-open.org/ebxml-bp/2.0.4/OS/signalSchema/documentation/ebxmlbp-v2.0.4-Document-os-SignalSchema-en.html
 
 
 
@@ -107,6 +128,8 @@ SBDH20040506-02/
 Original: `TODO`
 
 Disse er uendret fra originalene.
+
+
 
 
 
@@ -160,10 +183,20 @@ curl -sL http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/xenc-schema.xsd \
 
 #### xlink.xsd
 
-Original: `TODO`
+Original: http://www.oasis-open.org/committees/ebxml-msg/schema/xlink.xsd
 
-> Hvor kommer xlink.xsd fra? Ligner ikke på verken http://www.w3.org/1999/xlink.xsd
-> eller http://www.w3.org/XML/2008/06/xlink.xsd
+Ingen endringer.
+
+> Denne filen ligner ikke på noen av xlink.xsd-filene man finner på w3.org.
+> Den refereres til fra
+> http://docs.oasis-open.org/ebxml-bp/2.0.4/OS/signalSchema/documentation/ebxmlbp-v2.0.4-Document-os-SignalSchema-en.html.
+> Filen inneholder bl.a. typisk "tool-generated" initiell dokumentasjon som
+> "Comment describing your root element", noe som ikke er så tillitsvekkende.
+
+> Mer offisielle xlink.xsd-filer finnes på http://www.w3.org/1999/xlink.xsd
+> og http://www.w3.org/XML/2008/06/xlink.xsd. Kan disse brukes istedet? Dersom
+> vi plutselig tar ibruk noe annet som forventer standard xlink.xsd, så får vi helt sikkert problemer
+> med navnekollisjoner.
 
 
 #### xml.xsd
