@@ -29,8 +29,8 @@ h2. Innholdsfortegnelse
 ** "Meldingsflyt":Meldingsutveksling 
 ** Feilhåndtering
 ** PModes
-*** Pmode1
-*** Pmode2
+*** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
+*** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
 * Meldingsspesifikasjoner
 ** "Meldingsstruktur":meldingsstruktur
 *** UserMessage
