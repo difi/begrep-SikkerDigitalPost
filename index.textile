@@ -34,7 +34,7 @@ h2. Meldingsspesifikasjoner
 
 "Digital postforsendelse":meldingsstruktur består av følgende meldingselementer:
 
-# Webservice Security Header
+# "Webservice Security Header":WebserviceSecurity
 # "UserMessage":UserMessage 
 # "StandardBusinessDocument":StandardBusinessDocument 
 # og eventuelt en "Dokumentpakke":ASiC
