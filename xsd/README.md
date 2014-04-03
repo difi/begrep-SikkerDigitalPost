@@ -175,18 +175,14 @@ curl -sL http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/xenc-schema.xsd \
 
 #### xlink.xsd
 
-Original: http://www.oasis-open.org/committees/ebxml-msg/schema/xlink.xsd
+Original: http://www.w3.org/1999/xlink.xsd
 
-Ingen endringer.
+Endringer:
+```bash
+curl -sL http://www.w3.org/1999/xlink.xsd \
+| diff -uw --strip-trailing-cr - w3/xlink.xsd | vim -R -
+```
 
-> Denne filen ligner ikke på noen av xlink.xsd-filene man finner på w3.org.
-> Den refereres til fra
-> http://docs.oasis-open.org/ebxml-bp/2.0.4/OS/signalSchema/documentation/ebxmlbp-v2.0.4-Document-os-SignalSchema-en.html.
-
-> Mer offisielle xlink.xsd-filer finnes på http://www.w3.org/1999/xlink.xsd
-> og http://www.w3.org/XML/2008/06/xlink.xsd. Kan disse brukes istedet? Dersom
-> vi plutselig tar ibruk noe annet som forventer standard xlink.xsd, så får vi helt sikkert problemer
-> med navnekollisjoner.
 
 
 #### xml.xsd
