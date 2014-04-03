@@ -9,13 +9,12 @@ headtitle: Sikker digital post - Standard Business Document
 - Definisjon := Informasjon relatert til ruting og adressering av en melding
 - Kilde := GS1
 
-
 h3. Attributter
 
 {background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | HeaderVersion | 1..1 | xs:string | "1.0" |
-{background:#ddd}.| Sender | 1..1 | sbdh:Sender | Postkasseleverandør/Printleverandør eller Databehandler sitt Organisasjonsnummer |
-| Receiver | 1..1 | sbdh:Receiver | Postkasseleverandør/Printleverandør eller Databehandler sitt Organisasjonsnummer |
+{background:#ddd}.| Sender | 1..1 | sbdh:Sender | Organisasjonsnummeret assosiert med virksomhetssertifikatet som blir benyttet i avsenders MSH formatert etter ISO-6523 standarden ihht "Oasis PartyIdType":http://docs.oasis-open.org/ebcore/PartyIdType/v1.0/PartyIdType-1.0.html, der verdien i tillegg er prefikset med scheme-specific-identifier: |
+| Receiver | 1..1 | sbdh:Receiver | Organisasjonsnummeret assosiert med virksomhetssertifikatet som blir benyttet i avsenders MSH formatert etter ISO-6523 standarden ihht "Oasis PartyIdType":http://docs.oasis-open.org/ebcore/PartyIdType/v1.0/PartyIdType-1.0.html, der verdien i tillegg er prefikset med scheme-specific-identifier: |
 {background:#ddd}.| "DocumentIdentification":DocumentIdentification | 1..1 | sbdh:DocumentIdentification | Unik identifikator for forsendelsen av Digital Post i Databehandler sitt scope, generert av Avsender  |
 
 
@@ -28,11 +27,11 @@ h3. XML eksempel
 			    <HeaderVersion>1.0</HeaderVersion>
 			    <Sender>
 				    <!-- orgnr avsender -->
-				    <Identifier Authority="iso6523-actorid-upis">9908:123456789</Identifier>
+				    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:123456789</Identifier>
 			    </Sender>
 			    <Receiver>
 				    <!-- orgnr mottaker, postboks eller print -->
-				    <Identifier Authority="iso6523-actorid-upis">9908:345678901</Identifier>
+				    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:345678901</Identifier>
 			    </Receiver>
 			    <DocumentIdentification>
 				    <Standard>urn:no:difi:sdp:1.0</Standard>
