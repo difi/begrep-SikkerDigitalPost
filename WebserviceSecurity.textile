@@ -23,6 +23,6 @@ For Soap signering skal:
 * Security Token være X509 sertifikater 
 * Sertifikatet som brukes skal være et virksomhetssertifikat
 * Sertifikat for validering av signatur skal inkluderes i SOAP header
-* Signeringsalgoritmen skal være http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. 
-* Fingeravtrykksalgoritmen i referansene skal være http://www.w3.org/2001/04/xmlenc#sha256
+* Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. 
+* Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmlenc#sha256":http://www.w3.org/2001/04/xmlenc#sha256
 * Time-to-live skal være 120 sekunder

@@ -16,7 +16,7 @@ Meldingen består av et attributt som er felles for alle meldingstyper.
 Resten av attributtene er definert i de enkelte meldingstypene.
 
 {background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
-| Signatur | 1..1 | ds:Signature, Enveloped XML signatur |
+| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
 
 h3. Klassediagram
 
@@ -36,7 +36,13 @@ Meldingstypen er definert i "DocumentIdentification":DocumentIdentification og e
 | "Varsling":Meldingstyper/VarslingskvitteringsMelding | Kvittering for at en spesifisert varsling ikke har blitt sendt |
 {background:#ddd}.| "Feil":Meldingstyper/FeilMelding | Generel feilkvittering |
 
-h3. Signatur
+h3. Signature
 
-Signatur av Forretningsmeldingen og signatur av "StandardBusinessDocumentHeader":StandardBusinessDocumentHeader.
-Disse BØR være signert av "Behandlingsansvarlig":AktorIdentifikatorer, men KAN signeres av "Databehandler":AktorIdentifikatorer.
+Det er satt følgende krav til signaturen:
+* Security Token være X509 sertifikater 
+* Sertifikatet som brukes skal være et virksomhetssertifikat
+* Sertifikat for validering av signatur skal inkluderes i Signatur elementet
+* Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. 
+* Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmlenc#sha256":http://www.w3.org/2001/04/xmlenc#sha256
+* Signature skal være en signatur av Meldingen og signatur av "StandardBusinessDocumentHeader":StandardBusinessDocumentHeader.
+* BØR være signert av "Behandlingsansvarlig":AktorIdentifikatorer, men KAN signeres av "Databehandler":AktorIdentifikatorer.
