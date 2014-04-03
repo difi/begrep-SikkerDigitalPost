@@ -18,7 +18,7 @@ h4. Egenskaper
 |_. Identifikator |_. Term |_. Kardinalitet |
 | "identifier":/Felles/virksomhetsidentifikator | Identifikator i henhold til iso6523-actorid-upis | 1..1 |
 | "avsenderidentifikator":/Felles/avsenderidentifikator | xs:string | 0..1 |
-| ehfFakturaRef | xs:string | 0..1 |
+| "OrderReference":OrderReference | cac:OrderReference | 0..1 |
 
 h4. Xml eksempel
 
@@ -26,7 +26,9 @@ h4. Xml eksempel
 	<avsender>
 		<identifier authority="iso6523-actorid-upis">9908:123456789</identifier>
 		<avsenderidentifikator>12345</avsenderidentifikator>
-		<fakturaKonto>ØK1</fakturaKonto>
+		<cac:OrderReference> 
+			<cbc:ID>123</cbc:ID> 
+		</cac:OrderReference>		
 	</avsender>
 </pre>
 
