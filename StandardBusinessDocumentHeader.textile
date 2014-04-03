@@ -13,34 +13,34 @@ h3. Attributter
 
 {background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | HeaderVersion | 1..1 | xs:string | "1.0" |
-{background:#ddd}.| Sender | 1..1 | sbdh:Sender | Organisasjonsnummeret assosiert med virksomhetssertifikatet som blir benyttet i avsenders MSH formatert etter ISO-6523 standarden ihht "Oasis PartyIdType":http://docs.oasis-open.org/ebcore/PartyIdType/v1.0/PartyIdType-1.0.html, der verdien i tillegg er prefikset med scheme-specific-identifier: |
-| Receiver | 1..1 | sbdh:Receiver | Organisasjonsnummeret assosiert med virksomhetssertifikatet som blir benyttet i avsenders MSH formatert etter ISO-6523 standarden ihht "Oasis PartyIdType":http://docs.oasis-open.org/ebcore/PartyIdType/v1.0/PartyIdType-1.0.html, der verdien i tillegg er prefikset med scheme-specific-identifier: |
+{background:#ddd}.| Sender | 1..1 | "sbdh:Sender":Sender | Identifikator (organisasjonsnummer) til virksomheten som initierer (er avsender) i meldingsprosessen |
+| Receiver | 1..1 | "sbdh:Receiver":Receiver | Identifikator (organisasjonsnummer) til virksomheten som er sluttmottaker i meldingsprosessen |
 {background:#ddd}.| "DocumentIdentification":DocumentIdentification | 1..1 | sbdh:DocumentIdentification | Unik identifikator for forsendelsen av Digital Post i Databehandler sitt scope, generert av Avsender  |
 
+h3. Kommentar
 
+Sender/Receiver indikerer retning på meldingsprosessen. For eksempel i "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse prosessen så vil Sender være dataansvarlig og Receiver postboks.
 
 h3. XML eksempel
 
 <pre class="brush: xml; toolbar: false">
-
-		    <StandardBusinessDocumentHeader>
-			    <HeaderVersion>1.0</HeaderVersion>
-			    <Sender>
-				    <!-- orgnr avsender -->
-				    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:123456789</Identifier>
-			    </Sender>
-			    <Receiver>
-				    <!-- orgnr mottaker, postboks eller print -->
-				    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:345678901</Identifier>
-			    </Receiver>
-			    <DocumentIdentification>
-				    <Standard>urn:no:difi:sdp:1.0</Standard>
-				    <TypeVersion>1.0</TypeVersion>
-				    <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
-					<InstanceIdentifier>2014/001</InstanceIdentifier>
-				    <Type>Sikkerpost</Type>
-				    <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
-			    </DocumentIdentification>
-		    </StandardBusinessDocumentHeader>
-
+    <StandardBusinessDocumentHeader>
+	    <HeaderVersion>1.0</HeaderVersion>
+	    <Sender>
+		    <!-- orgnr avsender -->
+		    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:123456789</Identifier>
+	    </Sender>
+	    <Receiver>
+		    <!-- orgnr mottaker, postboks eller print -->
+		    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:345678901</Identifier>
+	    </Receiver>
+	    <DocumentIdentification>
+		    <Standard>urn:no:difi:sdp:1.0</Standard>
+		    <TypeVersion>1.0</TypeVersion>
+		    <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
+			<InstanceIdentifier>2014/001</InstanceIdentifier>
+		    <Type>Sikkerpost</Type>
+		    <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
+	    </DocumentIdentification>
+    </StandardBusinessDocumentHeader>
 </pre>		
