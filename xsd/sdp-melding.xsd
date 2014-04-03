@@ -17,8 +17,8 @@
 		<xsd:sequence>
 			<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1"/>
 			<xsd:choice>
-				<xsd:element name="digitalPostInfo" type="DigitalPostInfo" minOccurs="1" maxOccurs="1" />
 				<xsd:element name="fysiskPostInfo" type="FysiskPostInfo" minOccurs="1" maxOccurs="1" />
+				<xsd:element name="digitalPostInfo" type="DigitalPostInfo" minOccurs="1" maxOccurs="1" />
 			</xsd:choice>
 			<xsd:element name="dokumentPakke" type="DokumentPakke" minOccurs="1" maxOccurs="1" />
 		</xsd:sequence>
@@ -35,9 +35,7 @@
 
 	<xsd:complexType name="Avsender">
 		<xsd:sequence>
-			<!-- 
-			<xsd:element name="identifier" type="AvsenderOrganisasjon"/>
-			-->
+			<xsd:element name="organisasjon" type="AvsenderOrganisasjon" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="avsenderId" minOccurs="1" maxOccurs="1">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
@@ -186,6 +184,7 @@
 
 	<xsd:complexType name="FysiskPostInfo">
 		<xsd:sequence>
+			<xsd:element name="mottaker" type="postmottaker-navn" minOccurs="1" maxOccurs="1"/>
 			<xsd:choice>
 				<xsd:element name="norsk-mottakeradresse" type="norsk-postadresse" minOccurs="1" maxOccurs="1" />
 				<xsd:element name="utenlandsk-mottakeradresse" type="utenlandsk-postadresse" minOccurs="1" maxOccurs="1" />

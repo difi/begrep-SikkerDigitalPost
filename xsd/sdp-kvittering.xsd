@@ -16,7 +16,7 @@
 				<xsd:element name="levertTilPostkasse" type="LevertTilPostkasse"/>
 				<xsd:element name="aapnetAvMottaker" type="AapnetAvMottaker"/>
 				<xsd:element name="avvistAvMottaker" type="AvvistAvMottaker"/>
-				<xsd:element name="mottakerVarselFeilet" type="MottakerVarselFeilet"/>
+				<xsd:element name="mottakerKunneIkkeVarsles" type="MottakerKunneIkkeVarsles"/>
 				<xsd:element name="feil" type="Feil"/>
 			</xsd:choice>
 		</xsd:sequence>
@@ -54,7 +54,7 @@
 	-->
 
 
-	<xsd:complexType name="MottakerVarselFeilet">
+	<xsd:complexType name="MottakerKunneIkkeVarsles">
 		<xsd:sequence>
 			<xsd:element name="type" type="Varseltype" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
