@@ -6,7 +6,7 @@ headtitle: Sikker digital post
 
 h2. Innledning
 
-På denne delen av begrep.difi.no publiseres grensesnittspesifikasjonen for Sikker Digital Posttjeneste.
+På denne delen av "begrep.difi.no":/ publiseres grensesnittspesifikasjonen for Sikker Digital Posttjeneste.
 Målgruppen for denne spesifikasjonen er Avsendervirksomheter, Meldingsformidler og Postkasselverandører.
 
 h2. Omfang
@@ -23,11 +23,12 @@ h2. Innholdsfortegnelse
 * "Innledning":index#Innledning
 * "Omfang":index#Omfang
 * "Meldingsutveksling":Meldingsutveksling
-** "Aktører og Roller":AktorIdentifikatorer
+** "Aktører og Roller":Aktorer
+*** "Aktør identifikatorer":Aktoridentifikatorer
 ** "Ekspederingsprosessen":EksepederePost
 ** "Meldingstyper":Melding
 ** "Meldingsflyt":Meldingsutveksling 
-** Feilhåndtering
+** "Feilhåndtering":Feilhaandtering
 ** PModes
 *** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
 *** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
