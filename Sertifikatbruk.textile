@@ -1,0 +1,68 @@
+---
+layout: default
+title: Signering og kryptering av Sikker Digital Post forsendelse
+headtitle: Sikker digital post
+---
+
+h3. Innledning
+
+Her beskrives det kort hvordan hver del av "Digital postforsendelse":meldingsstruktur krypteres og signeres.
+
+h3. Omfang
+
+Dokumentasjonen skal hovedsakelig fungere som en implementasjonguide for avsendere.
+Se beskrivelsen av de enkelte delene av for detaljer om signering og krypteringsalgoritmer etc.
+
+h3. Overordnet
+
+Deler av Digital postforsendelse er sikret ende til ende, fra Avsender til Mottaker.
+Deler av Digital postforsendelse er sikret punkt til punkt fra Teknisk Mottaker til Meldingsformidlerleverandør, og fra Meldingsformidler- til Postkasseleverandør.
+
+h4. Sikret ende til ende
+
+Følgende deler av Digital postforsendelse er sikret ende-til-ende
+* "Melding":Melding
+* "Dokumentpakke":ASiC
+
+h4. Sikret punkt til punkt
+
+Følgende deler av Digital postforsendelse er sikret punkt til punkt:
+* Wsse:timestamp
+* Eb:messaging
+* "SOAP:Body":StandardBusinessDocument
+* "Dokumentpakke":ASiC
+
+h3. "Dokumentpakke":ASiC
+
+Inneholder signaturer fra Behandlingsansvarlig* og kryptert før utveksling av Behandlingsansvarlig*.
+Krypteringen er gjort med en symmetrisk engangs-nøkkel
+Signeringssertifikatet med fullkjede er lagt inn i "Dokumentpakke":ASiC, sammen med signaturen
+
+I tillegg til ende til ende sikkerheten så er "dokumentpakken":ASiC signert i meldingsutvekslingen punkt til punkt.
+
+
+h3. StandardBusinessDocument
+
+"Melding":Melding i "StandardBusinessDocument":StandardBusinessDocument er signert av Behandlingsansvarlig*/Postkasseleverandør ved bruk av Enveloped xml signature.
+Signeringssertifikatet er lagt inn i "Melding":Melding, sammen med signaturen.
+
+"StandardBusinessDocument.Melding.Dokumentpakke":Dokumentpakke har en kryptert engangsnøkkel,kryptert med innbyggers sertifikat.
+"StandardBusinessDocument.Melding.Avsender":Avsender skal være organisasjonsnummeret til Behandlingsansvarlig.
+
+
+I tillegg så er "StandardBusinessDocument":StandardBusinessDocument signert i meldingsutvekslingen punkt til punkt.
+
+h3. Eb:Messaging
+
+EB:Messaging headeren er signert punkt til punkt.
+
+
+h3. Wsse:Security:
+
+* wsse:Secuity skal inneholde 
+** Signert Timestamp som angir meldingens levetid, signert av Databehandler, Meldingsformidler, Postkasse
+* Utvekslingen/ebMS 3.0/SOAP:
+** Signert av Teknisk avsender (Databehandler, Meldingsformidler, Postkasse) med referanse til:
+*** Timestamp, eb:Messaging, SOAP Body, Attachment
+* Signeringssertifikat er vedlagt i wsse:security header
+

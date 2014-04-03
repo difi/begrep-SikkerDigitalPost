@@ -18,13 +18,10 @@ Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mel
 I tillegg skal det gis ett overblikk over aktører, roller og meldingsflyt mellom aktørene.
 
 
-h2. Innholdsfortegnelse
+h2. Meldingsutveksling
 
-* "Innledning":index#Innledning
-* "Omfang":index#Omfang
-* "Meldingsutveksling":Meldingsutveksling
 ** "Aktører og Roller":Aktorer
-*** "Aktør identifikatorer":Aktoridentifikatorer
+*** "Aktør identifikatorer":AktorIdentifikatorer
 ** "Ekspederingsprosessen":EksepederePost
 ** "Meldingstyper":Melding
 ** "Meldingsflyt":Meldingsutveksling 
@@ -32,18 +29,28 @@ h2. Innholdsfortegnelse
 ** PModes
 *** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
 *** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
-* Meldingsspesifikasjoner
-** "Meldingsstruktur":meldingsstruktur
-*** UserMessage
-*** "StandardBusinessDocument":StandardBusinessDocument
-*** "Dokumentpakke":ASiC
-** Klassediagrammer	
-* Sikkerhet
-** Sertifikatbruk
+
+h2. Meldingsspesifikasjoner
+
+"Digital postforsendelse":meldingsstruktur består av følgende meldingselementer:
+
+# Webservice Security Header
+# UserMessage 
+# "StandardBusinessDocument":StandardBusinessDocument 
+# og eventuelt en "Dokumentpakke":ASiC
+
+h2. Sikkerhet
+
+** "Sertifikatbruk":Sertifikatbruk
 ** "Sikring av Dokumentpakken":ASiC_sikkerhet
 ** "Meldingsidentifikatorer":Meldingsidentifikatorer
-* Teknisk miljø
+
+h2. Teknisk miljø
+
 ** (Dokumentasjon leveres innen 01.05.2014)
+
+h2. Annet
+
 * "Referanser":referanser
 * "Endringslogg":/changelog
 * "Hvordan bidra til grensesnittspesifikasjonen?":/README

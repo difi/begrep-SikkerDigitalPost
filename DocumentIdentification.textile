@@ -24,7 +24,7 @@ h3. Attributer
 h3. Kodeverk: Type
 
 Type spesifiserer "Melding":Melding som ligger i "Standard Business Document":StandardBusinessDocument
-Type = "Melding":Meldingstypen.
+Type = "Meldingstypen":Melding.
 
 h4. xml eksempel
 
