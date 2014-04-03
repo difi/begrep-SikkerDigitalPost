@@ -43,8 +43,7 @@ h2. Innholdsfortegnelse
 ** "Sikring av Dokumentpakken":ASiC_sikkerhet
 ** "Meldingsidentifikatorer":Meldingsidentifikatorer
 * Teknisk miljø
-** Miljøer
-** Web-servicer
+** (Dokumentasjon leveres innen 01.05.2014)
 * "Referanser":referanser
 * "Endringslogg":/changelog
 * "Hvordan bidra til grensesnittspesifikasjonen?":/README
