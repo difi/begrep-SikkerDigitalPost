@@ -13,19 +13,9 @@ Grunnen til at vi lagrer disse lokalt er for å sikre at verktøy ikke trenger �
 Rot (samme katalog som denne filen ligger i)
 -------------
 
-#### sdp-kvittering.xsd
+#### sdp-kvittering.xsd, sdp-manifest.xsd, sdp-melding.xsd
 
-Beskrivelse: `TODO`
-
-
-#### sdp-manifest.xsd
-
-Beskrivelse: `TODO`
-
-
-#### sdb-melding.xsd
-
-Beskrivelse: `TODO`
+Beskrivelse: http://begrep.difi.no/SikkerDigitalPost/
 
 
 
@@ -139,7 +129,7 @@ Universal Business Language (UBL)
 
 Originaler: http://docs.oasis-open.org/ubl/prd4-UBL-2.1/xsd/common/
 
-
+Ingen endringer.
 
 
 w3/
