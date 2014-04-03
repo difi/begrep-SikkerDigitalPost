@@ -4,30 +4,59 @@ title: Sikker digital post
 headtitle: Sikker digital post
 ---
 
-h2. Bakgrunn
+h2. Innledning
 
-Begrepskatalogen for sikker digital post definerer de forskjellige delene av en Sikker Digital Postforsendelse som skal gå fra en offentlig "avsender":Avsender til en privat "mottaker":Mottaker sin postboks. 
+På denne delen av "begrep.difi.no":/ publiseres grensesnittspesifikasjonen for Sikker Digital Posttjeneste.
+Målgruppen for denne spesifikasjonen er Avsendervirksomheter, Meldingsformidler og Postkasselverandører.
 
-h3. "Aktører":AktorIdentifikatorer
+h2. Omfang
 
-Se mer under "Informasjon om Aktøridentifikatorer":AktorIdentifikatorer
+Dokumentasjonen skal hovedsakelig fungere som en implementasjonguide for integrasjon mellom avsendere og postkasseleverandører gjennom meldingsformidleren. 
 
-Overføring fra Databehandler til Meldingsformidler til Postkasseleverandør skjer gjennom sikre grensesnitt definerte med "ebMS 3.0 standarden":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.pdf og implementert etter en "The AS4 Light Client Conformance Profile":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/profiles/AS4-profile/v1.0/os/AS4-profile-v1.0-os.html#__RefHeading__26166_1909778835 . 
+Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mellom partene, hvordan de skal bygges opp og definisjon av begreper.
 
-h3. Digital postforsendelse
-
-Postforsendelsen i seg selv består av følgende deler:
-* "Standard Business Document":StandardBusinessDocument - inneholder informasjonen som meldingsformidler trenger for å formidle meldingen og som postboksen trenger for å presentere og håndtere dokumentpakken.
-* "Dokumentpakke (ASiC)":ASiC - inneholder posten (brev og evt vedlegg) med informasjon som trengs for å ivareta integritet i meldingen over lang tid
-
-Disse to delene vil oppstå som en del av "ekspederingsprosessen":EksepederePost hos "avsender":Avsender. 
-Deretter skal disse to overførest til en ebMS 3.0 Message Service Handler (MSH). 
-* Les mer om "meldingsutvekslingen":Meldingsutveksling.
-** Les mer om hvilke "meldingstyper":DocumentIdentification#Kodeverk som kan utveksles
-* Les mer om "meldingsstrukturen":meldingsstruktur.
+I tillegg skal det gis ett overblikk over aktører, roller og meldingsflyt mellom aktørene.
 
 
-h3. Sikkerhet
-* Les mer om "hvordan dokumenter som sendes i Sikker digital post er beskyttet":ASiC_sikkerhet.
-* Les mer om  "meldingsidentifikatorer":MeldingsIdentifikatorer for sporbarhet i Sikkker digital post.
-* Sikkerhet knyttet til "meldingsutvekslingen":Meldingsutveksling vil dokumenteres i neste versjon av grensesnittet.
+h2. Meldingsutveksling
+
+** "Aktører og Roller":Aktorer
+*** "Aktør identifikatorer":AktorIdentifikatorer
+** "Ekspederingsprosessen":EksepederePost
+** "Meldingstyper":Melding
+** "Meldingsflyt":Meldingsutveksling 
+** "Feilhåndtering":Feilhaandtering
+** PModes
+*** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
+*** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
+
+h2. Meldingsspesifikasjoner
+
+"Digital postforsendelse":meldingsstruktur består av følgende meldingselementer:
+
+# "Webservice Security Header":WebserviceSecurity
+# "UserMessage":UserMessage 
+# "StandardBusinessDocument":StandardBusinessDocument 
+# og eventuelt en "Dokumentpakke":ASiC
+
+h2. Sikkerhet
+
+** "Sertifikatbruk":Sertifikatbruk
+** "Sikring av Dokumentpakken":ASiC_sikkerhet
+** "Meldingsidentifikatorer":Meldingsidentifikatorer
+
+h2. Teknisk miljø
+
+** (Dokumentasjon leveres innen 01.05.2014)
+
+h2. Annet
+
+* "Referanser":referanser
+* "Endringslogg":/changelog
+* "Hvordan bidra til grensesnittspesifikasjonen?":/README
+
+
+
+
+
+

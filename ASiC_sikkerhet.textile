@@ -26,8 +26,8 @@ Hoveddokumentet og vedleggene pakkes sammen i en dokumentpakke sammen med noe me
 [2] krav 6.1 “ASiC conformance” skal være “ASiC-E XAdES”.
 [2] krav 8.1 “ASiC-E Media type identification” skal være “ASiC file extension is ".asice"”
 [2] krav 8.2 “ASiC-E Signed data object”. Alle filer utenfor META-INF katalogen skal være signert.  
-[2] 8.3.1 «ASiC-E XAdES signature» Det skal kun være en signatur i META-INF katalogen, med navn signature.xml. Denne signaturen skal dekke alle andre filer i beholderen, og avsenderens virksomhetssertifikat skal benyttes for signering.
-[2] 8.3.2 “Requirements for the contents of Container” refererer til [1] 6.2.2 punkt 4b) “"META-INF/manifest.xml" if present […]”. Denne filen skal ikke være tilstede.
+[2] krav 8.3.1 «ASiC-E XAdES signature» Det skal kun være en signatur i META-INF katalogen, med navn signature.xml. Denne signaturen skal dekke alle andre filer i beholderen, og avsenderens virksomhetssertifikat skal benyttes for signering.
+[2] krav 8.3.2 “Requirements for the contents of Container” refererer til [1] 6.2.2 punkt 4b) “"META-INF/manifest.xml" if present […]”. Denne filen skal ikke være tilstede.
 
 h3. Signatur i dokumentpakken for sikker digital post
 
@@ -35,7 +35,7 @@ Dokumentpakken BØR være signert av "Behandlingsansvarlig":AktorIdentifikatorer
 
 Signaturen skal være i henhold til [3] med basisprofilen definert i [4] (B-Level Conformance). Ytterlige begrensninger følger nedenfor:
 
-[4] krav 5.1 «Algorithm requirements». Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. Fingeravtrykksalgoritmen i CertDigest skal være "http://www.w3.org/2000/09/xmldsig#sha1":http://www.w3.org/2000/09/xmldsig#sha1.. 
+[4] krav 5.1 «Algorithm requirements». Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmlenc#sha256":http://www.w3.org/2001/04/xmlenc#sha256. Fingeravtrykksalgoritmen i CertDigest skal være "http://www.w3.org/2000/09/xmldsig#sha1":http://www.w3.org/2000/09/xmldsig#sha1.. 
 [4] krav 6.2.1 «Placement of the signing certificate”. Alle sertifikater fra virkomhetsertifikatet og opp til en tiltrodd rot skal være inkludert.
 [4] krav 6.2.2 “Canonicalization of ds:SignedInfo element” skal være "http://www.w3.org/2006/12/xml-c14n11":http://www.w3.org/2006/12/xml-c14n11
 [4] krav 6.2.3 “Profile of ds:Reference element”. Alle dokumenter skal være med, og det er ikke lov med referanser utenfor dokumentpakken.
@@ -46,8 +46,9 @@ Signaturen skal være i henhold til [3] med basisprofilen definert i [4] (B-Leve
 
 h3. Konfidensialitet
 
-Dokumentpakken krypteres med en 256-bit AES nøkkel i modus AES-GCM. Det skal genereres en ny nøkkel for hver kryptering av en dokumentpakke. 
-I parameterne til GCM skal det være «Tag Length» lik null, og en IV bestående av bare nuller. IV lik null er sikkerhetsmessig ikke et problem fordi den aldri blir gjentatt ettersom nøkkelen bare brukes en gang.
+Dokumentpakken krypteres med en 256-bit AES nøkkel i modus AES/CTR/NoPadding. Det skal genereres en ny nøkkel for hver kryptering av en dokumentpakke. Teller (IV) skal starte på. IV lik null er sikkerhetsmessig ikke et problem fordi den aldri blir gjentatt ettersom nøkkelen bare brukes en gang.
+
+Integriteten til den krypterte dokumentpakken ivaretas av "Dokumentpakke":Dokumentpakke.
 
 Det er avsenders ansvar å generere en AES-nøkkel med tilstrekkelig tilfeldighet. Kilden bør være en sertifisert tilfeldig tall generator (TRNG).
 
