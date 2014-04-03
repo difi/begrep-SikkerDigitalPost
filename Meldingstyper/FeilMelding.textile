@@ -1,0 +1,21 @@
+---
+layout: default
+title: Feilmelding
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := En "Kvitteringsmelding":Kvitteringsmelding til Avsender om at varsling til Mottaker ikke har blitt gjort i henhold til avtale.
+- Kilde := DIFI
+
+
+h3. Attributer
+
+
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| tidspunkt | 1..1 | xsd:dateTime |
+| feiltype | 1..1 | xsd:string |
+| detaljer | 0..1 | xsd:string |
+

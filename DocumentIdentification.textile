@@ -23,16 +23,8 @@ h3. Attributer
 
 h3. Kodeverk: Type
 
-Følgende Forretningsmeldinger er definert:
-
-{background:#ddd}.|_. Type |_. Beskrivelse |
-| DigitalPost | "DigitalPost":DigitalPostMelding |
-{background:#ddd}.| PrioritertDigitalPost | "PrioritertDigitalPost":DigitalPostMelding |
-| Åpning | "Åpning":AapningMelding |
-{background:#ddd}.| Varsling | "Varsling":VarslingMelding |
-| Feil | "Feil":FeilMelding |
-
-Type styrer hvilken Melding som ligger i "Standard Business Document":StandardBusinessDocument og hvilke forretningskvitteringer som eventuelt vil returneres.
+Type spesifiserer "Melding":Melding som ligger i "Standard Business Document":StandardBusinessDocument
+Type = "Melding":Meldingstypen.
 
 h4. xml eksempel
 
@@ -42,7 +34,7 @@ h4. xml eksempel
 		<Standard>urn:no:difi.sdp:1.0</Standard>
 		<TypeVersion>1.0</TypeVersion>
 		<InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</InstanceIdentifier> <!-- Dette er den reelle unike identifikatoren i SDB -->
-		<Type>Sikkerpost</Type>
+		<Type>DigitalPost</Type>
 		<CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
 	</DocumentIdentification>
 

@@ -12,7 +12,9 @@ Målgruppen for denne spesifikasjonen er Avsendervirksomheter, Meldingsformidler
 h2. Omfang
 
 Dokumentasjonen skal hovedsakelig fungere som en implementasjonguide for integrasjon mellom avsendere og postkasseleverandører gjennom meldingsformidleren. 
+
 Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mellom partene, hvordan de skal bygges opp og definisjon av begreper.
+
 I tillegg skal det gis ett overblikk over aktører, roller og meldingsflyt mellom aktørene.
 
 
@@ -21,11 +23,9 @@ h2. Innholdsfortegnelse
 * "Innledning":index#Innledning
 * "Omfang":index#Omfang
 * "Meldingsutveksling":Meldingsutveksling
-** "Aktører":AktorIdentifikatorer
-** Roller
+** "Aktører og Roller":AktorIdentifikatorer
 ** "Ekspederingsprosessen":EksepederePost
 ** "Meldingstyper":Melding
-*** Kvitteringer
 ** "Meldingsflyt":Meldingsutveksling 
 ** Feilhåndtering
 ** PModes
@@ -45,6 +45,8 @@ h2. Innholdsfortegnelse
 ** Miljøer
 ** Web-servicer
 * "Referanser":referanser
+* "Endringslogg":/changelog
+* "Hvordan bidra til grensesnittspesifikasjonen?":/README
 
 
 

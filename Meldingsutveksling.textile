@@ -8,6 +8,7 @@ headtitle: Sikker digital post
 Postforsendelsen skal overføres fra Databehandler ved bruk av en ebMS 3.0 Message Service Handler (MSH). 
 MSH'en er virksomhetens tilgangpunkt inn til ebMS 3.0 rammeverket som er ansvarlig for videre transport.
 Avsender sin MSH skal støtte "The AS4 Light Client Conformance Profile":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/profiles/AS4-profile/v1.0/os/AS4-profile-v1.0-os.html#__RefHeading__26166_1909778835
+
 Det er flere forskjellige scenarier for hvordan MSH blir tatt i bruk av (eller integrert inn i) avsender sine løsninger. 
 Det er opp til avsender om man vil fullintegrere MSH inn i eksisterende løsning, benytte seg av en standard "hyllevare" løsning med lokal integrasjon eller benytte seg av tredjepart som MSH. 
 
