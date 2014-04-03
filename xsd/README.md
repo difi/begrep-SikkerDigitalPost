@@ -1,9 +1,9 @@
-XSD-er
+Skjemaer (XSD)
 ===========================
 
-Oversikt over XSD-er for [Sikker digital post](http://begrep.difi.no/SikkerDigitalPost/).
+Dokumentasjon av kilder og ev. endringer i XSD-skjemaer for [Sikker digital post](http://begrep.difi.no/SikkerDigitalPost/).
 
-Grunnen til at vi lagrer disse lokalt er for å sikre at verktøy ikke trenger å være online for å kunne jobbe med XSD-ene. For at dette skal fungere må også referanser til URLer endres til å peke på lokale filer. For de filene vi har endret på er det inkludert en bash-kommando for å vise hvilke endringer som er gjort. Disse kommandoene kan pastes rett inn i en terminal, og kan kjøres fra katalogen `SikkerDigitalPost/xsd`.
+Grunnen til at vi lagrer disse lokalt er for å sikre at verktøy ikke trenger å være online for å kunne jobbe med XSD-ene. For at dette skal fungere må også referanser til URLer endres til å peke på lokale filer. For de filene vi har endret på er det inkludert en bash-kommando for å vise hvilke endringer som er gjort. Disse kommandoene kan pastes rett inn i en terminal, og kan kjøres fra katalogen `SikkerDigitalPost/xsd`. Kommandoene piper til vim for å vise diff med farger. For å avslutte vim, skriv `:q` og trykk Enter. Eventuelt kan du droppe den siste pipen til vim for å vise diff rett i terminalen (uten farger).
 
 
 
@@ -17,6 +17,11 @@ Rot (samme katalog som denne filen ligger i)
 
 Beskrivelse: http://begrep.difi.no/SikkerDigitalPost/
 
+
+#### StandardBusinessDocument.xml
+
+Eksempel på en Standard Business Document (SBD) -fil. Mer informasjon
+finnes her: http://begrep.difi.no/SikkerDigitalPost/StandardBusinessDocument
 
 
 
@@ -38,7 +43,6 @@ curl -Ls http://www.etsi.org/deliver/etsi_ts/102900_102999/102918/01.02.01_60/ts
 | funzip | diff -uw --strip-trailing-cr - asic-e/ts_102918v010201.xsd | vim -R -
 ```
 
-Kommandoen piper til vim for å vise diff med farger. For å avslutte vim, skriv `:q` og trykk Enter. Eventuelt kan du droppe den siste pipen til vim for å vise diff rett i terminalen (uten farger).
 
 
 
@@ -72,6 +76,8 @@ curl -Ls http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms-header-3_0-
 ### Referanser:
 
 - http://docs.oasis-open.org/ebxml-bp/2.0.4/OS/signalSchema/documentation/ebxmlbp-v2.0.4-Document-os-SignalSchema-en.html
+
+
 
 
 
