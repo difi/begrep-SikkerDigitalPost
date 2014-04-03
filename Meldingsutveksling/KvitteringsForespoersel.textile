@@ -70,4 +70,3 @@ h5. Sikkerhet
 | Pmode<notextile>[1]</notextile>.Security.SendReceipt.ReplyPattern | support required for “response”if PMode.MEPbinding is "push", and for "callback" if PMode.MEPbinding is "pull". | |
 
 h3. Eksempler
-
