@@ -6,7 +6,7 @@ headtitle: Sikker digital post - Standard Business Document
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Avsender som har initiert en meldingsprosess
+- Definisjon := Avsender som har initiert en meldingsprosess mot meldingsutvekslingsrammeverket, definert som en "Databehandler":AktorIdentifikatorer aktør.
 - Kilde := GS1
 
 h3. Attributter
