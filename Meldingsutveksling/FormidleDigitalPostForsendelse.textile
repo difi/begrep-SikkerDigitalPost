@@ -11,15 +11,15 @@ Malen inneholder enkelte variabler som skal fylles ved instansiering av et varia
 h5. Generelle parametere
 
 |_. P-Mode |_. Beskrivelse |_. Verdi |
-| PMode.ID | Unik identifikator for paramtersettet | %%"Sender":../StandardBusinessDocumentHeader%%-"FormidleDigitalPostForsendelse"-%versjon/løpenummer% |
+| PMode.ID | Unik identifikator for paramtersettet | %%"Sender":../StandardBusinessDocumentHeader/Sender%%-"FormidleDigitalPostForsendelse"-%versjon/løpenummer% |
 | PMode.Agreement | Unik identifikator for samarbeidsprotokollen | "http://begrep.difi.no/SikkerDigitalPost/Meldingsutveksling/FormidleDigitalPostForsendelse" |
 | PMode.MEP | Message Exchange Pattern | "http://www.oasis-open.org/committees/ebxml-msg/one-way" |
 | PMode.MEPbinding | Retning på kommunikasjon, push eller pull | "http://www.oasis-open.org/committees/ebxml-msg/push" |
-| PMode.Initiator.Party | Identifikator for den som initierar sendingen | %%"Sender":../StandardBusinessDocumentHeader%% |
+| PMode.Initiator.Party | Identifikator for den som initierar sendingen | %%"Sender":../StandardBusinessDocumentHeader/Sender%% |
 | PMode.Initiator.Role | Rolle for den som initierar sendinga | "Avsender" |
 | PMode.Initiator.Authorization.username | Skal kunne støtte bruk av wsse:UsernameToken | - ikke relevant - |
 | PMode.Initiator.Authorization.password | Skal kunne støtte bruk av wsse:UsernameToken | - ikke relevant - |
-| PMode.Responder.Party | Identifikator for den som er mottaker | %%"Reciever":../StandardBusinessDocumentHeader%% |
+| PMode.Responder.Party | Identifikator for den som er mottaker | %%"Reciever":/Felles/virksomhetsidentifikator%% - alltid meldingsformidler? |
 | PMode.Responder.Role | Rolle for den som mottar  | "Meldingsformidler" |
 | PMode.Responder.Authorization.username | Skal kunne støtte bruk av wsse:UsernameToken | - ikke relevant - |
 | PMode.Responder.Authorization.password | Skal kunne støtte bruk av wsse:UsernameToken | - ikke relevant - |
@@ -53,7 +53,7 @@ h5. Sikkerhet
 |_. P-Mode |_. Beskrivelse |_. Verdi |
 | PMode<notextile>[1]</notextile>.Security.WSSVersion | support required for: 1.1 | "1.1" |
 | PMode<notextile>[1]</notextile>.Security.X509.Sign | support required. |  Timestamp, eb:Messaging, SOAP Body, Attachment |
-| PMode<notextile>[1]</notextile>.Security.X509.Signature.Certificate | support required. | %%"Sender":../StandardBusinessDocumentHeader sitt sertifikat%% |
+| PMode<notextile>[1]</notextile>.Security.X509.Signature.Certificate | support required. | %%"Sender":../StandardBusinessDocumentHeader/Sender sitt sertifikat%% |
 | PMode<notextile>[1]</notextile>.Security.X509.Signature.HashFunction |  support required. | "SHA-256" |
 | PMode<notextile>[1]</notextile>.Security.X509.Signature.Algorithm | support required. | "RSA-SHA256" |
 | PMode<notextile>[1]</notextile>.Security.X509.Encryption.Encrypt | support not required. | - ikke relevant - |
