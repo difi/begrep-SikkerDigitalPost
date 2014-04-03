@@ -12,9 +12,6 @@
 
 	<xsd:complexType name="Kvittering">
 		<xsd:sequence>
-			<!--
-				<xsd:element name="refMeldingsId" type="GUID" minOccurs="1" maxOccurs="1"/>
-			-->
 			<xsd:choice>
 				<xsd:element name="levertTilPostkasse" type="LevertTilPostkasse"/>
 				<xsd:element name="aapnetAvMottaker" type="AapnetAvMottaker"/>
@@ -33,7 +30,8 @@
 
 	<xsd:complexType name="Feil">
 		<xsd:sequence>
-			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="feilType" type="Feiltype" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -44,7 +42,7 @@
 
 
 	<xsd:complexType name="AvvistAvMottaker">
-		<!--  TODO: trenger vi denne? -->
+		<!--  TODO: trenger vi denne for å signalisere at mottaker har valgt å "avvise" et brev med åpningskvittering? -->
 	</xsd:complexType>
 
 
@@ -73,23 +71,18 @@
 	</xsd:simpleType>
 
 
-	<xsd:complexType name="Feilinformasjon">
-		<xsd:sequence>
-			<xsd:element name="feiltype" minOccurs="1" maxOccurs="1">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:string">
-						<xsd:maxLength value="100" />
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
-			<xsd:element name="detaljer" minOccurs="0" maxOccurs="1">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:string">
-						<xsd:maxLength value="1000" />
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:complexType>
+	<xsd:simpleType name="Feiltype">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="INPUT" />
+			<xsd:enumeration value="SERVER" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:simpleType name="Feilinformasjon">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1000" />
+		</xsd:restriction>
+	</xsd:simpleType>
 
 </xsd:schema>

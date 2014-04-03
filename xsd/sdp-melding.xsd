@@ -14,32 +14,10 @@
 
 
 	<xsd:complexType name="Melding">
-
 		<xsd:sequence>
 			<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1"/>
 			<xsd:choice>
-				<xsd:sequence>
-					<xsd:element name="digitalMottaker" type="Mottaker" minOccurs="1" maxOccurs="1" />
-					<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1"/>
-					<xsd:element name="aapningskvittering" type="xsd:boolean" minOccurs="0" maxOccurs="1" default="false"/>
-					<xsd:element name="sikkerhetsnivaa" minOccurs="0"
-						maxOccurs="1">
-						<xsd:simpleType>
-							<xsd:restriction base="xsd:integer">
-								<xsd:enumeration value="3" />
-								<xsd:enumeration value="4" />
-							</xsd:restriction>
-						</xsd:simpleType>
-					</xsd:element>
-					<xsd:element name="ikkeSensitivHoveddokumenttittel" minOccurs="0" maxOccurs="1">
-						<xsd:simpleType>
-							<xsd:restriction base="xsd:string">
-								<xsd:maxLength value="100" />
-							</xsd:restriction>
-						</xsd:simpleType>
-					</xsd:element>
-					<xsd:element name="varsler" type="Varsler" minOccurs="0" maxOccurs="1"/>
-				</xsd:sequence>
+				<xsd:element name="digitalPostInfo" type="DigitalPostInfo" minOccurs="1" maxOccurs="1" />
 				<xsd:element name="fysiskPostInfo" type="FysiskPostInfo" minOccurs="1" maxOccurs="1" />
 			</xsd:choice>
 			<xsd:element name="dokumentPakke" type="DokumentPakke" minOccurs="1" maxOccurs="1" />
@@ -57,8 +35,10 @@
 
 	<xsd:complexType name="Avsender">
 		<xsd:sequence>
+			<!-- 
 			<xsd:element name="identifier" type="AvsenderOrganisasjon"/>
-			<xsd:element name="avsenderId" minOccurs="0" maxOccurs="1">
+			-->
+			<xsd:element name="avsenderId" minOccurs="1" maxOccurs="1">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="100" />
@@ -153,17 +133,16 @@
 	</xsd:complexType>
 
 
-    <xsd:simpleType name="LandkodeOrgnr">
+    <xsd:simpleType name="Iso6523Identitet">
         <xsd:restriction base="xsd:string">
-        	<!-- hva er mønsteret? -->
-        	<xsd:pattern value="[0-9]{4}:[0-9]{1,20}"/>
+        	<xsd:pattern value="9908:[0-9]{9}"/>
         </xsd:restriction>
     </xsd:simpleType>
 
 
 	<xsd:complexType name="AvsenderOrganisasjon">
 		<xsd:simpleContent>
-			<xsd:extension base="LandkodeOrgnr">
+			<xsd:extension base="Iso6523Identitet">
 				<xsd:attribute name="authority" use="optional" default="iso6523-actorid-upis">
 					<xsd:simpleType>
 						<xsd:restriction base="xsd:string">
@@ -175,6 +154,31 @@
 		</xsd:simpleContent>
 	</xsd:complexType>
 
+
+	<xsd:complexType name="DigitalPostInfo">
+		<xsd:sequence>
+			<xsd:element name="digitalMottaker" type="Mottaker" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="aapningskvittering" type="xsd:boolean" minOccurs="0" maxOccurs="1" default="false"/>
+			<xsd:element name="sikkerhetsnivaa" minOccurs="0"
+				maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:integer">
+						<xsd:enumeration value="3" />
+						<xsd:enumeration value="4" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="ikkeSensitivHoveddokumenttittel" minOccurs="0" maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="100" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="varsler" type="Varsler" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
 
 
 	<!-- typer nedenfor er for fysisk post -->
