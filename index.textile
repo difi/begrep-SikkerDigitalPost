@@ -33,7 +33,7 @@ h2. Innholdsfortegnelse
 *** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
 * Meldingsspesifikasjoner
 ** "Meldingsstruktur":meldingsstruktur
-*** UserMessage
+*** "UserMessage":UserMessage
 *** "StandardBusinessDocument":StandardBusinessDocument
 *** "Dokumentpakke":ASiC
 ** Klassediagrammer	
