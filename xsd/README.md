@@ -161,6 +161,8 @@ curl -sL http://www.w3.org/TR/2002/REC-xml-exc-c14n-20020718/exc-c14n.xsd \
 
 #### soap-envelope.xsd
 
+Skjema for SOAP/1.2 envelope.
+
 Original: http://www.w3.org/2003/05/soap-envelope/
 
 Endringer:
@@ -215,3 +217,18 @@ Endringer:
 curl -sL http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd \
 | diff -uw --strip-trailing-cr - w3/xmldsig-core-schema.xsd | vim -R -
 ```
+
+
+
+
+
+xmlsoap/
+---------------------
+
+#### envelope.xsd
+
+Skjema for SOAP/1.1 envelope.
+
+Original: http://schemas.xmlsoap.org/soap/envelope/
+
+Ingen endringer.
