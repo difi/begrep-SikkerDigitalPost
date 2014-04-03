@@ -7,25 +7,34 @@ group: SikkerDigitalPost
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Standard Forretningsmelding brukt i forsendelsen av digital post. En inpakning for de forskjellige forretningsmeldingen.
+- Definisjon := Standard Forretningsmelding brukt i forsendelsen av digital post. En innpakning for de forskjellige forretningsmeldingen.
 - Kilde := DIFI
 
 h3. Attributer
 
+Meldingen består av et attributt som er felles for alle meldingstyper.
+Resten av attributtene er definert i de enkelte meldingstypene.
+
 {background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
-| Forretningsmelding | 1..1 | Melding definert i "StandardBusinessDocumentHeader":StandardBusinessDocumentHeader  |
-{background:#ddd}.| Signatur | 1..1 | ds:Signature |
+| Signatur | 1..1 | ds:Signature, Enveloped XML signatur |
 
-h3. Forretningsmeldingen
+h3. Klassediagram
 
-Forretningsmeldingen er definert i "DocumentIdentification":DocumentIdentification og er en av følgende: 
+Meldingen er en av følgende typer beskrevet i diagrammet under.
+
+"!{width:80%}Meldingstyper/meldingstyper.jpg!":Meldingstyper/meldingstyper.jpg
+
+h4. Meldingstypene
+
+Meldingstypen er definert i "DocumentIdentification":DocumentIdentification og er en av følgende: 
 
 {background:#ddd}.|_. Type |_. Beskrivelse |
-| DigitalPost | "DigitalPost":DigitalPostMelding |
-{background:#ddd}.| PrioritertDigitalPost | "PrioritertDigitalPost":DigitalPostMelding |
-| Åpning | "Åpning":AapningMelding |
-{background:#ddd}.| Varsling | "Varsling":VarslingMelding |
-| Feil | "Feil":FeilMelding |
+| "DigitalPost":Meldingstyper/DigitalPostMelding | Forsendelse av digital post |
+{background:#ddd}.| "PrioritertDigitalPost":Meldingstyper/DigitalPostMelding | Forsendelse av digital post |
+| "Levering":Meldingstyper/LeveringsMelding | Kvittering på at digital post er tilgjengeliggjort |
+{background:#ddd}.| "Åpning":Meldingstyper/AapningsMelding | Kvittering fra Innbygger for at digital post er åpnet |
+| "Varsling":Meldingstyper/VarslingskvitteringsMelding | Kvittering for at en spesifisert varsling ikke har blitt sendt |
+{background:#ddd}.| "Feil":Meldingstyper/FeilMelding | Generel feilkvittering |
 
 h3. Signatur
 

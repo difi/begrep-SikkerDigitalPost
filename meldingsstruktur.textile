@@ -6,7 +6,7 @@ headtitle: Oppslagstjenesten for kontakt og reservasjonsregisteret
 
 Illustrert på følgende måte:
 
-!{width:80%}meldingsstruktur.jpg!
+!{width:80%}meldingsstruktur_diagram.jpg!
 
 h3. Eksempel
 

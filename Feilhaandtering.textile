@@ -1,0 +1,31 @@
+---
+layout: default
+title: Meldingsutveksling - Feilhåndtering
+headtitle: Sikker digital post
+---
+
+h3. Feiltyper
+
+Feil som oppstår i meldingsutvekslingen er transportfeil og er ikke forretningsfeil.
+Forretningsfeil sendes som egne "forretningsmeldinger":Melding
+
+h3. Feil ved meldingsutveksling
+
+Ved feilsituasjoner vil tjenestene returnere en Soap-fault med feilkode enten Client eller Server. 
+Client vil typisk være en request som ikke validerer. 
+Server vil være en systemfeil, som vil ha en Leverandørspesifikk-generert feilkode og en feilmelding i faultString-elementet, ref. eksempelet under:
+ 
+ 
+<pre class="brush: xml; toolbar: false">
+ 
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <SOAP-ENV:Fault>
+         <faultcode>SOAP-ENV:Server</faultcode>
+         <faultstring xml:lang="en">[U-1000] Some error message</faultstring>
+      </SOAP-ENV:Fault>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+</pre>
