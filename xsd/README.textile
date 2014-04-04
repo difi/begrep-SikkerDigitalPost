@@ -1,36 +1,37 @@
-Skjemaer (XSD)
-===========================
+---
+layout: default
+title: Skjemaer (XSD)
+headtitle: Sikker digital post
+---
 
-Dokumentasjon av kilder og ev. endringer i XSD-skjemaer for [Sikker digital post](http://begrep.difi.no/SikkerDigitalPost/).
+
+Dokumentasjon av kilder og ev. endringer i XSD-skjemaer for "Sikker digital post":(http://begrep.difi.no/SikkerDigitalPost/).
+
 
 Grunnen til at vi lagrer disse lokalt er for å sikre at verktøy ikke trenger å være online for å kunne jobbe med XSD-ene. For at dette skal fungere må også referanser til URLer endres til å peke på lokale filer. For de filene vi har endret på er det inkludert en bash-kommando for å vise hvilke endringer som er gjort. Disse kommandoene kan pastes rett inn i en terminal, og kan kjøres fra katalogen `SikkerDigitalPost/xsd`. Kommandoene piper til vim for å vise diff med farger. For å avslutte vim, skriv `:q` og trykk Enter. Eventuelt kan du droppe den siste pipen til vim for å vise diff rett i terminalen (uten farger).
 
 
 
-
-
-
-Rot (samme katalog som denne filen ligger i)
+h3. Rot (samme katalog som denne filen ligger i)
 -------------
 
-#### sdp-kvittering.xsd, sdp-manifest.xsd, sdp-melding.xsd
+# "sdp-kvittering.xsd":sdp-kvittering.xsd
+# "sdp-manifest.xsd":sdp-manifest.xsd
+# "sdp-melding.xsd":sdp-melding.xsd
 
 Beskrivelse: http://begrep.difi.no/SikkerDigitalPost/
 
 
-#### StandardBusinessDocument.xml
+h4. StandardBusinessDocument.xml
 
 Eksempel på en Standard Business Document (SBD) -fil. Mer informasjon
 finnes her: http://begrep.difi.no/SikkerDigitalPost/StandardBusinessDocument
 
 
-
-
-
 asic-e/
 -----------------
 
-#### ts_102918v010201.xsd
+# ts_102918v010201.xsd
 
 Skjema for **META-INF/signatures.xml** i en ASiC-E bundle.
 
@@ -42,9 +43,6 @@ Endringer:
 curl -Ls http://www.etsi.org/deliver/etsi_ts/102900_102999/102918/01.02.01_60/ts_102918v010201p0.zip \
 | funzip | diff -uw --strip-trailing-cr - asic-e/ts_102918v010201.xsd | vim -R -
 ```
-
-
-
 
 
 
