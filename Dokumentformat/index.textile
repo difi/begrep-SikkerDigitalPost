@@ -14,7 +14,6 @@ Eksekverbare filer kan ikke sendes i Sikker digital posttjeneste.
 Det utføres ingen endringer i innholdet i mottatte dokumenter. 
 Linker, bilder eller referanser til annet innhold fjernes ikke og dokumentet blir vist i et eget vindu/frame. 
 
-
 Visning av PDF, DOC, ODF og OOXML krever at brukeren har installert en viewer eller et annet program som kan vise det gjeldende formatet.
 
 

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: Sikker digital post - Aktører og Roller
 headtitle: Sikker digital post - Aktører og Identifikatorer
@@ -6,12 +6,9 @@ headtitle: Sikker digital post - Aktører og Identifikatorer
 
 h2. Aktører og roller
 
-
 "!{width:90%}aktorer.jpg!":aktorer.jpg
 
 Overføringen av postforsendelser fra avsender til mottaker innvolverer følgende parter/komponenter:
-
-
 
 {background:#ddd}.|_. Aktør |_. Beskrivelse |
 |_. Behandlingsansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten overfor Innbygger.

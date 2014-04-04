@@ -12,7 +12,6 @@ group: SikkerDigitalPost/Dokumentformat
 - Kilde := DIFI
 - Kommentar :=  
 
-
 Dersom en melding er levert som ren HTML vil denne vises til posttmottaker uten bruk av nettlesertillegg.
 
 h3. Begrensninger
@@ -31,5 +30,3 @@ Det anbefales at HTML overholder W3C og WCAG av hensyn til tilgjengeligheten og 
 h3. Feilhåndtering
 
 HTML-meldinger som ikke oppfyller disse kravene blir avvist ved mottak. Avsendervirksomheten må korrigere meldingene og sende på nytt.
-
-
