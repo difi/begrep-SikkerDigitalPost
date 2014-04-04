@@ -6,26 +6,45 @@ headtitle: Sikker digital post
 
 h3. Feiltyper
 
-Feil som oppstår i meldingsutvekslingen er transportfeil og er ikke forretningsfeil.
-Forretningsfeil sendes som egne "forretningsmeldinger":Melding
+Feil som oppstår i meldingsutvekslingen er transportfeil og ikke forretningsfeil.
+Forretningsfeil sendes som egne "forretningsmeldinger":Melding og er ikke beskrivet videre her.
 
 h3. Feil ved meldingsutveksling
 
-Ved feilsituasjoner vil tjenestene returnere en Soap-fault med feilkode enten Client eller Server. 
+Ved feilsituasjoner vil tjenestene returnere en Soap-fault.
+Denne vil både inneholde en ebMS 3.0 SignalMessage som inneholder informasjon om feilen og en feilkode i Soap bodyen.
+
+h3. ebMS 3.0 feilhåndtering
+
+referanse:
+[8] OASIS, "AS4 Profil of ebMS 3.0 Version 1.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/profiles/AS4-profile/v1.0/os/AS4-profile-v1.0-os.html 
+Kapitel 6. Error Handling beskriver i detalj feilhåndteringen.
+
+h4. eb:Error/@severity
+
+* ebMS Error meldinger med Severity="warning" oversendes alltid som SOAP meldinger.
+* ebMS Error meldinger med Severity="failure" oversendes alltid som SOAP Fault meldinger. 
+
+
+h3. SOAP-Body fault
+
+SOAP feilen vil være enten typen Client eller Server. 
 
 h4. Client feil
+
 Client vil typisk være en request som ikke validerer. 
 For disse tilfellene må Avsender løse problemet det forsøkes å sende meldingen på nytt.
 
 h4. Server feil
+
 Server vil være en systemfeil, som vil ha en Leverandørspesifikk-generert feilkode og en feilmelding i faultString-elementet, 
 For disse tilfellene kan Avsender prøve å sende meldingen på nytt, da feilen kan være forbigående.
 
 
-ref. eksempelet under:
+h3. Eksempel
+
  
- 
-<pre class="brush: xml; toolbar: false">
+<pre class="brush: bash; toolbar: false">
  
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
    <SOAP-ENV:Header>
@@ -37,8 +56,8 @@ ref. eksempelet under:
 					<eb:RefToMessageId>UUID-4@receiver.example.com</eb:RefToMessageId>
 				</eb:MessageInfo>
 				<eb:Error errorCode="EBMS:0101" severity="failure">
-					<eb:Description lang="en">FailedDecryption</eb:Description>
-					<eb:ErrorDetail>There is no message available for pulling from this MPC at this moment.</eb:ErrorDetail>
+					<eb:Description lang="en">FailedAuthentication</eb:Description>
+					<eb:ErrorDetail>The signature in the Security header intended for the "ebms" SOAP actor, could not be validated by the Security module. </eb:ErrorDetail>
 					 <refToMessageId.....
 				</eb:Error>
 			</eb:SignalMessage>
@@ -47,7 +66,7 @@ ref. eksempelet under:
    <SOAP-ENV:Body>
       <SOAP-ENV:Fault>
          <faultcode>SOAP-ENV:Server</faultcode>
-         <faultstring xml:lang="en">[U-1000] Some error message</faultstring>
+         <faultstring xml:lang="en">Some error message</faultstring>
       </SOAP-ENV:Fault>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
