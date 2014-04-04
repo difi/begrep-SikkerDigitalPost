@@ -13,7 +13,6 @@ Grunnen til at vi lagrer disse lokalt er for å sikre at verktøy ikke trenger �
 
 
 h3. Rot (samme katalog som denne filen ligger i)
--------------
 
 # "sdp-kvittering.xsd":sdp-kvittering.xsd
 # "sdp-manifest.xsd":sdp-manifest.xsd
@@ -22,16 +21,16 @@ h3. Rot (samme katalog som denne filen ligger i)
 Beskrivelse: http://begrep.difi.no/SikkerDigitalPost/
 
 
-h4. StandardBusinessDocument.xml
+h4. "StandardBusinessDocument.xml":StandardBusinessDocument.xml
 
 Eksempel på en Standard Business Document (SBD) -fil. Mer informasjon
 finnes her: http://begrep.difi.no/SikkerDigitalPost/StandardBusinessDocument
 
 
-asic-e/
+h3. "asic-e/":asic-e/
 -----------------
 
-# ts_102918v010201.xsd
+# "ts_102918v010201.xsd":asic-e/ts_102918v010201.xsd
 
 Skjema for **META-INF/signatures.xml** i en ASiC-E bundle.
 
@@ -45,12 +44,11 @@ curl -Ls http://www.etsi.org/deliver/etsi_ts/102900_102999/102918/01.02.01_60/ts
 </pre>
 
 
-ebxml/
-----------------------
+h3. "ebxml/":ebxml/
 
 Skjemaer som hører til ebXML-standarden.
 
-# ebbp-signals-2.0.xsd
+# "ebbp-signals-2.0.xsd":ebxml/ebbp-signals-2.0.xsd
 
 Original: http://docs.oasis-open.org/ebxml-bp/2.0.4/ebbp-signals-2.0.4.xsd
 
@@ -60,7 +58,7 @@ curl -Ls http://docs.oasis-open.org/ebxml-bp/2.0.4/ebbp-signals-2.0.4.xsd \
 | diff -uw --strip-trailing-cr - ebxml/ebbp-signals-2.0.xsd | vim -R -
 </pre>
 
-# ebms-header-3_0-200704.xsd
+# "ebms-header-3_0-200704.xsd":ebxml/ebbp-signals-2.0.xsd
 
 Original: http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms-header-3_0-200704.xsd
 
@@ -72,16 +70,11 @@ curl -Ls http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms-header-3_0-
 
 h4. Referanser:
 
-- http://docs.oasis-open.org/ebxml-bp/2.0.4/OS/signalSchema/documentation/ebxmlbp-v2.0.4-Document-os-SignalSchema-en.html
+# http://docs.oasis-open.org/ebxml-bp/2.0.4/OS/signalSchema/documentation/ebxmlbp-v2.0.4-Document-os-SignalSchema-en.html
 
+h3. "etsi/":etsi/
 
-
-
-
-etsi/
------------------------
-
-# XAdES.xsd
+# "XAdES.xsd":etsi/XAdES.xsd
 
 Original: http://uri.etsi.org/01903/v1.3.2/XAdES.xsd
 
@@ -89,14 +82,10 @@ Endringer:
 <pre class="brush: bash; toolbar: false">
 curl -Ls http://uri.etsi.org/01903/v1.3.2/XAdES.xsd \
 | diff -uw --strip-trailing-cr - etsi/XAdES.xsd | vim -R -
-```
+</pre>
 
+h3. "oppslag/":oppslag/
 
-
-
-
-oppslag/
----------------------------
 Difis oppslagstjeneste: http://begrep.difi.no/Oppslagstjenesten/
 
 # oppslagstjeneste-metadata-14-05.xsd
@@ -108,13 +97,9 @@ Endringer:
 <pre class="brush: bash; toolbar: false">
 curl -Ls http://begrep.difi.no/Oppslagstjenesten/xsd/oppslagstjeneste-metadata-14-05.xsd \
 | diff -uw --strip-trailing-cr - oppslag/oppslagstjeneste-metadata-14-05.xsd | vim -R -
-```
+</pre>
 
-
-
-
-SBDH20040506-02/
-----------------------------------------
+h3. "SBDH20040506-02/":SBDH20040506-02/
 
 # StandardBusinessDocumentHeader.xsd og tilhørende XSD-er
 
@@ -122,12 +107,8 @@ Original: `TODO`
 
 Disse er uendret fra originalene.
 
+h3. "ubl/":ubl/
 
-
-
-
-ubl/
------------------------------
 Universal Business Language (UBL)
 
 Originaler: http://docs.oasis-open.org/ubl/prd4-UBL-2.1/xsd/common/
@@ -135,12 +116,12 @@ Originaler: http://docs.oasis-open.org/ubl/prd4-UBL-2.1/xsd/common/
 Ingen endringer.
 
 
-w3/
-----------------------
+h3. "w3/":w3/
+
 XSD-er som hører til standarder definert av World Wide Web Consortium (http://w3.org).
 
 
-# exc-c14n.xsd
+# "exc-c14n.xsd":w3/exc-c14n.xsd
 
 Original:
 http://www.w3.org/TR/2002/REC-xml-exc-c14n-20020718/exc-c14n.xsd
@@ -151,8 +132,7 @@ curl -sL http://www.w3.org/TR/2002/REC-xml-exc-c14n-20020718/exc-c14n.xsd \
 | diff -uw --strip-trailing-cr - w3/exc-c14n.xsd | vim -R -
 </pre>
 
-
-# soap-envelope.xsd
+# "soap-envelope.xsd":w3/soap-envelope.xsd
 
 Skjema for SOAP/1.2 envelope.
 
@@ -164,8 +144,7 @@ curl -sL http://www.w3.org/2003/05/soap-envelope/ \
 | diff -uw --strip-trailing-cr - w3/soap-envelope.xsd | vim -R -
 </pre>
 
-
-# xenc-schema.xsd
+# "xenc-schema.xsd":w3/xenc-schema.xsd
 
 Original: http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/xenc-schema.xsd
 
@@ -175,8 +154,7 @@ curl -sL http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/xenc-schema.xsd \
 | diff -uw --strip-trailing-cr - w3/xenc-schema.xsd | vim -R -
 </pre>
 
-
-# xlink.xsd
+# "xlink.xsd":w3/xlink.xsd
 
 Original: http://www.w3.org/1999/xlink.xsd
 
@@ -186,16 +164,13 @@ curl -sL http://www.w3.org/1999/xlink.xsd \
 | diff -uw --strip-trailing-cr - w3/xlink.xsd | vim -R -
 </pre>
 
-
-
-# xml.xsd
+# "xml.xsd":w3/xml.xsd
 
 Original: http://www.w3.org/2001/xml.xsd
 
 Ingen endringer.
 
-
-# xmldsig-core-schema.xsd
+# "xmldsig-core-schema.xsd":w3/xmldsig-core-schema.xsd
 
 Original: http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd
 
@@ -205,14 +180,9 @@ curl -sL http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd \
 | diff -uw --strip-trailing-cr - w3/xmldsig-core-schema.xsd | vim -R -
 </pre>
 
+h3. "xmlsoap/":xmlsoap/
 
-
-
-
-xmlsoap/
----------------------
-
-# envelope.xsd
+# "envelope.xsd":xmlsoap/envelope.xsd
 
 Skjema for SOAP/1.1 envelope.
 
