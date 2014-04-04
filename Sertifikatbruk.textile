@@ -27,7 +27,7 @@ Følgende deler av Digital postforsendelse er sikret ende-til-ende
 h4. Sikret punkt til punkt
 
 Følgende deler av Digital postforsendelse er sikret punkt til punkt:
-* Wsse:timestamp
+* "Webservice security header timestamp":WebserviceSecurity
 * Eb:messaging
 * "SOAP:Body":StandardBusinessDocument
 * "Dokumentpakke":ASiC

@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Sikker digital post - Aktører og Roller
 headtitle: Sikker digital post - Aktører og Identifikatorer
@@ -16,7 +16,9 @@ Overføringen av postforsendelser fra avsender til mottaker innvolverer følgend
 {background:#ddd}.|_. Aktør |_. Beskrivelse |
 |_. Behandlingsansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten overfor Innbygger.
 BØR signere "Standard Business Document":StandardBusinessDocument og "Dokumentpakke (ASiC)":ASiC |
-{background:#ddd}.| Ansvarlig enhet | Er en mulig aktør som er en underenhet hos Behandlingsansvarlig som skal stå som Avsender for posten overfor Innbygger. |
+{background:#ddd}.| Ansvarlig enhet | Er en mulig aktør som er en underenhet hos Behandlingsansvarlig som skal stå som Avsender for posten overfor Innbygger. 
+Ansvarlig enhet brukes hvis de enkelte enheter har samme organisasjonsnummer som Behandlingsansvarlig eller når den ansvarlige enhet ikke har en selvstendig avtale med Sentralforvalter om bruk av Sikker Digital Post. 
+Ansvarlig enhet brukes av Behandlingsansvarlige med et stort virkeområder som ønsker å differensiere Avsendere til Innbygger avhengig av de interne enhetene som sender digital post. |
 |_. Databehandler  | Avsender eller avtalepart hos avsender, ansvarlig for pakking og sikring av postforsendelser.
 KAN signere "Standard Business Document":StandardBusinessDocument og "Dokumentpakke (ASiC)":ASiC |
 {background:#ddd}.| Teknisk Avsender | Er en mulig aktør som gjennomfører den tekniske forsendelsen av posten på vegne av en databehandler. |

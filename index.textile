@@ -26,7 +26,7 @@ h2. Meldingsutveksling
 ** "Meldingstyper":Melding
 ** "Meldingsflyt":Meldingsutveksling 
 ** "Feilhåndtering":Feilhaandtering
-** PModes
+** ebMS 3.0 PModes
 *** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
 *** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
 
@@ -41,7 +41,7 @@ h2. Meldingsspesifikasjoner
 
 h2. Sikkerhet
 
-** "Sertifikatbruk":Sertifikatbruk
+** "Bruk av sertifikater":Sertifikatbruk
 ** "Sikring av Dokumentpakken":ASiC_sikkerhet
 ** "Meldingsidentifikatorer":Meldingsidentifikatorer
 
