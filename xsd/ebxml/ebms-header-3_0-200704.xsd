@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:S11="http://schemas.xmlsoap.org/soap/envelope/"
-            xmlns:S12="http://www.w3.org/2003/05/soap-envelope"
-            xmlns:tns="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"
-            xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
-            jaxb:version="2.0"
-            targetNamespace="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:S11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" targetNamespace="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xsd:annotation>
 		<xsd:appinfo>Schema for ebMS-3 XML Infoset</xsd:appinfo>
 		<xsd:documentation xml:lang="en">
@@ -17,10 +10,7 @@
 	</xsd:annotation>
 	<xsd:import namespace="http://schemas.xmlsoap.org/soap/envelope/" schemaLocation="../xmlsoap/envelope.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2003/05/soap-envelope" schemaLocation="../w3/soap-envelope.xsd"/>
-
-	<!-- Endret (lagt til) i forhold til den offisielle XSD-en for å unngå feil i forbindelse med XML parsing -->
 	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../w3/xml.xsd"/>
-
 	<xsd:element name="Messaging" type="Messaging"/>
 	<xsd:complexType name="Messaging">
 		<xsd:annotation>
@@ -201,10 +191,6 @@
 				<xsd:documentation>
 	    if SOAP 1.2 is being used, this attribute is required
 			  </xsd:documentation>
-					<!-- Lagt til for at ikke JAXB skulle feile -->
-					<xsd:appinfo>
-							<jaxb:property name="mustUnderstand12"/>
-					</xsd:appinfo>
 			</xsd:annotation>
 		</xsd:attribute>
 		<xsd:anyAttribute namespace="##other" processContents="lax"/>
