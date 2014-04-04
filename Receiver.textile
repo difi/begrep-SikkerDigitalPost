@@ -1,0 +1,24 @@
+---
+layout: default
+title: Receiver
+headtitle: Sikker digital post - Standard Business Document
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Sluttmottaker i en meldingsprosess. Kan være en databehandler på vegne av en dataansvarlig.
+- Kilde := GS1
+
+h3. Attributter
+
+{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
+| Identifier | 1..1 | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator |  |
+
+h3. XML eksempel
+
+<pre class="brush: xml; toolbar: false">
+    <Receiver>
+	    <!-- orgnr avsender -->
+	    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:123456789</Identifier>
+    </Receiver>
+</pre>		

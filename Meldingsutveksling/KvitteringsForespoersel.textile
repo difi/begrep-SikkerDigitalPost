@@ -1,0 +1,72 @@
+---
+layout: default
+title: Meldingsutveksling i Sikker Digital Post - KvitteringsForespoersel
+headtitle: Sikker digital post
+---
+
+Mal/URI for P-Mode parametere som skal benyttes ved forretningsprosessen KvitteringsForsepoersel. Oversikten er basert på P-Mode parametere som en AS4 Light Compliant MSH skal kunne forstå, men det er ikke alle av disse som er relevante for et Sikker Digital Post. Disse er markert med - ikke relevant -
+
+Malen inneholder enkelte variabler som skal fylles ved instansiering av et variabelsett. For disse er formen %%variabelnavn%% benyttet.
+
+h5. Generelle parametere
+
+|_. P-Mode |_. Beskrivelse |_. Verdi |
+| PMode.ID | Unik identifikator for paramtersettet | %%"Sender":../StandardBusinessDocumentHeader/Sender%%-"KvitteringsForespoersel"-%versjon/løpenummer% |
+| PMode.Agreement | Unik identifikator for samarbeidsprotokollen | "http://begrep.difi.no/SikkerDigitalPost/Meldingsutveksling/KvitteringsForespoersel" |
+| PMode.MEP | Message Exchange Pattern | "http://www.oasis-open.org/committees/ebxml-msg/one-way" |
+| PMode.MEPbinding | Retning på kommunikasjon, push eller pull | "http://www.oasis-open.org/committees/ebxml-msg/pull" |
+| PMode.Initiator.Party | Identifikator for den som initierar sendingen | %%"Sender":../StandardBusinessDocumentHeader/Sender%% |
+| PMode.Initiator.Role | Rolle for den som initierar sendinga | "Avsender" |
+| PMode.Initiator.Authorization.username | Skal kunne støtte bruk av wsse:UsernameToken | - ikke relevant - |
+| PMode.Initiator.Authorization.password | Skal kunne støtte bruk av wsse:UsernameToken | - ikke relevant - |
+| PMode.Responder.Party | Identifikator for den som er mottaker | %%"Reciever":/Felles/virksomhetsidentifikator%% - alltid MF? |
+| PMode.Responder.Role | Rolle for den som mottar  | "Meldingsformidler" |
+| PMode.Responder.Authorization.username | Skal kunne støtte bruk av wsse:UsernameToken | - ikke relevant - |
+| PMode.Responder.Authorization.password | Skal kunne støtte bruk av wsse:UsernameToken | - ikke relevant - |
+
+h5. Protokoll
+
+|_. P-Mode |_. Beskrivelse |_. Verdi |
+| PMode<notextile>[1]</notextile>.Protocol.Address |  | "HTTPS 1.1" |
+| PMode<notextile>[1]</notextile>.Protocol.SOAPVersion |  | "SOAP 1.2" |
+
+h5. 
+
+|_. P-Mode  |_. Verdi |
+| PMode<notextile>[1]</notextile>.BusinessInfo.Service  | "SDP"|
+| PMode<notextile>[1]</notextile>.BusinessInfo.Action  | "KvitteringsForespoersel" |
+| PMode<notextile>[1]</notextile>.BusinessInfo.Properties[]: | - ikke relevant - |
+
+2.2.3.4     PMode<notextile>[1]</notextile>.ErrorHandling
+
+|_. P-Mode |_. Beskrivelse |_. Verdi |
+| PMode<notextile>[1]</notextile>.ErrorHandling.Report.AsResponse | support required (true/false)  as initiator of the one-way / push, as well as for the eb:PullRequest signal (PMode<notextile>[1]</notextile>[s]). | ?? |
+| PMode<notextile>[1]</notextile>.ErrorHandling.Report.ProcessErrorNotifyProducer | support required (true/false) | true |
+| PMode<notextile>[1]</notextile>.ErrorHandling.Report.DeliveryFailuresNotifyProducer | support required (true/false) | true |
+
+h5. Pålitlighet
+
+Støtte ikke påkrevd i profilen.
+
+h5. Sikkerhet
+
+|_. P-Mode |_. Beskrivelse |_. Verdi |
+| PMode<notextile>[1]</notextile>.Security.WSSVersion | support required for: 1.1 | "1.1" |
+| PMode<notextile>[1]</notextile>.Security.X509.Sign | support required. |  Timestamp, eb:Messaging, SOAP Body, Attachment |
+| PMode<notextile>[1]</notextile>.Security.X509.Signature.Certificate | support required. | %%"Sender":../StandardBusinessDocumentHeader sitt sertifikat%% |
+| PMode<notextile>[1]</notextile>.Security.X509.Signature.HashFunction |  support required. | "SHA-256" |
+| PMode<notextile>[1]</notextile>.Security.X509.Signature.Algorithm | support required. | "RSA-SHA256" |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Encrypt | support not required. | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Certificate | support not required. | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Algorithm | support not required. |- ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.MinimumStrength | support not required | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.username | support required. | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.password | support required. | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.Digest | support required (true/false) |- ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.Nonce |  support not required | - ikke relevant -|
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.Created | support required. |- ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.PModeAuthorize | support required (true/false) | false |
+| PMode<notextile>[1]</notextile>.Security.SendReceipt | support required (true/false) | |
+| Pmode<notextile>[1]</notextile>.Security.SendReceipt.ReplyPattern | support required for “response”if PMode.MEPbinding is "push", and for "callback" if PMode.MEPbinding is "pull". | |
+
+h3. Eksempler

@@ -1,0 +1,20 @@
+---
+layout: default
+title: UserMessage
+headtitle: Sikker digital post - UserMessage
+---
+
+h2. Introduksjon
+
+Denne delen av meldingen blir benyttet for utveksling av metadata relatert til payload mellom to MSH'er. Innholdet er styrt av AS4 profilen, og skal reflektere innholdet i P-Mode variablene avtalt mellom de to MSHene.
+
+h3. Innhold
+
+{background:#ddd}.|_. Fil |_. Kardinalitet |_. Beskrivelse |
+
+
+h3. Eksempel
+
+
+h3. Refererte standarder
+
