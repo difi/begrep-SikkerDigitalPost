@@ -12,14 +12,38 @@ Forretningsfeil sendes som egne "forretningsmeldinger":Melding
 h3. Feil ved meldingsutveksling
 
 Ved feilsituasjoner vil tjenestene returnere en Soap-fault med feilkode enten Client eller Server. 
+
+h4. Client feil
 Client vil typisk være en request som ikke validerer. 
-Server vil være en systemfeil, som vil ha en Leverandørspesifikk-generert feilkode og en feilmelding i faultString-elementet, ref. eksempelet under:
+For disse tilfellene må Avsender løse problemet det forsøkes å sende meldingen på nytt.
+
+h4. Server feil
+Server vil være en systemfeil, som vil ha en Leverandørspesifikk-generert feilkode og en feilmelding i faultString-elementet, 
+For disse tilfellene kan Avsender prøve å sende meldingen på nytt, da feilen kan være forbigående.
+
+
+ref. eksempelet under:
  
  
 <pre class="brush: xml; toolbar: false">
  
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
-   <SOAP-ENV:Header/>
+   <SOAP-ENV:Header>
+			<eb:Messaging S12:mustUnderstand="true">
+			<eb:SignalMessage>
+				<eb:MessageInfo>
+					<eb:Timestamp>2014-02-10T15:21:42.821Z</eb:Timestamp>
+					<eb:MessageId>UUID-6@sender.example.com</eb:MessageId>
+					<eb:RefToMessageId>UUID-4@receiver.example.com</eb:RefToMessageId>
+				</eb:MessageInfo>
+				<eb:Error errorCode="EBMS:0101" severity="failure">
+					<eb:Description lang="en">FailedDecryption</eb:Description>
+					<eb:ErrorDetail>There is no message available for pulling from this MPC at this moment.</eb:ErrorDetail>
+					 <refToMessageId.....
+				</eb:Error>
+			</eb:SignalMessage>
+		</eb:Messaging>
+   </SOAP-ENV:Header>
    <SOAP-ENV:Body>
       <SOAP-ENV:Fault>
          <faultcode>SOAP-ENV:Server</faultcode>

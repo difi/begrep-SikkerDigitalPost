@@ -15,7 +15,6 @@
 			<xsd:choice>
 				<xsd:element name="levertTilPostkasse" type="LevertTilPostkasse"/>
 				<xsd:element name="aapnetAvMottaker" type="AapnetAvMottaker"/>
-				<xsd:element name="avvistAvMottaker" type="AvvistAvMottaker"/>
 				<xsd:element name="mottakerKunneIkkeVarsles" type="MottakerKunneIkkeVarsles"/>
 				<xsd:element name="feil" type="Feil"/>
 			</xsd:choice>

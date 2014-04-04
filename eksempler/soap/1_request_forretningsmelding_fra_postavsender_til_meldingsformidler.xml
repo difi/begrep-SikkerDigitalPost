@@ -50,9 +50,10 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
 Avsender til MF:
 
 SBD.Type: Digitalpost/ Varslingfeil /  Åpning / Levering / Feil :
+
 	          <eb:UserMessage mpc="urn:sdp:normal:identifier:123456789 (:avsenderidentifikator:1234)  ">
 	          
-SBD.Type: Digitalpost :
+SBD.Type: PrioritertDigitalpost :
 	          
 	          <eb:UserMessage mpc="urn:sdp:prioritet:identifier:123456789 (:avsenderidentifikator:1234)   ">
 
@@ -126,11 +127,11 @@ Avsender til MF:
                 
                 <eb:CollaborationInfo>
 	                  <!-- TODO lik for alle - kan utelates ref spec-->
-                    <eb:AgreementRef>uri:som:identifiserar:samarbeidsprotokollavtalen</eb:AgreementRef>
+                    <eb:AgreementRef>"PMode.Agreement :" = http://begrep.difi.local/SikkerDigitalPost/Meldingsutveksling/FormidleDigitalPostForsendelse</eb:AgreementRef>
 	                  <!-- TODO default AS4 service -->
-                    <eb:Service>http://docs.oasis-open.org/ebxml-msg/as4/200902/service</eb:Service>
+                    <eb:Service>PMode[1].BusinessInfo.Service = "SDP"</eb:Service>
 	                  <!-- TODO default AS4 action -->
-                    <eb:Action>http://docs.oasis-open.org/ebxml-msg/as4/200902/action</eb:Action>
+                    <eb:Action>"PMode[1].BusinessInfo.Action " =  FormidleDigitalPost</eb:Action>
 	                  <!-- TODO detaljere innholdet av denne -->
                     <eb:ConversationId>%%SBD.InstanceIdentifier%%</eb:ConversationId>
                 </eb:CollaborationInfo>
