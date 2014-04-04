@@ -1,0 +1,35 @@
+---
+layout: default
+title: HTML dokument
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/Dokumentformat
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := HTML fil
+- Datatype := fil
+- Kilde := DIFI
+- Kommentar :=  
+
+
+Dersom en melding er levert som ren HTML vil denne vises til posttmottaker uten bruk av nettlesertillegg.
+
+h3. Begrensninger
+
+Av sikkerhetsmessige hensyn, og for å sikre korrekt visning i hele dokumentets levetid, kan dokumentet ikke inneholde referanser til eksternt innhold eller javascript. 
+Links til egne sider er unntatt og kan benyttes.
+Bilder som ønskes brukt i HTML-brev skal derfor legges inn i HTML encodet etter ""data url scheme"" (RFC 2397). 
+HTML-dokumenter får ikke inneholder forms av følgende årsaker:
+* Dersom serveren, som mottar POST fra en form, ikke svarer korrekt eller ikke lengre finnes, vil dette resultere i at brukerne blir møtt med en feil som ikke kan håndteres av postkassen.
+* Det vil ikke kunne sende med troverdige opplysninger om hvem brukeren er.
+
+Det tillates heller ikke bruk av Flash, Java, JavaScript eller andre tredjepartsløsninger som ikke inngår i HTML-standardene.
+
+Det anbefales at HTML overholder W3C og WCAG av hensyn til tilgjengeligheten og for å sikre nettleserkompatibilitet. Det anbefales alltid at det ikke benyttes en fast bredde og at innholdet tilpasser seg browserens størrelse.
+
+h3. Feilhåndtering
+
+HTML-meldinger som ikke oppfyller disse kravene blir avvist ved mottak. Avsendervirksomheten må korrigere meldingene og sende på nytt.
+
+

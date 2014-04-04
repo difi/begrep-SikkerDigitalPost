@@ -39,6 +39,9 @@ h2. Meldingsspesifikasjoner
 # "StandardBusinessDocument":StandardBusinessDocument 
 # og eventuelt en "Dokumentpakke":ASiC
 
+Beskrivelse av "dokumentformater":Dokumentformat/
+Beskrivelser av meldingspesifikasjonen i "XSD":xsd/
+
 h2. Sikkerhet
 
 ** "Bruk av sertifikater":Sertifikatbruk

@@ -1,0 +1,22 @@
+---
+layout: default
+title: Dokumentformater
+headtitle: Sikker digital post
+---
+
+h2. Innledning
+
+Sikker digital posttjeneste kan i utgangspunktet frakte en hver filtype fra avsender til mottaker. 
+Det er derimot begrenset hva postkasseløsningene håndterer. 
+I postkassene er det støtte for PDF og HTML filer og andre formater vil kun være tilgjengelig i postkassene for nedlasting til eget utstyr. 
+Eksekverbare filer kan ikke sendes i Sikker digital posttjeneste.
+
+Det utføres ingen endringer i innholdet i mottatte dokumenter. 
+Linker, bilder eller referanser til annet innhold fjernes ikke og dokumentet blir vist i et eget vindu/frame. 
+
+
+Visning av PDF, DOC, ODF og OOXML krever at brukeren har installert en viewer eller et annet program som kan vise det gjeldende formatet.
+
+
+
+
