@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+﻿<?xml version="1.0" ?>
 <S12:Envelope xmlns:S12="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2003/05/soap-envelope http://www.w3.org/2003/05/soap-envelope">
     <S12:Header>
         <wsse:Security S12:mustUnderstand="true" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
@@ -46,25 +46,84 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
         </wsse:Security>
         <eb:Messaging S12:mustUnderstand="true" id="ebmsHeader" wsu:Id="id-DE969A773C0E48851A139204210260210" xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xsi:schemaLocation="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/ http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd">
             <!--TODO definerer kanal for pull requester -->
-	          <eb:UserMessage mpc="urn:sdp:avsenderid:12345">
+
+Avsender til MF:
+
+SBD.Type: Digitalpost/ Varslingfeil /  Åpning / Levering / Feil :
+	          <eb:UserMessage mpc="urn:sdp:normal:identifier:123456789 (:avsenderidentifikator:1234)  ">
+	          
+SBD.Type: Digitalpost :
+	          
+	          <eb:UserMessage mpc="urn:sdp:prioritet:identifier:123456789 (:avsenderidentifikator:1234)   ">
+
+MF til PK:
+          <eb:UserMessage mpc="urn:sdp:normal:identifier:%%orgnr_MF%%">
+          <eb:UserMessage mpc="urn:sdp:prioritet:identifier:%%orgnr_MF%%">
+	          
+      
+PK til MF:
+          <eb:UserMessage mpc="urn:sdp:normal:identifier:%%orgnr_PK%%">
+          <eb:UserMessage mpc="urn:sdp:prioritet:identifier:%%orgnr_PK%%">
+	          
+	          
                 <eb:MessageInfo>
                     <eb:Timestamp>2014-02-10T14:21:42.520Z</eb:Timestamp>
                     <eb:MessageId>60a3ade5-84d1-46d7-b2cc-5f4fa15f41e5</eb:MessageId>
                 </eb:MessageInfo>
+                
+Avsender til MF:
+                
                 <eb:PartyInfo>
                     <eb:From>
 	                      <!-- orgnr til avsender -->
-                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">123456789</eb:PartyId>
+                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">%%ORG_NR_DATABEHANDLER%%</eb:PartyId>
 	                      <!-- TODO spesifisere denne-->
-                        <eb:Role>uri:som:identifiserar:rollen:postavsender</eb:Role>
+                        <eb:Role>uri:som:identifiserar:rollen:avsender</eb:Role>
                     </eb:From>
                     <eb:To>
 	                      <!-- orgnr til meldingsformidler -->
-                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">234567890</eb:PartyId>
+                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">%%ORG_NR_MF%%</eb:PartyId>
 	                      <!-- TODO spesifisere denne -->
                         <eb:Role>uri:som:identifiserar:rollen:meldingsformidler</eb:Role>
                     </eb:To>
                 </eb:PartyInfo>
+                
+  Fra MF til PK
+                
+   <eb:PartyInfo>
+                    <eb:From>
+	                      <!-- orgnr til avsender -->
+                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">%%ORG_NR_MF%%</eb:PartyId>
+	                      <!-- TODO spesifisere denne-->
+                        <eb:Role>uri:som:identifiserar:rollen:meldingsformidler</eb:Role>
+                    </eb:From>
+                    <eb:To>
+	                      <!-- orgnr til meldingsformidler -->
+                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">%%ORG_NR_PK%%</eb:PartyId>
+	                      <!-- TODO spesifisere denne -->
+                        <eb:Role>uri:som:identifiserar:rollen:postkasse</eb:Role>
+                    </eb:To>
+                </eb:PartyInfo>                
+  
+  
+  Fra PK til MF
+                
+   <eb:PartyInfo>
+                    <eb:From>
+	                      <!-- orgnr til avsender -->
+                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">%%ORG_NR_PK%%</eb:PartyId>
+	                      <!-- TODO spesifisere denne-->
+                        <eb:Role>uri:som:identifiserar:rollen:postkasse</eb:Role>
+                    </eb:From>
+                    <eb:To>
+	                      <!-- orgnr til meldingsformidler -->
+                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">%%ORG_NR_MF%%</eb:PartyId>
+	                      <!-- TODO spesifisere denne -->
+                        <eb:Role>uri:som:identifiserar:rollen:meldingsformidler</eb:Role>
+                    </eb:To>
+                </eb:PartyInfo>                
+                
+                
                 <eb:CollaborationInfo>
 	                  <!-- TODO lik for alle - kan utelates ref spec-->
                     <eb:AgreementRef>uri:som:identifiserar:samarbeidsprotokollavtalen</eb:AgreementRef>
@@ -73,13 +132,20 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
 	                  <!-- TODO default AS4 action -->
                     <eb:Action>http://docs.oasis-open.org/ebxml-msg/as4/200902/action</eb:Action>
 	                  <!-- TODO detaljere innholdet av denne -->
-                    <eb:ConversationId>GUID-Conversation-ID</eb:ConversationId>
+                    <eb:ConversationId>%%SBD.InstanceIdentifier%%</eb:ConversationId>
                 </eb:CollaborationInfo>
+
+
                 <eb:PayloadInfo>
                     <eb:PartInfo href="#soapBody"/>
                     <!-- TODO standardisere cid ? -->
-                    <eb:PartInfo href="cid:asic"/>
+                    <!-- Avsender setter cid selv, men contenttype MÅ alltid settes contenttype i.h.h.t ASiC standarden.  -->
+                    <eb:PartInfo href="cid:sdp:asic" >
+                                    <contenttype></contenttype>                    
+                    </eb:PartInfo>
 	              </eb:PayloadInfo>
+	              
+	              
             </eb:UserMessage>
         </eb:Messaging>
     </S12:Header>
@@ -100,7 +166,7 @@ P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7
 				    <TypeVersion>1.0</TypeVersion>
 				    <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
 					<InstanceIdentifier>GUID-Conversation-ID</InstanceIdentifier>
-				    <Type>Sikkerpost</Type>
+				    <Type> Digitalpost/ Varslingfeil /  Åpning / Levering / Feil </Type>
 				    <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
 			    </DocumentIdentification>
 		    </StandardBusinessDocumentHeader>

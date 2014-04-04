@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HTML dokument
+title: HTML
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost/Dokumentformat
 ---
@@ -9,9 +9,6 @@ group: SikkerDigitalPost/Dokumentformat
 - Term := {{page.title}}
 - Definisjon := HTML fil
 - Datatype := fil
-- Kilde := DIFI
-- Kommentar :=  
-
 
 Dersom en melding er levert som ren HTML vil denne vises til posttmottaker uten bruk av nettlesertillegg.
 
