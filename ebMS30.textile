@@ -1,0 +1,14 @@
+---
+layout: default
+title: ebMS 3.0
+headtitle: Sikker digital post - EbMS 3.0
+---
+
+h2. Introduksjon
+
+Denne delen av meldingen blir benyttet for utveksling av metadata relatert til payload mellom to MSH'er slik som definert av ebMS 3.0. Denne informasjonen blir fraktet som en del av SOAP Header. 
+
+Alle ebMS relaterte Xml element er lagt inn under et eb:Messaging element. Dette kan ha følgende underelement:
+
+* "UserMessage":UserMessage - indikerer at det blir sendt en forretningmelding. 
+* SignalMessage - signalmelding om at det er ønske om en handling fra den andre MSH'en
