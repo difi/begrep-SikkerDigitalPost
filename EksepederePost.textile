@@ -3,8 +3,9 @@ layout: default
 title: Ekspedere Post
 headtitle: Sikker digital post
 ---
+Ekspedere post er prosessen som må gjennomføres hos avsender for å sende post til Meldingsformidler.
 
-utdrag fra "Arkitekturbeskrivelse for Sikker Digital Posttjeneste v 1.0":ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf datert 16.08.2013
+Dette er beskrever i "Arkitekturbeskrivelse for Sikker Digital Posttjeneste v 1.0":ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf datert 16.08.2013 på følgende måte:
 
 h2. Detaljering av forretningsprosessen Ekspedere post
 
