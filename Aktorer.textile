@@ -10,18 +10,18 @@ h2. Aktører og roller
 
 Overføringen av postforsendelser fra avsender til mottaker innvolverer følgende parter/komponenter:
 
-{background:#ddd}.|_. Aktør |_. Beskrivelse |
-|_. Behandlingsansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten overfor Innbygger.
-BØR signere "Standard Business Document":StandardBusinessDocument/ og "Dokumentpakke (ASiC)":Dokumentpakke/ASiC |
-{background:#ddd}.| Ansvarlig enhet | Er en mulig aktør som er en underenhet hos Behandlingsansvarlig som skal stå som Avsender for posten overfor Innbygger. 
+{background:#ddd}.|_. Aktør |_. URN |_. Beskrivelse |
+|_. Behandlingsansvarlig | urn:sdp:behandlingsansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten overfor Innbygger.
+BØR signere "Standard Business Document":StandardBusinessDocument/ og "Dokumentpakke (ASiC)":Dokumentpakke/ |
+{background:#ddd}.| Ansvarlig enhet | urn:sdp:ansvarlig|  Er en mulig aktør som er en underenhet hos Behandlingsansvarlig som skal stå som Avsender for posten overfor Innbygger. 
 Ansvarlig enhet brukes hvis de enkelte enheter har samme organisasjonsnummer som Behandlingsansvarlig eller når den ansvarlige enhet ikke har en selvstendig avtale med Sentralforvalter om bruk av Sikker Digital Post. 
 Ansvarlig enhet brukes av Behandlingsansvarlige med et stort virkeområder som ønsker å differensiere Avsendere til Innbygger avhengig av de interne enhetene som sender digital post. |
-|_. Databehandler  | Avsender eller avtalepart hos avsender, ansvarlig for pakking og sikring av postforsendelser.
-KAN signere "Standard Business Document":StandardBusinessDocument/ og "Dokumentpakke (ASiC)":Dokumentpakke/ASiC |
-{background:#ddd}.| Teknisk Avsender | Er en mulig aktør som gjennomfører den tekniske forsendelsen av posten på vegne av en databehandler. |
-|_. Meldingsformidlerleverandør | Ansvarlig for formidling, sporing og rapportering av postforsendelser |
-{background:#ddd}.|_. Postkasseleverandør | Ansvarlig for å tilgjengeliggjøre og oppbevare post til innbygger, samt å varsle innbygger når det er kommet ny post. |
-|_. Mottaker | Mottaker av postforsendelsen, en Innbygger | 
+|_. Databehandler  | urn:sdp:databehandler | Avsender eller avtalepart hos avsender, ansvarlig for pakking og sikring av postforsendelser.
+KAN signere "Standard Business Document":StandardBusinessDocument/ og "Dokumentpakke (ASiC)":Dokumentpakke/ |
+{background:#ddd}.| Teknisk Avsender | urn:sdp:tekniskavsender | Er en mulig aktør som gjennomfører den tekniske forsendelsen av posten på vegne av en databehandler. |
+|_. Meldingsformidlerleverandør | urn:sdp:meldingsformidler | Ansvarlig for formidling, sporing og rapportering av postforsendelser |
+{background:#ddd}.|_. Postkasseleverandør | urn:sdp:postkasseleverandør | Ansvarlig for å tilgjengeliggjøre og oppbevare post til innbygger, samt å varsle innbygger når det er kommet ny post. |
+|_. Mottaker | urn:sdp:mottaker | Mottaker av postforsendelsen, en Innbygger | 
 
 *Ansvarlig enhet* og *Teknisk Avsender* er kun brukt ved behov i spesielle situasjoner. 
 
