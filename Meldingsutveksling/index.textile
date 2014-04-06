@@ -14,7 +14,7 @@ Det er opp til avsender om man vil fullintegrere MSH inn i eksisterende løsning
 
 "!{width:90%}ebms_flyt_diagram.jpg!":ebms_flyt_diagram.jpg
 
-Les mer om  "meldingsidentifikatorer":../MeldingsIdentifikatorer
+Les mer om  "meldingsidentifikatorer":MeldingsIdentifikatorer
 
 h3. AS4 Light Client profilen
 
@@ -22,16 +22,16 @@ ebMS benytter konseptet P-Mode (Processing Mode) til å beskrive en samling para
 
 AS4 Light client profilen definerer hvilke av disse som en implementasjon skal støtte.
 
-h3. Grensesnitt mellom Avsender og Meldingsformidler
+h4. Grensesnitt mellom avsender og MF
 
-Grensesnittet mellom "teknisk avsender":../Aktorer og "meldingsformidler":../Aktorer har to sett med P-Mode parametere:
-* "FormidleDigitalPostForsendelse":FormidleDigitalPostForsendelse - benyttes ved sending av en digital post forsendelse fra avsender til meldingsformidler
-* "KvitteringsForespoersel":KvitteringsForespoersel - benyttes av avsender for å sjekke om det er forretningskvitteringer som kan hentes
+Grensesnittet mellom avsender og meldingsformidler har to sett med P-Mode parametere:
+* "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse - benyttes ved sending av en digital post forsendelse fra avsender til meldingsformidler
+* "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel - benyttes av avsender for å sjekke om det er forretningskvitteringer som kan hentes
 
 h3. Eksempler
 
 Det er utarbeidet noen eksempler på SOAP meldinger knyttet til flyt diagrammet over.
-Eksemplene finnes her: "eksempler/soap":../eksempler/soap/.
+Eksemplene finnes her: "eksempler/soap":eksempler/soap/.
 
 h3. Refererte standarder
 

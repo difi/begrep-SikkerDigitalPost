@@ -24,7 +24,7 @@ h2. Meldingsutveksling
 *** "Aktør identifikatorer":AktorIdentifikatorer
 ** "Ekspederingsprosessen":EksepederePost
 ** "Meldingstyper":StandardBusinessDocument/Melding/
-** "Meldingsflyt (P-Modes)":Meldingsutveksling 
+** "Meldingsutvekslingsflyt (P-Modes)":Meldingsutveksling/ 
 *** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
 *** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
 ** "Feilhåndtering":Feilhaandtering
