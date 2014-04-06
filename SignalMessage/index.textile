@@ -1,0 +1,22 @@
+---
+layout: default
+title: SignalMessage
+headtitle: Sikker digital post - UserMessage
+---
+
+h2. Introduksjon
+
+SignalMessage blir brukt til å sende en melding til mottakende MSH. Signalmekanismen blir brukt til å sende feilmeldinger, transportkvitteringer eller en forespørsel om å få levert en melding. 
+
+h3. Innhold
+
+{background:#ddd}.|_. Type |_. Beskrivelse |
+| "MessageInfo":../UserMessage/MessageInfo | Samme element som i UserMessage - intern identifikator og timestamp |
+{background:#ddd}.| "PullRequest":PullRequest | Forespørsel om å få levert en ventende melding |
+| "Receipt":Receipt | Standard kvittering relatert til en UserMessage |
+{background:#ddd}.| "Error":Error | Standard feilmelding relatert til en UserMessage  |
+
+h3. Eksempel
+
+* "SOAP forespørsel om kvitteringer fra avsender til meldingsformidler":../eksempler/soap/5_request_forespoersel_om_forretningskvittering_fra_postavsender_til_meldingsformidler.xml
+* "SOAP svar fra meldingsformidler om ingen kvitteringer":../eksempler/soap/5_response_error_fra_meldingsformidler_til_postavsender.xml
