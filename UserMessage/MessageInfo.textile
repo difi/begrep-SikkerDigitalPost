@@ -15,8 +15,8 @@ h4. Egenskaper
 
 |_. Identifikator |_. Type |_. Kardinalitet | Kommentar |
 | Timestamp | xsd:dateTime | 1..1 | |
-| MessageId | tns:none-empty-string | 1..1 | Unik identifikator, satt av MSH |
-| RefToMessageId | tns:none-empty-string | 0..1 | Brukes dersom meldingen er relatert til en annen, f.eks som kvittering |
+| MessageId | tns:none-empty-string | 1..1 | Unik identifikator, satt av MSH. Kan med fordel benytte SBDH.InstanceIdentifier |
+| RefToMessageId | tns:none-empty-string | 0..1 | Brukes dersom meldingen er relatert til en annen. Refererer alltid til MessageId. |
 
 h4. Xml eksempel
 
