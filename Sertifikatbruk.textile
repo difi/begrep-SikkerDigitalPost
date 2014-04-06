@@ -64,9 +64,9 @@ h3. "Webservice Security":WebserviceSecurity
 ** Denne signaturen skal ha referanse til følgende signerte elementer:
 *** "Timestamp":WebserviceSecurity
 *** "eb:Messaging":ebMS30
-*** "SOAP Body_(StandardBusinessDocument)":StandardBusinessDocument/
-*** "Attachment_(Dokumentpakke)":Dokumentpakke/
-* Signeringssertifikat skal være vedlagt SOAP meldingen i "wsse:security":WebserviceSecurity
+*** "SOAP Body <notextile>(StandardBusinessDocument)</notextile>":StandardBusinessDocument/
+*** "Attachment <notextile>(Dokumentpakke)</notextile>":Dokumentpakke/
+* Signeringssertifikatet skal være vedlagt SOAP meldingen i "wsse:security":WebserviceSecurity
 
 
 h3. Signering på veien av Behandlingsansvarlig
