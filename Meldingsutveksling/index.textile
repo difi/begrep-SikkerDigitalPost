@@ -25,8 +25,8 @@ AS4 Light client profilen definerer hvilke av disse som en implementasjon skal s
 h4. Grensesnitt mellom avsender og MF
 
 Grensesnittet mellom avsender og meldingsformidler har to sett med P-Mode parametere:
-* "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse - benyttes ved sending av en digital post forsendelse fra avsender til meldingsformidler
-* "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel - benyttes av avsender for å sjekke om det er forretningskvitteringer som kan hentes
+* "FormidleDigitalPostForsendelse":FormidleDigitalPostForsendelse - benyttes ved sending av en digital post forsendelse fra avsender til meldingsformidler
+* "KvitteringsForespoersel":KvitteringsForespoersel - benyttes av avsender for å sjekke om det er forretningskvitteringer som kan hentes
 
 h3. Eksempler
 
