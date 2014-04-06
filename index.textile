@@ -23,11 +23,12 @@ h2. Meldingsutveksling
 ** "Aktører og Roller":Aktorer
 *** "Aktør identifikatorer":AktorIdentifikatorer
 ** "Ekspederingsprosessen":EksepederePost
-** "Meldingstyper":Melding
+** "Meldingstyper":StandardBusinessDocument/Melding/
 ** "Meldingsflyt (P-Modes)":Meldingsutveksling 
 *** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
 *** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
 ** "Feilhåndtering":Feilhaandtering
+** "Eksempel SOAP meldinger":eksempler/soap/
 
 h2. Meldingsspesifikasjoner
 
@@ -35,16 +36,18 @@ h2. Meldingsspesifikasjoner
 
 # "Webservice Security Header":WebserviceSecurity
 # "ebMS 3.0/AS4 Header":ebMS30 
-# "StandardBusinessDocument":StandardBusinessDocument 
-# og eventuelt en "Dokumentpakke":ASiC
+# "StandardBusinessDocument":StandardBusinessDocument/ 
+# og eventuelt en "Dokumentpakke":Dokumentpakke/
+# med filer (beskrivelse av  tillatte "dokumentformater":Dokumentformat/ )
 
-Beskrivelse av "dokumentformater":Dokumentformat/
+
 Beskrivelser av meldingspesifikasjonen i "XSD":xsd/
+"Eksempel XML meldinger":eksempler/
 
 h2. Sikkerhet
 
 ** "Bruk av sertifikater":Sertifikatbruk
-** "Sikring av Dokumentpakken":ASiC_sikkerhet
+** "Sikring av Dokumentpakken":Dokumentpakke/ASiC_sikkerhet
 ** "Meldingsidentifikatorer":Meldingsidentifikatorer
 
 h2. Teknisk miljø

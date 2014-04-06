@@ -12,13 +12,13 @@ h3. Unik Identifikator for forsendelsen.
 Denne identifikatoren opprettes av Databehandler og skal unikt identifiserer forsendelsen.
 
 |_. Term |_. Kardinalitet |_. Datatype |
-{background:#ddd}.| "StandardBusinessDocument.DocumentIdentification.InstanceIdentifier":DocumentIdentification  | 1..1 | xs:string |
+{background:#ddd}.| "StandardBusinessDocument.DocumentIdentification.InstanceIdentifier":StandardBusinessDocument/DocumentIdentification  | 1..1 | xs:string |
 
 h3. Identifikatorer brukt i forsendelsen punkt til punkt.
 
 Disse identifikatorene benyttes for å spore en melding og tilhørende meldinger i en samtale.
 
 |_. Term |_. Kardinalitet |_. Datatype |_. Beskrivelse |
-{background:#ddd}.| eb:Messaging.MessageInfo.MessageId  | 1..1 | tns:non-empty-string | GUID som unikt identifiserer meldingen |
-| eb:Messaging.MessageInfo.RefToMessageId  | 0..1 | tns:non-empty-string | GUID som unikt identifiserer meldingen dette er et svar på |
-{background:#ddd}.| eb:Messaging.CollaborationInfo.ConversationId  | 0..1 | tns:non-empty-string | GUID som unikt identifiserer første melding i samtalen, kan brukes på tvers av Aktører |
+{background:#ddd}.| "eb:Messaging.MessageInfo.MessageId":UserMessage/MessageInfo  | 1..1 | tns:non-empty-string | GUID som unikt identifiserer meldingen |
+| "eb:Messaging.MessageInfo.RefToMessageId":UserMessage/MessageInfo  | 0..1 | tns:non-empty-string | GUID som unikt identifiserer meldingen dette er et svar på |
+{background:#ddd}.| "eb:Messaging.CollaborationInfo.ConversationId":UserMessage/CollaborationInfo  | 0..1 | tns:non-empty-string | GUID som unikt identifiserer første melding i samtalen, kan brukes på tvers av Aktører |

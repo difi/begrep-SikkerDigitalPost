@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Varslingsmelding
+title: VarslingfeiletMelding
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost
 ---
@@ -15,8 +15,7 @@ h3. Attributer
 
 
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "status":/Felles/status | 1..1 | "status":/Felles/status |
 | "beskrivelse":/Felles/beskrivelse | 0..1 | "beskrivelse":/Felles/beskrivelse |
-| tidspunkt | 1..1 | xsd:dateTime |
+| tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
 | "varslingskanal":/Felles/varslingskanal | 1..1 | "varslingskanal":/Felles/varslingskanal |
 

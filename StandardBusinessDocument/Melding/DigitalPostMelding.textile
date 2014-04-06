@@ -14,8 +14,8 @@ h3. Attributer
 
 
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "Avsender":Avsender | 1..1 | "Avsender":Avsender |
-| "Mottaker":Mottaker | 1..1 | "Mottaker":Mottaker |
+| "Avsender":Avsender | 1..1 | "sdp:Avsender":Avsender |
+| "Mottaker":Mottaker | 1..1 | "sdp:Mottaker":Mottaker |
 | "Dokumentpakke":Dokumentpakke | 1..1 | "sdp:Dokumentpakke":Dokumentpakke |
-| "FysiskPostInfo":FysiskPostInfo | 0..1 | "FysiskPostInfo":FysiskPostInfo  |
-| "DigitalPostInfo":DigitalPostInfo | 0..1 | "DigitalPostInfo":DigitalPostInfo  |
+| "FysiskPostInfo":FysiskPostInfo | 0..1 | "sdp:FysiskPostInfo":FysiskPostInfo  |
+| "DigitalPostInfo":DigitalPostInfo | 0..1 | "sdp:DigitalPostInfo":DigitalPostInfo  |

@@ -7,15 +7,13 @@ group: SikkerDigitalPost
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := En Kvitteringsmelding til Avsender.
+- Definisjon := En "Melding":index til "Avsender":Avsender.
 - Kilde := DIFI
 
 h3. Attributer
 
 
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "status":/Felles/status | 1..1 | "status":/Felles/status |
-| "beskrivelse":/Felles/beskrivelse | 0..1 | "beskrivelse":/Felles/beskrivelse |
-| tidspunkt | 1..1 | xsd:dateTime |
+| tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
 
 

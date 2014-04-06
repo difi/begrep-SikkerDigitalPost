@@ -5,7 +5,7 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/complexType
 ---
 
-- Identifikator := http://begrep.difi.no/SikkerDigialPost/{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
 - Definisjon := Beskrivende tittel for den sikre digitale posten. Skal kunne benyttes til å informere sluttbruker om meldingen
 - Datatype := complexType

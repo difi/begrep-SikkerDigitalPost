@@ -18,13 +18,13 @@ h3. Attributer
 | InstanceIdentifier | 1..1 | xs:string | Unik identifikator for forsendelsen. Opprettet av Databehandler. Anbefalt format: GUID |
 {background:#ddd}.| Type | 1..1 | xs:string | Forretningsmeldingstype, se kodeverk |
 | MultipleType | 0..0 | xs:boolean | brukes ikke |
-{background:#ddd}.| CreationDateAndTime | 1..1 | xs:dateTime | Tidspunkt for oppretting av "Standard Business Document":StandardBusinessDocument |
+{background:#ddd}.| CreationDateAndTime | 1..1 | xs:dateTime | Tidspunkt for oppretting av "Standard Business Document":index |
 
 
 h3. Kodeverk: Type
 
-Type spesifiserer "Melding":Melding som ligger i "Standard Business Document":StandardBusinessDocument
-Type = "Meldingstypen":Melding.
+Type spesifiserer "Melding":Melding/ som ligger i "Standard Business Document":index
+Type = "Meldingstypen":Melding/#Meldingstypene.
 
 h4. xml eksempel
 

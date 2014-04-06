@@ -7,18 +7,18 @@ group: SikkerDigitalPost/Melding
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Person i Sikker digital Post
+- Definisjon := Person i Sikker digital post
 - Datatype := complexType
 - Kilde := DIFI
-- Kommentar := Person er en Mottaker som Digital Post skal sendes til.
+- Kommentar := Person er "mottakeren":Mottaker som Digital Post skal sendes til.
 
 h4. Attributer
 
-|_. Term |_. Kardinalitet |
-| "personidentifikator":/Felles/personidentifikator  | 1..1 |
-| "postkasseadresse":/Felles/postkasseadresse | 1..1 |
-| "mobiltelefonnummer":/Felles/mobiltelefonnummer | 0..1 |
-| "epostadresse":/Felles/epostadresse | 0..1 |
+|_. Term |_. Kardinalitet |_. Datatype |
+| "personidentifikator":/Felles/personidentifikator  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "postkasseadresse":/Felles/postkasseadresse | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "mobiltelefonnummer":/Felles/mobiltelefonnummer | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "epostadresse":/Felles/epostadresse | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 
 h4. Xml eksempel
 

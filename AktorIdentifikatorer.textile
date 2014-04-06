@@ -11,12 +11,12 @@ Her er en oversikt over identifikatorene som er bruk i Digital Postforsendelse o
 Ved kvitteringer/meldinger fra Postkasseleverandør eller meldingsformidlerleverandør tilbake til Offentlig virksomhet er identifikatorene  for Sender og Receiver snudd. 
 
 |_. Term |_. Kardinalitet |_. Aktør |_. Datatype |
-{background:#ddd}.| "StandardBusinessDocument.Melding.Mottaker.personidentifikator":/Felles/personidentifikator  | 1..1 | *"Mottaker":Mottaker* | "personidentifikator":/Felles/personidentifikator |
-| "StandardBusinessDocument.Melding.Avsender.identifier":/Felles/virksomhetsidentifikator | 1..1 | *Behandlingsansvarlig*| "organisasjonsnummer":/Felles/virksomhetsidentifikator |
-{background:#ddd}.| "StandardBusinessDocument.Melding.Avsender.avsenderidentifikator":/Felles/avsenderidentifikator | 0..1 | *Ansvarlig enhet*  | "xsd:String":/Felles/avsenderidentifikator |
-| "StandardBusinessDocument.Header.Sender.Identifier":/Felles/virksomhetsidentifikator | 1..1 | *Databehandler* | "organisasjonsnummer":/Felles/virksomhetsidentifikator |
-{background:#ddd}.| "StandardBusinessDocument.Header.Receiver.Identifier":/Felles/virksomhetsidentifikator | 1..1 | *Postkasseleverandør*| "organisasjonsnummer":/Felles/virksomhetsidentifikator |
-| "ebMessaging.PartyInfo.From.PartyId":/Felles/virksomhetsidentifikator | 1..1 | *Databehandler* eller *Teknisk Avsender* | "organisasjonsnummer":/Felles/virksomhetsidentifikator |
+{background:#ddd}.| "StandardBusinessDocument.Melding.Mottaker.personidentifikator":StandardBusinessDocument/Melding/Mottaker | 1..1 | *"Mottaker":StandardBusinessDocument/Melding/Mottaker* | "personidentifikator":/Felles/personidentifikator |
+| "StandardBusinessDocument.Melding.Avsender.identifier":StandardBusinessDocument/Melding/Avsender | 1..1 | *Behandlingsansvarlig*| "organisasjonsnummer":/Felles/virksomhetsidentifikator |
+{background:#ddd}.| "StandardBusinessDocument.Melding.Avsender.avsenderidentifikator":StandardBusinessDocument/Melding/Avsender | 0..1 | *Ansvarlig enhet*  | "xsd:String":/Felles/avsenderidentifikator |
+| "StandardBusinessDocument.Header.Sender.Identifier":StandardBusinessDocument/Sender | 1..1 | *Databehandler* | "organisasjonsnummer":/Felles/virksomhetsidentifikator |
+{background:#ddd}.| "StandardBusinessDocument.Header.Receiver.Identifier":StandardBusinessDocument/Receiver | 1..1 | *Postkasseleverandør*| "organisasjonsnummer":/Felles/virksomhetsidentifikator |
+| "ebMessaging.PartyInfo.From.PartyId":UserMessage/PartyInfo | 1..1 | *Databehandler* eller *Teknisk Avsender* | "organisasjonsnummer":/Felles/virksomhetsidentifikator |
 {background:#ddd}.| Virksomhetssertifikat | 1..1 | *Databehandler* | X509 med et "organisasjonsnummer":/Felles/virksomhetsidentifikator |
 
 Aktørene og identifikatorene kan illustreres på følgende måte:

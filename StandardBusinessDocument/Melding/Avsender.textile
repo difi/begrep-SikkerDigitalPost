@@ -15,10 +15,10 @@ Kan være forskjellige frå Databehandler og teknisk avsender (for eksempel kan 
 
 h4. Egenskaper
 
-|_. Identifikator |_. Term |_. Kardinalitet |
-| "identifier":/Felles/virksomhetsidentifikator | Identifikator i henhold til iso6523-actorid-upis | 1..1 |
-| "avsenderidentifikator":/Felles/avsenderidentifikator | xs:string | 0..1 |
-| "OrderReference":OrderReference | cac:OrderReference | 0..1 |
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| "identifier":/Felles/virksomhetsidentifikator | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "avsenderidentifikator":/Felles/avsenderidentifikator | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "OrderReference":OrderReference | 0..1 | cac:OrderReference |
 
 h4. Xml eksempel
 

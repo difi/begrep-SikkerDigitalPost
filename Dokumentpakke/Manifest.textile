@@ -14,8 +14,8 @@ group: SikkerDigitalPost
 h3. Attributer
 
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "Mottaker":Mottaker | 1..1 | "sdp:Mottaker":Mottaker |
-| "Avsender":Avsender | 1..1 | "sdp:Avsender":Avsender |
+| "Mottaker":../StandardBusinessDocument/Melding/Mottaker | 1..1 | "sdp:Mottaker":../StandardBusinessDocument/Melding/Mottaker |
+| "Avsender":../StandardBusinessDocument/Melding/Avsender | 1..1 | "sdp:Avsender":../StandardBusinessDocument/Melding/Avsender |
 | hoveddokument | 1..1 | "sdp:Dokument":Dokument |
 | vedlegg | 0..99 | "sdp:Dokument":Dokument |
 

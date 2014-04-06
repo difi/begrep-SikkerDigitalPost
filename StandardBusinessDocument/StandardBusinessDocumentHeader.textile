@@ -6,8 +6,8 @@ headtitle: Sikker digital post - Standard Business Document
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Informasjon relatert til ruting og adressering av en melding
-- Kilde := GS1
+- Definisjon := Informasjon relatert til ruting og adressering av en melding.  FOrkortelse: SBDH
+- Kilde := "GS1":http://www.gs1.org
 
 h3. Attributter
 
@@ -19,7 +19,7 @@ h3. Attributter
 
 h3. Kommentar
 
-Sender/Receiver indikerer retning på meldingsprosessen. For eksempel i "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse prosessen så vil Sender være dataansvarlig og Receiver postboks.
+Sender/Receiver indikerer retning på meldingsprosessen. For eksempel i "FormidleDigitalPostForsendelse":../Meldingsutveksling/FormidleDigitalPostForsendelse prosessen så vil Sender være "Databehandler":../Aktorer og Receiver være "Postkasseleverandør":../Aktorer.
 
 h3. XML eksempel
 

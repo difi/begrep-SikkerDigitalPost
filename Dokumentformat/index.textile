@@ -16,6 +16,8 @@ Linker, bilder eller referanser til annet innhold fjernes ikke og dokumentet bli
 
 Visning av PDF, DOC, ODF og OOXML krever at brukeren har installert en viewer eller et annet program som kan vise det gjeldende formatet.
 
+Spesielle regler knyttet til de enkelte dokument formatene:
 
+* "HTML dokumenter":html
 
 

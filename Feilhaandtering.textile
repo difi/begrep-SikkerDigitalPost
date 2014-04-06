@@ -7,7 +7,7 @@ headtitle: Sikker digital post
 h3. Feiltyper
 
 Feil som oppstår i meldingsutvekslingen er transportfeil og ikke forretningsfeil.
-Forretningsfeil sendes som egne "forretningsmeldinger":Melding og er ikke beskrivet videre her.
+Forretningsfeil sendes som egne "StandardBusinessDocument":StandardBusinessDocument/ og er ikke beskrivet videre her.
 
 h3. Feil ved meldingsutveksling
 

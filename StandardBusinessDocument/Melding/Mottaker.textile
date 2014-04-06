@@ -10,6 +10,7 @@ group: SikkerDigitalPost/Melding
 - Definisjon := Person som er mottaker av en sikker digital post
 - Kilde := DIFI
 - Kommentar := Skjema i sikker digital post støtter at Mottaker kan være en "Person":Person eller en virksomhet.
+Virksomhet er ikke detaljert ytterligere da det ikke er planlagt støttet, men er representert som funksjonalitet i løsningene hos postkassleverandørene.
 
 h4. Egenskaper
 

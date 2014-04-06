@@ -1,0 +1,21 @@
+---
+layout: default
+title: Feilmelding
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := En "Melding":index til "Avsender":Avsender om en forretningsfeil knyttet til innsendt Digital Post.
+- Kilde := DIFI
+
+
+h3. Attributer
+
+
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
+| feiltype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| detaljer | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+

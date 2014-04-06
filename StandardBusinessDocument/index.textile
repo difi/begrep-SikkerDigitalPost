@@ -6,21 +6,25 @@ headtitle: Sikker digital post - Standard Business Document
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Forretningsmeldingen i en forsendelse inkludert adresseringsinformasjon.
-- Kilde := GS1
+- Definisjon := Forretningsmeldingen i en forsendelse inkludert adresseringsinformasjon. FOrkortelse: SBD
+- Kilde := "GS1":http://www.gs1.org
 
-h2. Standard Business Document (SBD)
+h3. Standard Business Document (SBD)
 
 "SBD":http://www.gs1.org/ecom/standards/guidelines#s2 er en "GS1":http://www.gs1.org standard utviklet for å forenkle utveksling av dokumenter i en B2B kontekst. 
 Standardkonvolutten inneholder informasjon for adressering og ruting av forretningsmeldingen. SBD er obligatorisk i neste versjon av PEPPOL infrastrukturen for fakturaformidling.
 
 I sikker digital post blir SBD brukt til å sende informasjonen som meldingsformidler trenger for å formidle meldingen og som postboksen trenger for å presentere og håndtere dokumentpakken.
 
+h3. Klassediagram
+
+"!{width:80%}uml_diagram.jpg!":uml_diagram.jpg
+
 h3. Attributter
 
 {background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | "StandardBusinessDocumentHeader":StandardBusinessDocumentHeader | 1..1 | sh:StandardBusinessDocument | Informasjon for å formidle postforsendelsen |
-{background:#ddd}.| "Melding":Melding | 0..1 | "Melding":Melding | Forretningsmelding identifisert i "DocumentIdentification":DocumentIdentification |
+{background:#ddd}.| "Melding":Melding/ | 0..1 | "Melding":Melding/ | Forretningsmelding identifisert i "DocumentIdentification":DocumentIdentification |
 
 
 

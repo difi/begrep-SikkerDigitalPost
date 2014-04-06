@@ -1,0 +1,49 @@
+---
+layout: default
+title: Melding
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := En abstrakt forretningsmelding brukt i forsendelsen av digital post som alle konkrete forretningsmeldingen arver fra.
+- Kilde := DIFI
+- Kommentar := Forretningsmeldingen er en del av "Standard Business Document":../index. Informasjon om meldingsidentifikator, sender og reciever er dermed ikke en del av meldingen, da dette ligger i "Standard Business Document Header":../StandardBusinessDocumentHeader.
+
+h3. Attributer
+
+Meldingen består av et attributt som er felles for alle "meldingstyper":#meldingstypene.
+Resten av attributtene er definert i de enkelte "meldingstypene, se under":#meldingstypene.
+
+{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
+| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
+
+h3. Klassediagram
+
+Meldingen er en av følgende typer beskrevet i diagrammet under.
+
+"!{width:80%}uml_diagram.jpg!":uml_diagram.jpg
+
+h3. Meldingstypene
+
+Meldingstypen er definert i "DocumentIdentification":../DocumentIdentification og er en av følgende: 
+
+{background:#ddd}.|_. Type |_. Beskrivelse |
+| "DigitalPost":DigitalPostMelding | Forsendelse av digital post |
+{background:#ddd}.| "PrioritertDigitalPost":DigitalPostMelding | Forsendelse av digital post |
+| "Levering":LeveringsMelding | Kvittering på at digital post er tilgjengeliggjort |
+{background:#ddd}.| "Åpning":AapningsMelding | Kvittering fra Innbygger for at digital post er åpnet |
+| "Varslingfeilet":VarslingfeiletMelding | Kvittering for at en spesifisert varsling ikke har blitt sendt |
+{background:#ddd}.| "Feil":FeilMelding | Generel feilkvittering |
+
+h3. Signature
+
+Det er satt følgende krav til signaturen:
+* Security Token være X509 sertifikater 
+* Sertifikatet som brukes skal være et virksomhetssertifikat
+* Sertifikat for validering av signatur skal inkluderes i Signatur elementet
+* Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. 
+* Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmlenc#sha256":http://www.w3.org/2001/04/xmlenc#sha256
+* Signature skal være en signatur av Meldingen og signatur av "StandardBusinessDocumentHeader":../StandardBusinessDocumentHeader.
+* BØR være signert av "Behandlingsansvarlig"::../../Aktorer, men KAN signeres av "Databehandler":../../Aktorer.

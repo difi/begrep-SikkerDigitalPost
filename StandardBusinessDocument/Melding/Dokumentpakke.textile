@@ -14,10 +14,11 @@ group: SikkerDigitalPost/Melding
 
 h4. Eigenskapar
 
-|_. Identifikator |_. Kardinalitet |_. Datatype |
-| Digest | 1..1 | hash av den krypterte Asic-fila |
-| "EncryptedKey":http://www.w3.org/2001/04/xmlenc | 1..1 | "http://www.w3.org/2001/04/xmlenc":http://www.w3.org/2001/04/xmlenc |
-
+|_. Identifikator |_. Kardinalitet |_. Datatype |_. Beskrivelse |
+| "SignedInfo":http://www.w3.org/TR/xmldsig-core1/#sec-SignedInfo | 1..1 | "ds:SignedInfo":http://www.w3.org/TR/xmldsig-core1/#sec-SignedInfo | Hash av den krypterte Asic-fila |
+| "EncryptedKey":http://www.w3.org/2001/04/xmlenc | 1..1 | "enc:EncryptedKey":http://www.w3.org/2001/04/xmlenc | Informasjon om kryptert engangsnøkkel |
+| "KeyInfo":http://www.w3.org/TR/xmldsig-core1/#sec-KeyInfo | 1..1 | "ds:KeyInfo":http://www.w3.org/TR/xmldsig-core1/#sec-KeyInfo | "Mottaker":Mottaker sitt sertifikat, brukt for kryptering av engangsnøkkel. |
+| "CipherData":ttp://www.w3.org/2001/04/xmlenc | 1..1 | "enc:CipherData":ttp://www.w3.org/2001/04/xmlenc | Kryptert engangsnøkkel |
 
 h4. Xml eksempel
 
