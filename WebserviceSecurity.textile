@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Webservice Security
+title: WebserviceSecurity
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost/Melding
 ---
 
-- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
 - Definisjon := Informasjonsbærer i SOAP-meldinger for å gi melding integritet og konfidensialit
 - Datatype := Soap header

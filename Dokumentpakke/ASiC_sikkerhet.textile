@@ -31,7 +31,7 @@ Hoveddokumentet og vedleggene pakkes sammen i en dokumentpakke sammen med noe me
 
 h3. Signatur i dokumentpakken for sikker digital post
 
-Dokumentpakken BØR være signert av "Behandlingsansvarlig":AktorIdentifikatorer, men KAN signeres av "Databehandler":AktorIdentifikatorer.
+Dokumentpakken BØR være signert av "Behandlingsansvarlig":../Aktorer, men KAN signeres av "Databehandler":../Aktorer.
 
 Signaturen skal være i henhold til [3] med basisprofilen definert i [4] (B-Level Conformance). Ytterlige begrensninger følger nedenfor:
 
