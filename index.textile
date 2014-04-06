@@ -24,11 +24,10 @@ h2. Meldingsutveksling
 *** "Aktør identifikatorer":AktorIdentifikatorer
 ** "Ekspederingsprosessen":EksepederePost
 ** "Meldingstyper":Melding
-** "Meldingsflyt":Meldingsutveksling 
-** "Feilhåndtering":Feilhaandtering
-** ebMS 3.0 PModes
+** "Meldingsflyt (P-Modes)":Meldingsutveksling 
 *** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
 *** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
+** "Feilhåndtering":Feilhaandtering
 
 h2. Meldingsspesifikasjoner
 
