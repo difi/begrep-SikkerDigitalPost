@@ -11,4 +11,4 @@ Denne delen av meldingen blir benyttet for utveksling av metadata relatert til p
 Alle ebMS relaterte xml element er lagt inn under et eb:Messaging element i SOAP header. Dette elementet kan ha etter eller flere av følgende underelement:
 
 * "UserMessage":UserMessage/ - en forretningsmelding som skal overleveres til fagsystemet bak MSH'en som tar i mot meldingen
-* "SignalMessage":SignalMessage - signalmelding om at det er ønske om en handling fra den andre MSH'en. En signalmelding vil ikkje innvolvere fagsystemet til MSH'en.
+* "SignalMessage":SignalMessage - signalmelding om at det er ønske om en handling fra den andre MSH'en. En signalmelding vil typisk ikke innvolvere fagsystemet til MSH'en.
