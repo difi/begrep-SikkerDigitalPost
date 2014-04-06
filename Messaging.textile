@@ -4,9 +4,9 @@ title: Messaging
 headtitle: Sikker digital post - Standard Business Document
 ---
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.url}}
 - Term := {{page.title}}
-- Definisjon := Forretningsmeldingen i en forsendelse inkludert adresseringsinformasjon. FOrkortelse: SBD
+- Definisjon := ebMS 3.0 metadata relatert til en meldingsutveksling
 - Kilde := "ebMS 3.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html
 
 h3. eb:Messaging

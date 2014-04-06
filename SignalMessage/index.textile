@@ -1,20 +1,25 @@
 ---
 layout: default
 title: SignalMessage
-headtitle: Sikker digital post - UserMessage
+headtitle: Sikker digital post - Standard Business Document
 ---
 
-h2. Introduksjon
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:"/index.html" }}":{{page.url  | remove:"/index.html"}}
+- Term := {{page.title}}
+- Definisjon := ebMS 3.0 signalmelding
+- Kilde := "ebMS 3.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html
+
+h3. eb:SignalMessage
 
 SignalMessage blir brukt til å sende en melding til mottakende MSH. Signalmekanismen blir brukt til å sende feilmeldinger, transportkvitteringer eller en forespørsel om å få levert en melding. 
 
-h3. Innhold
+h3. Attributter
 
-{background:#ddd}.|_. Type |_. Beskrivelse |
-| "MessageInfo":../UserMessage/MessageInfo | Samme element som i UserMessage - intern identifikator og timestamp |
-{background:#ddd}.| "PullRequest":PullRequest | Forespørsel om å få levert en ventende melding |
-| "Receipt":Receipt | Standard kvittering relatert til en UserMessage |
-{background:#ddd}.| "Error":Error | Standard feilmelding relatert til en UserMessage  |
+{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
+| "MessageInfo":../UserMessage/MessageInfo | 1..1 | eb:MessageInfo | Samme element som i UserMessage - intern identifikator og timestamp |
+{background:#ddd}.| "PullRequest":PullRequest | 0..1 | eb:PullRequest | Forespørsel om å få levert en ventende melding |
+| "Receipt":Receipt | 0..1 | eb:Receipt |  Standard kvittering relatert til en UserMessage |
+{background:#ddd}.| "Error":Error | 0..unbounded | eb:Error | Standardfeilmelding relatert til en melding |
 
 h3. Eksempel
 
