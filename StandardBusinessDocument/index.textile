@@ -4,9 +4,9 @@ title: StandardBusinessDocument
 headtitle: Sikker digital post - Standard Business Document
 ---
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:"/index.html" }}":{{page.url}}
 - Term := {{page.title}}
-- Definisjon := Forretningsmeldingen i en forsendelse inkludert adresseringsinformasjon. FOrkortelse: SBD
+- Definisjon := Forretningsmeldingen i en forsendelse inkludert adresseringsinformasjon. Forkortelse: SBD
 - Kilde := "GS1":http://www.gs1.org
 
 h3. Standard Business Document (SBD)
