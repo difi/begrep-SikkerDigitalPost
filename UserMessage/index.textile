@@ -1,21 +1,26 @@
 ---
 layout: default
 title: UserMessage
-headtitle: Sikker digital post - UserMessage
+headtitle: Sikker digital post - Standard Business Document
 ---
 
-h2. Introduksjon
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:"/index.html" }}":{{page.url}}
+- Term := {{page.title}}
+- Definisjon := ebMS 3.0 relaterte metadata om en forretningmelding
+- Kilde := "ebMS 3.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html
+
+h3. eb:Messaging
 
 UserMessage blir brukt når innholdet i SOAP-meldingen er en forretningsmelding. I sikker digial post er type forretningsmelding definert i "meldingen":../Melding. eb:UserMessage skal bygges opp ved å tolke innholdet i meldingen som skal formidles, samt settinger angitt i "P-Modes":../Meldingsutveksling
 
-h3. Innhold
+h3. Attributter
 
-{background:#ddd}.|_. Type |_. Beskrivelse |
-| "mpc":mpc | Konstantverdi som angir kanal som skal benyttes |
-{background:#ddd}.| "MessageInfo":MessageInfo | Intern identifikator og timestamp |
-| "PartyInfo":PartyInfo | Informasjon om mottaker og avsender |
-{background:#ddd}.| "CollaborationInfo":CollabortationInfo | Informasjon om avtalt samhandlingsmønster for meldingen  |
-| "PayloadInfo":PayloadInfo | Informasjon om selve forretningsmeldingen |
+{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
+| "mpc":mpc | 1..1 | xs:anyURI | Konstantverdi som angir kanal som skal benyttes |
+{background:#ddd}.| "MessageInfo":MessageInfo | 1..1 | eb:MessageInfo | Intern identifikator og timestamp |
+| "PartyInfo":PartyInfo | 1..1 | eb:PartyInfo | Informasjon om avsender og mottaker |
+{background:#ddd}.| "CollaborationInfo":CollaborationInfo | 1..1 | eb:CollaborationInfo | Informasjon om avtalt samhandlingsmønster for meldingen |
+| "PayloadInfo":PayloadInfo | 1..1 | eb:PayloadInfo| Informasjon om selve forretningsmeldingen |
 
 h3. Eksempel
 
