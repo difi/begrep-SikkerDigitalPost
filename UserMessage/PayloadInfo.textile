@@ -1,0 +1,13 @@
+---
+layout: default
+title: PayloadInfo
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost/Melding
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Informasjon om selve forretningsmeldingen 
+- Datatype := complexType
+- Kilde := "ebMS 3.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd
+
