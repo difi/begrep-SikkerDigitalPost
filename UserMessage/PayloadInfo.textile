@@ -11,3 +11,25 @@ group: SikkerDigitalPost/Melding
 - Datatype := complexType
 - Kilde := "ebMS 3.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd
 
+h4. Egenskaper
+
+|_. Identifikator |_. Type |_. Kardinalitet | Kommentar |
+| PartInfo | PartInfo | 1.. | Beskriver vedlegget |
+
+h4. Kommentar
+
+En SDP forretningsmelding skal alltid ha en PartInfo med referanse til SoapBody, og alternativt en til med referanse til ASIC-E vedlegg
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+	<eb:PayloadInfo>
+		<eb:PartInfo href="#soapBody"/>
+		<eb:PartInfo href="cid:sdp:asic">
+			<eb:PartProperties>
+				<eb:Property name="MimeType">application/vnd.etsi.asic-e+zip</eb:Property>
+			</eb:PartProperties>
+		</eb:PartInfo>
+	</eb:PayloadInfo>
+</pre>
+
