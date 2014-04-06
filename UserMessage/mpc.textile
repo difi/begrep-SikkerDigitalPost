@@ -5,7 +5,7 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost
 ---
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.url}}
 - Term := {{page.title}}
 - Definisjon := Konstantverdi som angir underliggende meldingskanal
 - Kilde := ebMS 3.0
