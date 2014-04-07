@@ -14,6 +14,9 @@ h3. Feil ved meldingsutveksling
 Ved feilsituasjoner vil tjenestene returnere en Soap-fault.
 Denne vil både inneholde en ebMS 3.0 SignalMessage som inneholder informasjon om feilen og en feilkode i Soap bodyen.
 
+Feilmeldinger blir returnert som standard SOAP-fault uten noen WS-security-header, og er dermed verken kryptert eller signert slik som andre meldinger er. 
+Dette er fordi feilmeldingene ikke inneholder informasjon som må integritets- eller konfidensialitetsbeskyttes, samt fordi noen feilsituasjoner gjør det umulig å kryptere og/eller signere feilmeldingen.
+
 h3. ebMS 3.0 feilhåndtering
 
 referanse:
