@@ -59,9 +59,3 @@ h2. Annet
 * "Referanser":referanser
 * "Endringslogg":/changelog
 * "Hvordan bidra til grensesnittspesifikasjonen?":/README
-
-
-
-
-
-
