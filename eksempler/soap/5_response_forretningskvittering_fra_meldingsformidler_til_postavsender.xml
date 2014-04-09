@@ -10,29 +10,35 @@
           <eb:MessageId>UUID-5@sender.example.com</eb:MessageId>
           <eb:RefToMessageId>UUID-4@receiver.example.com</eb:RefToMessageId>
         </eb:MessageInfo>
-        
-        <eb:PartyInfo>
-	        <eb:From>
-		        <eb:PartyId>partyId</eb:PartyId>
-		        <eb:Role>role</eb:Role>
-	        </eb:From>
-	        <eb:To>
-		        <eb:PartyId>partyId</eb:PartyId>
-		        <eb:Role>role</eb:Role>
-	        </eb:To>
-        </eb:PartyInfo>
+
+		    <eb:PartyInfo>
+			    <eb:From>
+				    <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">%%ORG_NR_MF%%</eb:PartyId>
+				    <eb:Role>Meldingsformidler</eb:Role>
+			    </eb:From>
+			    <eb:To>
+				    <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">%%ORG_NR_DATABEHANDLER%%</eb:PartyId>
+				    <eb:Role>Avsender</eb:Role>
+			    </eb:To>
+		    </eb:PartyInfo>
         
         
         <eb:CollaborationInfo>
-	        <eb:AgreementRef>agreement</eb:AgreementRef>
-	        <eb:Service>http://docs.oasis-open.org/ebxml-msg/as4/200902/service</eb:Service>
-	        <eb:Action>http://docs.oasis-open.org/ebxml-msg/as4/200902/action</eb:Action>
-	        <eb:ConversationId>GUID-Conversation-ID</eb:ConversationId>
+	        <eb:AgreementRef>http://begrep.difi.no/SikkerDigitalPost/Meldingsutveksling/FormidleDigitalPostForsendelse</eb:AgreementRef>
+	        <eb:Service>urn:sdp:service:sdp</eb:Service>
+	        <eb:Action>FormidleDigitalPost</eb:Action>
+	        <eb:ConversationId>GUID-ConversationId</eb:ConversationId>
 	      </eb:CollaborationInfo>
-        
-        <eb:PayloadInfo>
-	        <eb:PartInfo href="#soapBody"/>
-        </eb:PayloadInfo>
+
+		    <eb:PayloadInfo>
+			    <!-- Avsender setter href selv, men MÅ alltid peke på SOAP body -->
+			    <eb:PartInfo href="#soapBody">
+				    <eb:PartProperties>
+					    <!-- MimeType MÅ alltid settes til application/xml -->
+					    <eb:Property name="MimeType">application/xml</eb:Property>
+				    </eb:PartProperties>
+			    </eb:PartInfo>
+		    </eb:PayloadInfo>
       </eb:UserMessage>
     </eb:Messaging>
   </S12:Header>
