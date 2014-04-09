@@ -12,10 +12,12 @@
 
 	<xsd:complexType name="Kvittering">
 		<xsd:sequence>
+			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
 			<xsd:choice>
 				<xsd:element name="levertTilPostkasse" type="LevertTilPostkasse"/>
 				<xsd:element name="aapnetAvMottaker" type="AapnetAvMottaker"/>
-				<xsd:element name="mottakerKunneIkkeVarsles" type="MottakerKunneIkkeVarsles"/>
+				<xsd:element name="mottakerVarselFeilet" type="MottakerVarselFeilet"/>
+				<xsd:element name="duplikatMelding" type="DuplikatMelding"/>
 				<xsd:element name="feil" type="Feil"/>
 			</xsd:choice>
 		</xsd:sequence>
@@ -23,7 +25,6 @@
 
 
 	<xsd:complexType name="LevertTilPostkasse">
-		<!--  TODO: her kan vi vurdere å inkludere tid_levert, e.l. -->
 	</xsd:complexType>
 
 
@@ -36,27 +37,20 @@
 
 
 	<xsd:complexType name="AapnetAvMottaker">
-		<!--  TODO: her kan vi vurdere å inkludere tid_åpnet, e.l. -->
 	</xsd:complexType>
 
 
-	<xsd:complexType name="AvvistAvMottaker">
-		<!--  TODO: trenger vi denne for å signalisere at mottaker har valgt å "avvise" et brev med åpningskvittering? -->
+	<xsd:complexType name="DuplikatMelding">
+		<!-- TODO: bør denne inneholde originalkvitteringen? -->
+		<xsd:sequence>
+			<xsd:element name="originalKvittering" type="Kvittering"/>
+		</xsd:sequence>
 	</xsd:complexType>
 
 
-	<!--
-	<xsd:complexType name="MottakerVarselSendt">
-		<xsd:element name="type" type="Varseltype" minOccurs="1" maxOccurs="1"/>
-		<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"∕>
-	</xsd:complexType>
-	-->
-
-
-	<xsd:complexType name="MottakerKunneIkkeVarsles">
+	<xsd:complexType name="MottakerVarselFeilet">
 		<xsd:sequence>
 			<xsd:element name="type" type="Varseltype" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>

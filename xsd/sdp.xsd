@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema version="1.0" targetNamespace="http://begrep.difi.no/sdp/schema_v10" xmlns="http://begrep.difi.no/sdp/schema_v10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:difi="http://begrep.difi.no"
+	xmlns:enc="http://www.w3.org/2001/04/xmlenc#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" elementFormDefault="qualified">
+
+	<xsd:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="w3/xenc-schema.xsd" />
+	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslag/oppslagstjeneste-metadata-14-05.xsd" />
+
+	<xsd:include schemaLocation="sdp-melding.xsd"/>
+	<xsd:include schemaLocation="sdp-manifest.xsd"/>
+	<xsd:include schemaLocation="sdp-kvittering.xsd"/>
+
+</xsd:schema>
