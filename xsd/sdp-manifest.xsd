@@ -11,23 +11,18 @@
 
 
 	<xsd:complexType name="Manifest">
+		<xsd:annotation>
+			<xsd:documentation>
+				Inneholder metadata relatert til hver fil i en forsendelse.
+			</xsd:documentation>
+		</xsd:annotation>
 		<xsd:sequence>
-		    <!--
-			<xsd:element name="meldingsId" type="GUID" minOccurs="0" maxOccurs="1"/>
-			-->
 			<xsd:element name="mottaker" type="Mottaker" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="hoveddokument" type="Dokument" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="vedlegg" type="Dokument" minOccurs="0" maxOccurs="99"/>
 		</xsd:sequence>
 	</xsd:complexType>
-
-
-	<xsd:simpleType name="GUID">
-		<xsd:restriction base="xsd:string">
-            <xsd:pattern value="[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"/>
-        </xsd:restriction>
-    </xsd:simpleType>
 
 
 	<xsd:complexType name="Dokument">
@@ -48,12 +43,11 @@
 				</xsd:restriction>
 			</xsd:simpleType>
 		</xsd:attribute>
-		<xsd:attribute name="mime" use="required">
+		<xsd:attribute name="mime" use="required" type="xsd:string">
 			<xsd:simpleType>
 				<xsd:restriction base="xsd:string">
-					<xsd:enumeration value="application/pdf"/>
-					<xsd:enumeration value="text/html"/>
-					<xsd:enumeration value="text/plain"/>
+					<xsd:minLength value="1" />
+					<xsd:maxLength value="100" />
 				</xsd:restriction>
 			</xsd:simpleType>
 		</xsd:attribute>
