@@ -59,8 +59,8 @@
 
 	<xsd:complexType name="Feil">
 		<xsd:sequence>
-			<xsd:element name="feiltype" type="Feilkilde" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="kilde" type="Feilkilde" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="informasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
 
