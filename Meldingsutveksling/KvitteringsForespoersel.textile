@@ -33,7 +33,7 @@ h5. Protokoll
 h5. 
 
 {background:#ddd}.|_. P-Mode  |_. Verdi |
-| PMode<notextile>[1]</notextile>.BusinessInfo.Service  | "SDP" |
+| PMode<notextile>[1]</notextile>.BusinessInfo.Service  | "urn:sdp:service:sdp" |
 {background:#ddd}.| PMode<notextile>[1]</notextile>.BusinessInfo.Action  | "KvitteringsForespoersel" |
 | PMode<notextile>[1]</notextile>.BusinessInfo.Properties[]: | - ikke relevant - |
 
