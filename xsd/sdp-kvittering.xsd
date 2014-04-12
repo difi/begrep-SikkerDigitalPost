@@ -25,16 +25,32 @@
 
 
 	<xsd:complexType name="LevertTilPostkasse">
+		<xsd:annotation>
+			<xsd:documentation>
+				Postkasseleverandøren garanterer at brevet har elle vil bli levert
+				til mottakers digitale postkasse.
+			</xsd:documentation>
+		</xsd:annotation>
 	</xsd:complexType>
 
 
-
 	<xsd:complexType name="AapnetAvMottaker">
+		<xsd:annotation>
+			<xsd:documentation>
+				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom 
+				avsender har bestilt åpningskvittering for meldingen.
+			</xsd:documentation>
+		</xsd:annotation>
 	</xsd:complexType>
 
 
 	<xsd:complexType name="DuplikatMelding">
-		<!-- TODO: bør denne inneholde originalkvitteringen? -->
+		<xsd:annotation>
+			<xsd:documentation>
+				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom 
+				avsender har bestilt åpningskvittering.
+			</xsd:documentation>
+		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="originalKvittering" type="Kvittering"/>
 		</xsd:sequence>
@@ -42,6 +58,11 @@
 
 
 	<xsd:complexType name="MottakerVarselFeilet">
+		<xsd:annotation>
+			<xsd:documentation>
+				Signaliserer at et varsel ikke kunde sendes til mottaker.
+			</xsd:documentation>
+		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="type" type="Varseltype" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="1" maxOccurs="1"/>
@@ -67,8 +88,22 @@
 
 	<xsd:simpleType name="Feilkilde">
 		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="INPUT" />
-			<xsd:enumeration value="SERVER" />
+			<xsd:enumeration value="KLIENT">
+				<xsd:annotation>
+					<xsd:documentation>
+						Dersom kilden til feil er KLIENT, er feilen relatert
+						til input og kan ikke sendes på ny.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SERVER">
+				<xsd:annotation>
+					<xsd:documentation>
+						Dersom kilden til feil er SERVER, er feilen forbigående
+						og klienten kan forsøke å sende samme forespørsel på ny.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 

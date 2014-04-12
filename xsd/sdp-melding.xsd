@@ -19,7 +19,7 @@
 			<xsd:element name="behandlingsansvarlig" type="Avsender" minOccurs="1" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>
-						  den reelle avsenderen av dokument(ene)
+						  Den reelle avsenderen av dokument(ene)
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
@@ -58,6 +58,13 @@
 	<xsd:complexType name="Repetisjoner">
 		<xsd:sequence>
 			<xsd:element name="dagerEtter" minOccurs="1" maxOccurs="10">
+				<xsd:annotation>
+					<xsd:documentation>
+						Når varselet skal sendes, relativ til virkningsdato.
+						Verdien 0 betyr at varsel skal sendes samme dag som brevet 
+						tilgjengeliggjøres i mottakers digitale postkasse.
+					</xsd:documentation>
+				</xsd:annotation>
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:nonNegativeInteger">
 						<xsd:maxInclusive value="25" />
@@ -120,7 +127,7 @@
 			<xsd:element name="tittel" minOccurs="0" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>
-						ikke-sensitiv tittel på dokumentpakken
+						Ikke-sensitiv tittel på dokumentpakken
 					</xsd:documentation>
 				</xsd:annotation>
 				<xsd:simpleType>
