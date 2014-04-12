@@ -28,13 +28,6 @@
 	</xsd:complexType>
 
 
-	<xsd:complexType name="Feil">
-		<xsd:sequence>
-			<xsd:element name="feilType" type="Feiltype" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-
 
 	<xsd:complexType name="AapnetAvMottaker">
 	</xsd:complexType>
@@ -64,7 +57,15 @@
 	</xsd:simpleType>
 
 
-	<xsd:simpleType name="Feiltype">
+	<xsd:complexType name="Feil">
+		<xsd:sequence>
+			<xsd:element name="kilde" type="Feilkilde" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="informasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:simpleType name="Feilkilde">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="INPUT" />
 			<xsd:enumeration value="SERVER" />
