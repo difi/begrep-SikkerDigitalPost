@@ -6,8 +6,8 @@
 
 	<tidspunkt>2014-05-19T12:00:00</tidspunkt>
 	<feil>
-		<feilType>INPUT</feilType>
-		<feilinformasjon>Ugyldig PDF</feilinformasjon>
+		<kilde>INPUT</kilde>
+		<informasjon>Ugyldig PDF</informasjon>
 	</feil>
 
 </kvittering>

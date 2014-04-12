@@ -8,14 +8,14 @@
 	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-melding.xsd" 
 	prioritet="prioritert">
 
-	<avsender>
+	<behandlingsansvarlig>
 		<organisasjon>9908:123456789</organisasjon>
 		<avsenderId>123456789-A</avsenderId>
-		<fakturaKonto>ØK1</fakturaKonto>
-	</avsender>
+		<fakturakonto>ØK1</fakturakonto>
+	</behandlingsansvarlig>
 
 	<digitalPostInfo>
-		<digitalMottaker>
+		<mottaker>
 			<person>
 				<difi:personidentifikator>12345678901</difi:personidentifikator>
 				<difi:reservasjon>NEI</difi:reservasjon>
@@ -31,11 +31,11 @@
 				</difi:SikkerDigitalPostAdresse>
 				<difi:X509Certificate>difi:X509Certificate</difi:X509Certificate>
 			</person>
-		</digitalMottaker>
+		</mottaker>
 		<virkningsdato>2014-05-17</virkningsdato>
 		<aapningskvittering>false</aapningskvittering>
 		<sikkerhetsnivaa>3</sikkerhetsnivaa>
-		<ikkeSensitivHoveddokumenttittel>Hurra for 17. mai</ikkeSensitivHoveddokumenttittel>
+		<tittel>Hurra for 17. mai</tittel>
 		<varsler>
 			<epostVarsel>
 				<varselTekst>Viktig melding fra Staten i din digital postkasse</varselTekst>
@@ -53,7 +53,7 @@
 		</varsler>
 	</digitalPostInfo>
 
-	<dokumentPakke>
+	<dokumentpakke>
 		<encryptedKey Encoding="" MimeType="" Recipient="" Type="">
 			<enc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p">
 				<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
@@ -69,6 +69,6 @@
 				<enc:CipherValue>Zm9v</enc:CipherValue>
 			</enc:CipherData>
 		</encryptedKey>
-	</dokumentPakke>
+	</dokumentpakke>
 	
 </melding>

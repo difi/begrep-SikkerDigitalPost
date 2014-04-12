@@ -29,7 +29,7 @@
 	<avsender>
 		<organisasjon authority="iso6523-actorid-upis">9908:123456789</organisasjon>
 		<avsenderId>0123456789</avsenderId>
-		<fakturaKonto>ØK1</fakturaKonto>
+		<fakturakonto>ØK1</fakturakonto>
 	</avsender>
 
 	<hoveddokument href="vedtak_2398324.pdf" mime="application/pdf">
