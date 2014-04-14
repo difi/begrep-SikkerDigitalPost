@@ -260,7 +260,9 @@
 
 
 	<xsd:simpleType name="NorskPostnummer">
-		<xsd:restriction base="xsd:string" />
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{4}" />
+		</xsd:restriction>
 	</xsd:simpleType>
 
 
@@ -293,7 +295,7 @@
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="2" />
+			<xsd:pattern value="[a-zA-Z]{2}"></xsd:pattern>
 		</xsd:restriction>
 	</xsd:simpleType>
 
