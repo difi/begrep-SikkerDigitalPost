@@ -12,7 +12,7 @@
 	<xsd:complexType name="Melding">
 		<xsd:annotation>
 			<xsd:documentation>
- 	      
+
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
@@ -61,7 +61,7 @@
 				<xsd:annotation>
 					<xsd:documentation>
 						Når varselet skal sendes, relativ til virkningsdato.
-						Verdien 0 betyr at varsel skal sendes samme dag som brevet 
+						Verdien 0 betyr at varsel skal sendes samme dag som brevet
 						tilgjengeliggjøres i mottakers digitale postkasse.
 					</xsd:documentation>
 				</xsd:annotation>
@@ -77,7 +77,7 @@
 
 	<xsd:complexType name="Virksomhet">
 		<xsd:sequence>
-			<xsd:element name="sikkerDigitalPostadresse" type="difi:SikkerDigitalPostAdresse" />
+			<xsd:element name="sikkerDigitalPostAdresse" type="difi:SikkerDigitalPostAdresse" />
 		</xsd:sequence>
 	</xsd:complexType>
 
