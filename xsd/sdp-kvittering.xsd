@@ -27,7 +27,7 @@
 	<xsd:complexType name="LevertTilPostkasse">
 		<xsd:annotation>
 			<xsd:documentation>
-				Postkasseleverandøren garanterer at brevet har elle vil bli levert
+				Postkasseleverandøren garanterer at brevet har eller vil bli levert
 				til mottakers digitale postkasse.
 			</xsd:documentation>
 		</xsd:annotation>
@@ -37,7 +37,7 @@
 	<xsd:complexType name="AapnetAvMottaker">
 		<xsd:annotation>
 			<xsd:documentation>
-				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom 
+				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom
 				avsender har bestilt åpningskvittering for meldingen.
 			</xsd:documentation>
 		</xsd:annotation>
@@ -47,7 +47,7 @@
 	<xsd:complexType name="DuplikatMelding">
 		<xsd:annotation>
 			<xsd:documentation>
-				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom 
+				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom
 				avsender har bestilt åpningskvittering.
 			</xsd:documentation>
 		</xsd:annotation>
@@ -60,7 +60,7 @@
 	<xsd:complexType name="MottakerVarselFeilet">
 		<xsd:annotation>
 			<xsd:documentation>
-				Signaliserer at et varsel ikke kunde sendes til mottaker.
+				Signaliserer at et varsel ikke kunne sendes til mottaker.
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
