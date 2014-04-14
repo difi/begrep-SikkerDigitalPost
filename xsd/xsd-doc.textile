@@ -24,5 +24,5 @@ h2. Generere HTML fra XSD
 Xs3p http://wiki.fiforms.org/index.php/Xs3p kan brukes til å generere HTML fra XSD slik:
 
 <pre class="brush: bash; toolbar: false">
-xsltproc xs3p.xsl /sti/til/sdp-melding.xsd > output.html
+xsltproc xs3p/xs3p.xsl sdp-melding.xsd > output.html
 </pre>
