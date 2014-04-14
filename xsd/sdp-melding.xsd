@@ -135,6 +135,7 @@
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="100" />
+						<xsd:minLength value="1" />
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
@@ -168,10 +169,11 @@
 
 	<xsd:complexType name="EpostVarsel">
 		<xsd:sequence>
-			<xsd:element name="varselTekst">
+			<xsd:element name="tekst" minOccurs="0" maxOccurs="1">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="500" />
+						<xsd:minLength value="1" />
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
@@ -187,10 +189,11 @@
 
 	<xsd:complexType name="SmsVarsel">
 		<xsd:sequence>
-			<xsd:element name="varselTekst">
+			<xsd:element name="tekst" minOccurs="0" maxOccurs="1">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="160" />
+						<xsd:minLength value="1" />
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
