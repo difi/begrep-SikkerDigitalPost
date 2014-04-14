@@ -90,8 +90,17 @@
 
 
 	<xsd:simpleType name="Iso6523Identitet">
+		<xsd:annotation>
+			<xsd:documentation>
+				Internasjonal standard for identifisering av organisasjoner. Formatet er
+				4 siffer, et kolon, og 9 siffer. De første 4 sifferne angir ICD, som er
+				autoriteten som har gitt identiteten til organisasjonen. De 9 sifferne er
+				selve organisasjons-IDen. I Norge vil dette i praksis se slik ut:
+				9908:123456789, hvor tallet etter kolon er et org-nr.
+			</xsd:documentation>
+		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
-			<xsd:pattern value="9908:[0-9]{9}" />
+			<xsd:pattern value="[0-9]{4}:[0-9]{9}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 
