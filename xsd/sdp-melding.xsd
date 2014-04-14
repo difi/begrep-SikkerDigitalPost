@@ -108,16 +108,16 @@
 	<xsd:complexType name="Organisasjon">
 		<xsd:simpleContent>
 			<xsd:extension base="Iso6523Identitet">
-				<xsd:attribute name="authority" use="optional" default="iso6523-actorid-upis">
-					<xsd:simpleType>
-						<xsd:restriction base="xsd:string">
-							<xsd:enumeration value="iso6523-actorid-upis" />
-						</xsd:restriction>
-					</xsd:simpleType>
-				</xsd:attribute>
+				<xsd:attribute name="authority" type="Iso6523Authority" use="optional" default="iso6523-actorid-upis" />
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
+
+	<xsd:simpleType name="Iso6523Authority">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="iso6523-actorid-upis" />
+		</xsd:restriction>
+	</xsd:simpleType>
 
 
 	<xsd:complexType name="DigitalPostInfo">
@@ -125,14 +125,7 @@
 			<xsd:element name="mottaker" type="Mottaker" minOccurs="1" maxOccurs="1" />
 			<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1" />
 			<xsd:element name="aapningskvittering" type="xsd:boolean" minOccurs="0" maxOccurs="1" default="false" />
-			<xsd:element name="sikkerhetsnivaa" minOccurs="0" maxOccurs="1" default="3">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:integer">
-						<xsd:enumeration value="3" />
-						<xsd:enumeration value="4" />
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
+			<xsd:element name="sikkerhetsnivaa" type="Sikkerhetsnivaa" minOccurs="0" maxOccurs="1" default="3" />
 			<xsd:element name="tittel" minOccurs="0" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -148,6 +141,13 @@
 			<xsd:element name="varsler" type="Varsler" minOccurs="0" maxOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
+
+	<xsd:simpleType name="Sikkerhetsnivaa">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="3" />
+			<xsd:enumeration value="4" />
+		</xsd:restriction>
+	</xsd:simpleType>
 
 
 	<xsd:complexType name="Mottaker">
