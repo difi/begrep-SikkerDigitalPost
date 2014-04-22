@@ -4,9 +4,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-kvittering.xsd ">
 
+	<tidspunkt>2014-05-19T12:00:00</tidspunkt>
 	<feil>
-		<feilType>INPUT</feilType>
-		<feilinformasjon>Ugyldig PDF</feilinformasjon>
+		<kilde>KLIENT</kilde>
+		<informasjon>Ugyldig PDF</informasjon>
 	</feil>
 
 </kvittering>

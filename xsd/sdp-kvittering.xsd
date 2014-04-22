@@ -12,10 +12,12 @@
 
 	<xsd:complexType name="Kvittering">
 		<xsd:sequence>
+			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
 			<xsd:choice>
 				<xsd:element name="levertTilPostkasse" type="LevertTilPostkasse"/>
 				<xsd:element name="aapnetAvMottaker" type="AapnetAvMottaker"/>
-				<xsd:element name="mottakerKunneIkkeVarsles" type="MottakerKunneIkkeVarsles"/>
+				<xsd:element name="mottakerVarselFeilet" type="MottakerVarselFeilet"/>
+				<xsd:element name="duplikatMelding" type="DuplikatMelding"/>
 				<xsd:element name="feil" type="Feil"/>
 			</xsd:choice>
 		</xsd:sequence>
@@ -23,40 +25,46 @@
 
 
 	<xsd:complexType name="LevertTilPostkasse">
-		<!--  TODO: her kan vi vurdere å inkludere tid_levert, e.l. -->
-	</xsd:complexType>
-
-
-	<xsd:complexType name="Feil">
-		<xsd:sequence>
-			<xsd:element name="feilType" type="Feiltype" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1"/>
-		</xsd:sequence>
+		<xsd:annotation>
+			<xsd:documentation>
+				Postkasseleverandøren garanterer at brevet har eller vil bli levert
+				til mottakers digitale postkasse.
+			</xsd:documentation>
+		</xsd:annotation>
 	</xsd:complexType>
 
 
 	<xsd:complexType name="AapnetAvMottaker">
-		<!--  TODO: her kan vi vurdere å inkludere tid_åpnet, e.l. -->
+		<xsd:annotation>
+			<xsd:documentation>
+				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom
+				avsender har bestilt åpningskvittering for meldingen.
+			</xsd:documentation>
+		</xsd:annotation>
 	</xsd:complexType>
 
 
-	<xsd:complexType name="AvvistAvMottaker">
-		<!--  TODO: trenger vi denne for å signalisere at mottaker har valgt å "avvise" et brev med åpningskvittering? -->
+	<xsd:complexType name="DuplikatMelding">
+		<xsd:annotation>
+			<xsd:documentation>
+				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom
+				avsender har bestilt åpningskvittering.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="originalKvittering" type="Kvittering"/>
+		</xsd:sequence>
 	</xsd:complexType>
 
 
-	<!--
-	<xsd:complexType name="MottakerVarselSendt">
-		<xsd:element name="type" type="Varseltype" minOccurs="1" maxOccurs="1"/>
-		<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"∕>
-	</xsd:complexType>
-	-->
-
-
-	<xsd:complexType name="MottakerKunneIkkeVarsles">
+	<xsd:complexType name="MottakerVarselFeilet">
+		<xsd:annotation>
+			<xsd:documentation>
+				Signaliserer at et varsel ikke kunne sendes til mottaker.
+			</xsd:documentation>
+		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="type" type="Varseltype" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
@@ -70,10 +78,32 @@
 	</xsd:simpleType>
 
 
-	<xsd:simpleType name="Feiltype">
+	<xsd:complexType name="Feil">
+		<xsd:sequence>
+			<xsd:element name="kilde" type="Feilkilde" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="informasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:simpleType name="Feilkilde">
 		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="INPUT" />
-			<xsd:enumeration value="SERVER" />
+			<xsd:enumeration value="KLIENT">
+				<xsd:annotation>
+					<xsd:documentation>
+						Dersom kilden til feil er KLIENT, er feilen relatert
+						til input og kan ikke sendes på ny.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SERVER">
+				<xsd:annotation>
+					<xsd:documentation>
+						Dersom kilden til feil er SERVER, er feilen forbigående
+						og klienten kan forsøke å sende samme forespørsel på ny.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 

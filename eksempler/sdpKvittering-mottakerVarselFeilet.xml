@@ -4,6 +4,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-kvittering.xsd ">
 
-	<avvistAvMottaker/>
+	<tidspunkt>2014-05-19T12:00:00</tidspunkt>
+	<mottakerVarselFeilet>
+		<type>SMS</type>
+		<feilinformasjon>Nummer ikke i bruk</feilinformasjon>
+	</mottakerVarselFeilet>
 
 </kvittering>

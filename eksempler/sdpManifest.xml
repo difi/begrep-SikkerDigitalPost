@@ -7,10 +7,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-manifest.xsd ">
 
-
 	<mottaker>
 		<person>
-			<difi:personidentifikator>12345678901</difi:personidentifikator>
+			<difi:personidentifikator>17051400000</difi:personidentifikator>
 			<difi:reservasjon>NEI</difi:reservasjon>
 			<difi:status>AKTIV</difi:status>
 			<difi:beskrivelse>difi:beskrivelse</difi:beskrivelse>
@@ -28,8 +27,8 @@
 
 	<avsender>
 		<organisasjon authority="iso6523-actorid-upis">9908:123456789</organisasjon>
-		<avsenderId>0123456789</avsenderId>
-		<fakturaKonto>ØK1</fakturaKonto>
+		<avsenderId>A</avsenderId>
+		<fakturakonto>ABC barnehage</fakturakonto>
 	</avsender>
 
 	<hoveddokument href="vedtak_2398324.pdf" mime="application/pdf">

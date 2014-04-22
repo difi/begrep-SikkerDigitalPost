@@ -11,10 +11,12 @@
 
 
 	<xsd:complexType name="Manifest">
+		<xsd:annotation>
+			<xsd:documentation>
+				Inneholder metadata relatert til hver fil i en forsendelse.
+			</xsd:documentation>
+		</xsd:annotation>
 		<xsd:sequence>
-		    <!--
-			<xsd:element name="meldingsId" type="GUID" minOccurs="0" maxOccurs="1"/>
-			-->
 			<xsd:element name="mottaker" type="Mottaker" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="hoveddokument" type="Dokument" minOccurs="1" maxOccurs="1"/>
@@ -23,24 +25,28 @@
 	</xsd:complexType>
 
 
-	<xsd:simpleType name="GUID">
-		<xsd:restriction base="xsd:string">
-            <xsd:pattern value="[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"/>
-        </xsd:restriction>
-    </xsd:simpleType>
-
-
 	<xsd:complexType name="Dokument">
 		<xsd:sequence>
-			<xsd:element name="tittel" minOccurs="1" maxOccurs="1">
+			<xsd:element name="tittel" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Emnet på dokumentet som skal vises til bruker når innlogget riktig sikkerhetsnivå.
+					</xsd:documentation>
+				</xsd:annotation>
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="100" />
+						<xsd:minLength value="1" />
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
 		</xsd:sequence>
 		<xsd:attribute name="href" use="required">
+			<xsd:annotation>
+				<xsd:documentation>
+					Navn på filen i dokumentpakken.
+				</xsd:documentation>
+			</xsd:annotation>
 			<xsd:simpleType>
 				<xsd:restriction base="xsd:string">
 					<xsd:minLength value="4" />
@@ -49,11 +55,15 @@
 			</xsd:simpleType>
 		</xsd:attribute>
 		<xsd:attribute name="mime" use="required">
+			<xsd:annotation>
+				<xsd:documentation>
+					For tillatte MIME-typer, se http://begrep.difi.no/ (TODO)
+				</xsd:documentation>
+			</xsd:annotation>
 			<xsd:simpleType>
 				<xsd:restriction base="xsd:string">
-					<xsd:enumeration value="application/pdf"/>
-					<xsd:enumeration value="text/html"/>
-					<xsd:enumeration value="text/plain"/>
+					<xsd:minLength value="1" />
+					<xsd:maxLength value="100" />
 				</xsd:restriction>
 			</xsd:simpleType>
 		</xsd:attribute>
