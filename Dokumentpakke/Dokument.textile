@@ -16,18 +16,15 @@ h4. Eigenskapar
 
 {background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
 | href| 1..1 | xsd:string |
-{background:#ddd}.| media | 1..1 |  xsd:string  |
-| mime | 1..1 |  xsd:string  |
-{background:#ddd}.| "Tittel":Tittel | 1..1 | "Tittel":Tittel |
+{background:#ddd}.| mime | 1..1 |  xsd:string  |
+| "Tittel":Tittel | 0..1 | "Tittel":Tittel |
 
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
-		<sdp:Dokument href="melding.pdf" media="all" mime="application/pdf">
-            <sdp:Tittel> <!-- Har tatt vekk offentlig tittel - må passe på at denne ikkje inneheld data som må skjermast... -->
-                <sdp:Tekst lang="no">Vedtak om barnehageplass til Ola</sdp:Tekst>
-                <sdp:Tekst lang="ny">Vedtak om barnehageplass til Ola</sdp:Tekst>
-                <sdp:Tekst lang="en">Ola's application for childcare</sdp:Tekst>            
+		<sdp:Dokument href="melding.pdf" mime="application/pdf">
+            <sdp:Tittel> 
+                <sdp:Tekst lang="no">Vedtak om barnehageplass til Ola</sdp:Tekst>     
             </sdp:Tittel>             
         </sdp:Dokument>
       

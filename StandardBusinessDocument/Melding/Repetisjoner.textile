@@ -13,7 +13,7 @@ group: SikkerDigitalPost/Melding
 - Kommentar := Beskriver hvilke dager noe skal repeteres etter en definert dag, der "dagerEtter":/Felles/dagerEtter angir hvor mange dager etter tidspunktet det skal repeteres.
 dagerEtter=0 betyr samme dag. dagerEtter=7 betyr den syvende dagen etter en bestemt dag. 
 
-
+* Det kreves at alle dagerEtter er unike.
 
 h4. Eigenskapar
 
