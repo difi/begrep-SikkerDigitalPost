@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DigitalPostMelding
+title: DigitalpostMelding
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost
 ---
@@ -17,5 +17,5 @@ h3. Attributer
 | "Avsender":Avsender | 1..1 | "sdp:Avsender":Avsender |
 | "Mottaker":Mottaker | 1..1 | "sdp:Mottaker":Mottaker |
 | "Dokumentpakke":Dokumentpakke | 1..1 | "sdp:Dokumentpakke":Dokumentpakke |
-| "FysiskPostInfo":FysiskPostInfo | 0..1 | "sdp:FysiskPostInfo":FysiskPostInfo  |
-| "DigitalPostInfo":DigitalPostInfo | 0..1 | "sdp:DigitalPostInfo":DigitalPostInfo  |
+| "FysiskpostInfo":FysiskPostInfo | 0..1 | "sdp:FysiskpostInfo":FysiskPostInfo  |
+| "DigitalpostInfo":DigitalPostInfo | 0..1 | "sdp:DigitalpostInfo":DigitalPostInfo  |

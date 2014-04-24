@@ -16,7 +16,7 @@
       <TypeVersion>1.0</TypeVersion>
       <InstanceIdentifier>2014/001</InstanceIdentifier>
       <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
-      <Type>Sikkerpost</Type>
+      <Type>Digitalpost</Type>
       <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
     </DocumentIdentification>
   </StandardBusinessDocumentHeader>

@@ -37,7 +37,7 @@
 	<xsd:complexType name="Avsender">
 		<xsd:sequence>
 			<xsd:element name="organisasjon" type="Organisasjon" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="avsenderId" minOccurs="0" maxOccurs="1">
+			<xsd:element name="avsenderidentifikator" minOccurs="0" maxOccurs="1">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="100" />
@@ -120,12 +120,11 @@
 	</xsd:simpleType>
 
 
-	<xsd:complexType name="DigitalPostInfo">
+	<xsd:complexType name="DigitalpostInfo">
 		<xsd:sequence>
-			<xsd:element name="mottaker" type="Mottaker" minOccurs="1" maxOccurs="1" />
 			<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1" />
 			<xsd:element name="aapningskvittering" type="xsd:boolean" minOccurs="0" maxOccurs="1" default="false" />
-			<xsd:element name="sikkerhetsnivaa" type="Sikkerhetsnivaa" minOccurs="0" maxOccurs="1" default="3" />
+			<xsd:element name="sikkerhetsnivaa" type="Sikkerhetsnivaa" minOccurs="0" maxOccurs="1" default="4" />
 			<xsd:element name="tittel" minOccurs="0" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>

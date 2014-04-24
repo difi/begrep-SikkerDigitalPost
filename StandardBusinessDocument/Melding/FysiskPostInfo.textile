@@ -1,6 +1,6 @@
 ---
 layout: default
-title: FysiskPostInfo
+title: FysiskpostInfo
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost
 ---

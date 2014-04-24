@@ -48,10 +48,10 @@ h3. Konfidensialitet
 
 Dokumentpakken krypteres med en 256-bit AES nøkkel i modus AES/CTR/NoPadding. Det skal genereres en ny nøkkel for hver kryptering av en dokumentpakke. Teller (IV) skal starte på. IV lik null er sikkerhetsmessig ikke et problem fordi den aldri blir gjentatt ettersom nøkkelen bare brukes en gang.
 
-Integriteten til den krypterte dokumentpakken ivaretas av "Dokumentpakke":Dokumentpakke.
+Integriteten til den krypterte dokumentpakken ivaretas av "Dokumentpakke":../StandardBusinessDocument/Melding/Dokumentpakke.
 
 Det er avsenders ansvar å generere en AES-nøkkel med tilstrekkelig tilfeldighet. Kilden bør være en sertifisert tilfeldig tall generator (TRNG).
 
-AES-nøkkelen krypteres til mottakers sertifikat som beskrevet i "Dokumentpakke":Dokumentpakke.
+AES-nøkkelen krypteres til mottakers sertifikat som beskrevet i "Dokumentpakke":../StandardBusinessDocument/Melding/Dokumentpakke.
 
  

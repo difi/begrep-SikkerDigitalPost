@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DigitalPostInfo
+title: DigitalpostInfo
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost
 ---
@@ -14,9 +14,10 @@ h3. Attributer
 
 
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "Varsler":Varsler | 0..1 | "sdp:Varsler":Varsler |
-| "virkningsdato":/Felles/virkningsdato | 0..1 | "xs:date":http://www.w3.org/TR/xmlschema-2/#date |
 | "sikkerhetsnivaa":/Felles/sikkerhetsnivaa | 1..1 | "xs:int":http://www.w3.org/TR/xmlschema-2/#int |
+| "virkningsdato":/Felles/virkningsdato | 0..1 | "xs:date":http://www.w3.org/TR/xmlschema-2/#date |
 | "aapningskvittering":/Felles/aapningskvittering | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
-| "ikkeSensitiveHoveddokumenttittel":/Felles/tittel | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "tittel":/Felles/tittel | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "varsler":Varsler | 0..1 | "sdp:Varsler":Varsler |
 
+Tittelen angitt her er en ikke sensitive tittel for hoveddokumentet i meldingen.
