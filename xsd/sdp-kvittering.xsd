@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema version="1.0" targetNamespace="http://begrep.difi.no/sdp/schema_v10"
-	xmlns="http://begrep.difi.no/sdp/schema_v10"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	elementFormDefault="qualified">
-
+<xsd:schema xmlns="http://begrep.difi.no/sdp/schema_v10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://begrep.difi.no/sdp/schema_v10" elementFormDefault="qualified" version="1.0">
 	<xsd:include schemaLocation="sdp-melding.xsd"/>
-
-
 	<xsd:element name="kvittering" type="Kvittering"/>
-
-
 	<xsd:complexType name="Kvittering">
 		<xsd:sequence>
 			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
 			<xsd:choice>
-				<xsd:element name="levertTilPostkasse" type="LevertTilPostkasse"/>
-				<xsd:element name="aapnetAvMottaker" type="AapnetAvMottaker"/>
-				<xsd:element name="mottakerVarselFeilet" type="MottakerVarselFeilet"/>
-				<xsd:element name="duplikatMelding" type="DuplikatMelding"/>
-				<xsd:element name="feil" type="Feil"/>
+				<xsd:element name="levering" type="Levering"/>
+				<xsd:element name="aapning" type="Aapning"/>
+				<xsd:element name="varslingfeilet" type="Varslingfeilet"/>
+				<!--				<xsd:element name="duplikatMelding" type="DuplikatMelding"/>
+					<xsd:element name="feil" type="Feil"/> -->
 			</xsd:choice>
 		</xsd:sequence>
 	</xsd:complexType>
-
-
-	<xsd:complexType name="LevertTilPostkasse">
+	<xsd:complexType name="Levering">
 		<xsd:annotation>
 			<xsd:documentation>
 				Postkasseleverandøren garanterer at brevet har eller vil bli levert
@@ -32,9 +22,7 @@
 			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:complexType>
-
-
-	<xsd:complexType name="AapnetAvMottaker">
+	<xsd:complexType name="Aapning">
 		<xsd:annotation>
 			<xsd:documentation>
 				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom
@@ -42,9 +30,7 @@
 			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:complexType>
-
-
-	<xsd:complexType name="DuplikatMelding">
+	<!--	<xsd:complexType name="DuplikatMelding">
 		<xsd:annotation>
 			<xsd:documentation>
 				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom
@@ -55,37 +41,30 @@
 			<xsd:element name="originalKvittering" type="Kvittering"/>
 		</xsd:sequence>
 	</xsd:complexType>
-
-
-	<xsd:complexType name="MottakerVarselFeilet">
+-->
+	<xsd:complexType name="Varslingfeilet">
 		<xsd:annotation>
 			<xsd:documentation>
 				Signaliserer at et varsel ikke kunne sendes til mottaker.
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="type" type="Varseltype" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="feilinformasjon" type="Feilinformasjon" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="varslingskanal" type="Varslingskanal" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="beskrivelse" type="Beskrivelse" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
-
-
-	<xsd:simpleType name="Varseltype">
+	<xsd:simpleType name="Varslingskanal">
 		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="SMS" />
-			<xsd:enumeration value="EPOST" />
+			<xsd:enumeration value="SMS"/>
+			<xsd:enumeration value="EPOST"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-
-
-	<xsd:complexType name="Feil">
+	<!--	<xsd:complexType name="Feil">
 		<xsd:sequence>
-			<xsd:element name="kilde" type="Feilkilde" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="informasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="kilde" type="Feilkilde" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="informasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
-
-
 	<xsd:simpleType name="Feilkilde">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="KLIENT">
@@ -106,12 +85,10 @@
 			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
-
-
-	<xsd:simpleType name="Feilinformasjon">
+-->
+	<xsd:simpleType name="Beskrivelse">
 		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="1000" />
+			<xsd:maxLength value="1000"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-
 </xsd:schema>
