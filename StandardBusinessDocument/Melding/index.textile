@@ -30,7 +30,7 @@ h3. Meldingstypene
 Meldingstypen er definert i "DocumentIdentification":../DocumentIdentification og er en av følgende: 
 
 {background:#ddd}.|_. Type |_. Beskrivelse |
-| "Digitalost":DigitalPostMelding | Forsendelse av digital post |
+| "Digitalpost":DigitalPostMelding | Forsendelse av digital post |
 {background:#ddd}.| "PrioritertDigitalpost":DigitalPostMelding | Forsendelse av digital post |
 | "Levering":LeveringsMelding | Kvittering på at digital post er tilgjengeliggjort |
 {background:#ddd}.| "Åpning":AapningsMelding | Kvittering fra Innbygger for at digital post er åpnet |
