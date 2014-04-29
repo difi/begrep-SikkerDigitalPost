@@ -1,0 +1,30 @@
+---
+layout: default
+title: KaranteneKvittering
+headtitle: Begrepskatalog for Sikker digital post - 
+group: SikkerDigitalPost
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := En "KvitteringsMelding":KvitteringsMelding til Avsender om at en DigitalPost er tilbakekalt/satt i karantene.
+- Kilde := DIFI
+- Kommentar := Kvitteringen gir informasjon om den DigitalPost meldingen ble satt i karantene eller ikke.
+
+h3. Attributer
+
+
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| "status":/Felles/status | 1..1 | "status":/Felles/status |
+| "beskrivelse":/Felles/beskrivelse | 0..1 | "beskrivelse":/Felles/beskrivelse |
+| tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
+
+h3. Kodeverk
+
+
+"status":/Felles/status kan ha følgende verdi:
+
+|_. Kodeverdi |_. Beskrivelse |
+| OK | Digitalpost ble satt i karantene |
+| FEILET | Digitalpost ble ikke satt i karantene  |
+
