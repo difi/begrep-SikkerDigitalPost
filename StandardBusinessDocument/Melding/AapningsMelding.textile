@@ -13,4 +13,4 @@ group: SikkerDigitalPost
 
 h3. Attributer
 
-se "Kvitteringsmelding":Kvitteringsmelding
+se "KvitteringsMelding":KvitteringsMelding
