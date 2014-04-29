@@ -31,7 +31,6 @@
 			</xsd:choice>
 			<xsd:element name="dokumentpakke" type="Dokumentpakke" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
-		<xsd:attribute name="prioritet" type="Meldingsprioritet" use="optional" default="standard"/>
 	</xsd:complexType>
 	<xsd:complexType name="Avsender">
 		<xsd:sequence>
@@ -257,12 +256,6 @@
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
 			<xsd:pattern value="[a-zA-Z]{2}"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="Meldingsprioritet">
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="standard"/>
-			<xsd:enumeration value="prioritert"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 </xsd:schema>
