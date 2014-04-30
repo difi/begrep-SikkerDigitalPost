@@ -9,8 +9,6 @@
 				<xsd:element name="levering" type="Levering"/>
 				<xsd:element name="aapning" type="Aapning"/>
 				<xsd:element name="varslingfeilet" type="Varslingfeilet"/>
-				<!--				<xsd:element name="duplikatMelding" type="DuplikatMelding"/>
-					<xsd:element name="feil" type="Feil"/> -->
 			</xsd:choice>
 		</xsd:sequence>
 	</xsd:complexType>
@@ -30,18 +28,7 @@
 			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:complexType>
-	<!--	<xsd:complexType name="DuplikatMelding">
-		<xsd:annotation>
-			<xsd:documentation>
-				Signaliserer at mottaker har åpnet meldingen. Sendes kun dersom
-				avsender har bestilt åpningskvittering.
-			</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="originalKvittering" type="Kvittering"/>
-		</xsd:sequence>
-	</xsd:complexType>
--->
+
 	<xsd:complexType name="Varslingfeilet">
 		<xsd:annotation>
 			<xsd:documentation>
@@ -59,33 +46,7 @@
 			<xsd:enumeration value="EPOST"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	<!--	<xsd:complexType name="Feil">
-		<xsd:sequence>
-			<xsd:element name="kilde" type="Feilkilde" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="informasjon" type="Feilinformasjon" minOccurs="0" maxOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:simpleType name="Feilkilde">
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="KLIENT">
-				<xsd:annotation>
-					<xsd:documentation>
-						Dersom kilden til feil er KLIENT, er feilen relatert
-						til input og kan ikke sendes på ny.
-					</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SERVER">
-				<xsd:annotation>
-					<xsd:documentation>
-						Dersom kilden til feil er SERVER, er feilen forbigående
-						og klienten kan forsøke å sende samme forespørsel på ny.
-					</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-		</xsd:restriction>
-	</xsd:simpleType>
--->
+
 	<xsd:simpleType name="Beskrivelse">
 		<xsd:restriction base="xsd:string">
 			<xsd:maxLength value="1000"/>
