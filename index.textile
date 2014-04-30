@@ -34,11 +34,11 @@ h2. Meldingsspesifikasjoner
 
 "Digital postforsendelse":meldingsstruktur består av følgende meldingselementer:
 
-# "Webservice Security Header":WebserviceSecurity
-# "ebMS 3.0/AS4 Header":Messaging 
-# "StandardBusinessDocument":StandardBusinessDocument/ 
-# og eventuelt en "Dokumentpakke":Dokumentpakke/
-# med filer (beskrivelse av  tillatte "dokumentformater":Dokumentformat/ )
+|_. Identifikator |_. Beskrivelse |_. scope |
+| "Webservice Security Header":WebserviceSecurity | Sikring av integritet i meldingen |  punkt til punkt |
+| "ebMS 3.0/AS4 Header":Messaging | Meldingsutvekslingsattributtene nødvendig for sending av Digitalpost og henting av kvitteringer |  punkt til punkt |
+| "StandardBusinessDocument":StandardBusinessDocument/ | Integritetssikret Forretningsmeldingen med informasjon til "Postkasseleverandør":Aktorer |  ende til ende |
+| "Dokumentpakke":Dokumentpakke/ | En Integritet og konfidensialitetssikret pakke med filer (beskrivelse av  tillatte "dokumentformater":Dokumentformat/ ) til "Mottaker":Aktorer |  ende til ende |
 
 
 Beskrivelser av meldingspesifikasjonen i "XSD":xsd/
