@@ -5,7 +5,7 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost
 ---
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":http://begrep.difi.no{{ page.url  | remove:".html" }}
 - Term := {{page.title}}
 - Definisjon := En abstrakt forretningsmelding brukt i forsendelsen av digital post som alle konkrete forretningsmeldingen arver fra.
 - Kilde := DIFI
@@ -32,10 +32,12 @@ Meldingstypen er definert i "DocumentIdentification":../DocumentIdentification o
 {background:#ddd}.|_. Type |_. Beskrivelse |
 | "Digitalpost":DigitalPostMelding | Forsendelse av digital post |
 {background:#ddd}.| "PrioritertDigitalpost":DigitalPostMelding | Forsendelse av digital post |
-| "Levering":LeveringsMelding | Kvittering på at digital post er tilgjengeliggjort |
-{background:#ddd}.| "Åpning":AapningsMelding | Kvittering fra Innbygger for at digital post er åpnet |
+| "LeveringsKvittering":LeveringsMelding | Kvittering på at digital post er tilgjengeliggjort |
+{background:#ddd}.| "ÅpningsKvittering":AapningsMelding | Kvittering fra Innbygger for at digital post er åpnet |
 | "Varslingfeilet":VarslingfeiletMelding | Kvittering for at en spesifisert varsling ikke har blitt sendt |
 {background:#ddd}.| "Feil":FeilMelding | Generel feilkvittering |
+| "Karantene":KaranteneMelding | Melding for å tilbakekalle en forsendelsen av en digital post melding. |
+{background:#ddd}.| "KaranteneKvittering":KaranteneKvittering | Kvittering for en tilbakekallingsmelding. |
 
 h3. Signature
 
@@ -46,4 +48,4 @@ Det er satt følgende krav til signaturen:
 * Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. 
 * Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmlenc#sha256":http://www.w3.org/2001/04/xmlenc#sha256
 * Signature skal være en signatur av Meldingen og signatur av "StandardBusinessDocumentHeader":../StandardBusinessDocumentHeader.
-* BØR være signert av "Behandlingsansvarlig"::../../Aktorer, men KAN signeres av "Databehandler":../../Aktorer.
+* BØR være signert av "Behandlingsansvarlig":../../Aktorer, men KAN signeres av "Databehandler":../../Aktorer.
