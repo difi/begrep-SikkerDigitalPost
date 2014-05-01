@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<manifest 
-	xmlns="http://begrep.difi.no/sdp/schema_v10" 
-	xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
-	xmlns:difi="http://begrep.difi.no" 
+<manifest
+	xmlns="http://begrep.difi.no/sdp/schema_v10"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:difi="http://begrep.difi.no"
 	xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-manifest.xsd ">
 
 	<mottaker>
@@ -27,7 +27,7 @@
 
 	<avsender>
 		<organisasjon authority="iso6523-actorid-upis">9908:123456789</organisasjon>
-		<avsenderId>A</avsenderId>
+		<avsenderidentifikator>A</avsenderidentifikator>
 		<fakturakonto>ABC barnehage</fakturakonto>
 	</avsender>
 
