@@ -18,6 +18,16 @@
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
+			<xsd:element name="sdpMeldingId" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Unik meldings-ID for behandlingsansvarlig.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="40"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
 			<xsd:element name="behandlingsansvarlig" type="Avsender" minOccurs="1" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>
