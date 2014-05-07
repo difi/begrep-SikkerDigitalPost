@@ -23,7 +23,7 @@ h3. Klassediagram
 
 Meldingen er en av følgende typer beskrevet i diagrammet under.
 
-"!{width:80%}uml_diagram.jpg!":uml_diagram.jpg
+"!{width:80%}../uml_diagram.jpg!":../uml_diagram.jpg
 
 h3. Meldingstypene
 

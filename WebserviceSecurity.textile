@@ -14,9 +14,9 @@ group: SikkerDigitalPost/Melding
 
 h4. Eigenskapar
 
-|_. Identifikator |_. Kardinalitet |_. Datatype |
+{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
 | Timestamp | 1..1 | "wsu:Timestamp":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717167 |
-| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148 |
+{background:#ddd}.| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148 |
 
 
 For Soap signering skal:

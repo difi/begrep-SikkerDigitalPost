@@ -32,13 +32,13 @@ h2. Meldingsutveksling
 
 h2. Meldingsspesifikasjoner
 
-"Digital postforsendelse":meldingsstruktur består av følgende meldingselementer:
+En Digital postforsendelse har følgende "meldingsstruktur":meldingsstruktur som består av følgende meldingselementer:
 
-|_. Identifikator |_. Beskrivelse |_. scope |
+{background:#ddd}.|_. Identifikator |_. Beskrivelse |_. scope |
 | "Webservice Security Header":WebserviceSecurity | Sikring av integritet i meldingen |  punkt til punkt |
-| "ebMS 3.0/AS4 Header":Messaging | Meldingsutvekslingsattributtene nødvendig for sending av Digitalpost og henting av kvitteringer |  punkt til punkt |
+{background:#ddd}.| "ebMS 3.0/AS4 Header":Messaging | Meldingsutvekslingsattributtene nødvendig for sending av Digitalpost og henting av kvitteringer |  punkt til punkt |
 | "StandardBusinessDocument":StandardBusinessDocument/ | Integritetssikret Forretningsmeldingen med informasjon til "Postkasseleverandør":Aktorer |  ende til ende |
-| "Dokumentpakke":Dokumentpakke/ | En Integritet og konfidensialitetssikret pakke med filer (beskrivelse av  tillatte "dokumentformater":Dokumentformat/ ) til "Mottaker":Aktorer |  ende til ende |
+{background:#ddd}.| "Dokumentpakke":Dokumentpakke/ | En Integritet og konfidensialitetssikret pakke med filer (beskrivelse av  tillatte "dokumentformater":Dokumentformat/ ) til "Mottaker":Aktorer |  ende til ende |
 
 
 Beskrivelser av meldingspesifikasjonen i "XSD":xsd/
@@ -46,13 +46,15 @@ Beskrivelser av meldingspesifikasjonen i "XSD":xsd/
 
 h2. Sikkerhet
 
+Overordnet kan sikker
+
 ** "Bruk av sertifikater":Sertifikatbruk
 ** "Sikring av Dokumentpakken":Dokumentpakke/ASiC_sikkerhet
 ** "Meldingsidentifikatorer":Meldingsidentifikatorer
 
 h2. Teknisk miljø
 
-** (Dokumentasjon leveres innen 01.05.2014)
+* Detaljer om teknisk miljø for tjenesten mottas ved å kontakte "idporten@difi.no":mailto:idporten@difi.no 
 
 h2. Annet
 
