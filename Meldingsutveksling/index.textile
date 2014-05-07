@@ -31,7 +31,7 @@ Grensesnittet mellom avsender og meldingsformidler har to sett med P-Mode parame
 h3. Eksempler
 
 Det er utarbeidet noen eksempler på SOAP meldinger knyttet til flyt diagrammet over.
-Eksemplene finnes her: "eksempler/soap":eksempler/soap/.
+Eksemplene finnes "her":../eksempler/soap/.
 
 h3. Refererte standarder
 
