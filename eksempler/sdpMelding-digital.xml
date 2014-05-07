@@ -7,20 +7,22 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-melding.xsd ">
 
+	<sdpMeldingId>31415926535987</sdpMeldingId>
+	
 	<behandlingsansvarlig>
 		<organisasjon>9908:123456789</organisasjon>
 		<avsenderidentifikator>123456789-A</avsenderidentifikator>
-		<fakturakonto>ØK1</fakturakonto>
+		<fakturaReferanse>ØK1</fakturaReferanse>
 	</behandlingsansvarlig>
 
 	<digitalPostInfo>
 		<virkningsdato>2014-05-17</virkningsdato>
 		<aapningskvittering>false</aapningskvittering>
 		<sikkerhetsnivaa>3</sikkerhetsnivaa>
-		<tittel>Hurra for 17. mai</tittel>
+		<tittel lang="no">Hurra for 17. mai</tittel>
 		<varsler>
 			<epostVarsel>
-				<tekst>Viktig melding fra Staten i din digital postkasse</tekst>
+				<tekst lang="no">Viktig melding fra Staten i din digital postkasse</tekst>
 				<repetisjoner>
 					<dagerEtter>0</dagerEtter>
 					<dagerEtter>7</dagerEtter>

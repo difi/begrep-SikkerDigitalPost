@@ -28,19 +28,19 @@
 	<avsender>
 		<organisasjon authority="iso6523-actorid-upis">9908:123456789</organisasjon>
 		<avsenderidentifikator>A</avsenderidentifikator>
-		<fakturakonto>ABC barnehage</fakturakonto>
+		<fakturaReferanse>ABC barnehage</fakturaReferanse>
 	</avsender>
 
 	<hoveddokument href="vedtak_2398324.pdf" mime="application/pdf">
-		<tittel>Vedtak</tittel>
+		<tittel lang="no">Vedtak</tittel>
 	</hoveddokument>
 
 	<vedlegg href="info.html" mime="text/html">
-		<tittel>informasjon</tittel>
+		<tittel lang="no">informasjon</tittel>
 	</vedlegg>
 
 	<vedlegg href="journal.txt" mime="text/plain">
-		<tittel>journal</tittel>
+		<tittel lang="no">journal</tittel>
 	</vedlegg>
 
 </manifest>
