@@ -15,7 +15,7 @@ group: SikkerDigitalPost/Melding
 h4. Eigenskapar
 
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "varslingsTekst":/Felles/varslingsTekst | 0..1 | "xs:String":http://www.w3.org/TR/xmlschema-2/#string |
+| "varslingsTekst":/Felles/varslingsTekst | 0..1 | "varslingsTekst":/Felles/varslingsTekst |
 | "Repetisjoner":Repetisjoner | 1..1 | "sdp:Repetisjoner":Repetisjoner |
 
 
@@ -23,7 +23,7 @@ h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
     <SmsVarsel>
-      <varselTekst>Viktig melding fra Staten</varselTekst>
+      <varselTekst><Tekst lang="no">Viktig melding fra Staten</Tekst></varselTekst>
       <repetisjoner>
         <dagerEtter>0</dagerEtter>
         <dagerEtter>7</dagerEtter>
