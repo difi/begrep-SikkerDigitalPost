@@ -11,6 +11,8 @@ group: SikkerDigitalPost/complexType
 - Definisjon := Informasjon om kryptering og innhold i dokumentpakken som utgjør vedlegget i meldingen
 - Datatype := complexType
 - Kjelde := DIFI
+- Kommentar :=  Dette gir en  henvisning til dokumentet i "Dokumentpakken":index.html sammen med en tittel. 
+Denne tittelen vil vises til Innbygger når Dokumentpakken er dekryptert og Innbygger er autentisert på tilstrekkelig sikkerhetsnivå.
 
 h4. Eigenskapar
 
