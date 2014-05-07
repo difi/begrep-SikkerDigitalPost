@@ -9,6 +9,10 @@ group: SikkerDigitalPost
 - Term := {{page.title}}
 - Definisjon := Informasjon relatert til presentasjon og behandling av en sikker digital post melding
 - Kilde := DIFI
+- Kommentar := Dette er informasjon om den Digitalpostforsendelsen som vil bli brukt av Postkasseleverandør for å presentere og behandle den digitale posten.
+Den ikkeSensitiveTittelen vil bli brukt i dialogen med Innbygger dersom ikke Innbygger er autentisert på tilstrekkelig nivå. 
+Den ikkeSensitiveTittelen vil også bli brukt i varsling til Innbygger.
+Når den digitale posten er dekryptert og innbygger er autentisert på tilstrekkelig sikkerhetsnivå så vil Tittel i "Manifest-filen":../../Dokumentpakke/Manifest brukes.
 
 h3. Attributer
 
@@ -17,7 +21,5 @@ h3. Attributer
 | "sikkerhetsnivaa":/Felles/sikkerhetsnivaa | 1..1 | "xs:int":http://www.w3.org/TR/xmlschema-2/#int |
 | "virkningsdato":/Felles/virkningsdato | 0..1 | "xs:date":http://www.w3.org/TR/xmlschema-2/#date |
 | "aapningskvittering":/Felles/aapningskvittering | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
-| "tittel":/Felles/tittel | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "ikkeSensitivTittel":/Felles/ikkeSensitivTittel | 1..1 | "tekst":/Felles/tekst |
 | "varsler":Varsler | 0..1 | "sdp:Varsler":Varsler |
-
-Tittelen angitt her er en ikke sensitive tittel for hoveddokumentet i meldingen.
