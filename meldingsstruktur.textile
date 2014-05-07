@@ -4,128 +4,22 @@ title: Meldingsstruktur
 headtitle: Oppslagstjenesten for kontakt og reservasjonsregisteret
 ---
 
-!{width:80%}meldingsstruktur_diagram.jpg!
+
+En Digitalpost forsendelse består av et hoveddokument med vedlegg.
+Disse dokumentene er beskyttet med kryptering og signering ende til ende for å sikre konfidensialitet og integritet hele veien fra Avsender til Mottaker.
+Hoveddokumentet med vedlegg er pakket inn som "Dokumentpakke((Asic))":Dokumentpakke/
+
+Sammen med Dokumentpakken består Digitalpost forsendelse av en beskrivelse av forsendelsen. 
+Dette er behandlingsregler som Postkasseleverandør skal bruke for å presentere og behandle den digitale postforsendelsen til Mottaker.
+Dette er "StandardBusinessDocument":StandardBusinessDocument/, som er signert/integritetsbeskyttet fra Avsender til Postkasseleverandør.
+
+ebMS 3.0 er brukt som "meldingsutvekslingsrammeverk":Meldingsutveksling/ fra Avsender til Meldingsformidler.
+Så "eb:Messaging":Messaging og "Webservice security":WebserviceSecurity er signert/integritetsbeskyttet punkt til punkt.
+
+
+!{width:50%;display: block;margin-left: auto;margin-right: auto;}meldingsstruktur_diagram.jpg!
 
 
 
-h3. Eksempel
-
-Følgende SOAP eksempel illustrerer sendingen av en Sikker Digital Postforsendelse fra Databehandler til Meldingsformidler.
 
 
-
-<pre class="brush: xml; toolbar: false">
-
-<?xml version="1.0" ?>
-<S12:Envelope xmlns:S12="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2003/05/soap-envelope http://www.w3.org/2003/05/soap-envelope">
-    <S12:Header>
-        <wsse:Security S12:mustUnderstand="true" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-            <ds:Signature Id="SIG-DE969A773C0E48851A139204210262312" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
-                <ds:SignedInfo>
-                    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
-                        <ec:InclusiveNamespaces PrefixList="env xsi" xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-                    </ds:CanonicalizationMethod>
-                    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
-                    <ds:Reference URI="#id-DE969A773C0E48851A139204210260210">
-                        <ds:Transforms>
-                            <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
-                                <ec:InclusiveNamespaces PrefixList="" xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-                            </ds:Transform>
-                        </ds:Transforms>
-                        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                        <ds:DigestValue>oQ8OT9OV+9Md/+FddyaNFEfzR85gXsd9KAugtk6/9EA=</ds:DigestValue>
-                    </ds:Reference>
-                    <ds:Reference URI="#id-DE969A773C0E48851A139204210261411">
-                        <ds:Transforms>
-                            <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
-                                <ec:InclusiveNamespaces PrefixList="xsi" xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-                            </ds:Transform>
-                        </ds:Transforms>
-                        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                        <ds:DigestValue>Qt66RSmhjZqUkFRrMm33W209OPfht0Q2LrAcX/95uis=</ds:DigestValue>
-                    </ds:Reference>
-                </ds:SignedInfo>
-                <ds:SignatureValue>VFw2UKvJYvXUnCpMno3kPldLQi7poMMwg/yed2/AaRmFvY6swqNvQbw9GqKDC4I/H
-Z42INt3liTGskE2wHNJQJhE11DEUSC8pMZC38yrz/dgnPJd13p43mWRzUmlotCIWscJOf9+vn2zKMKxPCMb8
-fWU8JPDkOU/boLFpUbVD5SqRJV50GoV8Q39MKBj5Pmg+sHR8Pw9KkNXJbIt3x1kqGTh9+x8m4Wp1j0pqQE1r
-P/eSbxmlpCIWGeKOtvQlwHWypRc09CjY29rzAjG9Ux4cAfGlYJVgmnaCpfJjvWSVsdH31/iCt5xAEYe7DiGD
-2tXHAM/5/Uz+3qfJvcxXHeo7g==</ds:SignatureValue>
-                <ds:KeyInfo Id="KI-DE969A773C0E48851A13920421025878">
-                    <wsse:SecurityTokenReference wsu:Id="STR-DE969A773C0E48851A13920421025879">
-                        <ds:X509Data>
-                            <ds:X509IssuerSerial>
-                                <ds:X509IssuerName>CN=Jentrata,OU=Jentrata,O=jentrata.org,L=Melbourne,ST=VIC,C=AU</ds:X509IssuerName>
-                                <ds:X509SerialNumber>513240931</ds:X509SerialNumber>
-                            </ds:X509IssuerSerial>
-                        </ds:X509Data>
-                    </wsse:SecurityTokenReference>
-                </ds:KeyInfo>
-            </ds:Signature>
-        </wsse:Security>
-        <eb:Messaging S12:mustUnderstand="true" id="ebmsHeader" wsu:Id="id-DE969A773C0E48851A139204210260210" xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xsi:schemaLocation="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/ http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd">
-            <eb:UserMessage>
-                <eb:MessageInfo>
-                    <eb:Timestamp>2014-02-10T14:21:42.520Z</eb:Timestamp>
-                    <eb:MessageId>60a3ade5-84d1-46d7-b2cc-5f4fa15f41e5</eb:MessageId>
-                </eb:MessageInfo>
-                <eb:PartyInfo>
-                    <eb:From>
-	                      <!-- orgnr til avsender -->
-                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">123456789</eb:PartyId>
-	                      <!-- TODO spesifisere denne-->
-                        <eb:Role>uri:som:identifiserar:rollen:postavsender</eb:Role>
-                    </eb:From>
-                    <eb:To>
-	                      <!-- orgnr til meldingsformidler -->
-                        <eb:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">234567890</eb:PartyId>
-	                      <!-- TODO spesifisere denne -->
-                        <eb:Role>uri:som:identifiserar:rollen:meldingsformidler</eb:Role>
-                    </eb:To>
-                </eb:PartyInfo>
-                <eb:CollaborationInfo>
-	                  <!-- TODO ser ikke behov for denne - kan utelates ref spec-->
-                    <!-- <eb:AgreementRef>uri:som:identifiserar:samarbeidsprotokollavtalen</eb:AgreementRef> -->
-	                  <!-- TODO default AS4 service -->
-                    <eb:Service>http://docs.oasis-open.org/ebxml-msg/as4/200902/service</eb:Service>
-	                  <!-- TODO default AS4 action -->
-                    <eb:Action>http://docs.oasis-open.org/ebxml-msg/as4/200902/action</eb:Action>
-	                  <!-- TODO detaljere innholdet av denne -->
-                    <eb:ConversationId>2014-0001</eb:ConversationId>
-                </eb:CollaborationInfo>
-                <eb:PayloadInfo>
-                    <eb:PartInfo href="#soapBody"/>
-                    <!-- TODO standardisere cid -->
-                    <eb:PartInfo href="cid:asic"/>
-	              </eb:PayloadInfo>
-            </eb:UserMessage>
-        </eb:Messaging>
-    </S12:Header>
-    <S12:Body xml:id="soapBody" wsu:Id="id-DE969A773C0E48851A139204210261411" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-	    <StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
-		    <StandardBusinessDocumentHeader>
-			    <HeaderVersion>1.0</HeaderVersion>
-			    <Sender>
-				    <!-- orgnr avsender -->
-				    <Identifier Authority="iso6523-actorid-upis">9908:123456789</Identifier>
-			    </Sender>
-			    <Receiver>
-				    <!-- orgnr mottaker, postboks eller print -->
-				    <Identifier Authority="iso6523-actorid-upis">9908:345678901</Identifier>
-			    </Receiver>
-			    <DocumentIdentification>
-				    <Standard>urn:no:difi:sdp:1.0</Standard>
-				    <TypeVersion>1.0</TypeVersion>
-				    <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
-					<InstanceIdentifier>2014/001</InstanceIdentifier>
-				    <Type>Sikkerpost</Type>
-				    <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
-			    </DocumentIdentification>
-		    </StandardBusinessDocumentHeader>
-		    <sdp:melding xmlns:sdp="http://begrep.difi.no/sdp/schema_v10">
-			       <!-- .... -->
-			  </sdp:melding>
-	    </StandardBusinessDocument>
-	  </S12:Body>
-</S12:Envelope>
-
-</pre>
