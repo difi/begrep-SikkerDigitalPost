@@ -8,8 +8,6 @@
 	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslag/oppslagstjeneste-metadata-14-05.xsd"/>
 
 
-
-
 	<xsd:complexType name="Avsender">
 		<xsd:sequence>
 			<xsd:element name="organisasjon" type="Organisasjon" minOccurs="1" maxOccurs="1"/>
@@ -29,6 +27,7 @@
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
+
 	<xsd:complexType name="Organisasjon">
 		<xsd:simpleContent>
 			<xsd:extension base="Iso6523Identitet">
@@ -37,23 +36,18 @@
 		</xsd:simpleContent>
 	</xsd:complexType>
 
-
-
-
-
 	<xsd:complexType name="Mottaker">
 		<xsd:choice>
 			<xsd:element name="person" type="difi:Person"/>
 			<xsd:element name="virksomhet" type="Virksomhet"/>
 		</xsd:choice>
 	</xsd:complexType>
+
 	<xsd:complexType name="Virksomhet">
 		<xsd:sequence>
 			<xsd:element name="sikkerDigitalPostAdresse" type="difi:SikkerDigitalPostAdresse"/>
 		</xsd:sequence>
 	</xsd:complexType>
-
-
 
 	<xsd:simpleType name="Iso6523Identitet">
 		<xsd:annotation>
@@ -77,10 +71,6 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
-
-
-
-
 	<xsd:complexType name="Tittel">
 		<xsd:simpleContent>
 			<xsd:extension base="TittelString">
@@ -95,20 +85,16 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
-
 	<xsd:simpleType name="Spraakkode">
 		<xsd:annotation>
 			<xsd:documentation>
-				Språkkode ihht ISO-639
+				Språkkode ihht ISO-639-1 (2 bokstaver)
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
 			<xsd:minLength value="2"></xsd:minLength>
-			<xsd:maxLength value="5"></xsd:maxLength>
+			<xsd:maxLength value="2"></xsd:maxLength>
 		</xsd:restriction>
 	</xsd:simpleType>
-
-
-
 
 </xsd:schema>

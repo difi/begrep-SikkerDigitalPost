@@ -22,14 +22,14 @@
 		<tittel lang="no">Hurra for 17. mai</tittel>
 		<varsler>
 			<epostVarsel>
-				<tekst lang="no">Viktig melding fra Staten i din digital postkasse</tekst>
+				<tekst lang="no">Viktig melding fra Staten i din digitale postkasse</tekst>
 				<repetisjoner>
 					<dagerEtter>0</dagerEtter>
 					<dagerEtter>7</dagerEtter>
 				</repetisjoner>
 			</epostVarsel>
 			<smsVarsel>
-				<tekst>Viktig melding fra Staten</tekst>
+				<tekst lang="no">Viktig melding fra Staten</tekst>
 				<repetisjoner>
 					<dagerEtter>1</dagerEtter>
 				</repetisjoner>
