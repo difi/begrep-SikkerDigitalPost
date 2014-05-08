@@ -4,7 +4,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	elementFormDefault="qualified">
 
-	<xsd:include schemaLocation="sdp-melding.xsd"/>
+	<xsd:include schemaLocation="sdp-felles.xsd"/>
 
 
 	<xsd:element name="manifest" type="Manifest"/>

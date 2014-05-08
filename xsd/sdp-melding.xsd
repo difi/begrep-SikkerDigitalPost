@@ -6,10 +6,16 @@
 	xmlns:enc="http://www.w3.org/2001/04/xmlenc#"
 	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
 	targetNamespace="http://begrep.difi.no/sdp/schema_v10" elementFormDefault="qualified" version="1.0">
+
+
+	<xsd:include schemaLocation="sdp-felles.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="w3/xenc-schema.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="w3/xmldsig-core-schema.xsd"/>
-
 	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslag/oppslagstjeneste-metadata-14-05.xsd"/>
+
+
+
+
 	<xsd:element name="melding" type="Melding"/>
 	<xsd:complexType name="Melding">
 		<xsd:annotation>
@@ -42,25 +48,7 @@
 			<xsd:element name="dokumentpakke" type="Dokumentpakke" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="Avsender">
-		<xsd:sequence>
-			<xsd:element name="organisasjon" type="Organisasjon" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="avsenderidentifikator" minOccurs="0" maxOccurs="1">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:string">
-						<xsd:maxLength value="100"/>
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
-			<xsd:element name="fakturaReferanse" minOccurs="0" maxOccurs="1">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:string">
-						<xsd:maxLength value="40"/>
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:complexType>
+
 	<xsd:complexType name="Repetisjoner">
 		<xsd:sequence>
 			<xsd:element name="dagerEtter" minOccurs="1" maxOccurs="10">
@@ -79,44 +67,14 @@
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="Virksomhet">
-		<xsd:sequence>
-			<xsd:element name="sikkerDigitalPostAdresse" type="difi:SikkerDigitalPostAdresse"/>
-		</xsd:sequence>
-	</xsd:complexType>
 	<xsd:complexType name="Dokumentpakke">
 		<xsd:sequence>
 			<xsd:element name="digest" type="ds:ReferenceType" />
 			<xsd:element name="encryptedKey" type="enc:EncryptedKeyType"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="Organisasjon">
-		<xsd:simpleContent>
-			<xsd:extension base="Iso6523Identitet">
-				<xsd:attribute name="authority" type="Iso6523Authority" use="optional" default="iso6523-actorid-upis"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:simpleType name="Iso6523Identitet">
-		<xsd:annotation>
-			<xsd:documentation>
-				Internasjonal standard for identifisering av organisasjoner. Formatet er
-				4 siffer, et kolon, og opptil 35 tegn. De første 4 sifferne angir ICD, som er
-				autoriteten som har gitt identiteten til organisasjonen. De opptil 35 tegnene er
-				selve organisasjons-IDen. I Norge vil dette i praksis se slik ut:
-				9908:123456789, hvor 9908 angir	Brønnøysundregisteret, og de 9 sifrene etter
-				kolon er et org-nr.
-			</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:pattern value="[0-9]{4}:\w{1,35}"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="Iso6523Authority">
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="iso6523-actorid-upis"/>
-		</xsd:restriction>
-	</xsd:simpleType>
+
+
 	<xsd:complexType name="DigitalPostInfo">
 		<xsd:sequence>
 			<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1"/>
@@ -138,12 +96,6 @@
 			<xsd:enumeration value="4"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	<xsd:complexType name="Mottaker">
-		<xsd:choice>
-			<xsd:element name="person" type="difi:Person"/>
-			<xsd:element name="virksomhet" type="Virksomhet"/>
-		</xsd:choice>
-	</xsd:complexType>
 	<xsd:complexType name="Varsler">
 		<xsd:sequence>
 			<xsd:element name="epostVarsel" type="EpostVarsel" minOccurs="0" maxOccurs="1"/>
@@ -179,21 +131,7 @@
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	
-	
-	<xsd:complexType name="Tittel">
-		<xsd:simpleContent>
-			<xsd:extension base="TittelString">
-				<xsd:attribute name="lang" type="Spraakkode" use="required"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:simpleType name="TittelString">		
-		<xsd:restriction base="xsd:string">
-			<xsd:minLength value="1"/>
-			<xsd:maxLength value="100"/>
-		</xsd:restriction>
-	</xsd:simpleType>
+
 
 	<xsd:complexType name="EpostVarselTekst">
 		<xsd:simpleContent>
@@ -202,26 +140,15 @@
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<xsd:simpleType name="EpostVarselTekstString">		
+	<xsd:simpleType name="EpostVarselTekstString">
 		<xsd:restriction base="xsd:string">
 			<xsd:minLength value="1"/>
 			<xsd:maxLength value="500"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	
-	<xsd:simpleType name="Spraakkode">
-		<xsd:annotation>
-			<xsd:documentation>
-				Språkkode ihht ISO-639
-			</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:minLength value="2"></xsd:minLength>
-			<xsd:maxLength value="5"></xsd:maxLength>
-		</xsd:restriction>
-	</xsd:simpleType>
-	
-	
+
+
+
 	<!-- typer nedenfor er for fysisk post -->
 
 	<xsd:complexType name="FysiskPostInfo">
