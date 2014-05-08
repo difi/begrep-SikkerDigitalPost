@@ -28,7 +28,7 @@
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="behandlingsansvarlig" type="Avsender" minOccurs="1" maxOccurs="1">
+			<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>
 						  Den reelle avsenderen av dokument(ene)
