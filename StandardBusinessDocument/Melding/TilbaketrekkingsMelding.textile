@@ -7,17 +7,18 @@ group: SikkerDigitalPost
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Melding for å tilbakekalle en "Digitalpost":DigitalPostMelding
+- Definisjon := Melding for å tilbakekalle en feilsendt "Digitalpost":DigitalPostMelding
 - Kilde := DIFI
-- Kommentar := Meldingen sendes dersom det oppdages alvorlig feil i en "Digitalpost":DigitalPostMelding. Dette kan f.eks. være dersom "Digitalpost":DigitalPostMelding er sendt til feil "Mottaker":Mottaker.
-Meldingen som ønskes tilbaketrukket vil bli satt i karantene og "Mottaker":Mottaker vil ikke få mulighet til å lese posten. 
-Karantenemeldingen vil kun bli iverksatt dersom "Digitalpost":DigitalPostMelding ikke er lest av "Mottaker":Mottaker.
+- Kommentar := Meldingen sendes dersom det oppdages alvorlig feil i en "Digitalpost":DigitalPostMelding. 
+Dette kan f.eks. være dersom "Digitalpost":DigitalPostMelding er sendt til feil "Mottaker":Mottaker.
+Ved feilforsendelser tilbyr postkasseleverandørene mulighet for, på bakgrunn av "konversasjonsId":/Felles/konversasjonsId at dokumenter kan trekkes tilbake av avsender. 
+Hvis tilbaketrekking skjer innen "virkningsdato":/Felles/virkningsdato er inntruffet, vil dokumentet bli fjernet fra brukerens postkasse.
 
 
 
 h3. Attributer
 
-Attributtet konversasjonsIDD inneholder identifikatoren for meldingen som ønskes trukket tilbake.
+Attributtet konversasjonsId inneholder identifikatoren for meldingen som ønskes trukket tilbake.
 
 {background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
 | Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
