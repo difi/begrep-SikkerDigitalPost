@@ -4,7 +4,7 @@ title: Meldingsutveksling - Feilhåndtering
 headtitle: Sikker digital post
 ---
 
-h3. Feiltyper
+h2. Feiltyper
 
 Feil som oppstår i meldingsutvekslingen er transportfeil og ikke forretningsfeil.
 Forretningsfeil sendes som egne "StandardBusinessDocument":StandardBusinessDocument/ og er ikke beskrivet videre her.
@@ -46,7 +46,6 @@ For disse tilfellene kan Avsender prøve å sende meldingen på nytt, da feilen 
 
 h3. Eksempel
 
- 
 <pre class="brush: bash; toolbar: false">
  
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">

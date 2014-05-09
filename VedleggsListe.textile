@@ -5,14 +5,17 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/complexType
 ---
 
+h2. {{page.title}}
+
 - Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
 - Term := {{page.title}}
 - Definisjon := Informasjon om kryptering og innhold i dokumentpakken som utgjør vedlegget i meldingen
 - Datatype := complexType
 - Kjelde := DIFI
 
-h4. Eigenskapar
+h3. Eigenskapar
 
+table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
 | "Dokument":Dokument | 1..* | "Dokument":Dokument  |
 

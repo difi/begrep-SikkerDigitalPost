@@ -4,7 +4,7 @@ title: Signering og kryptering av Sikker Digital Post forsendelse
 headtitle: Sikker digital post
 ---
 
-h3. Innledning
+h2. Innledning
 
 Her beskrives det kort hvordan hver del av "Digital postforsendelse":meldingsstruktur krypteres og signeres.
 
@@ -40,7 +40,6 @@ Signeringssertifikatet med fullkjede er lagt inn i "Dokumentpakke":Dokumentpakke
 
 I tillegg til ende til ende sikkerheten så er "dokumentpakken":Dokumentpakke/ signert i meldingsutvekslingen punkt til punkt.
 
-
 h3. "StandardBusinessDocument":StandardBusinessDocument/
 
 "Melding":StandardBusinessDocument/Melding/ i "StandardBusinessDocument":StandardBusinessDocument/ er signert av Behandlingsansvarlig*/Postkasseleverandør ved bruk av Enveloped xml signature.
@@ -49,13 +48,11 @@ Signeringssertifikatet er lagt inn i "Melding":StandardBusinessDocument/Melding/
 "StandardBusinessDocument.Melding.Dokumentpakke":StandardBusinessDocument/Melding/Dokumentpakke har en kryptert engangsnøkkel,kryptert med innbyggers sertifikat.
 "StandardBusinessDocument.Melding.Avsender":StandardBusinessDocument/Melding/Avsender skal være organisasjonsnummeret til Behandlingsansvarlig.
 
-
 I tillegg så er "StandardBusinessDocument":StandardBusinessDocument/ signert i meldingsutvekslingen punkt til punkt.
 
 h3. "Eb:Messaging":ebMS30
 
 EB:Messaging headeren er signert punkt til punkt.
-
 
 h3. "Webservice Security":WebserviceSecurity
 
@@ -67,7 +64,6 @@ h3. "Webservice Security":WebserviceSecurity
 *** "SOAP Body <notextile>(StandardBusinessDocument)</notextile>":StandardBusinessDocument/
 *** "Attachment <notextile>(Dokumentpakke)</notextile>":Dokumentpakke/
 * Signeringssertifikatet skal være vedlagt SOAP meldingen i "wsse:security":WebserviceSecurity
-
 
 h3. Signering på veien av Behandlingsansvarlig
 

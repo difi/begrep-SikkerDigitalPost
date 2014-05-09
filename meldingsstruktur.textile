@@ -4,6 +4,7 @@ title: Meldingsstruktur
 headtitle: Oppslagstjenesten for kontakt og reservasjonsregisteret
 ---
 
+h2. {{page.title}}
 
 En Digitalpost forsendelse består av et hoveddokument med vedlegg.
 Disse dokumentene er beskyttet med kryptering og signering ende til ende for å sikre konfidensialitet og integritet hele veien fra Avsender til Mottaker.
@@ -15,7 +16,6 @@ Dette er "StandardBusinessDocument":StandardBusinessDocument/, som er signert/in
 
 ebMS 3.0 er brukt som "meldingsutvekslingsrammeverk":Meldingsutveksling/ fra Avsender til Meldingsformidler.
 Så "eb:Messaging":Messaging og "Webservice security":WebserviceSecurity er signert/integritetsbeskyttet punkt til punkt.
-
 
 !{width:50%;display: block;margin-left: auto;margin-right: auto;}meldingsstruktur_diagram.jpg!
 
