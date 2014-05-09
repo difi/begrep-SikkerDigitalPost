@@ -15,7 +15,7 @@ h2. {{page.title}}
 
 h3. Egenskaper
 
-table(table).
+table(table table-striped).
 |_. Identifikator |_. Type |_. Kardinalitet | Kommentar |
 | PartInfo | PartInfo | 1.. | Beskriver vedlegget |
 

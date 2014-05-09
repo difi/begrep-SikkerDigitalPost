@@ -4,6 +4,8 @@ title: UserMessage
 headtitle: Sikker digital post - Standard Business Document
 ---
 
+h2. {{page.title}}
+
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:"/index.html" }}":{{page.url}}
 - Term := {{page.title}}
 - Definisjon := ebMS 3.0 relaterte metadata om en forretningmelding
@@ -15,11 +17,12 @@ UserMessage blir brukt når innholdet i SOAP-meldingen er en forretningsmelding.
 
 h3. Attributter
 
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | "mpc":mpc | 1..1 | xs:anyURI | Konstantverdi som angir kanal som skal benyttes |
-{background:#ddd}.| "MessageInfo":MessageInfo | 1..1 | eb:MessageInfo | Intern identifikator og timestamp |
+| "MessageInfo":MessageInfo | 1..1 | eb:MessageInfo | Intern identifikator og timestamp |
 | "PartyInfo":PartyInfo | 1..1 | eb:PartyInfo | Informasjon om avsender og mottaker |
-{background:#ddd}.| "CollaborationInfo":CollaborationInfo | 1..1 | eb:CollaborationInfo | Informasjon om avtalt samhandlingsmønster for meldingen |
+| "CollaborationInfo":CollaborationInfo | 1..1 | eb:CollaborationInfo | Informasjon om avtalt samhandlingsmønster for meldingen |
 | "PayloadInfo":PayloadInfo | 1..1 | eb:PayloadInfo| Informasjon om selve forretningsmeldingen |
 
 h3. Eksempel
