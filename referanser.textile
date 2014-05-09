@@ -4,9 +4,7 @@ title: Sikker digital post - Referanseliste
 headtitle: Sikker digital post
 ---
 
-
-
-h3. Referanseliste
+h2. Referanseliste
 
 [1] ETSI, "ETSI TS 102 918: Electronic Signatures and Infrastructures (ESI); Associated Signature":http://www.etsi.org/deliver/etsi_ts/102900_102999/102918/01.03.01_60/ts_102918v010301p.pdf ,» ETSI, 2013-06.
 [2] ETSI, "ETSI TS 103 174: Electronic Signatures and Infrastructures (ESI); ASiC Baseline Profile":http://www.etsi.org/deliver/etsi_ts/103100_103199/103174/02.02.01_60/ts_103174v020201p.pdf ,» ETSI, 2013-06.

@@ -4,6 +4,8 @@ title: Messaging
 headtitle: Sikker digital post - Standard Business Document
 ---
 
+h2. {{page.title}}
+
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.url}}
 - Term := {{page.title}}
 - Definisjon := ebMS 3.0 metadata relatert til en meldingsutveksling
@@ -15,6 +17,7 @@ eb:Messaging er rot-elementet som blir benyttet til holde metadata relatert til 
 
 h3. Attributter
 
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | "UserMessage":UserMessage/ | 0..1 | eb:UserMessage | en forretningsmelding som skal overleveres til fagsystemet bak MSH'en som tar i mot meldingen |
-{background:#ddd}.| "SignalMessage":SignalMessage/ | 0..unbounded | eb:SignalMessage | Signalmelding om at det er ønske om en handling fra den andre MSH'en. En signalmelding vil typisk ikke innvolvere fagsystemet til MSH'en. |
+| "SignalMessage":SignalMessage/ | 0..unbounded | eb:SignalMessage | Signalmelding om at det er ønske om en handling fra den andre MSH'en. En signalmelding vil typisk ikke innvolvere fagsystemet til MSH'en. |
