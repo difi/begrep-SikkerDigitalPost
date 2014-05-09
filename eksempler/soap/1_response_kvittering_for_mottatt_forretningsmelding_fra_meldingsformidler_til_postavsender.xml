@@ -35,13 +35,6 @@
             <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
             <ds:DigestValue>WpLNOIKOqjp2QBoZ2d56ZJpPywirUE17k9X6uM3FTWY=</ds:DigestValue>
           </ds:Reference>
-          <ds:Reference URI="cid:sdp:asic">
-            <ds:Transforms>
-              <ds:Transform Algorithm="http://docs.oasis-open.org/wss/oasis-wss-SwAProfile-1.1#Attachment-Content-Signature-Transform"/>
-            </ds:Transforms>
-            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-            <ds:DigestValue>i6tYolJ3hdVDq2sH/QrtKDwf+3VcPlQb2NDBrevKEaw=</ds:DigestValue>
-          </ds:Reference>
         </ds:SignedInfo>
         <ds:SignatureValue>fV3uREHeGVZaR8qEFlgWsnfDLCMP35uSOKdE1sT/JuIW/5sXCwbDmh9i0F4+j28r4BPCUvut9+sAtk2jgiPsUSLOelxRuHyNu41b9NLOvyi+AjlPjeCp8ZynW7fVaJEYdweT8xkFVjSfklU5dv8PU8V0fmBDU/NWIFsUk4QVMman5Kwbvq+3hdcqnF+vOMIB/23qm646PIBpAk2plUdMxtSqoZB6u1MO2i4siyEFmsRUZtoGWO7krneEBdmLJeEgb1KG2y+dEWrX4ltWIK87FBWAHv3wOJ4mcMtmyzRDfRq9LLtih8UCC+7tauydndwwxBlncMxKG4C6IaavEg8wwg==</ds:SignatureValue>
         <ds:KeyInfo Id="KI-539aea5f-20ee-4c41-b5d2-3bab2ba0d6f4">
