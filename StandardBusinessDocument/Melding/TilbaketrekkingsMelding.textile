@@ -21,5 +21,5 @@ Attributtet konversasjonsIDD inneholder identifikatoren for meldingen som ønske
 
 {background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
 | Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
-{background:#ddd}.| "konversasjonsId"::/Felles/konversasjonsId  | 1..1 | xsd:string |
+{background:#ddd}.| "konversasjonsId":/Felles/konversasjonsId  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 
