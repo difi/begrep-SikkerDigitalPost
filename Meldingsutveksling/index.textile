@@ -34,6 +34,14 @@ Sentralt i utvekslingsmønsteret er "Message Partition Channel (mpc)":../UserMes
 - normal := Vent minst 10 minutter før neste forespørsel
 - prioritert := Vent minst 1 minutter før neste forespørsel
 
+h3. Duplikate meldinger/resending av mendlinger
+
+Automatisk resending av en melding som ikke er kommet fram er en valgfri opsjon i AS4. Dersom en avsendervirksomhet benytter seg av denne type funksjonalitet, så skal denne gjøres i henhold til AS4 profilen. 
+
+Merk at det er et klart skille mellom å resende en melding automatisk i AS4/MSH og resending fra fagsystemet/avsender. Dersom fagsystemet resender en melding så er dette en ny melding for meldingsutvekslingsrammeverket og skal ikke ha samme MessageId som forrige melding.
+
+Duplikatsjekk skjer i henhold til AS4 standarden ved at MessageId skal være unik. Det blir ikke gjort semantisk/innholdssjekk for å finne duplikater.
+
 h3. Eksempler
 
 Det er utarbeidet noen eksempler på SOAP meldinger knyttet til flyt diagrammet over.
