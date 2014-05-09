@@ -1,72 +1,79 @@
 ---
 layout: default
-title: Meldingsutveksling i Sikker Digital Post - FormidleDigitalPostForsendelse
+title: FormidleDigitalPostForsendelse
 headtitle: Sikker digital post
 ---
+
+h2. {{page.title }}
 
 Mal/URI for P-Mode parametere som skal benyttes ved forretningsprosessen FormidleDigitalPostForsendelse. Oversikten er basert på P-Mode parametere som en AS4 Light Compliant MSH skal kunne forstå, men det er ikke alle av disse som er relevante for et Sikker Digital Post. Disse er markert med - ikke relevant -
 
 Malen inneholder enkelte variabler som skal fylles ved instansiering av et variabelsett. For disse er formen %%variabelnavn%% benyttet.
 
-h5. Generelle parametere
+h3. Generelle parametere
 
-{background:#ddd}.|_. P-Mode |_. Beskrivelse |_. Verdi |
+table(table table-striped table-condensed).
+|_. P-Mode |_. Beskrivelse |_. Verdi |
 | PMode.ID | Unik identifikator for paramtersettet | %%"Sender":../StandardBusinessDocument/Sender%%-"FormidleDigitalPostForsendelse"-%versjon/løpenummer% |
-{background:#ddd}.| PMode.Agreement | Unik identifikator for samarbeidsprotokollen | "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.url}} |
+| PMode.Agreement | Unik identifikator for samarbeidsprotokollen | "http://begrep.difi.no {{ page.url  | remove:".html" }}":{{page.url}} |
 | PMode.MEP | Message Exchange Pattern | "http://www.oasis-open.org/committees/ebxml-msg/one-way" |
-{background:#ddd}.| PMode.MEPbinding | Retning på kommunikasjon, push eller pull | "http://www.oasis-open.org/committees/ebxml-msg/push" |
+| PMode.MEPbinding | Retning på kommunikasjon, push eller pull | "http://www.oasis-open.org/committees/ebxml-msg/push" |
 | PMode.Initiator.Party | Identifikator for den som initierar sendingen | %%"Sender":../StandardBusinessDocument/Sender%% |
-{background:#ddd}.| PMode.Initiator.Role | Rolle for den som initierar sendinga | ""Avsender"":../StandardBusinessDocument/Melding/Avsender |
+| PMode.Initiator.Role | Rolle for den som initierar sendinga | ""Avsender"":../StandardBusinessDocument/Melding/Avsender |
 | PMode.Initiator.Authorization.username | - ikke relevant - | - ikke relevant - |
-{background:#ddd}.| PMode.Initiator.Authorization.password | - ikke relevant - | - ikke relevant - |
+| PMode.Initiator.Authorization.password | - ikke relevant - | - ikke relevant - |
 | PMode.Responder.Party | Identifikator for den som er mottaker | %%"Receiver":../StandardBusinessDocument/Receiver%% |
-{background:#ddd}.| PMode.Responder.Role | Rolle for den som mottar  | "Meldingsformidler" |
+| PMode.Responder.Role | Rolle for den som mottar  | "Meldingsformidler" |
 | PMode.Responder.Authorization.username | - ikke relevant - | - ikke relevant - |
-{background:#ddd}.| PMode.Responder.Authorization.password | - ikke relevant - | - ikke relevant - |
+| PMode.Responder.Authorization.password | - ikke relevant - | - ikke relevant - |
 
-h5. Protokoll
+h3. Protokoll
 
-{background:#ddd}.|_. P-Mode |_. Beskrivelse |_. Verdi |
+table(table table-striped table-condensed).
+|_. P-Mode |_. Beskrivelse |_. Verdi |
 | PMode<notextile>[1]</notextile>.Protocol.Address |  | "HTTPS 1.1" |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.Protocol.SOAPVersion |  | "SOAP 1.2" |
+| PMode<notextile>[1]</notextile>.Protocol.SOAPVersion |  | "SOAP 1.2" |
 
-h5. 
+h3. BusinessInfo 
 
-{background:#ddd}.|_. P-Mode  |_. Verdi |
+table(table table-striped table-condensed).
+|_. P-Mode  |_. Verdi |
 | PMode<notextile>[1]</notextile>.BusinessInfo.Service  | "urn:sdp:service:sdp" |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.BusinessInfo.Action  | "FormidleDigitalPost" |
+| PMode<notextile>[1]</notextile>.BusinessInfo.Action  | "FormidleDigitalPost" |
 | PMode<notextile>[1]</notextile>.BusinessInfo.Properties[]: | - ikke relevant - |
 
-2.2.3.4     PMode<notextile>[1]</notextile>.ErrorHandling
+h3. ErrorHandling
 
-{background:#ddd}.|_. P-Mode |_. Verdi |
+table(table table-striped table-condensed).
+|_. P-Mode |_. Verdi |
 | PMode<notextile>[1]</notextile>.ErrorHandling.Report.AsResponse | ??ikke avklart?? |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.ErrorHandling.Report.ProcessErrorNotifyProducer | true |
+| PMode<notextile>[1]</notextile>.ErrorHandling.Report.ProcessErrorNotifyProducer | true |
 | PMode<notextile>[1]</notextile>.ErrorHandling.Report.DeliveryFailuresNotifyProducer | true |
 
-h5. Pålitlighet
+h3. Pålitlighet
 
 Støtte ikke påkrevd i profilen.
 
-h5. Sikkerhet
+h3. Sikkerhet
 
-{background:#ddd}.|_. P-Mode  |_. Verdi |
+table(table table-striped table-condensed).
+|_. P-Mode  |_. Verdi |
 | PMode<notextile>[1]</notextile>.Security.WSSVersion | "1.1" |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.Security.X509.Sign  |  Timestamp, eb:Messaging, SOAP Body, Attachment |
+| PMode<notextile>[1]</notextile>.Security.X509.Sign  |  Timestamp, eb:Messaging, SOAP Body, Attachment |
 | PMode<notextile>[1]</notextile>.Security.X509.Signature.Certificate  | %%"Sender":../StandardBusinessDocument/Sender sitt sertifikat%% |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.Security.X509.Signature.HashFunction  | "SHA-256" |
+| PMode<notextile>[1]</notextile>.Security.X509.Signature.HashFunction  | "SHA-256" |
 | PMode<notextile>[1]</notextile>.Security.X509.Signature.Algorithm  | "RSA-SHA256" |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Encrypt  | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Encrypt  | - ikke relevant - |
 | PMode<notextile>[1]</notextile>.Security.X509.Encryption.Certificate  | - ikke relevant - |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Algorithm  |- ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.X509.Encryption.Algorithm  |- ikke relevant - |
 | PMode<notextile>[1]</notextile>.Security.X509.Encryption.MinimumStrength  | - ikke relevant - |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.Security.UsernameToken.username  | - ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.username  | - ikke relevant - |
 | PMode<notextile>[1]</notextile>.Security.UsernameToken.password  | - ikke relevant - |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.Security.UsernameToken.Digest |- ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.Digest |- ikke relevant - |
 | PMode<notextile>[1]</notextile>.Security.UsernameToken.Nonce | - ikke relevant -|
-{background:#ddd}.| PMode<notextile>[1]</notextile>.Security.UsernameToken.Created |- ikke relevant - |
+| PMode<notextile>[1]</notextile>.Security.UsernameToken.Created |- ikke relevant - |
 | PMode<notextile>[1]</notextile>.Security.PModeAuthorize | false |
-{background:#ddd}.| PMode<notextile>[1]</notextile>.Security.SendReceipt  | |
+| PMode<notextile>[1]</notextile>.Security.SendReceipt  | |
 | Pmode<notextile>[1]</notextile>.Security.SendReceipt.ReplyPattern  |
 
 h3. Eksempler

@@ -4,6 +4,7 @@ title: Meldingsutveksling i Sikker Digital Post
 headtitle: Sikker digital post
 ---
 
+h2. {{page.title}}
 
 Postforsendelsen skal overføres fra Databehandler ved bruk av en ebMS 3.0 Message Service Handler (MSH). 
 MSH'en er virksomhetens tilgangpunkt inn til ebMS 3.0 rammeverket som er ansvarlig for videre transport.
@@ -22,11 +23,16 @@ ebMS benytter konseptet P-Mode (Processing Mode) til å beskrive en samling para
 
 AS4 Light client profilen definerer hvilke av disse som en implementasjon skal støtte.
 
-h4. Grensesnitt mellom avsender og MF
+h3. Grensesnitt mellom avsender og MF
 
 Grensesnittet mellom avsender og meldingsformidler har to sett med P-Mode parametere:
 * "FormidleDigitalPostForsendelse":FormidleDigitalPostForsendelse - benyttes ved sending av en digital post forsendelse fra avsender til meldingsformidler
 * "KvitteringsForespoersel":KvitteringsForespoersel - benyttes av avsender for å sjekke om det er forretningskvitteringer som kan hentes
+
+Sentralt i utvekslingsmønsteret er "Message Partition Channel (mpc)":../UserMessage/mpc som blir brukt til å angi informasjon om hvilken kø man formidler/sjekker informasjon i. Ved "KvitteringsForespoersel":KvitteringsForespoersel så er det forventet at man respekterer følgende intervaller mellom hver forespørsel når forrige forespørsel returnerte at det er ikke er meldinger å hente:
+
+- normal := Vent minst 10 minutter før neste forespørsel
+- prioritert := Vent minst 1 minutter før neste forespørsel
 
 h3. Eksempler
 
