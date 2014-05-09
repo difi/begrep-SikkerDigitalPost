@@ -1,6 +1,6 @@
 ---
 layout: default
-title: LeveringsMelding
+title: LeveringsKvittering
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost
 ---

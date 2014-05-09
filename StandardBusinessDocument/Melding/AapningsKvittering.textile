@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ÅpningsMelding
+title: ÅpningsKvittering
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost
 ---
