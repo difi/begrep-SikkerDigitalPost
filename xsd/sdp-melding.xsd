@@ -13,36 +13,39 @@
 	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslag/oppslagstjeneste-metadata-14-05.xsd"/>
 
 
-	<xsd:element name="melding" type="Melding"/>
-	<xsd:complexType name="Melding">
+	<xsd:element name="digitalPost" type="DigitalPost" />
+	<xsd:complexType name="DigitalPost" >
 		<xsd:annotation>
 			<xsd:documentation>
-
+				Sikker digital postmelding fra avsender til mottaker, samt
+				informasjon relatert til presentasjon og behandling av denne.
 			</xsd:documentation>
 		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="konversasjonsId" type="KonversasjonsId" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1">
-				<xsd:annotation>
-					<xsd:documentation>
-						  Den reelle avsenderen av dokument(ene)
-					</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="mottaker" type="Mottaker" minOccurs="1" maxOccurs="1">
-				<xsd:annotation>
-					<xsd:documentation>
-						  Mottakeren av meldingen.
-					</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:choice>
-				<xsd:element name="fysiskPostInfo" type="FysiskPostInfo" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="digitalPostInfo" type="DigitalPostInfo" minOccurs="1" maxOccurs="1"/>
-			</xsd:choice>
-			<xsd:element name="dokumentpakke" type="Dokumentpakke" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="signatur" type="ds:SignatureType" minOccurs="1" maxOccurs="1" />
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="Melding">
+				<xsd:sequence>
+					<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>
+								  Den reelle avsenderen av dokument(ene)
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="mottaker" type="Mottaker" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>
+								  Mottakeren av meldingen.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:choice>
+						<xsd:element name="fysiskPostInfo" type="FysiskPostInfo" minOccurs="1" maxOccurs="1"/>
+						<xsd:element name="digitalPostInfo" type="DigitalPostInfo" minOccurs="1" maxOccurs="1"/>
+					</xsd:choice>
+					<xsd:element name="dokumentpakke" type="Dokumentpakke" minOccurs="1" maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 
 	<xsd:complexType name="Repetisjoner">

@@ -6,13 +6,6 @@
 
 	<konversasjonsId>00c5ae20-da79-11e3-9c1a-0800200c9a66</konversasjonsId>
 
-	<tidspunkt>2014-05-19T12:00:00</tidspunkt>
-
-	<varslingfeilet>
-		<varslingskanal>SMS</varslingskanal>
-		<beskrivelse>Nummer ikke i bruk</beskrivelse>
-	</varslingfeilet>
-
     <signatur>
       <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
         <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
@@ -58,5 +51,12 @@
 	      </X509Data>
       </KeyInfo>
     </signatur>
+
+	<tidspunkt>2014-05-19T12:00:00</tidspunkt>
+
+	<varslingfeilet>
+		<varslingskanal>SMS</varslingskanal>
+		<beskrivelse>Nummer ikke i bruk</beskrivelse>
+	</varslingfeilet>
 
 </kvittering>

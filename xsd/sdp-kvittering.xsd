@@ -10,16 +10,18 @@
 
 	<xsd:element name="kvittering" type="Kvittering"/>
 	<xsd:complexType name="Kvittering">
-		<xsd:sequence>
-			<xsd:element name="konversasjonsId" type="KonversasjonsId" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
-			<xsd:choice>
-				<xsd:element name="levering" type="Levering"/>
-				<xsd:element name="aapning" type="Aapning"/>
-				<xsd:element name="varslingfeilet" type="Varslingfeilet"/>
-			</xsd:choice>
-			<xsd:element name="signatur" type="ds:SignatureType" minOccurs="1" maxOccurs="1" />
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="Melding">
+				<xsd:sequence>
+					<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+					<xsd:choice>
+						<xsd:element name="levering" type="Levering"/>
+						<xsd:element name="aapning" type="Aapning"/>
+						<xsd:element name="varslingfeilet" type="Varslingfeilet"/>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="Levering">
 		<xsd:annotation>

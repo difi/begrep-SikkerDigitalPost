@@ -8,12 +8,15 @@
 
 	<xsd:element name="feil" type="Feil"/>
 	<xsd:complexType name="Feil">
-		<xsd:sequence>
-			<xsd:element name="konversasjonsId" type="KonversasjonsId" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="feiltype" type="Feiltype" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="detaljer" type="Detaljer" minOccurs="0" maxOccurs="1"/>
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="Melding">
+				<xsd:sequence>
+					<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="feiltype" type="Feiltype" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="detaljer" type="Detaljer" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:simpleType name="Feiltype">
 		<xsd:restriction base="xsd:string">
