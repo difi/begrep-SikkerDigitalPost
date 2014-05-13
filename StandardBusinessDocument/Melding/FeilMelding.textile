@@ -14,8 +14,10 @@ group: SikkerDigitalPost
 h3. Attributer
 
 
-|_. Identifikator |_. Kardinalitet |_. Datatype |
+{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
+| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
+{background:#ddd}.| "konversasjonsId":/Felles/konversasjonsId  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
-| feiltype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+{background:#ddd}.| feiltype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | detaljer | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 

@@ -5,6 +5,8 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/Melding
 ---
 
+h2. {{page.title}}
+
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
 - Definisjon := Informasjonsbærer i SOAP-meldinger for å gi melding integritet og konfidensialit
@@ -12,12 +14,12 @@ group: SikkerDigitalPost/Melding
 - Kjelde := "OASIS":https://www.oasis-open.org/committees/download.php/21255/wss-v1.1-spec-errata-os-SOAPMessageSecurity.pdf
 - Kommentar := Informasjonsbærer brukt for å sikre integritet i meldingen fra punkt til punkt.
 
-h4. Eigenskapar
+h3. Eigenskapar
 
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
 | Timestamp | 1..1 | "wsu:Timestamp":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717167 |
-{background:#ddd}.| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148 |
-
+| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148 |
 
 For Soap signering skal:
 * Security Token være X509 sertifikater 

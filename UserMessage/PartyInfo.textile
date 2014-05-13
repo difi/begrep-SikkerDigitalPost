@@ -5,25 +5,28 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost/Melding
 ---
 
+h2. {{page.title}}
+
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
 - Definisjon := Informasjon om mottaker/avsender 
 - Datatype := complexType
 - Kilde := "ebMS 3.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd
 
-h4. Egenskaper
+h3. Egenskaper
 
 Består av to elementer som identifiserer avsender (eb:From) og mottaker (eb:To), som hver har følgende egenskaper
 
+table(table table-striped).
 |_. Identifikator |_. Type |_. Kardinalitet | Kommentar |
 | PartyId | "Virksomhetsidentifikator":/Felles/virksomhetsidentifikator | 1..1 | |
 | Role | "Konstant":../Aktorer | 1..1 | Definerer rollen i meldingsutvesklingen |
 
-h4. Kodeverdier for konstanten Role
+h3. Kodeverdier for konstanten Role
 
 Role skal benytte URN som angitt i listen over "aktører":../Aktorer. Merk at avsender av en Digital Forsendelse ofte er enten en behandlingsansvarlig (produsent av meldingen) eller databehandler (som formidler meldingen etter avtale med behandlingsansvarlig)
 
-h4. Xml eksempel
+h3. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
 	<eb:PartyInfo>

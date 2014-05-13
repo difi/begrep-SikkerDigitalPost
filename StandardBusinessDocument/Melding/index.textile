@@ -18,6 +18,7 @@ Resten av attributtene er definert i de enkelte "meldingstypene, se under":#meld
 
 {background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
 | Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
+| konversasjonsID | 1..1 | xsd:string |
 
 h3. Klassediagram
 
@@ -32,12 +33,12 @@ Meldingstypen er definert i "DocumentIdentification":../DocumentIdentification o
 {background:#ddd}.|_. Type |_. Beskrivelse |
 | "Digitalpost":DigitalPostMelding | Forsendelse av digital post |
 {background:#ddd}.| "PrioritertDigitalpost":DigitalPostMelding | Forsendelse av digital post |
-| "LeveringsKvittering":LeveringsMelding | Kvittering på at digital post er tilgjengeliggjort |
-{background:#ddd}.| "ÅpningsKvittering":AapningsMelding | Kvittering fra Innbygger for at digital post er åpnet |
-| "Varslingfeilet":VarslingfeiletMelding | Kvittering for at en spesifisert varsling ikke har blitt sendt |
-{background:#ddd}.| "Feil":FeilMelding | Generel feilkvittering |
-| "Karantene":KaranteneMelding | Melding for å tilbakekalle en forsendelsen av en digital post melding. |
-{background:#ddd}.| "KaranteneKvittering":KaranteneKvittering | Kvittering for en tilbakekallingsmelding. |
+| "Tilbaketrekking":TilbaketrekkingsMelding | Melding for å tilbakekalle en forsendelsen av en digital post melding. |
+{background:#ddd}.| "LeveringsKvittering":LeveringsKvittering | Kvittering på at digital post er tilgjengeliggjort |
+| "ÅpningsKvittering":AapningsKvittering | Kvittering fra Innbygger for at digital post er åpnet |
+{background:#ddd}.| "Varslingfeilet":VarslingfeiletKvittering | Kvittering for at en spesifisert varsling ikke har blitt sendt |
+| "Feil":FeilMelding | Generel feilkvittering |
+{background:#ddd}.| "TilbaketrekkingsKvittering":TilbaketrekkingsKvittering | Kvittering for en tilbakekallingsmelding. |
 
 h3. Signature
 
