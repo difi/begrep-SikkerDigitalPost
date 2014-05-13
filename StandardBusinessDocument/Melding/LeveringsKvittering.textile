@@ -7,9 +7,9 @@ group: SikkerDigitalPost
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := En "Kvitteringsmelding":Kvitteringsmelding til Avsender om at Mottaker har åpnet forsendelsen i sin postkasse.
+- Definisjon := En "Kvitteringsmelding":KvitteringsMelding til Avsender om at Mottaker har åpnet forsendelsen i sin postkasse.
 - Kilde := DIFI
 
 h3. Attributer
 
-se "Kvitteringsmelding":Kvitteringsmelding
+se "Kvitteringsmelding":KvitteringsMelding
