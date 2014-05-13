@@ -4,9 +4,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-kvittering.xsd ">
 
+	<konversasjonsId>00c5ae20-da79-11e3-9c1a-0800200c9a66</konversasjonsId>
+
 	<tidspunkt>2014-05-19T12:00:00</tidspunkt>
 	<levering/>
-  <signatur>
+	<signatur>
       <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
         <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
         <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
@@ -50,6 +52,6 @@
 	      </X509Certificate>
 	      </X509Data>
       </KeyInfo>
-  </signatur>
+	</signatur>
 
 </kvittering>

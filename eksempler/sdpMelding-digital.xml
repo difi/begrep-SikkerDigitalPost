@@ -7,13 +7,31 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-melding.xsd ">
 
-	<sdpMeldingId>31415926535987</sdpMeldingId>
+	<konversasjonsId>00c5ae20-da79-11e3-9c1a-0800200c9a66</konversasjonsId>
 
 	<avsender>
 		<organisasjon>9908:123456789</organisasjon>
 		<avsenderidentifikator>123456789-A</avsenderidentifikator>
 		<fakturaReferanse>ØK1</fakturaReferanse>
 	</avsender>
+
+	<mottaker>
+		<person>
+			<difi:personidentifikator>17051400000</difi:personidentifikator>
+			<difi:reservasjon>NEI</difi:reservasjon>
+			<difi:status>AKTIV</difi:status>
+			<difi:beskrivelse>difi:beskrivelse</difi:beskrivelse>
+			<difi:Kontaktinformasjon>
+				<difi:Mobiltelefonnummer sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">12345678</difi:Mobiltelefonnummer>
+				<difi:Epostadresse sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">ola@nordmann.no</difi:Epostadresse>
+			</difi:Kontaktinformasjon>
+			<difi:SikkerDigitalPostAdresse>
+				<difi:postkasseadresse>ola.nordmann#0ABC</difi:postkasseadresse>
+				<difi:postkasseleverandoerAdresse>984661185</difi:postkasseleverandoerAdresse>
+			</difi:SikkerDigitalPostAdresse>
+			<difi:X509Certificate>difi:X509Certificate</difi:X509Certificate>
+		</person>
+	</mottaker>
 
 	<digitalPostInfo>
 		<virkningsdato>2014-05-17</virkningsdato>
