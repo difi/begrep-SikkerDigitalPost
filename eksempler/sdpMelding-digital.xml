@@ -7,7 +7,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-melding.xsd ">
 
-	<konversasjonsId>00c5ae20-da79-11e3-9c1a-0800200c9a66</konversasjonsId>
+<!-- 	<konversasjonsId>00c5ae20-da79-11e3-9c1a-0800200c9a66</konversasjonsId> -->
 
     <signatur>
       <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
