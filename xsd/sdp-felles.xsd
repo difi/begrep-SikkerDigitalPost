@@ -7,6 +7,14 @@
 
 	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslag/oppslagstjeneste-metadata-14-05.xsd"/>
 
+	<xsd:simpleType name="KonversasjonsId">
+		<xsd:annotation>
+			<xsd:documentation>ID for forsendelsen. Unik i kontekst av avsender. Maks 36 tegn.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
 	<xsd:complexType name="Avsender">
 		<xsd:sequence>

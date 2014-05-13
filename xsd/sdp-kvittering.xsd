@@ -5,12 +5,13 @@
 	targetNamespace="http://begrep.difi.no/sdp/schema_v10"
 	elementFormDefault="qualified" version="1.0">
 
-	<xsd:include schemaLocation="sdp-melding.xsd"/>
+	<xsd:include schemaLocation="sdp-felles.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="w3/xmldsig-core-schema.xsd"/>
 
 	<xsd:element name="kvittering" type="Kvittering"/>
 	<xsd:complexType name="Kvittering">
 		<xsd:sequence>
+			<xsd:element name="konversasjonsId" type="KonversasjonsId" minOccurs="1" maxOccurs="1" />
 			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
 			<xsd:choice>
 				<xsd:element name="levering" type="Levering"/>
