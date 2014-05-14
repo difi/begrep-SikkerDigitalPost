@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://begrep.difi.no/sdp/schema_v10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://begrep.difi.no/sdp/schema_v10" elementFormDefault="qualified" version="1.0">
+
+<xsd:schema version="1.0" targetNamespace="http://begrep.difi.no/sdp/schema_v10" elementFormDefault="qualified"
+	xmlns="http://begrep.difi.no/sdp/schema_v10"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:include schemaLocation="sdp-felles.xsd"/>
+
 	<xsd:element name="feil" type="Feil"/>
 	<xsd:complexType name="Feil">
-		<xsd:sequence>
-			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="feiltype" type="Feiltype" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="detaljer" type="Detaljer" minOccurs="0" maxOccurs="1"/>
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="Melding">
+				<xsd:sequence>
+					<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="feiltype" type="Feiltype" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="detaljer" type="Detaljer" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:simpleType name="Feiltype">
 		<xsd:restriction base="xsd:string">

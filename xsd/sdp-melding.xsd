@@ -13,38 +13,58 @@
 	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslag/oppslagstjeneste-metadata-14-05.xsd"/>
 
 
-	<xsd:element name="melding" type="Melding"/>
-	<xsd:complexType name="Melding">
+	<xsd:element name="digitalPost" type="DigitalPost" />
+	<xsd:element name="tilbaketrekking" type="Tilbaketrekking" />
+
+
+
+	<xsd:complexType name="DigitalPost" >
 		<xsd:annotation>
 			<xsd:documentation>
-
+				Sikker digital postmelding fra avsender til mottaker, samt
+				informasjon relatert til presentasjon og behandling av denne.
 			</xsd:documentation>
 		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="konversasjonsId" minOccurs="1" maxOccurs="1">
-				<xsd:annotation>
-					<xsd:documentation>ID for forsendelsen. Unik i kontekst av avsender.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:string">
-						<xsd:maxLength value="40"/>
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
-			<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1">
-				<xsd:annotation>
-					<xsd:documentation>
-						  Den reelle avsenderen av dokument(ene)
-					</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:choice>
-				<xsd:element name="fysiskPostInfo" type="FysiskPostInfo" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="digitalPostInfo" type="DigitalPostInfo" minOccurs="1" maxOccurs="1"/>
-			</xsd:choice>
-			<xsd:element name="dokumentpakke" type="Dokumentpakke" minOccurs="1" maxOccurs="1" />
-			<xsd:element name="signatur" type="ds:SignatureType" minOccurs="1" maxOccurs="1" />
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="Melding">
+				<xsd:sequence>
+					<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>
+								  Den reelle avsenderen av dokument(ene)
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="mottaker" type="Mottaker" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>
+								  Mottakeren av meldingen.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:choice>
+						<xsd:element name="fysiskPostInfo" type="FysiskPostInfo" minOccurs="1" maxOccurs="1"/>
+						<xsd:element name="digitalPostInfo" type="DigitalPostInfo" minOccurs="1" maxOccurs="1"/>
+					</xsd:choice>
+					<xsd:element name="dokumentpakke" type="Dokumentpakke" minOccurs="1" maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="Tilbaketrekking">
+		<xsd:annotation>
+			<xsd:documentation>
+				Meldingen sendes dersom det oppdages alvorlig feil i en DigitalPost. Dette kan f.eks. være
+				dersom DigitalPost er sendt til feil Mottaker. Ved feilforsendelser tilbyr postkasseleverandørene
+				mulighet for, på bakgrunn av konversasjonsId, at dokumenter kan trekkes tilbake av avsender. Hvis
+				tilbaketrekking skjer innen virkningsdato er inntruffet, vil dokumentet bli fjernet fra
+				mottakerens postkasse.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="Melding" />
+		</xsd:complexContent>
 	</xsd:complexType>
 
 	<xsd:complexType name="Repetisjoner">
@@ -114,7 +134,7 @@
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="SmsVarsel">
 		<xsd:sequence>
 			<xsd:element name="tekst" minOccurs="0" maxOccurs="1" type="SmsVarselTekst"/>
