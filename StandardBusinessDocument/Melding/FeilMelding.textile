@@ -13,11 +13,30 @@ group: SikkerDigitalPost
 
 h3. Attributer
 
-
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
 | Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
-{background:#ddd}.| "konversasjonsId":/Felles/konversasjonsId  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "konversasjonsId":/Felles/konversasjonsId  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
-{background:#ddd}.| feiltype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| feiltype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| feilkode | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | detaljer | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 
+
+h4. Kodeverk for feiltype
+
+feiltype kan ha følgende verdi:
+
+table(table table-striped).
+|_. Kodeverdi |_. Beskrivelse |
+| KLIENT | Feilen kommer pga. feil på input eller andre feil der "Avsender":Avsender må rette opp i årsaken til feilen  |
+| SERVER | Feilen kommer av feil på sentral infrastruktur. "Avsender":Avsender må ta kontakt med Sentralforvalter for å få rettet opp i feilen. |
+
+h4. Kodeverk for feilkode
+
+feilkode kan ha følgende verdi:
+
+table(table table-striped).
+|_. Kodeverdi |_. Beskrivelse |
+
+(ikke detaljert)
