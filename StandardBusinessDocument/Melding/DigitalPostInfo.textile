@@ -16,7 +16,7 @@ Når den digitale posten er dekryptert og innbygger er autentisert på tilstrekk
 
 h3. Attributer
 
-
+table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
 | "sikkerhetsnivaa":/Felles/sikkerhetsnivaa | 1..1 | "xs:int":http://www.w3.org/TR/xmlschema-2/#int |
 | "virkningsdato":/Felles/virkningsdato | 0..1 | "xs:date":http://www.w3.org/TR/xmlschema-2/#date |

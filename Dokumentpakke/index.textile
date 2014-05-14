@@ -16,11 +16,12 @@ Sikker Digital Post har definert et eget begrep "Manifest":Manifest som innehold
 
 h3. Innhold
 
-{background:#ddd}.|_. Fil |_. Kardinalitet |_. Beskrivelse |
+table(table table-striped).
+|_. Fil |_. Kardinalitet |_. Beskrivelse |
 | hoveddokument | 1..1 | fil |
-{background:#ddd}.| "Manifest.xml":Manifest | 1..1 | "Manifest":Manifest  |
+| "Manifest.xml":Manifest | 1..1 | "Manifest":Manifest  |
 | vedlegg | 0..99 | fil |
-{background:#ddd}.| META-INF/signatures.xml | 1..1 | "XAdES":http://www.etsi.org/deliver/etsi_ts%5C101900_101999%5C101903%5C01.04.02_60%5Cts_101903v010402p.pdf signaturer av filene |
+| META-INF/signatures.xml | 1..1 | "XAdES":http://www.etsi.org/deliver/etsi_ts%5C101900_101999%5C101903%5C01.04.02_60%5Cts_101903v010402p.pdf signaturer av filene |
 
 h3. Eksempel
 

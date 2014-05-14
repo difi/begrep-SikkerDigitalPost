@@ -8,40 +8,25 @@ group: SikkerDigitalPost/Melding
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Informasjon om kryptering og innhold i dokumentpakken som utgjør vedlegget i meldingen
+- Definisjon := Hash av den krypterte "dokumentpakken":../../Dokumentpakke/
 - Datatype := complexType
 - Kjelde := DIFI
 
 h4. Eigenskapar
 
+table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |_. Beskrivelse |
-| "SignedInfo":http://www.w3.org/TR/xmldsig-core1/#sec-SignedInfo | 1..1 | "ds:SignedInfo":http://www.w3.org/TR/xmldsig-core1/#sec-SignedInfo | Hash av den krypterte Asic-fila |
-| "EncryptedKey":http://www.w3.org/2001/04/xmlenc | 1..1 | "enc:EncryptedKey":http://www.w3.org/2001/04/xmlenc | Informasjon om kryptert engangsnøkkel |
-| "KeyInfo":http://www.w3.org/TR/xmldsig-core1/#sec-KeyInfo | 1..1 | "ds:KeyInfo":http://www.w3.org/TR/xmldsig-core1/#sec-KeyInfo | "Mottaker":Mottaker sitt sertifikat, brukt for kryptering av engangsnøkkel. |
-| "CipherData":ttp://www.w3.org/2001/04/xmlenc | 1..1 | "enc:CipherData":ttp://www.w3.org/2001/04/xmlenc | Kryptert engangsnøkkel |
+| "DigestMethod":http://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod | 1..1 | "ds:SignedInfo":http://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod| Referanse til Hash algoritmen brukt for lage hash  |
+| "DigestValue":http://www.w3.org/TR/xmldsig-core1/#sec-DigestValue | 1..1 | "ds:DigestValue":http://www.w3.org/TR/xmldsig-core1/#sec-DigestValue | Base64 encoded Hash av den krypterte "Dokumentpakken":../../Dokumentpakke/ |
+
 
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
 
-  <dokumentPakke>
-    
-	<digest algorithm="SHA-256" value="" >
-	
-	<enc:EncryptedKey Encoding=""  MimeType="" Recipient="" Type="">
-		<enc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" Id="idvalue0">
-			<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-		</enc:EncryptionMethod>
-	<ds:KeyInfo>
-		<ds:KeyName>ds:KeyName</ds:KeyName>
-		<ds:X509Data>
-               Sertifikater og slikt
-		</ds:X509Data>
-	</ds:KeyInfo>
-	<enc:CipherData>
-		<enc:CipherValue>HreaWUt7EANxxQJeamkmDhUubKDwGPUrRYOUSO7cNdhV4irzL8ntuQVnEcb37+2UbU2ymvZrwuBL9dweevyMGpVRYUSjAqxO0M9gB38wgzltQqkqYo0HtLdOyfnxDBuRjyRCH8+dgNfVK0PSgVTyNnawDrQaZqTHxwCf7e5vqz5LWJLo16k6G17ldBzmet0xbBSJ3YD5y+AK/5EJjyDZGYMEJ8+nmEY7OTDd/JdrWPhL62LGdMP2EH3qSqjMOm84MLiLOvdiMNlv152BjVf+8JXEirUM7BBu+nmaZrpKvrVGIfhKXpvLMkSZlkb2zZfNOAg8OL5wIn0qqYtF+3U5sw==</enc:CipherValue>
-	</enc:CipherData>
-	</enc:EncryptedKey>
-  </dokumentPakke>
+<dokumentpakke>
+			<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+			<ds:DigestValue></ds:DigestValue>
+</dokumentpakke>
   
 </pre>
