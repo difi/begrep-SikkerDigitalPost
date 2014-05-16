@@ -76,7 +76,9 @@ h3. Konfidensialitet
 
 TODO: Formatering i ASN.1 med for eksempel [0] skal ikke være en referanse
 
-Dokumentpakken krypteres til mottakers sertifikat som leveres fra oppslagstjenesten. Krypteringen skal gjøres i henhold til [5] med begrensninger angitt nedenfor. 
+Dokumentpakken krypteres til mottakers sertifikat som leveres fra oppslagstjenesten for kontaktinformasjon. Krypteringen er ment å beskytte innholdet i overføringen fra avsender til mottaker, som betyr at nøklene for dekryptering er forventet å være tilgjengelig i minst noen måneder fremover. Langtidslagring av den krypterte dokumentpakken er ikke nødvendigvis støttet av den e-ID tilhørende sertifikatet som leveres fra oppslagstjenesten.
+
+Krypteringen skal gjøres i henhold til [5] med begrensninger angitt nedenfor. 
 
 CMS starter med en sekvens av ContentInfo
 
