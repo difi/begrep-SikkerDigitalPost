@@ -23,7 +23,7 @@ table(table table-striped table-condensed).
 | PMode.Initiator.Authorization.username | - ikke relevant - | - ikke relevant - |
 | PMode.Initiator.Authorization.password | - ikke relevant - | - ikke relevant - |
 | PMode.Responder.Party | Identifikator for den som er mottaker | %%"Receiver":../StandardBusinessDocument/Receiver%% |
-| PMode.Responder.Role | Rolle for den som mottar  | "Meldingsformidler" |
+| PMode.Responder.Role | Rolle for den som mottar  | "urn:sdp:meldingsformidler" |
 | PMode.Responder.Authorization.username | - ikke relevant - | - ikke relevant - |
 | PMode.Responder.Authorization.password | - ikke relevant - | - ikke relevant - |
 
