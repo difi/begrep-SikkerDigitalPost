@@ -74,10 +74,8 @@ ContentInfo ::= SEQUENCE {
 
 Her skal følgende begrensninger gjelde:
 
-<pre>
-  contentType = 1.2.840.113549.1.9.16.1.23 (id-ct-authEnvelopedData) ved bruk av AES-GCM, eller
-  contentType = 1.2.840.113549.1.7.3 (id-envelopedData) ved bruk av AES-CBC.
-</pre>
+* contentType = 1.2.840.113549.1.9.16.1.23 (id-ct-authEnvelopedData) ved bruk av AES-GCM, eller
+* contentType = 1.2.840.113549.1.7.3 (id-envelopedData) ved bruk av AES-CBC.
 
 content vil da være AuthEnvelopedData eller EnvelopedData som beskrevet nedenfor. AuthEnvelopedData er definert i "Cryptographic Message Syntax (CMS) Authenticated-Enveloped-Data Content Type":ietf9
 
