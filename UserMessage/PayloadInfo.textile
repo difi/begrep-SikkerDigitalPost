@@ -21,7 +21,7 @@ table(table table-striped).
 
 h3. Kommentar
 
-En SDP forretningsmelding skal alltid ha en PartInfo med referanse til SoapBody, og alternativt en til med referanse til ASIC-E vedlegg (dokuementpakken). Dette vedlegget skal alltid angi PartProperties for MimeType (konstant application/octet-stream) og Content (konstant sdp:Dokumentpakke).
+En SDP forretningsmelding skal alltid ha en PartInfo med referanse til SoapBody (som inneholder selve "meldingen":../StandardBusinessDocument, og alternativt en til med referanse til "ASIC-E vedlegg":../Dokumentpakke. For denne skal det alltid angis PartProperties for MimeType (konstant "application/cms") og Content (konstant "sdp:Dokumentpakke").
 
 h3. Xml eksempel
 
@@ -30,7 +30,7 @@ h3. Xml eksempel
 		<eb:PartInfo href="#soapBody"/>
 		<eb:PartInfo href="cid:sdp:asic">
 			<eb:PartProperties>
-				<eb:Property name="MimeType">application/octet-stream</eb:Property>
+				<eb:Property name="MimeType">application/cms</eb:Property>
 				<eb:Property name="Content">sdp:Dokumentpakke</eb:Property>
 			</eb:PartProperties>
 		</eb:PartInfo>
