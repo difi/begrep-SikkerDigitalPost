@@ -18,6 +18,6 @@ table(table table-striped).
 | "konversasjonsId":/Felles/konversasjonsId  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | "Avsender":Avsender | 1..1 | "sdp:Avsender":Avsender |
 | "Mottaker":Mottaker | 1..1 | "sdp:Mottaker":Mottaker |
-| "Dokumentpakke":Dokumentpakke | 1..1 | "sdp:Dokumentpakke":Dokumentpakke |
+| "Dokumentpakkefingeravtrykk":Dokumentpakkefingeravtrykk | 1..1 | "sdp:Dokumentpakkefingeravtrykk":Dokumentpakkefingeravtrykk |
 | "FysiskpostInfo":FysiskPostInfo | 0..1 | "sdp:FysiskpostInfo":FysiskPostInfo  |
 | "DigitalpostInfo":DigitalPostInfo | 0..1 | "sdp:DigitalpostInfo":DigitalPostInfo  |

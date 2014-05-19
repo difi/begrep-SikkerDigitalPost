@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dokumentpakke
+title: Dokumentpakkefingeravtrykk
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost/Melding
 ---
@@ -24,9 +24,9 @@ h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
 
-<dokumentpakke>
+<dokumentpakkefingeravtrykk>
 			<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
 			<ds:DigestValue></ds:DigestValue>
-</dokumentpakke>
+</dokumentpakkefingeravtrykk>
   
 </pre>
