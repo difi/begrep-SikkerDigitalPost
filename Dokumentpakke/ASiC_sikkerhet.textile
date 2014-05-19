@@ -36,7 +36,7 @@ Hoveddokumentet og vedleggene pakkes sammen i en dokumentpakke sammen med noe me
 table(table table-striped table-condensed).
 |_. Krav |_. Felt |_. Kommentar |
 | "krav 6.1":etsi2_9 | "ASiC conformance" | Skal være "ASiC-E XAdES" |
-| "krav 8.1":etsi2_11 | "ASiC-E Media type identification" | skal være "ASiC file extension is ".asice" |
+| "krav 8.1":etsi2_11 | "ASiC-E Media type identification" | Skal være "ASiC file extension is ".asice"" |
 | "krav 8.2":etsi2_11 | "ASiC-E Signed data object" | Alle filer utenfor META-INF katalogen skal være signert. |
 | "krav 8.3.1":etsi2_12 | "ASiC-E XAdES signature" | Det skal kun være en signatur i META-INF katalogen, med navn signature.xml. Denne signaturen skal dekke alle andre filer i beholderen, og avsenderens virksomhetssertifikat skal benyttes for signering. |
 |{white-space:nowrap}. "krav 8.3.2":etsi2_12 | "Requirements for the contents of Container" refererer til "6.2.2 punkt 4b) <notextile>"META-INF/manifest.xml" if present […]</notextile> i "ASiC":etsi1 | Denne filen skal ikke være tilstede. |
@@ -50,7 +50,7 @@ Signaturen skal være i henhold til "XAdES (ETSI TS 101 903)":etsi3 med basispro
 table(table table-striped table-condensed).
 |_. Krav |_. Felt |_. Kommentar |
 | "krav 5.1":etsi4_8 | "Algorithm requirements" | Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmlenc#sha256":http://www.w3.org/2001/04/xmlenc#sha256. Fingeravtrykksalgoritmen i CertDigest skal være "http://www.w3.org/2000/09/xmldsig#sha1":http://www.w3.org/2000/09/xmldsig#sha1. |
-| "krav 6.2.1":etsi4_10 | "Placement of the signing certificate" |. Alle sertifikater fra virkomhetsertifikatet og opp til en tiltrodd rot skal være inkludert. |
+| "krav 6.2.1":etsi4_10 | "Placement of the signing certificate" |. Alle sertifikater fra virkomhetsertifikatet og opp til og inkludert en tiltrodd rot skal være inkludert. |
 | "krav 6.2.2":etsi4_11 | "Canonicalization of ds:SignedInfo element" | Skal være "http://www.w3.org/2006/12/xml-c14n11":http://www.w3.org/2006/12/xml-c14n11 |
 | "krav 6.2.3":etsi4_11 | "Profile of ds:Reference element" | Alle dokumenter skal være med, og det er ikke lov med referanser utenfor dokumentpakken. |
 | "krav 6.2.4":etsi4_12 | "Transforms within ds:Reference element" | Alle fil-referansene skal være uten transform, og referansen til SignedProperties skal være "http://www.w3.org/TR/2001/REC-xml-c14n-20010315":http://www.w3.org/TR/2001/REC-xml-c14n-20010315 |
@@ -92,7 +92,7 @@ Her skal følgende begrensninger gjelde:
 
 * version = 1
 * originatorInfo skal ikke være med
-* recipientInfos en mengde av nøyaktig en KeyTransRecipientInfo som beskrevet nedenfor
+* recipientInfos skl være en mengde av nøyaktig en KeyTransRecipientInfo som beskrevet nedenfor
 * encryptedContentInfo er EncryptedContentInfo som beskrevet nedenfor
 * unprotectedAttrs skal ikke være med
 
@@ -125,7 +125,7 @@ EncryptedContentInfo ::= SEQUENCE {
 Her skal følgende begrensninger gjelde:
 
 * contentType = 1.2.840.113549.1.7.1 (data)
-* contentEncryptionAlgorithm = 2.16.840.1.101.3.4.1.46 (aes256-GCM) i henhold til "Using AES-CCM and AES-GCM Authenticated Encryption":ietf8 som anbefalt, men kan også bruke "2.16.840.1.101.3.4.1.42 (aes256-CBC)":ietf7.
+* contentEncryptionAlgorithm = 2.16.840.1.101.3.4.1.46 (aes256-GCM) i henhold til "Using AES-CCM and AES-GCM Authenticated Encryption":ietf8 som anbefalt, men 2.16.840.1.101.3.4.1.42 (aes256-CBC) i henhold til "Use of the Advanced Encryption Standard (AES) Encryption Algorithm in Cryptographic Message Syntax <notexttile>(CMS)</notexttile>":ietf7. kan også benyttes.
 
 Ved bruk av aes256-CBC skal padding gjøres i henhold til "kapittel 6.3 i CMS spesifikasjonen":ietf5_6_3
 
