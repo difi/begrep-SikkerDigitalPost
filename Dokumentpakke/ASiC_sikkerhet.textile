@@ -62,7 +62,7 @@ h3. Konfidensialitet
 
 Dokumentpakken krypteres til mottakers sertifikat som leveres fra oppslagstjenesten. Krypteringen skal gjøres i henhold til "CMS (Cryptographic Message Syntax)":ietf5 med begrensninger angitt nedenfor. 
 
-CMS starter med en sekvens av ContentInfo
+CMS er BER og DER kodet ASN.1 og starter med en sekvens av ContentInfo
 
 <pre>
 ContentInfo ::= SEQUENCE {
@@ -92,7 +92,7 @@ Her skal følgende begrensninger gjelde:
 
 * version = 1
 * originatorInfo skal ikke være med
-* recipientInfos skl være en mengde av nøyaktig en KeyTransRecipientInfo som beskrevet nedenfor
+* recipientInfos skal være en mengde av nøyaktig en KeyTransRecipientInfo som beskrevet nedenfor
 * encryptedContentInfo er EncryptedContentInfo som beskrevet nedenfor
 * unprotectedAttrs skal ikke være med
 
@@ -129,7 +129,7 @@ Her skal følgende begrensninger gjelde:
 
 Ved bruk av aes256-CBC skal padding gjøres i henhold til "kapittel 6.3 i CMS spesifikasjonen":ietf5_6_3
 
-Integriteten til den krypterte dokumentpakken ivaretas av "Dokumentpakke":../StandardBusinessDocument/Melding/Dokumentpakke.
+Integriteten til den krypterte dokumentpakken ivaretas av "Dokumentpakkefingeravtrykk":../StandardBusinessDocument/Melding/Dokumentpakkefingeravtrykk som ligger i en signert melding.
 
 Det er avsenders ansvar å generere en AES-nøkkel med tilstrekkelig tilfeldighet. Kilden bør være en sertifisert generator for tilfeldige tall (TRNG).
 
