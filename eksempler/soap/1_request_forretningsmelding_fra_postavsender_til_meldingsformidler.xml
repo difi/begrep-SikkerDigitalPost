@@ -165,12 +165,10 @@ NkQU2RLD1tavs9yYf37YesGmwhE7lqxRhrg=</X509Certificate>
 					<ns10:sikkerhetsnivaa>3</ns10:sikkerhetsnivaa>
 					<ns10:tittel lang="no">Velkommen til sikker digital post</ns10:tittel>
 				</ns10:digitalPostInfo>
-				<ns10:dokumentpakke>
-					<ns10:digest>
-						<ns5:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-						<ns5:DigestValue>eDdVMnhrT05XdTQvNnB1NkMvdFZtUjUrQVhleStjVXhuYUc2V3JDSnFZOD0=</ns5:DigestValue>
-					</ns10:digest>
-				</ns10:dokumentpakke>
+				<ns10:dokumentpakkefingeravtrykk>
+					<ns5:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+					<ns5:DigestValue>eDdVMnhrT05XdTQvNnB1NkMvdFZtUjUrQVhleStjVXhuYUc2V3JDSnFZOD0=</ns5:DigestValue>
+				</ns10:dokumentpakkefingeravtrykk>
 			</ns10:digitalPost>
 		</ns3:StandardBusinessDocument>
 	</env:Body>
