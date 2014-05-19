@@ -22,38 +22,9 @@ h3. Klassediagram
 
 h3. Attributter
 
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | "StandardBusinessDocumentHeader":StandardBusinessDocumentHeader | 1..1 | sh:StandardBusinessDocument | Informasjon for å formidle postforsendelsen |
-{background:#ddd}.| "Melding":Melding/ | 0..1 | "Melding":Melding/ | Forretningsmelding identifisert i "DocumentIdentification":DocumentIdentification |
+| "Melding":Melding/ | 0..1 | "Melding":Melding/ | Forretningsmelding identifisert i "DocumentIdentification":DocumentIdentification |
 
 
-
-h3. XML eksempel
-
-<pre class="brush: xml; toolbar: false">
-
-	    <StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
-		    <StandardBusinessDocumentHeader>
-			    <HeaderVersion>1.0</HeaderVersion>
-			    <Sender>
-				    <!-- orgnr avsender -->
-				    <Identifier Authority="iso6523-actorid-upis">9908:123456789</Identifier>
-			    </Sender>
-			    <Receiver>
-				    <!-- orgnr mottaker, postboks eller print -->
-				    <Identifier Authority="iso6523-actorid-upis">9908:345678901</Identifier>
-			    </Receiver>
-			    <DocumentIdentification>
-				    <Standard>urn:no:difi:sdp:1.0</Standard>
-				    <TypeVersion>1.0</TypeVersion>
-				    <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
-					<InstanceIdentifier>2014/001</InstanceIdentifier>
-				    <Type>Sikkerpost</Type>
-				    <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
-			    </DocumentIdentification>
-		    </StandardBusinessDocumentHeader>
-		    <sdp:melding xmlns:sdp="http://begrep.difi.no/sdp/schema_v10">
-			       <!-- .... -->
-			  </sdp:melding>
-	    </StandardBusinessDocument>
-</pre>		

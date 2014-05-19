@@ -13,12 +13,12 @@ group: SikkerDigitalPost
 
 h3. Attributer
 
-
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
 | Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
-{background:#ddd}.| "konversasjonsId":/Felles/konversasjonsId  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "konversasjonsId":/Felles/konversasjonsId  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | "status":/Felles/status | 1..1 | "status":/Felles/status |
-{background:#ddd}.| "beskrivelse":/Felles/beskrivelse | 0..1 | "beskrivelse":/Felles/beskrivelse |
+| "beskrivelse":/Felles/beskrivelse | 0..1 | "beskrivelse":/Felles/beskrivelse |
 | tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
 
 h3. Kodeverk
@@ -26,6 +26,7 @@ h3. Kodeverk
 
 "status":/Felles/status kan ha følgende verdi:
 
+table(table table-striped).
 |_. Kodeverdi |_. Beskrivelse |
 | OK | Digitalpost ble satt i karantene |
 | FEILET | Digitalpost ble ikke satt i karantene  |

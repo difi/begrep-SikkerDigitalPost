@@ -5,20 +5,24 @@
 	targetNamespace="http://begrep.difi.no/sdp/schema_v10"
 	elementFormDefault="qualified" version="1.0">
 
-	<xsd:include schemaLocation="sdp-melding.xsd"/>
+	<xsd:include schemaLocation="sdp-felles.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="w3/xmldsig-core-schema.xsd"/>
 
 	<xsd:element name="kvittering" type="Kvittering"/>
 	<xsd:complexType name="Kvittering">
-		<xsd:sequence>
-			<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
-			<xsd:choice>
-				<xsd:element name="levering" type="Levering"/>
-				<xsd:element name="aapning" type="Aapning"/>
-				<xsd:element name="varslingfeilet" type="Varslingfeilet"/>
-			</xsd:choice>
-			<xsd:element name="signatur" type="ds:SignatureType" minOccurs="1" maxOccurs="1" />
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="Melding">
+				<xsd:sequence>
+					<xsd:element name="tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+					<xsd:choice>
+						<xsd:element name="levering" type="Levering"/>
+						<xsd:element name="aapning" type="Aapning"/>
+						<xsd:element name="varslingfeilet" type="Varslingfeilet"/>
+						<xsd:element name="tilbaketrekking" type="Tilbaketrekkingsresultat" />
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="Levering">
 		<xsd:annotation>
@@ -52,6 +56,25 @@
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="SMS"/>
 			<xsd:enumeration value="EPOST"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="Tilbaketrekkingsresultat">
+		<xsd:annotation>
+			<xsd:documentation>
+				Kvitteringen gir informasjon om DigitalPost som ble forespurt tilbaketrukket
+				ble satt i karantene eller ikke.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="status" type="Tilbaketrekkingsstatus" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="beskrivelse" type="Beskrivelse" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="Tilbaketrekkingsstatus">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="OK" />
+			<xsd:enumeration value="FEILET" />
 		</xsd:restriction>
 	</xsd:simpleType>
 

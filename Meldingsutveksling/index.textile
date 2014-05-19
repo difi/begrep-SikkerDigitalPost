@@ -29,12 +29,25 @@ Grensesnittet mellom avsender og meldingsformidler har to sett med P-Mode parame
 * "FormidleDigitalPostForsendelse":FormidleDigitalPostForsendelse - benyttes ved sending av en digital post forsendelse fra avsender til meldingsformidler
 * "KvitteringsForespoersel":KvitteringsForespoersel - benyttes av avsender for å sjekke om det er forretningskvitteringer som kan hentes
 
-Sentralt i utvekslingsmønsteret er "Message Partition Channel (mpc)":../UserMessage/mpc som blir brukt til å angi informasjon om hvilken kø man formidler/sjekker informasjon i. Ved "KvitteringsForespoersel":KvitteringsForespoersel så er det forventet at man respekterer følgende intervaller mellom hver forespørsel når forrige forespørsel returnerte at det er ikke er meldinger å hente:
+h4. Message Partition Channel (mpc)
+
+Sentralt i utvekslingsmønsteret er "Message Partition Channel (mpc)":../UserMessage/mpc som blir brukt til å angi informasjon om hvilken kø man formidler/sjekker informasjon i. Denne blir brukt til å angi prioritet på meldingen, samt støtte at en teknisk avsender har håndterer flere avsendere.
+
+h4. Mellomlagring av meldinger i Meldingsformidler
+
+Meldingsformidler kan mellomlagre meldinger i en tidsperiode for å skjule kompeksitet for avsender. Tidsfristene er relatert til hvor lenge meldingsformidler kan gjøre dette uten å sende feil-kvittering tilbake til avsender (merk at alle parter blir målt på SLA ihht kontrakt og at disse tidsfristene ikke påvirker dette).
+
+- normal melding := Kan mellomlagre i opptil 25+5 dager
+- prioritert melding := Kan mellomlagre i opptil 24 timer
+
+h4. Intervall mellom kvitteringsforespørsler 
+
+Ved "KvitteringsForespoersel":KvitteringsForespoersel så er det forventet at man respekterer følgende intervaller mellom hver forespørsel når forrige forespørsel returnerte at det er ikke er meldinger å hente:
 
 - normal := Vent minst 10 minutter før neste forespørsel
 - prioritert := Vent minst 1 minutter før neste forespørsel
 
-h3. Duplikate meldinger/resending av mendlinger
+h4. Duplikate meldinger/resending av mendlinger
 
 Automatisk resending av en melding som ikke er kommet fram er en valgfri opsjon i AS4. Dersom en avsendervirksomhet benytter seg av denne type funksjonalitet, så skal denne gjøres i henhold til AS4 profilen. 
 

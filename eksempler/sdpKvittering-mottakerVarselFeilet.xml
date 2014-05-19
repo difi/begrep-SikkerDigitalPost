@@ -4,12 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-kvittering.xsd ">
 
-	<tidspunkt>2014-05-19T12:00:00</tidspunkt>
-
-	<varslingfeilet>
-		<varslingskanal>SMS</varslingskanal>
-		<beskrivelse>Nummer ikke i bruk</beskrivelse>
-	</varslingfeilet>
+	<konversasjonsId>00c5ae20-da79-11e3-9c1a-0800200c9a66</konversasjonsId>
 
     <signatur>
       <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
@@ -56,5 +51,12 @@
 	      </X509Data>
       </KeyInfo>
     </signatur>
+
+	<tidspunkt>2014-05-19T12:00:00</tidspunkt>
+
+	<varslingfeilet>
+		<varslingskanal>SMS</varslingskanal>
+		<beskrivelse>Nummer ikke i bruk</beskrivelse>
+	</varslingfeilet>
 
 </kvittering>

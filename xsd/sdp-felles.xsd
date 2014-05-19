@@ -2,11 +2,28 @@
 <xsd:schema xmlns="http://begrep.difi.no/sdp/schema_v10"
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 			xmlns:difi="http://begrep.difi.no"
+			xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
             targetNamespace="http://begrep.difi.no/sdp/schema_v10"
             elementFormDefault="qualified" version="1.0">
 
 	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslag/oppslagstjeneste-metadata-14-05.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="w3/xmldsig-core-schema.xsd"/>
 
+	<xsd:complexType name="Melding" abstract="true">
+		<xsd:sequence>
+			<xsd:element name="konversasjonsId" type="KonversasjonsId" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="signatur" type="ds:SignatureType" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="KonversasjonsId">
+		<xsd:annotation>
+			<xsd:documentation>ID for forsendelsen. Unik i kontekst av avsender. Maks 36 tegn.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
 	<xsd:complexType name="Avsender">
 		<xsd:sequence>
