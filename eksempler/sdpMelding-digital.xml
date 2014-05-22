@@ -8,7 +8,7 @@
 	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-melding.xsd ">
 
 
-    <signatur>
+    <Signature>
       <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
         <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
         <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
@@ -52,7 +52,7 @@
 	      </X509Certificate>
 	      </X509Data>
       </KeyInfo>
-    </signatur>
+    </Signature>
 
 	<avsender>
 		<organisasjon>9908:123456789</organisasjon>
