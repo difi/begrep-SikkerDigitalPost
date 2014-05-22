@@ -74,31 +74,8 @@ ContentInfo ::= SEQUENCE {
 
 Her skal følgende begrensninger gjelde:
 
-* contentType = 1.2.840.113549.1.9.16.1.23 (id-ct-authEnvelopedData) ved bruk av AES-GCM, eller
-* contentType = 1.2.840.113549.1.7.3 (id-envelopedData) ved bruk av AES-CBC.
-
-content vil da være AuthEnvelopedData eller EnvelopedData som beskrevet nedenfor. AuthEnvelopedData er definert i "Cryptographic Message Syntax (CMS) Authenticated-Enveloped-Data Content Type":ietf9
-
-<pre>
-AuthEnvelopedData ::= SEQUENCE {
-  version CMSVersion,
-  originatorInfo [0] IMPLICIT OriginatorInfo OPTIONAL,
-  recipientInfos RecipientInfos,
-  authEncryptedContentInfo EncryptedContentInfo,
-  authAttrs [1] IMPLICIT AuthAttributes OPTIONAL,
-  mac MessageAuthenticationCode,
-  unauthAttrs [2] IMPLICIT UnauthAttributes OPTIONAL
-</pre>
-
-Her skal følgende begrensninger gjelde:
-
-* version = 0
-* originatorInfo skal ikke være med
-* recipientInfos skal være en mengde av nøyaktig en KeyTransRecipientInfo som beskrevet nedenfor
-* authEncryptedContentInfo er EncryptedContentInfo som beskrevet nedenfor
-* authAttrs skal ikke være med
-* mac skal være 12 byte "authentication tag" som output av AES-GCM definert i NIST Special Publication 800-38D.
-* unauthAttrs skal ikke være med
+* contentType = 1.2.840.113549.1.7.3 (id-envelopedData).
+* content er EnvelopedData som beskrevet nedenfor.
 
 <pre>
 EnvelopedData ::= SEQUENCE {
@@ -130,10 +107,32 @@ Her skal følgende begrensninger gjelde:
 
 * version = 0
 * rid = issuerAndSerialNumber
-* keyEncryptionAlgorithm = 1.2.840.113549.1.1.7 (id-RSAES-OAEP) som spesifisert i "RSAES-OAEP Key Transport Algorithm":ietf6
-* hashFunc = { 1.3.14.3.2.26 (id-sha1), Null }
-* maskGenFunc = { 1.2.840.113549.1.1.8, { 1.3.14.3.2.26 (id-sha1), Null } }
-* pSourceFunc = { 1.2.840.113549.1.1.9, nullOctetString }
+* keyEncryptionAlgorithm er en AlgorithmIdentifier som beskrevet nedenfor
+* encryptedKey den krypterte nøkkelen
+
+<pre>
+AlgorithmIdentifier  ::=  SEQUENCE  {
+  algorithm               OBJECT IDENTIFIER,
+  parameters              ANY DEFINED BY algorithm OPTIONAL  }
+</pre>
+
+Her skal følgende begrensninger gjelde:
+
+* algorithm = 1.2.840.113549.1.1.7 (id-RSAES-OAEP) som spesifisert i "RSAES-OAEP Key Transport Algorithm":ietf6
+* parameteres = RSAES-OAEP-params som definert nedenfor
+
+<pre>
+RSAES-OAEP-params  ::=  SEQUENCE  {
+  hashFunc    [0] AlgorithmIdentifier DEFAULT sha1Identifier,
+  maskGenFunc [1] AlgorithmIdentifier DEFAULT mgf1SHA1Identifier,
+  pSourceFunc [2] AlgorithmIdentifier DEFAULT pSpecifiedEmptyIdentifier  }
+</pre>
+
+Her skal følgende begrensninger gjelde
+
+* hashFunc = sha1Identifier  
+* maskGenFunc = mgf1SHA1Identifier
+* pSourceFunc = pSpecifiedEmptyIdentifier
 
 <pre>
 EncryptedContentInfo ::= SEQUENCE {
@@ -147,6 +146,7 @@ Her skal følgende begrensninger gjelde:
 
 * contentType = 1.2.840.113549.1.7.1 (data)
 * contentEncryptionAlgorithm er en AlgorithmIdentifier som beskrevet nedenfor
+* encryptedContent = AES-CBC kryptert innhold med PKCS #5 padding
 
 <pre>
 AlgorithmIdentifier  ::=  SEQUENCE  {
@@ -154,9 +154,50 @@ AlgorithmIdentifier  ::=  SEQUENCE  {
   parameters              ANY DEFINED BY algorithm OPTIONAL  }
 </pre>
 
+Her skal verdiene være i henhold til "Use of the Advanced Encryption Standard (AES) Encryption Algorithm in Cryptographic Message Syntax <notexttile>(CMS)</notexttile>":ietf7, med følgende begrensninger:
+
+* algorithm = 2.16.840.1.101.3.4.1.42 (aes256-CBC)
+* parameters = 16 byte IV
+
+Ved bruk av aes256-CBC skal padding gjøres i henhold til "kapittel 6.3 i CMS spesifikasjonen":ietf5_6_3
+
+Integriteten til den krypterte dokumentpakken ivaretas av "Dokumentpakkefingeravtrykk":../StandardBusinessDocument/Melding/Dokumentpakkefingeravtrykk som ligger i en signert melding.
+
+Det er avsenders ansvar å generere en AES-nøkkel med tilstrekkelig tilfeldighet. Kilden bør være en sertifisert generator for tilfeldige tall (TRNG).
+
+Valg av kryptoalgoritme er begrenset til AES-CBC, men AES-GCM har også vært vurdert, og kan tas inn senere ved behov. Årsaken til ikke å ta med AES-GCM i denne omgang er at den ikke er støttet i s/mime, og dermed hindrer bruk av s/mime klienter for ende-til-ende kryptering.  
+
+Ved fremtidig støtte for AES-GCM vil følgende begrensninger gjelde:
+
+ContentInfo vil være:
+
+* contentType = 1.2.840.113549.1.9.16.1.23 (id-ct-authEnvelopedData) ved bruk av AES-GCM.
+* content AuthEnvelopedData
+
+AuthEnvelopedData er definert i "Cryptographic Message Syntax (CMS) Authenticated-Enveloped-Data Content Type":ietf9
+
+<pre>
+AuthEnvelopedData ::= SEQUENCE {
+  version CMSVersion,
+  originatorInfo [0] IMPLICIT OriginatorInfo OPTIONAL,
+  recipientInfos RecipientInfos,
+  authEncryptedContentInfo EncryptedContentInfo,
+  authAttrs [1] IMPLICIT AuthAttributes OPTIONAL,
+  mac MessageAuthenticationCode,
+  unauthAttrs [2] IMPLICIT UnauthAttributes OPTIONAL
+</pre>
+
 Her skal følgende begrensninger gjelde:
 
-For AuthEnvelopedData (AES-GCM) skal verdiene være i henhold til "Using AES-CCM and AES-GCM Authenticated Encryption":ietf8.
+* version = 0
+* originatorInfo skal ikke være med
+* recipientInfos skal være en mengde av nøyaktig en KeyTransRecipientInfo som beskrevet nedenfor
+* authEncryptedContentInfo er EncryptedContentInfo som beskrevet nedenfor
+* authAttrs skal ikke være med
+* mac skal være 12 byte "authentication tag" som output av AES-GCM definert i NIST Special Publication 800-38D.
+* unauthAttrs skal ikke være med
+
+For AuthEnvelopedData (AES-GCM) skal verdiene av EncryptedContentInfo være i henhold til "Using AES-CCM and AES-GCM Authenticated Encryption":ietf8.
 
 * algorithm = 2.16.840.1.101.3.4.1.46 (aes256-GCM) 
 * parameters = GCMParameters som beskrevet nedenfor
@@ -171,19 +212,6 @@ Her skal følgende begrensninger gjelde:
 
 * aes-nonce = 12 byte IV/Teller
 * aes-ICVlen = 12
-
-
-For EnvelopedData (AES-CBC) skal verdiene være i henhold til "Use of the Advanced Encryption Standard (AES) Encryption Algorithm in Cryptographic Message Syntax <notexttile>(CMS)</notexttile>":ietf7.
-
-* algorithm = 2.16.840.1.101.3.4.1.42 (aes256-CBC)
-* parameters = 16 byte IV
-
-Ved bruk av aes256-CBC skal padding gjøres i henhold til "kapittel 6.3 i CMS spesifikasjonen":ietf5_6_3
-
-
-Integriteten til den krypterte dokumentpakken ivaretas av "Dokumentpakkefingeravtrykk":../StandardBusinessDocument/Melding/Dokumentpakkefingeravtrykk som ligger i en signert melding.
-
-Det er avsenders ansvar å generere en AES-nøkkel med tilstrekkelig tilfeldighet. Kilden bør være en sertifisert generator for tilfeldige tall (TRNG).
 
 [etsi1]http://www.etsi.org/deliver/etsi_ts/102900_102999/102918/01.03.01_60/ts_102918v010301p.pdf
 [etsi2]http://www.etsi.org/deliver/etsi_ts/103100_103199/103174/02.02.01_60/ts_103174v020201p.pdf 
