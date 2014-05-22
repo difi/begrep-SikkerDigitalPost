@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-feil.xsd ">
 
-	<signatur>
+	<Signature>
       <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
         <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
         <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
@@ -48,7 +48,7 @@
 	      </X509Certificate>
 	      </X509Data>
       </KeyInfo>
-	</signatur>
+	</Signature>
 
 	<tidspunkt>2014-05-19T12:00:00</tidspunkt>
 	<feiltype>KLIENT</feiltype>
