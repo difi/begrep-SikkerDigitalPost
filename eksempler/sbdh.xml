@@ -10,11 +10,22 @@
 	<Receiver> <!-- orgnr mottaker, postboks eller print -->
 		<Identifier Authority="iso6523-actorid-upis">9908:996460320</Identifier>
 	</Receiver>
-	<DocumentIdentification> <!-- Unik identifikator i "Sender" sitt scope -->
+	<DocumentIdentification> 
 		<Standard>urn:no:difi.sdp:1.0</Standard>
 		<TypeVersion>1.0</TypeVersion>
-		<InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</InstanceIdentifier> <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
+		<!-- Unik identifikator i "Sender" sitt scope -->
+		<InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</InstanceIdentifier>
 		<Type>Sikkerpost</Type>
 		<CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
 	</DocumentIdentification>
+	<BusinessScope>
+	    <Scope>
+	        <Type>SCHEMA_GUIDE</Type>
+	        <InstanceIdentifier>SikkerDigitalPost/1.0</InstanceIdentifier>
+	        <CorrelationInformation>
+	        	<!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
+	            <RequestingDocumentInstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</RequestingDocumentInstanceIdentifier>
+	        </CorrelationInformation>
+	    </Scope>
+	</BusinessScope>
 </StandardBusinessDocumentHeader>

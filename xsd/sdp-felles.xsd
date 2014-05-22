@@ -11,19 +11,9 @@
 
 	<xsd:complexType name="Melding" abstract="true">
 		<xsd:sequence>
-			<xsd:element name="konversasjonsId" type="KonversasjonsId" minOccurs="1" maxOccurs="1" />
 			<xsd:element name="signatur" type="ds:SignatureType" minOccurs="1" maxOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
-
-	<xsd:simpleType name="KonversasjonsId">
-		<xsd:annotation>
-			<xsd:documentation>ID for forsendelsen. Unik i kontekst av avsender. Maks 36 tegn.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="36"/>
-		</xsd:restriction>
-	</xsd:simpleType>
 
 	<xsd:complexType name="Avsender">
 		<xsd:sequence>
