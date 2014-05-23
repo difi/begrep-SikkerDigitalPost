@@ -11,32 +11,57 @@ h2. {{page.title}}
 - Term := {{page.title}}
 - Definisjon := Konstantverdi som angir underliggende meldingskanal
 - Kilde := ebMS 3.0
-- Kommentar := MPC kan i sikker digital post sammenheng tolkes som navnet på en meldingskø.
+- Kommentar := MPC kan i sikker digital post sammenheng tolkes som navnet på en meldingskø. En avsender vil alltid ha tilgang til to køer - "normal" og "prioritert"
+
+h3. Hva kan MPC brukes til?
+
+Vanlig bruk av MPC vil være å angi om en melding/kvittering skal legges i/hentes fra normal eller prioritert kø. Dersom MPC ikke er angitt så vil denne tolkes basert på standard verdi angitt under.
+
+"Utvidet" MPC skal bare brukes i de spesialtilfeller der det er en avsender har behov for å skille mellom flere køer innenfor samme virksomhetsidentifikator (i praksis virksomhetssertifikat).
+Eksempler på dette kan være:
+
+* Flere selvstendige MSH'er innenfor samme organisasjon
+* En teknisk avsender som håndterer meldingsutveksling på vegne av andre organisasjoner
+
+MPC kan da brukes til å håndtere problemstillinger relatert til intern ruting.
 
 h3. Oppbygging av mpc-konstanten
 
-mpc-konstanten i sikker digital post er en streng som skal bygges opp slik:
+mpc-konstanten i sikker digital post er en URN-streng som skal bygges opp slik:
 
-{standard|prioritert}[:køidentifikator hos "databehandler":../Aktorer ]
+<pre>
+	{normal|prioritert}:{kønavn}
+</pre>
 
-Dersom det er behov for høyere grad av granularitet (for eksempel ved bruk av databehandler), så kan man legg til en køidentifikator. En virksomhet kan maksimalt bruke en køidentifikator per virksomhet den er databehandler for. 
-
-Bruk av MPC er ikkje obligatorisk i AS4. Dersom MPC ikke er angitt, så vil den bygges opp basert på følgende verdier:
-
-- meldingstype := standard
-
-h3. {standard|prioritet}
+h4. {normal|prioritert}
 
 Angir om meldingen skal legges i kø for prioriterte meldinger eller ikke. Dette medfører håndtering etter to forskjellige SLA kravsett.
+
+h4. {kønavn}
+
+Tekst-streng definert av avsender og godkjent av sentralforvalter/meldingsformidler (i hht. bruksvilkår) som identifiserer køen som meldingen skal legges i/hentes fra.
+
+h4. Standard verdier
+
+Dersom MPC ikke er angitt, så vil den bygges opp basert på følgende verdier:
+
+- meldingstype := normal
+- kønavn := tom streng
+
+Standard MPC blir da:
+
+<pre>
+	normal:
+</pre>
 
 h3. Eksempel
 
 <pre>
-standard
 
-standard:123456789
+normal:
 
-prioritert
+normal:IsolertFagsystemX
 
-prioritert:123456789
+prioritert:PaaVegneAvDifi
+
 </pre>
