@@ -28,7 +28,7 @@ h3. Xml eksempel
 <pre class="brush: xml; toolbar: false">
 	<eb:PayloadInfo>
 		<eb:PartInfo href="#soapBody"/>
-		<eb:PartInfo href="cid:sdp:asic">
+		<eb:PartInfo href="cid:1234-4567@some.domain.com">
 			<eb:PartProperties>
 				<eb:Property name="MimeType">application/cms</eb:Property>
 				<eb:Property name="Content">sdp:Dokumentpakke</eb:Property>
