@@ -15,26 +15,28 @@ h2. {{page.title}}
 
 h3. Oppbygging av mpc-konstanten
 
-mpc-konstanten i sikker digital post er en URN-streng som skal bygges opp slik:
+mpc-konstanten i sikker digital post er en streng som skal bygges opp slik:
 
-{ "aktør-urn":../Aktorer }:{ "virksomhetsidentifikator for aktøren":/Felles/virksomhetsidentifikator }[1..2]:{normal|prioritert}
+{standard|prioritert}[:køidentifikator hos "databehandler":../Aktorer ]
 
-Dersom det er behov for høyere grad av granularitet (for eksempel ved bruk av databehandler), så kan man repetere leddet med aktør/identifikator med informasjon om dataansvarlig.
+Dersom det er behov for høyere grad av granularitet (for eksempel ved bruk av databehandler), så kan man legg til en køidentifikator. En virksomhet kan maksimalt bruke en køidentifikator per virksomhet den er databehandler for. 
 
 Bruk av MPC er ikkje obligatorisk i AS4. Dersom MPC ikke er angitt, så vil den bygges opp basert på følgende verdier:
 
-- aktør-urn := urn:sdp:behandlingsansvarlig
-- virksomhetsidentifikator for aktøren := hentes fra virksomhetssertifikatet som har signert meldingen.
-- meldingstype := normal
+- meldingstype := standard
 
-h3. {normal|prioritet}
+h3. {standard|prioritet}
 
 Angir om meldingen skal legges i kø for prioriterte meldinger eller ikke. Dette medfører håndtering etter to forskjellige SLA kravsett.
 
 h3. Eksempel
 
 <pre>
-urn:sdp:behandlingsansvarlig:9908:991825827:normal
+standard
 
-urn:sdp:databehandler:9908:934382404:urn:sdp:behandlingsansvarlig:9908:991825827:prioritert
+standard:123456789
+
+prioritert
+
+prioritert:123456789
 </pre>
