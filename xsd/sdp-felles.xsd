@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://begrep.difi.no/sdp/schema_v10"
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:difi="http://begrep.difi.no"
 			xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
             targetNamespace="http://begrep.difi.no/sdp/schema_v10"
             elementFormDefault="qualified" version="1.0">
 
-	<xsd:import namespace="http://begrep.difi.no" schemaLocation="oppslag/oppslagstjeneste-metadata-14-05.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="w3/xmldsig-core-schema.xsd"/>
 
 	<xsd:complexType name="Melding" abstract="true">
@@ -45,14 +43,29 @@
 
 	<xsd:complexType name="Mottaker">
 		<xsd:choice>
-			<xsd:element name="person" type="difi:Person"/>
+			<xsd:element name="person" type="Person"/>
 			<xsd:element name="virksomhet" type="Virksomhet"/>
 		</xsd:choice>
 	</xsd:complexType>
 
+	<xsd:complexType name="Person">
+		<xsd:sequence>
+			<xsd:element name="personidentifikator" minOccurs="1" maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="[0-9]{11}"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="postkasseadresse" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="mobiltelefonnummer" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="epostadresse" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
 	<xsd:complexType name="Virksomhet">
 		<xsd:sequence>
-			<xsd:element name="sikkerDigitalPostAdresse" type="difi:SikkerDigitalPostAdresse"/>
+			<xsd:element name="postkasseadresse" type="xsd:string" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 

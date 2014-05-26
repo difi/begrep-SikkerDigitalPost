@@ -2,8 +2,6 @@
 <digitalPost
 	xmlns="http://begrep.difi.no/sdp/schema_v10"
 	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
-	xmlns:difi="http://begrep.difi.no"
-	xmlns:enc="http://www.w3.org/2001/04/xmlenc#"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../xsd/sdp-melding.xsd ">
 
@@ -62,19 +60,10 @@
 
 	<mottaker>
 		<person>
-			<difi:personidentifikator>17051400000</difi:personidentifikator>
-			<difi:reservasjon>NEI</difi:reservasjon>
-			<difi:status>AKTIV</difi:status>
-			<difi:beskrivelse>difi:beskrivelse</difi:beskrivelse>
-			<difi:Kontaktinformasjon>
-				<difi:Mobiltelefonnummer sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">12345678</difi:Mobiltelefonnummer>
-				<difi:Epostadresse sistOppdatert="2001-12-31T12:00:00" sistVerifisert="2001-12-31T12:00:00">ola@nordmann.no</difi:Epostadresse>
-			</difi:Kontaktinformasjon>
-			<difi:SikkerDigitalPostAdresse>
-				<difi:postkasseadresse>ola.nordmann#0ABC</difi:postkasseadresse>
-				<difi:postkasseleverandoerAdresse>984661185</difi:postkasseleverandoerAdresse>
-			</difi:SikkerDigitalPostAdresse>
-			<difi:X509Certificate>difi:X509Certificate</difi:X509Certificate>
+			<personidentifikator>17051400000</personidentifikator>
+			<postkasseadresse>ola.nordmann#0ABC</postkasseadresse>
+			<mobiltelefonnummer>12345678</mobiltelefonnummer>
+			<epostadresse>ola@nordmann.no</epostadresse>
 		</person>
 	</mottaker>
 
