@@ -30,7 +30,7 @@ h3. Oppbygging av mpc-konstanten
 mpc-konstanten i sikker digital post er en URN-streng som skal bygges opp slik:
 
 <pre>
-	{normal|prioritert}:{kønavn}
+	urn:{normal|prioritert}{:kønavn}
 </pre>
 
 h4. {normal|prioritert}
@@ -39,7 +39,7 @@ Angir om meldingen skal legges i kø for prioriterte meldinger eller ikke. Dette
 
 h4. {kønavn}
 
-Tekst-streng definert av avsender og godkjent av sentralforvalter/meldingsformidler (i hht. bruksvilkår) som identifiserer køen som meldingen skal legges i/hentes fra.
+URN-streng definert av avsender og godkjent av sentralforvalter/meldingsformidler (i hht. bruksvilkår) som identifiserer køen som meldingen skal legges i/hentes fra.
 
 h4. Standard verdier
 
@@ -51,17 +51,17 @@ Dersom MPC ikke er angitt, så vil den bygges opp basert på følgende verdier:
 Standard MPC blir da:
 
 <pre>
-	normal:
+	urn:normal
 </pre>
 
 h3. Eksempel
 
 <pre>
 
-normal:
+urn:normal
 
-normal:IsolertFagsystemX
+urn:normal:IsolertFagsystemX
 
-prioritert:PaaVegneAvDifi
+urn:prioritert:PaaVegneAvDifi
 
 </pre>
