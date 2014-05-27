@@ -39,7 +39,7 @@ table(table table-striped table-condensed).
 | "krav 6.1":etsi2_9 | "ASiC conformance" | Skal være "ASiC-E XAdES" |
 | "krav 8.1":etsi2_11 | "ASiC-E Media type identification" | Skal være "ASiC file extension is ".asice"" |
 | "krav 8.2":etsi2_11 | "ASiC-E Signed data object" | Alle filer utenfor META-INF katalogen skal være signert. |
-| "krav 8.3.1":etsi2_12 | "ASiC-E XAdES signature" | Det skal kun være en signatur i META-INF katalogen, med navn signature.xml. Denne signaturen skal dekke alle andre filer i beholderen, og avsenderens virksomhetssertifikat skal benyttes for signering. |
+| "krav 8.3.1":etsi2_12 | "ASiC-E XAdES signature" | Det skal kun være en signatur i META-INF katalogen, med navn signatures.xml. Denne signaturen skal dekke alle andre filer i beholderen, og avsenderens virksomhetssertifikat skal benyttes for signering. |
 |{white-space:nowrap}. "krav 8.3.2":etsi2_12 | "Requirements for the contents of Container" refererer til "6.2.2 punkt 4b) <notextile>"META-INF/manifest.xml" if present […]</notextile> i "ASiC":etsi1 | Denne filen skal ikke være tilstede. |
 
 h4. Signatur i dokumentpakken for sikker digital post
