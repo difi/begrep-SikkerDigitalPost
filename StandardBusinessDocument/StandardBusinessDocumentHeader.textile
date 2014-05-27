@@ -11,36 +11,82 @@ headtitle: Sikker digital post - Standard Business Document
 
 h3. Attributter
 
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | HeaderVersion | 1..1 | xs:string | "1.0" |
-{background:#ddd}.| Sender | 1..1 | "sbdh:Sender":Sender | Identifikator (organisasjonsnummer) til virksomheten som initierer (er avsender) i meldingsprosessen. Alle kvitteringer skal addresseres til denne parten som mottaker |
+| Sender | 1..1 | "sbdh:Sender":Sender | Identifikator (organisasjonsnummer) til virksomheten som initierer (er avsender) i meldingsprosessen. Alle kvitteringer skal addresseres til denne parten som mottaker |
 | Receiver | 1..1 | "sbdh:Receiver":Receiver | Identifikator (organisasjonsnummer) til virksomheten som er sluttmottaker i meldingsprosessen. Ved initiell sending av melding vil dette alltid være en postboks eller utskriftsleverandør. |
-{background:#ddd}.| "DocumentIdentification":DocumentIdentification | 1..1 | sbdh:DocumentIdentification | Unik identifikator for konversasjonen rundt Digital Post i Databehandler sitt scope, generert av Avsender  |
+| "DocumentIdentification":DocumentIdentification | 1..1 | sbdh:DocumentIdentification | Unik identifikator for meldingen, generert av Avsender  |
+| "BusinessScope":BusinessScope | 1..1 | sbdh:BusinessScope | Unik identifikator for konversasjonen, knytter meldinger og tilhørende kvitteringer sammen  |
 
 h3. Kommentar
 
 Sender/Receiver indikerer retning på meldingsprosessen. For eksempel i "FormidleDigitalPostForsendelse":../Meldingsutveksling/FormidleDigitalPostForsendelse prosessen så vil Sender være "Databehandler":../Aktorer og Receiver være "Postkasseleverandør":../Aktorer.
 
-h3. XML eksempel
+h3. XML eksempel fra Databehandler til Postkasseleverandør
+
+** En melding fra "Databehandler":../Aktorer med orgnummer: 123456789 til "Postkasseleverandør":../Aktorer med orgnummer: 987654321
+** "Databehandler":../Aktorer har generert en unik DocumentIdentification.InstanceIdentifier for denne meldingen: "35e21e33-22b3-4554-9707-5fa829ee8bc0"
+** "Databehandler":../Aktorer har generert en unik BusinessScope.InstanceIdentifier for hele konversasjonen: "37efbd4c-413d-4e2c-bbc5-257ef4a65a45"
+*** Dette vil brukes for å knytte seinere meldinger i samme konversasjon sammen.
+
 
 <pre class="brush: xml; toolbar: false">
-    <StandardBusinessDocumentHeader>
-	    <HeaderVersion>1.0</HeaderVersion>
-	    <Sender>
-		    <!-- orgnr avsender -->
-		    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:123456789</Identifier>
-	    </Sender>
-	    <Receiver>
-		    <!-- orgnr mottaker, postboks eller print -->
-		    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:345678901</Identifier>
-	    </Receiver>
-	    <DocumentIdentification>
-		    <Standard>urn:no:difi:sdp:1.0</Standard>
-		    <TypeVersion>1.0</TypeVersion>
-		    <!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
-			<InstanceIdentifier>2014/001</InstanceIdentifier>
-		    <Type>Sikkerpost</Type>
-		    <CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
-	    </DocumentIdentification>
-    </StandardBusinessDocumentHeader>
+	<ns3:StandardBusinessDocumentHeader>
+		<ns3:HeaderVersion>1.0</ns3:HeaderVersion>
+		<ns3:Sender>
+			<ns3:Identifier Authority="iso6523-actorid-upis">9908:123456789</ns3:Identifier>
+		</ns3:Sender>
+		<ns3:Receiver>
+			<ns3:Identifier Authority="iso6523-actorid-upis">9908:987654321</ns3:Identifier>
+		</ns3:Receiver>
+		<ns3:DocumentIdentification>
+			<ns3:Standard>urn:no:difi:sdp:1.0</ns3:Standard>
+			<ns3:TypeVersion>1.0</ns3:TypeVersion>
+			<ns3:InstanceIdentifier>35e21e33-22b3-4554-9707-5fa829ee8bc0</ns3:InstanceIdentifier>
+			<ns3:Type>digitalPost</ns3:Type>
+			<ns3:CreationDateAndTime>2014-05-26T13:08:00.288+02:00</ns3:CreationDateAndTime>
+		</ns3:DocumentIdentification>
+		<ns3:BusinessScope>
+			<ns3:Scope>
+				<ns3:Type>SikkerDigitalPostKonversasjon</ns3:Type>
+				<ns3:InstanceIdentifier>37efbd4c-413d-4e2c-bbc5-257ef4a65a45</ns3:InstanceIdentifier> 
+				<ns3:Identifier>SikkerDigitalPost/1.0</ns3:Identifier>
+			</ns3:Scope>
+		</ns3:BusinessScope>
+	</ns3:StandardBusinessDocumentHeader>
+</pre>		
+
+h3. XML eksempel fra Postkasseleverandør til Databehandler
+
+** En melding fra "Postkasseleverandør":../Aktorer med orgnummer: 987654321 til "Databehandler":../Aktorer med orgnummer: 123456789
+** "Postkasseleverandør":../Aktorer har generert en unik DocumentIdentification.InstanceIdentifier for denne meldingen: "12e57bde-ea5d-43ee-96b6-e2cf73f8311e"
+** "Postkasseleverandør":../Aktorer bruker den BusinessScope.InstanceIdentifier som "Databehandler":../Aktorer har generert.
+*** Dette er knytningen mot den opprinnelige forsendelsen.
+
+
+<pre class="brush: xml; toolbar: false">
+	<ns3:StandardBusinessDocumentHeader>
+		<ns3:HeaderVersion>1.0</ns3:HeaderVersion>
+		<ns3:Sender>
+			<ns3:Identifier Authority="iso6523-actorid-upis">9908:987654321</ns3:Identifier>
+		</ns3:Sender>
+		<ns3:Receiver>
+			<ns3:Identifier Authority="iso6523-actorid-upis">9908:123456789</ns3:Identifier>
+		</ns3:Receiver>
+		<ns3:DocumentIdentification>
+			<ns3:Standard>urn:no:difi:sdp:1.0</ns3:Standard>
+			<ns3:TypeVersion>1.0</ns3:TypeVersion>
+			<ns3:InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</ns3:InstanceIdentifier>
+			<ns3:Type>digitalPost</ns3:Type>
+			<ns3:CreationDateAndTime>2014-05-26T13:08:00.288+02:00</ns3:CreationDateAndTime>
+		</ns3:DocumentIdentification>
+		<ns3:BusinessScope>
+			<ns3:Scope>
+				<ns3:Type>SikkerDigitalPostKonversasjon</ns3:Type>
+				<ns3:InstanceIdentifier>37efbd4c-413d-4e2c-bbc5-257ef4a65a45</ns3:InstanceIdentifier> 
+				<ns3:Identifier>SikkerDigitalPost/1.0</ns3:Identifier>
+			</ns3:Scope>
+		</ns3:BusinessScope>
+	</ns3:StandardBusinessDocumentHeader>
 </pre>		

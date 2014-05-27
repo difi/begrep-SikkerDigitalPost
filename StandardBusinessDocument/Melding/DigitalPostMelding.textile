@@ -15,7 +15,6 @@ h3. Attributer
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
 | Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
-| "konversasjonsId":/Felles/konversasjonsId  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | "Avsender":Avsender | 1..1 | "sdp:Avsender":Avsender |
 | "Mottaker":Mottaker | 1..1 | "sdp:Mottaker":Mottaker |
 | "Dokumentpakkefingeravtrykk":Dokumentpakkefingeravtrykk | 1..1 | "sdp:Dokumentpakkefingeravtrykk":Dokumentpakkefingeravtrykk |

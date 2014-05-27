@@ -19,13 +19,13 @@ Resten av attributtene er definert i de enkelte "meldingstypene, se under":#meld
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
 | Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
-| konversasjonsID | 1..1 | xsd:string |
 
 h3. Klassediagram
 
 Meldingen er en av følgende typer beskrevet i diagrammet under.
 
-"!{width:80%}../uml_diagram.jpg!":../uml_diagram.jpg
+p=. centered
+"!{width:40%}../uml_diagram.jpg!":../uml_diagram.jpg
 
 h3. Meldingstypene
 
