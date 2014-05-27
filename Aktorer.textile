@@ -1,32 +1,26 @@
 ---
 layout: default
-title: Sikker digital post - Aktører og Roller
+title: Aktører og Roller
 headtitle: Sikker digital post - Aktører og Identifikatorer
 ---
 
 h2. Aktører og roller
 
-"!{width:90%}aktorer.jpg!":aktorer.jpg
-
-Overføringen av postforsendelser fra avsender til mottaker innvolverer følgende parter/komponenter:
+Tabellen under inneholder en oversikt over hovedaktørene/rollene i prosessen med å utveksle Sikker Digital Post:
 
 table(table table-striped).
-|_. Aktør |_. URN |_. Beskrivelse |
-|_. Behandlingsansvarlig | urn:sdp:behandlingsansvarlig | offentlig aktør som er ansvarlig for postforsendelsen og som er Avsender av posten overfor Innbygger.
-BØR signere "Standard Business Document":StandardBusinessDocument/ og "Dokumentpakke (ASiC)":Dokumentpakke/ |
-| Ansvarlig enhet | urn:sdp:ansvarlig|  Er en mulig aktør som er en underenhet hos Behandlingsansvarlig som skal stå som Avsender for posten overfor Innbygger. 
-Ansvarlig enhet brukes hvis de enkelte enheter har samme organisasjonsnummer som Behandlingsansvarlig eller når den ansvarlige enhet ikke har en selvstendig avtale med Sentralforvalter om bruk av Sikker Digital Post. 
-Ansvarlig enhet brukes av Behandlingsansvarlige med et stort virkeområder som ønsker å differensiere Avsendere til Innbygger avhengig av de interne enhetene som sender digital post. |
-|_. Databehandler  | urn:sdp:databehandler | Avsender eller avtalepart hos avsender, ansvarlig for pakking og sikring av postforsendelser.
-KAN signere "Standard Business Document":StandardBusinessDocument/ og "Dokumentpakke (ASiC)":Dokumentpakke/ |
-| Teknisk Avsender | urn:sdp:tekniskavsender | Er en mulig aktør som gjennomfører den tekniske forsendelsen av posten på vegne av en databehandler. |
-|_. Meldingsformidlerleverandør | urn:sdp:meldingsformidler | Ansvarlig for formidling, sporing og rapportering av postforsendelser |
-|_. Postkasseleverandør | urn:sdp:postkasseleverandør | Ansvarlig for å tilgjengeliggjøre og oppbevare post til innbygger, samt å varsle innbygger når det er kommet ny post. |
-|_. Mottaker | urn:sdp:mottaker | Mottaker av postforsendelsen, en Innbygger | 
+|_. Aktør |_. URN |_. Identifikator |_. Beskrivelse |
+|_. Behandlingsansvarlig | urn:sdp:behandlingsansvarlig | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Offentlig virksomhet som skal sende en post til en Mottaker. |
+|_. Databehandler  | urn:sdp:databehandler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Virksomhet (offentlig eller privat) som har en kontraktfestet avtale med Behandlingsansvarlig med formål å dekke hele eller deler av prosessen med å formidle en Sikker Digital Post fra Behandlingsansvarlig til Meldingsformidler. Det kan være felere databehandlere som har ansvar for forskjellige steg i prosessen med å formidle en Sikker Digital Post |
+|_. Meldingsformidler | urn:sdp:meldingsformidler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for formidling, sporing og rapportering av postforsendelser.  |
+|_. Postkasse | urn:sdp:postkasse | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for å tilgjengeliggjøre og oppbevare post til innbygger, samt å varsle innbygger når det er kommet ny post. |
+|_. Sentralforvalter | urn:sdp:sentralforvalter | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for forvaltning/kontroll av forholdet mellom behandlingsansvarlig, eventuelle databehandlere, meldingsformidler og postbokser |
+|_. Mottaker | urn:sdp:mottaker | "personidentifikator":/Felles/personidentifikator | Mottaker av postforsendelsen, en Innbygger | 
 
-*Ansvarlig enhet* og *Teknisk Avsender* er kun brukt ved behov i spesielle situasjoner. 
+Begrepene *Ansvarlig enhet* og *Teknisk Avsender* har også blitt brukt:
 
-- *Ansvarlig enhet* brukes av *Behandlingsansvarlig* virksomheter med et stort virkeområder som ønsker å differensiere Avsendere til Innbygger avhengig av de interne enhetene som sender posten. 
-Eksempel: Behandlingsansvarlig er Nav og Ansvarlig enhet er NAV Hjelpemiddelsentral Oslo og Akershus_.
+- *Ansvarlig enhet* brukes av *Behandlingsansvarlig* virksomheter med et stort virkeområder som ønsker å differensiere Avsendere til Innbygger avhengig av de interne enhetene som sender posten, i de tilfeller der det ikke er mulig eller lite hensiktsmessig at interne enheten selv er identifisert som behandlingsansvarlig (ved å ha et eget sertifikat). 
+*Ansvarlig enhet* blir satt av *Behandlingsansvarlig* som en del av klargjøring av en post med en identifikator 
+Eksempel: Behandlingsansvarlig er Nav og Ansvarlig enhet er NAV Hjelpemiddelsentral Oslo og Akershus. 
 
-- *Teknisk Avsender* brukes i de tilfeller der *Databehandler* har en ekstern ebMS 3.0 Message Service Handler (MSH - meldingshåndterer) leverandør.
+- *Teknisk Avsender* er blitt brukt som et begrep for en databehandler som leverer ebMS 3.0/MSH tjenester som en underleverandør til en databehandler. Dette begrepet er nå erstattet med mulighet for flere databehandlere.
