@@ -14,10 +14,10 @@ h3. Attributter
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | HeaderVersion | 1..1 | xs:string | "1.0" |
-| Sender | 1..1 | "sbdh:Sender":Sender | Identifikator (organisasjonsnummer) til virksomheten som initierer (er avsender) i meldingsprosessen. Alle kvitteringer skal addresseres til denne parten som mottaker |
-| Receiver | 1..1 | "sbdh:Receiver":Receiver | Identifikator (organisasjonsnummer) til virksomheten som er sluttmottaker i meldingsprosessen. Ved initiell sending av melding vil dette alltid være en postboks eller utskriftsleverandør. |
-| "DocumentIdentification":DocumentIdentification | 1..1 | sbdh:DocumentIdentification | Unik identifikator for meldingen, generert av Avsender  |
-| "BusinessScope":BusinessScope | 1..1 | sbdh:BusinessScope | Unik identifikator for konversasjonen, knytter meldinger og tilhørende kvitteringer sammen  |
+| "Sender":Sender | 1..1 | "sbdh:Sender":Sender | Identifikator (organisasjonsnummer) til virksomheten som initierer (er avsender) i meldingsprosessen. Alle kvitteringer skal addresseres til denne parten som mottaker |
+| "Receiver":Receiver | 1..1 | "sbdh:Receiver":Receiver | Identifikator (organisasjonsnummer) til virksomheten som er sluttmottaker i meldingsprosessen. Ved initiell sending av melding vil dette alltid være en postboks eller utskriftsleverandør. |
+| "DocumentIdentification":DocumentIdentification | 1..1 | "sbdh:DocumentIdentification":DocumentIdentification | Unik identifikator for meldingen, generert av Avsender  |
+| "BusinessScope":BusinessScope | 1..1 | "sbdh:BusinessScope":BusinessScope  | Unik identifikator for konversasjonen, knytter meldinger og tilhørende kvitteringer sammen  |
 
 h3. Kommentar
 

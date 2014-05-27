@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DocumentIdentification
+title: BusinessScope
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost
 ---
@@ -16,12 +16,9 @@ h3. Attributer
 
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |_. Verdi |
-| Standard | 1..1 | xs:string | "urn:no:difi.sdp:1.0" |
-| TypeVersion | 1..1 | xs:string | "1.0" |
-| InstanceIdentifier | 1..1 | xs:string | Unik identifikator for meldingen. Opprettet av Databehandler. Se format under. |
-| Type | 1..1 | xs:string | Type forretningsmelding. Skal alltid være "local-name" til rot-elementet XML'en til forretningmeldingen. Se kodeverk under |
-| MultipleType | 0..0 | xs:boolean | brukes ikke |
-| CreationDateAndTime | 1..1 | xs:dateTime | Tidspunkt for oppretting av "Standard Business Document":index |
+| Type | 1..1 | xs:string | "SikkerDigitalPostKonversasjon" |
+| InstanceIdentifier | 1..1 | xs:string | Unik identifikator for konversasjonen. Identifikator som binder meldinger og tilhørende kvitteringer/feilmeldinger sammen. Opprettet av Databehandler. Se format under. |
+| Identifier | 1..1 | xs:string | "SikkerDigitalPost/1." |
 
 h3. Format InstanceIdentifier
 
@@ -33,23 +30,17 @@ InstanceIdentifier er i XML skjemaet for SBDH definert som en tekst-streng. I Si
 
 Rett format på InstanceIdentifier blir håndhevet av meldingsformidler.
 
-h3. Kodeverk: Type
-
-I Sikker Digital Post vil type være en av følgende:
-
-* digitalPost
-* kvittering
 
 h3. Xml eksempel
 
 <pre>
-	<DocumentIdentification>
-		<Standard>urn:no:difi.sdp:1.0</Standard>
-		<TypeVersion>1.0</TypeVersion>
-		<InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</InstanceIdentifier> <!-- Dette er den reelle unike identifikatoren i SDB -->
-		<Type>digitalPost</Type>
-		<CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
-	</DocumentIdentification>
+	<ns3:BusinessScope>
+		<ns3:Scope>
+			<ns3:Type>SikkerDigitalPostKonversasjon</ns3:Type>
+			<ns3:InstanceIdentifier>37efbd4c-413d-4e2c-bbc5-257ef4a65a45</ns3:InstanceIdentifier> 
+			<ns3:Identifier>SikkerDigitalPost/1.0</ns3:Identifier>
+		</ns3:Scope>
+	</ns3:BusinessScope>
 
 </pre>
 
