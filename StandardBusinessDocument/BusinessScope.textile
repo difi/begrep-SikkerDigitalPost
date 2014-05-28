@@ -16,9 +16,9 @@ h3. Attributer
 
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |_. Verdi |
-| Type | 1..1 | xs:string | "SikkerDigitalPostKonversasjon" |
+| Type | 1..1 | xs:string | "ConversationId" |
 | InstanceIdentifier | 1..1 | xs:string | Unik identifikator for konversasjonen. Identifikator som binder meldinger og tilhørende kvitteringer/feilmeldinger sammen. Opprettet av Databehandler. Se format under. |
-| Identifier | 1..1 | xs:string | "SikkerDigitalPost/1." |
+| Identifier | 1..1 | xs:string | "urn:no:difi:sdp:1.0" |
 
 h3. Format InstanceIdentifier
 
@@ -36,9 +36,9 @@ h3. Xml eksempel
 <pre>
 	<ns3:BusinessScope>
 		<ns3:Scope>
-			<ns3:Type>SikkerDigitalPostKonversasjon</ns3:Type>
+			<ns3:Type>ConversationId</ns3:Type>
 			<ns3:InstanceIdentifier>37efbd4c-413d-4e2c-bbc5-257ef4a65a45</ns3:InstanceIdentifier> 
-			<ns3:Identifier>SikkerDigitalPost/1.0</ns3:Identifier>
+			<ns3:Identifier>urn:no:difi:sdp:1.0</ns3:Identifier>
 		</ns3:Scope>
 	</ns3:BusinessScope>
 

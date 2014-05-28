@@ -49,9 +49,9 @@ h3. XML eksempel fra Databehandler til Postkasseleverandør
 		</ns3:DocumentIdentification>
 		<ns3:BusinessScope>
 			<ns3:Scope>
-				<ns3:Type>SikkerDigitalPostKonversasjon</ns3:Type>
+				<ns3:Type>ConversationId</ns3:Type>
 				<ns3:InstanceIdentifier>37efbd4c-413d-4e2c-bbc5-257ef4a65a45</ns3:InstanceIdentifier> 
-				<ns3:Identifier>SikkerDigitalPost/1.0</ns3:Identifier>
+				<ns3:Identifier>urn:no:difi:sdp:1.0</ns3:Identifier>
 			</ns3:Scope>
 		</ns3:BusinessScope>
 	</ns3:StandardBusinessDocumentHeader>
@@ -83,9 +83,9 @@ h3. XML eksempel fra Postkasseleverandør til Databehandler
 		</ns3:DocumentIdentification>
 		<ns3:BusinessScope>
 			<ns3:Scope>
-				<ns3:Type>SikkerDigitalPostKonversasjon</ns3:Type>
+				<ns3:Type>ConversationId</ns3:Type>
 				<ns3:InstanceIdentifier>37efbd4c-413d-4e2c-bbc5-257ef4a65a45</ns3:InstanceIdentifier> 
-				<ns3:Identifier>SikkerDigitalPost/1.0</ns3:Identifier>
+				<ns3:Identifier>urn:no:difi:sdp:1.0</ns3:Identifier>
 			</ns3:Scope>
 		</ns3:BusinessScope>
 	</ns3:StandardBusinessDocumentHeader>
