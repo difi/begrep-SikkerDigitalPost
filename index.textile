@@ -17,11 +17,11 @@ headtitle: Sikker digital post
   <p>,men jeg lurer fortsatt på hva Sikker digital post er?</p>
   <p><a href="ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf" class="btn btn-primary btn-lg" role="button">Les arkitekturbeskrivelsen for sikker digital posttjeneste</a></p>
   
-  <p>jeg skal du starte opp et prosjekt for å ta i bruker Sikker digital post!</p>
-  <p><a href="https://samarbeid.difi.no/sikker-digital-post" class="btn btn-primary btn-lg" role="button">Les mer på samarbeidsportalen</a></p>
+  <p>jeg skal ta i bruker Sikker digital post!</p>
+  <p><a href="https://samarbeid.difi.no/sikker-digital-post" class="btn btn-primary btn-lg" role="button">Kom igang på samarbeidsportalen!</a></p>
   
   <p>, så nå skal jeg implementere en integrasjon mot Sikker digital post?</p>
-  <p><a href="spesifikasjon.html" class="btn btn-primary btn-lg" role="button">Les mer</a></p>
+  <p><a href="spesifikasjon.html" class="btn btn-primary btn-lg" role="button">Les mer om den tekniske spesifikasjonen</a></p>
 
 </div>
 
