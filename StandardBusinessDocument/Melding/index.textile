@@ -34,12 +34,10 @@ table(table table-striped).
 |_. Type |_. Beskrivelse |
 | "Digitalpost":DigitalPostMelding | Forsendelse av digital post |
 | "PrioritertDigitalpost":DigitalPostMelding | Forsendelse av digital post |
-| "Tilbaketrekking":TilbaketrekkingsMelding | Melding for å tilbakekalle en forsendelsen av en digital post melding. |
 | "LeveringsKvittering":LeveringsKvittering | Kvittering på at digital post er tilgjengeliggjort |
 | "ÅpningsKvittering":AapningsKvittering | Kvittering fra Innbygger for at digital post er åpnet |
 | "Varslingfeilet":VarslingfeiletKvittering | Kvittering for at en spesifisert varsling ikke har blitt sendt |
 | "Feil":FeilMelding | Generel feilkvittering |
-| "TilbaketrekkingsKvittering":TilbaketrekkingsKvittering | Kvittering for en tilbakekallingsmelding. |
 
 h3. Signature
 
