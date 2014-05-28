@@ -5,29 +5,28 @@ headtitle: Sikker digital post
 ---
 
 <div class="jumbotron">
-  <h1>Hva er Sikker digital post?</h1>
+  <h1>Teknisk spesifikasjon</h1>
 
-  <p>Difi har inngått avtale med E-Boks og Digipost om en sikker digital postkasse for innbyggerne.</p>
-  <p><a href="http://www.difi.no/sikkerpost" class="btn btn-primary btn-lg" role="button">Les mer på difi.no</a></p>
+  <p>Skal du implementere en integrasjon mot Sikker digital post?</p>
+  <p><a href="spesifikasjon.html" class="btn btn-primary btn-lg" role="button">Les mer her</a></p>
 </div>
 
-<div class="jumbotron">
-  <h1>Dette er interessant...</h1>
-  
-  <p>,men jeg lurer fortsatt på hva Sikker digital post er?</p>
-  <p><a href="ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf" class="btn btn-primary btn-lg" role="button">Les arkitekturbeskrivelsen for sikker digital posttjeneste</a></p>
-  
-  <p>jeg skal ta i bruker Sikker digital post!</p>
-  <p><a href="https://samarbeid.difi.no/sikker-digital-post" class="btn btn-primary btn-lg" role="button">Kom igang på samarbeidsportalen!</a></p>
-  
-  <p>, så nå skal jeg implementere en integrasjon mot Sikker digital post?</p>
-  <p><a href="spesifikasjon.html" class="btn btn-primary btn-lg" role="button">Les mer om den tekniske spesifikasjonen</a></p>
 
+
+<div class="jumbotron">
+  <h1>Hva er Sikker digital post?</h1>
+  
+  <p>Dersom du ønsker en introduksjon til sikker digital post før du kaster deg over den tekniske spesifikasjonen.</p>
+  <p><a href="ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf" class="btn btn-primary btn-lg" role="button">Les arkitekturbeskrivelsen for sikker digital posttjeneste</a></p>
+ 
+ <h1>Hvordan kommer jeg igang?</h1>
+  <p>Planlegger du å ta i bruk Sikker digital post så kom igang i dag.</p>
+  <p><a href="https://samarbeid.difi.no/sikker-digital-post" class="btn btn-primary btn-lg" role="button">Kom igang på samarbeidsportalen</a></p>
 </div>
 
 <div class="jumbotron">
   <h1>Fortsatt spørsmål?</h1>
 
-  <p>Send oss en e-post</p>
+  <p>Send oss en e-post da vel!</p>
   <p><a href="mailto:idporten@difi.no" class="btn btn-primary btn-lg" role="button">ID-porten Forvaltning</a></p>
 </div>
