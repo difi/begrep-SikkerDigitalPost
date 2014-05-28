@@ -10,11 +10,12 @@ Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene
 
 Katalogen inneholder følgende:
 
-* "Definisjon av begreper brukt i Sikker Digital Post":Begreper
-* "Oversikt over aktører i løsningen":Aktorer
-* "Meldingsformatet som benyttes":Meldingsformat
-* "Oversikt over prosesser i løsningen, med fokus på aktører innvolvert, ansvarsfordeling mellom disse og begreper brukt":Prosesser
-* "Oversikt over sikring av prosessene":Sikkerhet
+table(table table-striped).
+| "Begrepsdefinisjonen":Begreper | Definisjoner av begreper brukt i Sikker Digital post |
+| "Aktører":Aktorer | Oversikt over aktører i løsningen |
+| "Meldingsformatet":Meldingsformat | Formatet på meldingene som sendes i Sikker digital post, se også: "xsd definisjoner":xsd/ og "eksempel meldinger":eksempler/ |
+| "Prosessbeskrivelse":Prosesser | Oversikt over prosesser i løsningen, med fokus på aktører innvolvert, ansvarsfordeling mellom disse og begreper brukt |
+| "Sikkerhet":Sikkerhet | Oversikt over sikring av prosessene  |
 
 Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":Aktorer, "Meldingsformidler":Aktorer og "Postkasselverandører":Aktorer.
 
@@ -23,35 +24,16 @@ Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mel
 
 h2. Meldingsutveksling
 
-** "Aktører og Roller":Aktorer
-*** "Aktør identifikatorer":AktorIdentifikatorer
-** "Ekspederingsprosessen":EksepederePost
-** "Meldingstyper":StandardBusinessDocument/Melding/
 ** "Meldingsutvekslingsflyt (P-Modes)":Meldingsutveksling/ 
 *** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
 *** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
-** "Feilhåndtering":Feilhaandtering
-** "Eksempel SOAP meldinger":eksempler/soap/
-
-h2. Meldingsspesifikasjoner
-
-En Digital postforsendelse har følgende "meldingsstruktur":meldingsstruktur som består av følgende meldingselementer:
-
-table(table table-striped).
-|_. Identifikator |_. Beskrivelse |_. scope |
-| "Webservice Security Header":WebserviceSecurity | Sikring av integritet i meldingen |  punkt til punkt |
-| "ebMS 3.0/AS4 Header":Messaging | Meldingsutvekslingsattributtene nødvendig for sending av Digitalpost og henting av kvitteringer |  punkt til punkt |
-| "StandardBusinessDocument":StandardBusinessDocument/ | Integritetssikret Forretningsmeldingen med informasjon til "Postkasseleverandør":Aktorer |  ende til ende |
-| "Dokumentpakke":Dokumentpakke/ | En Integritet og konfidensialitetssikret pakke med filer (beskrivelse av  tillatte "dokumentformater":Dokumentformat/ ) til "Mottaker":Aktorer |  ende til ende |
-
-Beskrivelser av meldingspesifikasjonen i "XSD":xsd/
-"Eksempel XML meldinger":eksempler/
 
 h2. Sikkerhet
 
 ** "Bruk av sertifikater":Sertifikatbruk
 ** "Sikring av Dokumentpakken":Dokumentpakke/ASiC_sikkerhet
 ** "Meldingsidentifikatorer":MeldingsIdentifikatorer
+** "Feilhåndtering":Feilhaandtering
 
 h2. Teknisk miljø
 

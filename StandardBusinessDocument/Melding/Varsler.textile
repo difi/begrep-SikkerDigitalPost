@@ -16,6 +16,7 @@ Avsender vil kunne få kostnader knyttet til varslinger på Sms.
 
 h4. Eigenskapar
 
+table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
 |"EpostVarsel":EpostVarsel| 0..1 | "sdp:EpostVarsel":EpostVarsel |
 |"SmsVarsel":SmsVarsel | 0..1 | "sdp:SmsVarsel":SmsVarsel |

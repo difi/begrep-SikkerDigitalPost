@@ -15,11 +15,12 @@ SignalMessage blir brukt til å sende en melding til mottakende MSH. Signalmekan
 
 h3. Attributter
 
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | "MessageInfo":../UserMessage/MessageInfo | 1..1 | eb:MessageInfo | Samme element som i UserMessage - intern identifikator og timestamp |
-{background:#ddd}.| "PullRequest":PullRequest | 0..1 | eb:PullRequest | Forespørsel om å få levert en ventende melding |
+| "PullRequest":PullRequest | 0..1 | eb:PullRequest | Forespørsel om å få levert en ventende melding |
 | "Receipt":Receipt | 0..1 | eb:Receipt |  Standard kvittering relatert til en UserMessage |
-{background:#ddd}.| "Error":Error | 0..unbounded | eb:Error | Standardfeilmelding relatert til en melding |
+| "Error":Error | 0..unbounded | eb:Error | Standardfeilmelding relatert til en melding |
 
 h3. Eksempel
 

@@ -14,6 +14,7 @@ group: SikkerDigitalPost/Melding
 
 h4. Eigenskapar
 
+table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
 | "varslingsTekst":/Felles/varslingsTekst | 0..1 | "varslingsTekst":/Felles/varslingsTekst |
 |"repetisjoner":Repetisjoner | 1..1 | "sdp:Repetisjoner":Repetisjoner |

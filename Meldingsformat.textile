@@ -22,8 +22,6 @@ rammeverk som blir brukt for å utføre sendingen.
 h3. 
 
 
-
-
 <div class="row">
 	<div class="col-md-12 list-group">
 		
@@ -36,17 +34,28 @@ h3.
 	<div class="panel-body">
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				eb:Messaging
+				<a href="WebserviceSecurity" class="list-group-item active">wsse:Security</a>
 			</div>
 			<div class="list-group">
-			    <a href="#" class="list-group-item active">eb:UserMessage</a>
-			    <a href="#" class="list-group-item">eb:MessageInfo</a>
-			    <a href="#" class="list-group-item">eb:PartyInfo</a>
-			    <a href="#" class="list-group-item">eb:CollaborationInfo</a>
-			    <a href="#" class="list-group-item">eb:PayloadInfo</a>
+			    <a href="WebserviceSecurity" class="list-group-item">wsu:Timestamp</a>
+			    <a href="WebserviceSecurity" class="list-group-item">ds:Signature</a>
 			</div>
 		</div>
 	</div>
+	<div class="panel-body">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<a href="Messaging" class="list-group-item active">eb:Messaging</a>
+			</div>
+			<div class="list-group">
+			    <a href="UserMessage/" class="list-group-item">eb:UserMessage</a>
+			    <a href="UserMessage/MessageInfo" class="list-group-item">eb:MessageInfo</a>
+			    <a href="UserMessage/PartyInfo" class="list-group-item">eb:PartyInfo</a>
+			    <a href="UserMessage/CollaborationInfo" class="list-group-item">eb:CollaborationInfo</a>
+			    <a href="UserMessage/PayloadInfo" class="list-group-item">eb:PayloadInfo</a>
+			</div>
+		</div>
+	</div>	
 </div>
 <div class="panel panel-info">
 	<div class="panel-heading">
@@ -55,14 +64,27 @@ h3.
 	<div class="panel-body">
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				Standard Business Document
+				<a href="StandardBusinessDocument/" class="list-group-item active">Standard Business Document</a>
 			</div>
 			<div class="list-group">
-			    <a href="#" class="list-group-item">Standard Business Document Header</a>
-			    <a href="#" class="list-group-item">Sikker digital post forretningsmelding</a>
+			    <a href="StandardBusinessDocument/StandardBusinessDocumentHeader" class="list-group-item">Standard Business Document Header</a>
+			    <a href="StandardBusinessDocument/Melding/" class="list-group-item">Sikker digital post forretningsmelding</a>
 			</div>
-			<div class="panel-footer">
-				Signatur		
+		</div>
+	</div>
+</div>
+<div class="panel panel-info">
+	<div class="panel-heading">
+		SOAP 1.2 Attachment
+	</div>
+	<div class="panel-body">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<a href="Dokumentpakke/" class="list-group-item active">Dokumentpakke</a>
+			</div>
+			<div class="list-group">
+			    <a href="Dokumentpakke/Manifest" class="list-group-item">Manifest</a>
+			    <a href="Dokumentformat/" class="list-group-item">Hoveddokument m/vedlegg</a>
 			</div>
 		</div>
 	</div>

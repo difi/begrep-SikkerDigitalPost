@@ -15,6 +15,7 @@ Kan være forskjellige frå Databehandler og teknisk avsender (for eksempel kan 
 
 h4. Egenskaper
 
+table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
 | "identifier":/Felles/virksomhetsidentifikator | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | "avsenderidentifikator":/Felles/avsenderidentifikator | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |

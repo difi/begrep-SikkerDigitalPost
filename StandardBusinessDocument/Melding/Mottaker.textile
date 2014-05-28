@@ -14,6 +14,7 @@ Virksomhet er ikke detaljert ytterligere da det ikke er planlagt støttet, men e
 
 h4. Egenskaper
 
+table(table table-striped).
 |_. Identifikator |_. Term |_. Kardinalitet |
 | "Person":Person | "Person":Person | 0..1 |
 | virksomhet | virksomhet | 0..1 |

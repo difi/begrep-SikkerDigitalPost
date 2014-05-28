@@ -11,7 +11,8 @@ headtitle: Sikker digital post - Standard Business Document
 
 h3. Attributter
 
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | Identifier | 1..1 | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator |  |
 
 h3. XML eksempel

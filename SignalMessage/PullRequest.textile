@@ -15,6 +15,7 @@ h4. Egenskaper
 
 Forespørsel om å få tilsendt en melding. Må angi "mpc":../UserMessage/mpc attributten til å identifisere hvilken organisasjon en ønsker å hente meldinger for.
 
+table(table table-striped).
 |_. Identifikator |_. Type |_. Kardinalitet | Kommentar |
 | mpc | "mpc":../UserMessage/mpc | 1..1 | |
 

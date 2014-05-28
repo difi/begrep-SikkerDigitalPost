@@ -7,13 +7,20 @@ group: SikkerDigitalPost/complexType
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Beskrivende tittel for den sikre digitale posten. Skal kunne benyttes til å informere sluttbruker om meldingen
+- Definisjon := Beskrivende tittel for et Dokument
 - Datatype := complexType
 - Kilde := DIFI
-- Kommentar := Må kunne brukes uten sikker autentisering (for eksempel til varsling)
+- Kommentar := En beskrivende tittel for dokumentet, tittelen kan inneholde sensitive opplysninger da den kun vil vises til Innbygger etter dekryptering og når Innbygger er autentisert på tilstrekkelig sikkerhetsnivå.
 
 h4. Egenskaper
 
-|_. Identifikator |_. Term |_. Kardinalitet |
-| "tekst":/Felles/tekst | Tekst, Tittel | 1..* |
 
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| lang | 1..1 | "spraak":spraak |
+
+h3. Xml eksempel
+
+<pre>
+<{{page.title}} lang="no">Vedtaksbrev - støtte til utdanning - saksnr. 2013/1111</{{page.title}}>
+</pre>

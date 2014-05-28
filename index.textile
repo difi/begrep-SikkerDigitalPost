@@ -15,13 +15,12 @@ headtitle: Sikker digital post
 
 <div class="jumbotron">
   <h1>Hva er Sikker digital post?</h1>
-  
   <p>Dersom du ønsker en introduksjon til sikker digital post før du kaster deg over den tekniske spesifikasjonen.</p>
-  <p><a href="ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf" class="btn btn-primary btn-lg" role="button">Les arkitekturbeskrivelsen for sikker digital posttjeneste</a></p>
+  <p><a href="EksepederePost" class="btn btn-primary btn-lg" role="button">Les mer om det å ekspedere post i sikker digital posttjeneste</a></p>
  
  <h1>Hvordan kommer jeg igang?</h1>
   <p>Planlegger du å ta i bruk Sikker digital post så kom igang i dag.</p>
-  <p><a href="https://samarbeid.difi.no/sikker-digital-post" class="btn btn-primary btn-lg" role="button">Kom igang på samarbeidsportalen</a></p>
+  <p><a href="https://samarbeid.difi.no/sikker-digital-post" class="btn btn-primary btn-lg" role="button">Les mer på samarbeidsportalen</a></p>
 </div>
 
 <div class="jumbotron">
