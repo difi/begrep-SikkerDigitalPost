@@ -1,64 +1,33 @@
 ---
 layout: default
-title: Sikker digital post
+title: Sikker digital post 
 headtitle: Sikker digital post
 ---
 
-h2. Innledning
+<div class="jumbotron">
+  <h1>Hva er Sikker digital post?</h1>
 
-Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Sikker Digital Post":http://www.difi.no/digital-forvaltning/felles-it-losninger-fra-difi/sikker-post.
+  <p>Difi har inngått avtale med E-Boks og Digipost om en sikker digital postkasse for innbyggerne.</p>
+  <p><a href="http://www.difi.no/sikkerpost" class="btn btn-primary btn-lg" role="button">Les mer på difi.no</a></p>
+</div>
 
-Katalogen inneholder følgende:
+<div class="jumbotron">
+  <h1>Dette er interessant...</h1>
+  
+  <p>,men jeg lurer fortsatt på hva Sikker digital post er?</p>
+  <p><a href="ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf" class="btn btn-primary btn-lg" role="button">Les arkitekturbeskrivelsen for sikker digital posttjeneste</a></p>
+  
+  <p>jeg skal du starte opp et prosjekt for å ta i bruker Sikker digital post!</p>
+  <p><a href="https://samarbeid.difi.no/sikker-digital-post" class="btn btn-primary btn-lg" role="button">Les mer på samarbeidsportalen</a></p>
+  
+  <p>, så nå skal jeg implementere en integrasjon mot Sikker digital post?</p>
+  <p><a href="spesifikasjon.html" class="btn btn-primary btn-lg" role="button">Les mer</a></p>
 
-* "Definisjon av begreper brukt i Sikker Digital Post":Begreper
-* "Oversikt over aktører i løsningen":Aktorer
-* "Meldingsformatet som benyttes":Meldingsformat
-* "Oversikt over prosesser i løsningen, med fokus på aktører innvolvert, ansvarsfordeling mellom disse og begreper brukt":Prosesser
-* "Oversikt over sikring av prosessene":Sikkerhet
+</div>
 
-Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":Aktorer, "Meldingsformidler":Aktorer og "Postkasselverandører":Aktorer.
+<div class="jumbotron">
+  <h1>Fortsatt spørsmål?</h1>
 
-Dokumentasjonen skal hovedsakelig fungere som en implementasjonguide for integrasjon mellom avsendere og postkasseleverandører gjennom meldingsformidleren. 
-Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mellom partene, hvordan de skal bygges opp og definisjon av begreper.
-
-h2. Meldingsutveksling
-
-** "Aktører og Roller":Aktorer
-*** "Aktør identifikatorer":AktorIdentifikatorer
-** "Ekspederingsprosessen":EksepederePost
-** "Meldingstyper":StandardBusinessDocument/Melding/
-** "Meldingsutvekslingsflyt (P-Modes)":Meldingsutveksling/ 
-*** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
-*** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
-** "Feilhåndtering":Feilhaandtering
-** "Eksempel SOAP meldinger":eksempler/soap/
-
-h2. Meldingsspesifikasjoner
-
-En Digital postforsendelse har følgende "meldingsstruktur":meldingsstruktur som består av følgende meldingselementer:
-
-table(table table-striped).
-|_. Identifikator |_. Beskrivelse |_. scope |
-| "Webservice Security Header":WebserviceSecurity | Sikring av integritet i meldingen |  punkt til punkt |
-| "ebMS 3.0/AS4 Header":Messaging | Meldingsutvekslingsattributtene nødvendig for sending av Digitalpost og henting av kvitteringer |  punkt til punkt |
-| "StandardBusinessDocument":StandardBusinessDocument/ | Integritetssikret Forretningsmeldingen med informasjon til "Postkasseleverandør":Aktorer |  ende til ende |
-| "Dokumentpakke":Dokumentpakke/ | En Integritet og konfidensialitetssikret pakke med filer (beskrivelse av  tillatte "dokumentformater":Dokumentformat/ ) til "Mottaker":Aktorer |  ende til ende |
-
-Beskrivelser av meldingspesifikasjonen i "XSD":xsd/
-"Eksempel XML meldinger":eksempler/
-
-h2. Sikkerhet
-
-** "Bruk av sertifikater":Sertifikatbruk
-** "Sikring av Dokumentpakken":Dokumentpakke/ASiC_sikkerhet
-** "Meldingsidentifikatorer":MeldingsIdentifikatorer
-
-h2. Teknisk miljø
-
-* Detaljer om teknisk miljø for tjenesten mottas ved å kontakte "idporten@difi.no":mailto:idporten@difi.no 
-
-h2. Annet
-
-* "Referanser":referanser
-* "Endringslogg":/changelog
-* "Hvordan bidra til grensesnittspesifikasjonen?":/README
+  <p>Send oss en e-post</p>
+  <p><a href="mailto:idporten@difi.no" class="btn btn-primary btn-lg" role="button">ID-porten Forvaltning</a></p>
+</div>

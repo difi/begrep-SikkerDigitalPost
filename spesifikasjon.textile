@@ -1,0 +1,64 @@
+---
+layout: default
+title: Sikker digital post
+headtitle: Sikker digital post
+---
+
+h2. Innledning
+
+Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Sikker Digital Post":http://www.difi.no/digital-forvaltning/felles-it-losninger-fra-difi/sikker-post.
+
+Katalogen inneholder følgende:
+
+* "Definisjon av begreper brukt i Sikker Digital Post":Begreper
+* "Oversikt over aktører i løsningen":Aktorer
+* "Meldingsformatet som benyttes":Meldingsformat
+* "Oversikt over prosesser i løsningen, med fokus på aktører innvolvert, ansvarsfordeling mellom disse og begreper brukt":Prosesser
+* "Oversikt over sikring av prosessene":Sikkerhet
+
+Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":Aktorer, "Meldingsformidler":Aktorer og "Postkasselverandører":Aktorer.
+
+Dokumentasjonen skal hovedsakelig fungere som en implementasjonguide for integrasjon mellom avsendere og postkasseleverandører gjennom meldingsformidleren. 
+Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mellom partene, hvordan de skal bygges opp og definisjon av begreper.
+
+h2. Meldingsutveksling
+
+** "Aktører og Roller":Aktorer
+*** "Aktør identifikatorer":AktorIdentifikatorer
+** "Ekspederingsprosessen":EksepederePost
+** "Meldingstyper":StandardBusinessDocument/Melding/
+** "Meldingsutvekslingsflyt (P-Modes)":Meldingsutveksling/ 
+*** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
+*** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
+** "Feilhåndtering":Feilhaandtering
+** "Eksempel SOAP meldinger":eksempler/soap/
+
+h2. Meldingsspesifikasjoner
+
+En Digital postforsendelse har følgende "meldingsstruktur":meldingsstruktur som består av følgende meldingselementer:
+
+table(table table-striped).
+|_. Identifikator |_. Beskrivelse |_. scope |
+| "Webservice Security Header":WebserviceSecurity | Sikring av integritet i meldingen |  punkt til punkt |
+| "ebMS 3.0/AS4 Header":Messaging | Meldingsutvekslingsattributtene nødvendig for sending av Digitalpost og henting av kvitteringer |  punkt til punkt |
+| "StandardBusinessDocument":StandardBusinessDocument/ | Integritetssikret Forretningsmeldingen med informasjon til "Postkasseleverandør":Aktorer |  ende til ende |
+| "Dokumentpakke":Dokumentpakke/ | En Integritet og konfidensialitetssikret pakke med filer (beskrivelse av  tillatte "dokumentformater":Dokumentformat/ ) til "Mottaker":Aktorer |  ende til ende |
+
+Beskrivelser av meldingspesifikasjonen i "XSD":xsd/
+"Eksempel XML meldinger":eksempler/
+
+h2. Sikkerhet
+
+** "Bruk av sertifikater":Sertifikatbruk
+** "Sikring av Dokumentpakken":Dokumentpakke/ASiC_sikkerhet
+** "Meldingsidentifikatorer":MeldingsIdentifikatorer
+
+h2. Teknisk miljø
+
+* Detaljer om teknisk miljø for tjenesten mottas ved å kontakte "idporten@difi.no":mailto:idporten@difi.no 
+
+h2. Annet
+
+* "Referanser":referanser
+* "Endringslogg":/changelog
+* "Hvordan bidra til grensesnittspesifikasjonen?":/README
