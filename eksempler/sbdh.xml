@@ -11,7 +11,7 @@
 		<Identifier Authority="iso6523-actorid-upis">9908:996460320</Identifier>
 	</Receiver>
 	<DocumentIdentification> 
-		<Standard>urn:no:difi.sdp:1.0</Standard>
+		<Standard>urn:no:difi:sdp:1.0</Standard>
 		<TypeVersion>1.0</TypeVersion>
 		<!-- Unik identifikator i "Sender" sitt scope -->
 		<InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</InstanceIdentifier>
@@ -20,12 +20,10 @@
 	</DocumentIdentification>
 	<BusinessScope>
 	    <Scope>
-	        <Type>SCHEMA_GUIDE</Type>
-	        <InstanceIdentifier>SikkerDigitalPost/1.0</InstanceIdentifier>
-	        <CorrelationInformation>
-	        	<!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
-	            <RequestingDocumentInstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</RequestingDocumentInstanceIdentifier>
-	        </CorrelationInformation>
+	        <Type>ConversationId</Type>
+        	<!-- Dette er den reelle unike identifikatoren i SDBH - bør vera GUID! -->
+            <InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</InstanceIdentifier>
+	        <Identifier>urn:no:difi:sdp:1.0</Identifier>
 	    </Scope>
 	</BusinessScope>
 </StandardBusinessDocumentHeader>
