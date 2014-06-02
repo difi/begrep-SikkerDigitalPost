@@ -22,6 +22,6 @@ Forespørsel om å få tilsendt en melding. Må angi "mpc":../UserMessage/mpc at
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
-	<eb:PullRequest mpc="urn:sdp:prioritet:identifier:123456789:avsenderidentifikator:1234"/>
+	<eb:PullRequest mpc="normal:"/>
 </pre>
 

@@ -5,6 +5,8 @@ headtitle: Begrepskatalog for Sikker digital post -
 group: SikkerDigitalPost
 ---
 
+h2. {{ page.title }}
+
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
 - Definisjon := inneholder identifikasjon om dokumentet
@@ -12,29 +14,40 @@ group: SikkerDigitalPost
 
 h3. Attributer
 
-{background:#ddd}.|_. Identifikator |_. Kardinalitet |_. Datatype |_. Verdi |
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |_. Verdi |
 | Standard | 1..1 | xs:string | "urn:no:difi.sdp:1.0" |
-{background:#ddd}.| TypeVersion | 1..1 | xs:string | "1.0" |
-| InstanceIdentifier | 1..1 | xs:string | Unik identifikator for forsendelsen. Opprettet av Databehandler. Anbefalt format: GUID |
-{background:#ddd}.| Type | 1..1 | xs:string | Forretningsmeldingstype, se kodeverk |
+| TypeVersion | 1..1 | xs:string | "1.0" |
+| InstanceIdentifier | 1..1 | xs:string | Unik identifikator for forsendelsen. Opprettet av Databehandler. Se format under. |
+| Type | 1..1 | xs:string | Type forretningsmelding. Skal alltid være "local-name" til rot-elementet XML'en til forretningmeldingen. Se kodeverk under |
 | MultipleType | 0..0 | xs:boolean | brukes ikke |
-{background:#ddd}.| CreationDateAndTime | 1..1 | xs:dateTime | Tidspunkt for oppretting av "Standard Business Document":index |
+| CreationDateAndTime | 1..1 | xs:dateTime | Tidspunkt for oppretting av "Standard Business Document":index |
 
+h3. Format InstanceIdentifier
+
+InstanceIdentifier er i XML skjemaet for SBDH definert som en tekst-streng. I Sikker Digital Post skal denne alltid være en GUID som validerer mot følgende regulært uttrykk:
+
+<pre>
+	[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}	
+</pre>
+
+Rett format på InstanceIdentifier blir håndhevet av meldingsformidler.
 
 h3. Kodeverk: Type
 
-Type spesifiserer "Melding":Melding/ som ligger i "Standard Business Document":index
-Type = "Meldingstypen":Melding/#Meldingstypene.
+I Sikker Digital Post vil type være en av følgende:
 
-h4. xml eksempel
+* digitalPost
+* kvittering
 
-<pre class="brush: xml; toolbar: false">
+h3. Xml eksempel
 
+<pre>
 	<DocumentIdentification>
 		<Standard>urn:no:difi.sdp:1.0</Standard>
 		<TypeVersion>1.0</TypeVersion>
 		<InstanceIdentifier>12e57bde-ea5d-43ee-96b6-e2cf73f8311e</InstanceIdentifier> <!-- Dette er den reelle unike identifikatoren i SDB -->
-		<Type>DigitalPost</Type>
+		<Type>digitalPost</Type>
 		<CreationDateAndTime>2013-02-19T05:10:10Z</CreationDateAndTime>
 	</DocumentIdentification>
 
@@ -42,7 +55,7 @@ h4. xml eksempel
 
 h4. XSD
 
-<pre class="brush: xml; toolbar: false">
+<pre>
 
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -61,8 +74,5 @@ h4. XSD
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
-
-
-
 
 </pre>
