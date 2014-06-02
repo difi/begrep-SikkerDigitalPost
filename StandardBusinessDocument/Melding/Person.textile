@@ -7,10 +7,12 @@ group: SikkerDigitalPost/Melding
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Person i Sikker digital post
+- Definisjon := Person definert for Sikker digital post
 - Datatype := complexType
 - Kilde := DIFI
 - Kommentar := Person er "mottakeren":Mottaker som Digital Post skal sendes til.
+
+Merk at Person ikke er unik definert på tvers av Difi sine felleskomponenter, men at hver av felleskomponentene har en definisjon av Person i forhold til behovene i den enkelte felleskomponentene.
 
 h4. Attributer
 
@@ -18,16 +20,14 @@ table(table table-striped).
 |_. Term |_. Kardinalitet |_. Datatype |
 | "personidentifikator":/Felles/personidentifikator  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | "postkasseadresse":/Felles/postkasseadresse | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
-| "mobiltelefonnummer":/Felles/mobiltelefonnummer | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
-| "epostadresse":/Felles/epostadresse | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+
+
 
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
 <sdp:Person>
 	<sdp:personidentifikator>01012295312</sdp:personidentifikator>
-    <sdp:mobiltelefonnummer>12121212</sdp:mobiltelefonnummer>
-	<sdp:epostadresse>01012295312_test@minid.difi.no</sdp:epostadresse>
 	<sdp:postkasseadresse>1</sdp:postkasseadresse>
 </sdp:Person>
 </pre>
