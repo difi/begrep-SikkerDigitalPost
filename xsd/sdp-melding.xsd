@@ -89,7 +89,7 @@
 			<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1"/>
 			<xsd:element name="aapningskvittering" type="xsd:boolean" default="false" minOccurs="0" maxOccurs="1"/>
 			<xsd:element name="sikkerhetsnivaa" type="Sikkerhetsnivaa" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="tittel" minOccurs="0" maxOccurs="1" type="Tittel">
+			<xsd:element name="ikkeSensitivTittel" minOccurs="1" maxOccurs="1" type="Tittel">
 				<xsd:annotation>
 					<xsd:documentation>
 						Ikke-sensitiv tittel på dokumentpakken
