@@ -11,6 +11,7 @@ group: SikkerDigitalPost/Melding
 - Datatype := complexType
 - Kjelde := DIFI
 - Kommentar := Beskriver når det skal sendes sms varsel fra postkassen etter at posten er tilgjengeliggjort.
+Denne tjenesten vil medføre kostnader for Avsender.
 
 h4. Eigenskapar
 

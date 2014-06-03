@@ -7,8 +7,12 @@ group: SikkerDigitalPost
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := En "Kvitteringsmelding":KvitteringsMelding til Avsender om at Mottaker har ppnet forsendelsen i sin postkasse.
+- Definisjon := En "Kvitteringsmelding":KvitteringsMelding fra "Postkassleverandør":../../Aktorer til "Sender":../Sender om at posten vil leveres til "Mottaker":Mottaker.
 - Kilde := DIFI
+- Kommentar := Denne kvitteringen kan "Behandlingsansvarlig":../../Aktorer oppbevare som en garanti på at posten er levert til "Mottaker":Mottaker. Kvitteringen sendes fra "Postkassleverandør":../../Aktorer når posten forsendelsen er validert og de garanterer for at posten vil bli tilgjengeliggjort.
+Kvitteringen vil bli sendt så fort "Postkassleverandør":../../Aktorer kan garantere dette, det vil si at "Leveringskvitteringen":LeveringsKvitteringen vil bli sendt før "virkningsdato":/Felles/virkningsdato 
+
+Det anbefales at "Behandlingsansvarlig":../../Aktorer arkiverer denne kvitteringen som bevis på at "posten":DigitalPostMelding er levert til "Mottaker":Mottaker.
 
 h3. Attributer
 

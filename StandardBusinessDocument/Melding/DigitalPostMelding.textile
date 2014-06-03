@@ -9,6 +9,12 @@ group: SikkerDigitalPost
 - Term := {{page.title}}
 - Definisjon := Informasjon relatert til presentasjon og behandling av en sikker digital post melding
 - Kilde := DIFI
+- Kommentar := Digital post melding med tilhørende "Dokumentpakke":../../Dokumentpakke/ er postforsendelsen "Avsender":Avsender sender til "Mottaker":Mottaker.
+Denne inneholder informasjon om hvilken "Avsender":Avsender som er "Behandlingsansvarlig":../../Aktorer, en knytning til "dokumentpakken":../../Dokumentpakke/ igjennom "Dokumentpakkefingeravtrykk":Dokumentpakkefingeravtrykk
+og informasjon om behandlingsregler som "Postkasseleverandør":../../Aktorer skal bruke for å tilgjengeliggjøre posten.
+
+"Postkasseleverandør":../../Aktorer garanterer for at denne meldingen vil bli levert til "Mottaker":Mottaker igjennom å sende en "LeveringsKvittering":LeveringsKvittering til "Sender":../Sender.
+
 
 h3. Attributer
 

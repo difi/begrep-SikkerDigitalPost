@@ -14,7 +14,7 @@ table(table table-striped).
 | "Begrepsdefinisjonen":Begreper | Definisjoner av begreper brukt i Sikker Digital post |
 | "Aktører":Aktorer | Oversikt over aktører i løsningen |
 | "Meldingsformatet":Meldingsformat | Formatet på meldingene som sendes i Sikker digital post, se også: "xsd definisjoner":xsd/ og "eksempel meldinger":eksempler/ |
-| "Prosessbeskrivelse":Prosesser | Oversikt over prosesser i løsningen, med fokus på aktører innvolvert, ansvarsfordeling mellom disse og begreper brukt |
+| "Prosessbeskrivelse":Meldingsutveksling/ | Oversikt over prosesser i løsningen, med fokus på aktører innvolvert, ansvarsfordeling mellom disse og begreper brukt |
 | "Sikkerhet":Sikkerhet | Oversikt over sikring av prosessene  |
 
 Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":Aktorer, "Meldingsformidler":Aktorer og "Postkasselverandører":Aktorer.
@@ -24,9 +24,9 @@ Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mel
 
 h2. Meldingsutveksling
 
-** "Meldingsutvekslingsflyt (P-Modes)":Meldingsutveksling/ 
-*** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
-*** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
+* P-modes for meldingsutvekslingen i Sikker Digital post.
+** "FormidleDigitalPostForsendelse":Meldingsutveksling/FormidleDigitalPostForsendelse
+** "KvitteringsForespoersel":Meldingsutveksling/KvitteringsForespoersel
 
 h2. Sikkerhet
 

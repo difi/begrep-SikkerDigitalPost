@@ -17,7 +17,7 @@ Dette er "StandardBusinessDocument":StandardBusinessDocument/, som er signert/in
 ebMS 3.0 er brukt som "meldingsutvekslingsrammeverk":Meldingsutveksling/ fra Avsender til Meldingsformidler.
 Så "eb:Messaging":Messaging og "Webservice security":WebserviceSecurity er signert/integritetsbeskyttet punkt til punkt.
 
-!{width:50%;display: block;margin-left: auto;margin-right: auto;}meldingsstruktur_diagram.jpg!
+!{width:50%;display: block;margin-left: auto;margin-right: auto;}meldingsstruktur_enkel.jpg!
 
 
 

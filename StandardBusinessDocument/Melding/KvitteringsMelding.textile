@@ -7,8 +7,9 @@ group: SikkerDigitalPost
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := En "Melding":index til "Avsender":Avsender.
+- Definisjon := En kvitteringsmelding på en "digital post melding":DigitalPostMelding fra en "Avsender":Avsender.
 - Kilde := DIFI
+- Kommentar := Kvittering er en abstrakt "kvittering melding":index type, se under for de kvitteringer som er definert.
 
 h3. Attributer
 
@@ -17,4 +18,10 @@ table(table table-striped).
 | Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
 | tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
 
+h3. Kvitteringer
 
+Følgende konkrete kvitteringer er definert:
+
+* "LeveringsKvittering":LeveringsKvittering
+* "AapningsKvittering":AapningsKvittering
+* "VarslingfeiletKvittering":VarslingfeiletKvittering
