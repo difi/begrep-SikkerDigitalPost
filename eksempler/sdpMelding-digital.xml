@@ -71,7 +71,7 @@
 		<virkningsdato>2014-05-17</virkningsdato>
 		<aapningskvittering>false</aapningskvittering>
 		<sikkerhetsnivaa>3</sikkerhetsnivaa>
-		<tittel lang="no">Hurra for 17. mai</tittel>
+		<ikkeSensitivTittel lang="no">Hurra for 17. mai</ikkeSensitivTittel>
 		<varsler>
 			<epostVarsel>
 				<tekst lang="no">Viktig melding fra Staten i din digitale postkasse</tekst>
