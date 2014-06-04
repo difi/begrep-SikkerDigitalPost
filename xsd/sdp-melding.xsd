@@ -117,7 +117,7 @@
 	<xsd:complexType name="EpostVarsel">
 		<xsd:sequence>
 			<xsd:element name="epostadresse" minOccurs="1" maxOccurs="1" type="xsd:string"/>
-			<xsd:element name="varslingsTekst" minOccurs="0" maxOccurs="1" type="EpostVarselTekst"/>
+			<xsd:element name="varslingsTekst" minOccurs="1" maxOccurs="1" type="EpostVarselTekst"/>
 			<xsd:element name="repetisjoner" type="Repetisjoner" minOccurs="1" maxOccurs="1">
 				<xsd:unique name="UnikeEpostVarselRepetisjoner">
 					<xsd:selector xpath="dagerEtter"/>
@@ -130,7 +130,7 @@
 	<xsd:complexType name="SmsVarsel">
 		<xsd:sequence>
 			<xsd:element name="mobiltelefonnummer" minOccurs="1" maxOccurs="1" type="xsd:string"/>
-			<xsd:element name="varslingsTekst" minOccurs="0" maxOccurs="1" type="SmsVarselTekst"/>
+			<xsd:element name="varslingsTekst" minOccurs="1" maxOccurs="1" type="SmsVarselTekst"/>
 			<xsd:element name="repetisjoner" type="Repetisjoner" minOccurs="1" maxOccurs="1">
 				<xsd:unique name="UnikeSmsVarselRepetisjoner">
 					<xsd:selector xpath="dagerEtter"/>
