@@ -7,23 +7,23 @@ group: SikkerDigitalPost/Melding
 
 - Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Informasjon om hvordan postkasseleverandør skal varsle Innbygger om den nye posten. Overstyrer Innbygger sine egne varslingspreferanser.
+- Definisjon := Informasjon om hvordan postkasseleverandør skal varsle Mottaker om den nye posten. Overstyrer Mottaker sine egne varslingspreferanser.
 - Datatype := complexType
 - Kjelde := DIFI
-- Kommentar :=  Varslingsinformasjonen angitt her vil overstyre Innbygger sine egne varslingspreferanser, det vil kunne komme som tillegg til Innbygger sine varslingvalg.
+- Kommentar :=  Varslingsinformasjonen angitt her vil overstyre Mottaker sine egne varslingspreferanser, det vil kunne komme som tillegg til Mottaker sine varslingvalg.
 Avsender kan med instillingene her styre både "EpostVarsel":EpostVarsel og "SmsVarsel":SmsVarsel helt uavhengig av hverandre. Det vil si at Avsender kan velge å varsle i begge eller en av kanalene.
 Avsender kan velge selv hvilken kanal som velges, dette kan de gjøre med bakgrunn i sin egen kanalstrategi, erfaringer i forhold til åpningsgrad og kostnader.
 Bruk av "SmsVarsel":SmsVarsel vil medføre egne kostnader for Avsender.
 
 h3. Anbefalt bruk av varsling
 
-Som standard anbefales det at Avsender ikke spesifiserer varsling, da varsling bør styres av Innbygger selv.
-Innbygger har mulighet for å sette opp egen varslingspreferanser i postkassen.
+Som standard anbefales det at Avsender ikke spesifiserer varsling, da varsling bør styres av Mottaker selv.
+Mottaker har mulighet for å sette opp egen varslingspreferanser i postkassen.
 
-For alle brev som krever varsling i henhold til eforvaltningsforskriften, skal følgende instillinger brukes:
+For alle brev som krever varsling i henhold til "eForvaltningsforskriften  	&sect;8a":http://lovdata.no/dokument/SF/forskrift/2004-06-25-988/KAPITTEL_2#%C2%A78, skal følgende instillinger brukes:
 * Avsender velger selv kanal,  "EpostVarsel":EpostVarsel er tilstrekkelig.
 * Repetisjoner settes opp til: 0 og 7
-** Dette vil medføre at Avsender får en varsling når brevet blir tilgjengeliggjort og en påminnelse etter 7 dager dersom Innbygger ikke har gjort seg kjent med brevet.
+** Dette vil medføre at Mottaker får en varsling når brevet blir tilgjengeliggjort og en påminnelse etter 7 dager dersom Mottaker ikke har gjort seg kjent med brevet.
 
 
 
@@ -35,7 +35,7 @@ table(table table-striped).
 |"SmsVarsel":SmsVarsel | 0..1 | "sdp:SmsVarsel":SmsVarsel |
 
 
-h4. Xml eksempel
+h4. Xml eksempel - Brev som krever varsling etter eForvaltningsforskriften
 
 <pre class="brush: xml; toolbar: false">
   <varsler>
@@ -47,13 +47,26 @@ h4. Xml eksempel
         <dagerEtter>7</dagerEtter>
       </repetisjoner>
     </epostVarsel>
+  </varsler>
+</pre>
+
+h4. Xml eksempel - Avsender ønsker varsling i begge kanaler ved Levering
+
+<pre class="brush: xml; toolbar: false">
+  <varsler>
+    <epostVarsel>
+	  <epostadresse>01012295312_test@minid.difi.no</epostadresse>
+      <varselTekst>Viktig melding fra Staten</varselTekst>
+      <repetisjoner>
+        <dagerEtter>0</dagerEtter>
+      </repetisjoner>
+    </epostVarsel>
     <smsVarsel>
 	  <mobiltelefonnummer>12121212</mobiltelefonnummer>
       <varselTekst>Viktig melding fra Staten</varselTekst>
       <repetisjoner>
-        <dagerEtter>1</dagerEtter>
+        <dagerEtter>0</dagerEtter>
       </repetisjoner>
     </smsVarsel>
-  </varsler></pre>
-
-
+  </varsler>
+</pre>
