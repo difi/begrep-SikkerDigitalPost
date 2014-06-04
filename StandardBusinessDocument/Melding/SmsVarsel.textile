@@ -25,14 +25,14 @@ table(table table-striped).
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
-    <SmsVarsel>
+    <smsVarsel>
 	  <mobiltelefonnummer>12121212</mobiltelefonnummer>
-      <varselTekst lang="no">Viktig melding fra Staten</varselTekst>
+      <varslingsTekst lang="no">Viktig melding fra Staten</varslingsTekst>
       <repetisjoner>
         <dagerEtter>0</dagerEtter>
         <dagerEtter>7</dagerEtter>
       </repetisjoner>
-    </SmsVarsel>
+    </smsVarsel>
 
  </pre>
 

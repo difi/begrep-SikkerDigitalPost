@@ -62,8 +62,6 @@
 		<person>
 			<personidentifikator>17051400000</personidentifikator>
 			<postkasseadresse>ola.nordmann#0ABC</postkasseadresse>
-			<mobiltelefonnummer>12345678</mobiltelefonnummer>
-			<epostadresse>ola@nordmann.no</epostadresse>
 		</person>
 	</mottaker>
 
@@ -74,14 +72,16 @@
 		<ikkeSensitivTittel lang="no">Hurra for 17. mai</ikkeSensitivTittel>
 		<varsler>
 			<epostVarsel>
-				<tekst lang="no">Viktig melding fra Staten i din digitale postkasse</tekst>
+				<epostadresse>ola@example.com</epostadresse>
+				<varslingsTekst lang="no">Viktig melding fra Staten i din digitale postkasse</varslingsTekst>
 				<repetisjoner>
 					<dagerEtter>0</dagerEtter>
 					<dagerEtter>7</dagerEtter>
 				</repetisjoner>
 			</epostVarsel>
 			<smsVarsel>
-				<tekst lang="no">Viktig melding fra Staten</tekst>
+				<mobiltelefonnummer>12345678</mobiltelefonnummer>
+				<varslingsTekst lang="no">Viktig melding fra Staten</varslingsTekst>
 				<repetisjoner>
 					<dagerEtter>1</dagerEtter>
 				</repetisjoner>
