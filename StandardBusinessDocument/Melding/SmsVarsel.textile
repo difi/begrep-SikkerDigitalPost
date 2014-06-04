@@ -18,7 +18,7 @@ h4. Eigenskapar
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
 | "mobiltelefonnummer":/Felles/mobiltelefonnummer | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
-| "varslingsTekst":/Felles/varslingsTekst | 0..1 | "varslingsTekst":/Felles/varslingsTekst |
+| "varslingsTekst":/Felles/varslingsTekst | 1..1 | "varslingsTekst":/Felles/varslingsTekst |
 | "Repetisjoner":Repetisjoner | 1..1 | "sdp:Repetisjoner":Repetisjoner |
 
 

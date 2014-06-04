@@ -40,6 +40,7 @@ h4. Xml eksempel
 <pre class="brush: xml; toolbar: false">
   <varsler>
     <epostVarsel>
+	  <epostadresse>01012295312_test@minid.difi.no</epostadresse>
       <varselTekst>Viktig melding fra Staten</varselTekst>
       <repetisjoner>
         <dagerEtter>0</dagerEtter>
@@ -47,6 +48,7 @@ h4. Xml eksempel
       </repetisjoner>
     </epostVarsel>
     <smsVarsel>
+	  <mobiltelefonnummer>12121212</mobiltelefonnummer>
       <varselTekst>Viktig melding fra Staten</varselTekst>
       <repetisjoner>
         <dagerEtter>1</dagerEtter>
