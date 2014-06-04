@@ -23,7 +23,7 @@ Mottaker har mulighet for å sette opp egen varslingspreferanser i postkassen.
 For alle brev som krever varsling i henhold til "eForvaltningsforskriften  	&sect;8a":http://lovdata.no/dokument/SF/forskrift/2004-06-25-988/KAPITTEL_2#%C2%A78, skal følgende instillinger brukes:
 * Avsender velger selv kanal,  "EpostVarsel":EpostVarsel er tilstrekkelig.
 * Repetisjoner settes opp til: 0 og 7
-** Dette vil medføre at Mottaker får en varsling når brevet blir tilgjengeliggjort og en påminnelse etter 7 dager dersom Mottaker ikke har gjort seg kjent med brevet.
+** Dette vil medføre at Mottaker får en varsling når brevet blir levert og en påminnelse etter 7 dager dersom Mottaker ikke har skaffet seg tilgang til brevet.
 
 
 
