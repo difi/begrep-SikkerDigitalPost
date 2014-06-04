@@ -31,8 +31,8 @@ h4. Eigenskapar
 
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-|"EpostVarsel":EpostVarsel| 0..1 | "sdp:EpostVarsel":EpostVarsel |
-|"SmsVarsel":SmsVarsel | 0..1 | "sdp:SmsVarsel":SmsVarsel |
+|"epostVarsel":EpostVarsel| 0..1 | "sdp:EpostVarsel":EpostVarsel |
+|"smsVarsel":SmsVarsel | 0..1 | "sdp:SmsVarsel":SmsVarsel |
 
 
 h4. Xml eksempel - Brev som krever varsling etter eForvaltningsforskriften
@@ -41,7 +41,7 @@ h4. Xml eksempel - Brev som krever varsling etter eForvaltningsforskriften
   <varsler>
     <epostVarsel>
 	  <epostadresse>01012295312_test@minid.difi.no</epostadresse>
-      <varselTekst>Viktig melding fra Staten</varselTekst>
+      <varslingsTekst>Viktig melding fra Staten</varslingsTekst>
       <repetisjoner>
         <dagerEtter>0</dagerEtter>
         <dagerEtter>7</dagerEtter>
@@ -63,7 +63,7 @@ h4. Xml eksempel - Avsender ønsker varsling i begge kanaler ved Levering
     </epostVarsel>
     <smsVarsel>
 	  <mobiltelefonnummer>12121212</mobiltelefonnummer>
-      <varselTekst>Viktig melding fra Staten</varselTekst>
+      <varslingsTekst>Viktig melding fra Staten</varslingsTekst>
       <repetisjoner>
         <dagerEtter>0</dagerEtter>
       </repetisjoner>
