@@ -2,6 +2,13 @@
 layout: default
 title: StandardBusinessDocument
 headtitle: Sikker digital post - Standard Business Document
+group: forretningslag
+
+name: StandardBusinessDocument
+
+next: StandardBusinessDocumentHeader
+prev: Forretningsmeldingsstruktur
+
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:"/index.html" }}":{{page.url}}
@@ -22,7 +29,7 @@ I sikker digital post blir Standard Business Document brukt til å sende:
 
 h3. Klassediagram
 
-"!{width:40%}uml_diagram.jpg!":uml_diagram.jpg
+"!{width:30%;display: block;margin-left: auto;margin-right: auto;}uml_diagram.jpg!":uml_diagram.jpg
 
 h3. Attributter
 

@@ -2,7 +2,12 @@
 layout: default
 title: BusinessScope
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost
+group: forretningslag
+
+name: BusinessScope
+
+next: Dokumentpakke
+prev: DocumentIdentification
 ---
 
 h2. {{ page.title }}

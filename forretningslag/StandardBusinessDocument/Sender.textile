@@ -2,6 +2,12 @@
 layout: default
 title: Sender
 headtitle: Sikker digital post - Standard Business Document
+group: forretningslag
+
+name: Sender
+
+next: Receiver
+prev: StandardBusinessDocumentHeader
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

@@ -2,7 +2,10 @@
 layout: default
 title: Tittel
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/complexType
+group: complexType
+
+name: Tittel
+prev: Begreper
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

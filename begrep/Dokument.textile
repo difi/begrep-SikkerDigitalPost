@@ -2,7 +2,10 @@
 layout: default
 title: Dokument
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/complexType
+group: complexType
+
+name: Dokument
+prev: Begreper
 ---
 
 

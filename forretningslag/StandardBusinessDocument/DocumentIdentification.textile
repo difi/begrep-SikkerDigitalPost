@@ -2,7 +2,12 @@
 layout: default
 title: DocumentIdentification
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost
+group: forretningslag
+
+name: DocumentIdentification
+
+next: BusinessScope
+prev: Receiver
 ---
 
 h2. {{ page.title }}

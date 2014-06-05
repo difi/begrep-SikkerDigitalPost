@@ -2,6 +2,12 @@
 layout: default
 title: Sikker digital dokumentpakke 
 headtitle: Sikker digital post
+group: forretningslag
+
+name: Dokumentpakke sikkerhet
+
+next: Forretningslag
+prev: Sikkerhet
 ---
 
 h3. Introduksjon

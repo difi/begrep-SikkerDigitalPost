@@ -1,8 +1,43 @@
 ---
 layout: default
-title: Placeholder
+title: Forretninglag
 headtitle: Sikker digital post
+group: forretningslag
+
+name: Forretninglag
+
+prev: sdp
+
+children:
+ - name: Aktører
+ - name: Forretningsprosess
+ - name: Tilstand
+ - name: Forretningsmeldingsstruktur
+ - name: StandardBusinessDocument
+ - name: StandardBusinessDocumentHeader
+ - name: Sender
+ - name: Receiver
+ - name: DocumentIdentification
+ - name: BusinessScope
+ - name: Dokumentpakke
+ - name: Manifest
+ - name: Dokumentformat
+ - name: HTML dokument
+ - name: Sikkerhet
+ - name: Dokumentpakke sikkerhet
 
 ---
 
-h2. Content to come
+
+Forretningslaget er bygd opp av følgende kapitler:
+
+table(table table-striped).
+| "Aktører":Aktorer | Aktørene i sikker digital post |
+| "Forretningsprosess":forretningsprosess | Beskrivelse av flyten av forretningsmeldinger i Sikker digital post |
+| "Tilstand":avsender_tilstanddiagram | Tilstandsbeskrivelse for en Sikker digital post forsendelse sett fra Avsender |
+| "Forretningsmeldingsstruktur":meldingsformat | Detaljering av forretningsmeldinger |
+| "StandardBusinessDocument":StandardBusinessDocument/ | Forretningsmeldingen som sendes i Sikker digital post |
+| "Dokumentpakke":Dokumentpakke/ | Dokumentpakken med posten til Innbygger |
+| "Dokumentformat":Dokumentformat/ | Beskrivelse av de dokumentformatene som kan brukes i Sikker digital post |
+| "Sikkerhet":sikkerhet | sikkerhet i forhold til forretningsmeldingene og forretningsprosessen |
+

@@ -2,7 +2,12 @@
 layout: default
 title: Manifest
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost
+group: forretningslag
+
+name: Manifest
+
+next: Dokumentformater
+prev: Dokumentpakke
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
@@ -10,17 +15,17 @@ group: SikkerDigitalPost
 - Definisjon :=  inneholder metadata relatert til hver fil i en forsendelse.
 - Datatype := complexType
 - Kilde := DIFI
-- Kommentar :=  Manifest er en xml-fil som inneholder relevant informasjon om "dokumentene":Dokument i "dokumentpakken":index. 
+- Kommentar :=  Manifest er en xml-fil som inneholder relevant informasjon om "dokumentene":../../begrep/Dokument i "dokumentpakken":index. 
 Manifest xml-filen skal langtidsoppbevares sammen med dokumentene for å bevare integriteten på hele "dokumentpakken":index over lang tid.
 
 h3. Attributer
 
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "Mottaker":../StandardBusinessDocument/Melding/Mottaker | 1..1 | "sdp:Mottaker":../StandardBusinessDocument/Melding/Mottaker |
-| "Avsender":../StandardBusinessDocument/Melding/Avsender | 1..1 | "sdp:Avsender":../StandardBusinessDocument/Melding/Avsender |
-| hoveddokument | 1..1 | "sdp:Dokument":Dokument |
-| vedlegg | 0..99 | "sdp:Dokument":Dokument |
+| "Mottaker":../../begrep/Mottaker | 1..1 | "sdp:Mottaker":../../begrep/Mottaker |
+| "Avsender":../../begrep/Avsender | 1..1 | "sdp:Avsender":../../begrep/Avsender |
+| hoveddokument | 1..1 | "sdp:Dokument":../../begrep/Dokument |
+| vedlegg | 0..99 | "sdp:Dokument":../../begrep/Dokument |
 
 
 h3. Eksempel

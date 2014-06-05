@@ -1,7 +1,14 @@
 ---
 layout: default
-title: Sikker digital post
+title: Tilstand for Sikker digital postforsendelse
 headtitle: Sikker digital post
+group: forretningslag
+
+name: Tilstand
+
+next: Forretningsmeldingsstruktur
+prev: Forretningsprosess
+
 ---
 
 h2. Tilstand for Sikker digital postforsendelse
@@ -10,7 +17,7 @@ Under er en beskrivelse av tilstanden for en forsendelse sett fra et Avsender sy
 Målsetningen med tilstandsdiagrammet er å gi Avsendere en forståelse av hvilke prosesser og rutiner som bør etableres ved integrasjon mot Sikker digital post.
 
 
-!{width:50%;display: block;margin-left: auto;margin-right: auto;}tilstander_avsender.png!
+!{width:30%;display: block;margin-left: auto;margin-right: auto;}tilstander_avsender.png!
 
 h3. Tilstander
 
@@ -27,6 +34,7 @@ table(table table-striped).
 
 h3. Overganger
 
+table(table table-striped).
 |_. Overganger |_. Beskrivelse |_. Lenker |
 | Send melding | Avsender sender Digital post til Meldingsformidler | Transport, Prosessbeskrivelse, DigitalPostmelding |
 | Sending feilet | Avsender får ikke en vellykket transport kvittering fra meldingsformidler | ebMS |

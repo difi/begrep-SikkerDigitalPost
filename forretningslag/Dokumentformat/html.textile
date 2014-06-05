@@ -1,8 +1,13 @@
 ---
 layout: default
-title: HTML
+title: HTML dokument
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Dokumentformat
+group: forretningslag
+
+name: HTML dokument
+
+next: Sikkerhet
+prev: Dokumentformater
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
@@ -27,4 +32,5 @@ Det anbefales at HTML overholder W3C og WCAG av hensyn til tilgjengeligheten og 
 
 h3. Feilhåndtering
 
-HTML-meldinger som ikke oppfyller disse kravene blir avvist ved mottak. Avsendervirksomheten må korrigere meldingene og sende på nytt.
+HTML-meldinger som ikke oppfyller disse kravene blir avvist ved mottak. Dette vil resultere i en "Feilmelding":../../meldinger/FeilMelding 
+Avsendervirksomheten må korrigere meldingene og sende på nytt.

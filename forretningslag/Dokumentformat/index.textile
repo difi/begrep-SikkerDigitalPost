@@ -2,6 +2,12 @@
 layout: default
 title: Dokumentformater
 headtitle: Sikker digital post
+group: forretningslag
+
+name: Dokumentformater
+
+next: HTML dokument
+prev: Manifest
 ---
 
 h2. Innledning
