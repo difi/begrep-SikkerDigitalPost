@@ -1,0 +1,34 @@
+---
+layout: default
+title: DigitalpostMelding
+headtitle: Begrepskatalog for Sikker digital post - 
+group: Melding
+
+name: Digitalpostmelding
+
+next: Leveringskvittering
+prev: Forretningsmeldinger
+
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Informasjon relatert til presentasjon og behandling av en sikker digital post melding
+- Kilde := DIFI
+- Kommentar := Digital post melding med tilhørende "Dokumentpakke":../Dokumentpakke/ er postforsendelsen "Avsender":Avsender sender til "Mottaker":Mottaker.
+Denne inneholder informasjon om hvilken "Avsender":../begrep/Avsender som er "Behandlingsansvarlig":../Aktorer, en knytning til "dokumentpakken":../forretningslag/Dokumentpakke/ igjennom "Dokumentpakkefingeravtrykk":../begrep/Dokumentpakkefingeravtrykk
+og informasjon om behandlingsregler som "Postkasseleverandør":../Aktorer skal bruke for å tilgjengeliggjøre posten.
+
+"Postkasseleverandør":../Aktorer garanterer for at denne meldingen vil bli levert til "Mottaker":../begrep/Mottaker igjennom å sende en "LeveringsKvittering":LeveringsKvittering til "Sender":../forretningslag/Sender.
+
+
+h3. Attributer
+
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
+| "Avsender":../begrep/Avsender | 1..1 | "sdp:Avsender":../begrep/Avsender |
+| "Mottaker":../begrep/Mottaker | 1..1 | "sdp:Mottaker":../begrep/Mottaker |
+| "Dokumentpakkefingeravtrykk":../begrep/Dokumentpakkefingeravtrykk | 1..1 | "sdp:Dokumentpakkefingeravtrykk":../begrep/Dokumentpakkefingeravtrykk |
+| "FysiskpostInfo":../begrep/FysiskPostInfo | 0..1 | "sdp:FysiskpostInfo":../begrep/FysiskPostInfo  |
+| "DigitalpostInfo":../begrep/DigitalPostInfo | 0..1 | "sdp:DigitalpostInfo":../begrep/DigitalPostInfo  |

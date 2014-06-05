@@ -1,8 +1,11 @@
 ---
-layout: default
+layout: egenskap
 title: DigitalpostInfo
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost
+group: complexType
+
+name: DigitalpostInfo
+prev: Begreper
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

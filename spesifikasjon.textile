@@ -7,7 +7,6 @@ headtitle: Sikker digital post
 h2. Innledning
 
 Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Sikker Digital Post":http://www.difi.no/digital-forvaltning/felles-it-losninger-fra-difi/sikker-post.
-
 Katalogen inneholder følgende:
 
 table(table table-striped).

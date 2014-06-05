@@ -1,37 +1,42 @@
 ---
-layout: default
-title: EpostVarsel
+layout: egenskap
+title: SmsVarsel
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Melding
+group: complexType
+
+name: SmsVarsel
+prev: Begreper
+
 ---
 
 - Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Informasjon om hvordan man skal varsle sluttbruker på epost
+- Definisjon := Informasjon om hvordan man skal varsle sluttbruker på sms
 - Datatype := complexType
 - Kjelde := DIFI
-- Kommentar := Beskriver når det skal sendes epostvarsel fra postkassen etter at posten er tilgjengeliggjort.
+- Kommentar := Beskriver når det skal sendes sms varsel fra postkassen etter at posten er tilgjengeliggjort.
+Denne tjenesten vil medføre kostnader for Avsender.
 
 h4. Eigenskapar
 
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "epostadresse":/Felles/epostadresse | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "mobiltelefonnummer":/Felles/mobiltelefonnummer | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | "varslingsTekst":/Felles/varslingsTekst | 1..1 | "varslingsTekst":/Felles/varslingsTekst |
-|"repetisjoner":Repetisjoner | 1..1 | "sdp:Repetisjoner":Repetisjoner |
+| "Repetisjoner":Repetisjoner | 1..1 | "sdp:Repetisjoner":Repetisjoner |
 
 
 h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
-    <epostVarsel>
-	  <epostadresse>01012295312_test@minid.difi.no</epostadresse>
+    <smsVarsel>
+	  <mobiltelefonnummer>12121212</mobiltelefonnummer>
       <varslingsTekst lang="no">Viktig melding fra Staten</varslingsTekst>
       <repetisjoner>
         <dagerEtter>0</dagerEtter>
         <dagerEtter>7</dagerEtter>
       </repetisjoner>
-    </epostVarsel>
+    </smsVarsel>
 
  </pre>
 

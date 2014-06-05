@@ -1,8 +1,11 @@
 ---
-layout: default
+layout: egenskap
 title: Mottaker
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Melding
+group: complexType
+
+name: Mottaker
+prev: Begreper
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

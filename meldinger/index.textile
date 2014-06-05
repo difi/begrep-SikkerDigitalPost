@@ -1,8 +1,61 @@
 ---
 layout: default
-title: Placeholder
+title: Forretningsmeldinger i Sikker Digital Post
 headtitle: Sikker digital post
+
+name: Forretningsmeldinger
+
+children:
+ - name: Digitalpost
+ - name: Leveringskvittering
+ - name: Åpningskvittering
+ - name: Varslingfeiletkvittering
+ - name: Feil
+
+next: Digitalpost
+prev: sdp
 
 ---
 
-h2. Content to come
+h2. Forretningsmeldingene i Sikker Digital Post
+
+h3. Klassediagram
+
+Meldingen er en av følgende typer beskrevet i diagrammet under.
+
+!{width:40%;display: block;margin-left: auto;margin-right: auto;}meldingene.jpg!:meldingene.jpg
+
+
+h3. Meldingstypene
+
+Meldingstypen er definert i "DocumentIdentification":../DocumentIdentification og er en av følgende: 
+
+table(table table-striped).
+|_. Type |_. Beskrivelse |
+| "Digitalpost":DigitalPostMelding | Forsendelse av digital post |
+| "LeveringsKvittering":LeveringsKvittering | Kvittering på at digital post er tilgjengeliggjort |
+| "ÅpningsKvittering":AapningsKvittering | Kvittering fra Innbygger for at digital post er åpnet |
+| "Varslingfeilet":VarslingfeiletKvittering | Kvittering for at en spesifisert varsling ikke har blitt sendt |
+| "Feil":FeilMelding | Generel feilkvittering |
+
+h3. Felles meldingsatributt
+
+Alle meldingene består av et felles attributt uavhengig av "meldingstypen":#meldingstypene.
+Resten av attributtene er definert i de enkelte "meldingstypene, se over":#meldingstypene.
+
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
+
+
+h3. krav til signaturen
+
+Det er satt følgende krav til signaturen av forretningsmeldingene:
+
+* Security Token være X509 sertifikater 
+* Sertifikatet som brukes skal være et virksomhetssertifikat
+* Sertifikat for validering av signatur skal inkluderes i Signatur elementet
+* Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. 
+* Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmlenc#sha256":http://www.w3.org/2001/04/xmlenc#sha256
+* Signature skal være en signatur av Meldingen og signatur av "StandardBusinessDocumentHeader":../StandardBusinessDocumentHeader.
+* BØR være signert av "Behandlingsansvarlig":../../Aktorer, men KAN signeres av "Databehandler":../../Aktorer.

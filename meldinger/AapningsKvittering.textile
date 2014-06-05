@@ -2,16 +2,21 @@
 layout: default
 title: ÅpningsKvittering
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost
+group: Melding
+
+name: Åpningskvittering
+
+next: Varslingfeiletkvittering
+prev: Forretningsmeldinger
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
 - Definisjon := En "KvitteringsMelding":KvitteringsMelding til Avsender om at Mottaker har åpnet forsendelsen i sin postkasse.
 - Kilde := DIFI
-- Kommentar := Åpningskvitteringer blir bare sendt dersom dette er bestilt av "Avsender":../Sender i "digital post meldingen":DigitalPostMelding ved å spesifisere dette i "digitalpostinfo":DigitalPostInfo.
+- Kommentar := Åpningskvitteringer blir bare sendt dersom dette er bestilt av "Avsender":../Sender i "digital post meldingen":DigitalPostMelding ved å spesifisere dette i "digitalpostinfo":../begrep/DigitalPostInfo.
 "Mottaker":Mottaker må aksepteres at det sendes en "ÅpningsKvittering":AapningsKvittering til "Avsender":../Sender for å få lest den digital posten. 
-Mangel på "ÅpningsKvittering":AapningsKvittering betyr at "Mottaker":Mottaker ikke har lest dokumentet.
+Mangel på "ÅpningsKvittering":AapningsKvittering betyr at "Mottaker":../begrep/Mottaker ikke har lest dokumentet.
 Bruk av "ÅpningsKvittering":AapningsKvittering er priset for "Avsender":../Sender.
 
 

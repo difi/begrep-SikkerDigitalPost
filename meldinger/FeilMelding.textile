@@ -2,12 +2,17 @@
 layout: default
 title: Feilmelding
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost
+group: Melding
+
+name: Feil
+
+next: Forretningsmeldinger
+prev: Forretningsmeldinger
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := En "Melding":index til "Avsender":Avsender om en forretningsfeil knyttet til innsendt Digital Post.
+- Definisjon := En "Melding":index til "Avsender":../begrep/Avsender om en forretningsfeil knyttet til innsendt Digital Post.
 - Kilde := DIFI
 
 

@@ -1,8 +1,12 @@
 ---
-layout: default
+layout: egenskap
 title: Repetisjoner
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Melding
+group: complexType
+
+name: Repetisjoner
+prev: Begreper
+
 ---
 
 - Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}

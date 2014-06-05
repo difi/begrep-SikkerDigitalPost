@@ -1,0 +1,25 @@
+---
+layout: default
+title: LeveringsKvittering
+headtitle: Begrepskatalog for Sikker digital post - 
+group: Melding
+
+name: Leveringskvittering
+
+next: Åpningskvittering
+prev: Forretningsmeldinger
+
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := En "Kvitteringsmelding":KvitteringsMelding fra "Postkassleverandør":../Aktorer til "Sender":../forretningslag/Sender om at posten vil leveres til "Mottaker":../begrep/Mottaker.
+- Kilde := DIFI
+- Kommentar := Denne kvitteringen kan "Behandlingsansvarlig":../Aktorer oppbevare som en garanti på at posten er levert til "Mottaker":../begrep/Mottaker. Kvitteringen sendes fra "Postkassleverandør":../Aktorer når posten forsendelsen er validert og de garanterer for at posten vil bli tilgjengeliggjort.
+Kvitteringen vil bli sendt så fort "Postkassleverandør":../Aktorer kan garantere dette, det vil si at "Leveringskvitteringen":LeveringsKvittering vil bli sendt før "virkningsdato":/Felles/virkningsdato 
+
+Det anbefales at "Behandlingsansvarlig":../Aktorer arkiverer denne kvitteringen som bevis på at "posten":DigitalPostMelding er levert til "Mottaker":../begrep/Mottaker.
+
+h3. Attributer
+
+se "Kvitteringsmelding":KvitteringsMelding

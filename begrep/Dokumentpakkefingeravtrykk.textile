@@ -1,8 +1,11 @@
 ---
-layout: default
+layout: egenskap
 title: Dokumentpakkefingeravtrykk
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Melding
+group: complexType
+
+name: Dokumentpakkefingeravtrykk
+prev: Begreper
 ---
 
 

@@ -1,8 +1,11 @@
 ---
-layout: default
+layout: egenskap
 title: OrderReference
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Melding
+group: complexType
+
+name: OrderReference
+prev: Begreper
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

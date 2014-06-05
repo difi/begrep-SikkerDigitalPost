@@ -1,8 +1,11 @@
 ---
-layout: default
+layout: egenskap
 title: Varsler
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Melding
+group: complexType
+
+name: Varsler
+prev: Begreper
 ---
 
 - Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
