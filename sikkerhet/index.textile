@@ -1,0 +1,8 @@
+---
+layout: default
+title: Placeholder
+headtitle: Sikker digital post
+
+---
+
+h2. Content to come

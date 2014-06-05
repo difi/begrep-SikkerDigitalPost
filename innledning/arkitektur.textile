@@ -1,0 +1,26 @@
+---
+layout: default
+title: Arkitektur
+headtitle: Sikker digital post
+
+name: arkitektur
+
+parent: innledning
+
+next: innledning
+prev: lagdeling
+
+---
+
+h2. {{ page.title }}
+
+Dette er en overodrnet beskrivelse av den underliggende virksomhetsarkitekturen for Sikker Digital Post. For mer informasjon bør man lese dokumentet "Arkitekturbeskrivelse for Sikker Digital Post":ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf.
+
+Figuren under viser en detaljering av posttjenesteaktørene, og flyten av informasjonsobjekter mellom aktørene. 
+
+!(img-responsive)arkitektur.png(Figuren viser en detaljering av posttjenesteaktørene, og flyten av informasjonsobjekter mellom aktørene)!
+
+Offentlige virksomheter (avsendere) henter kontaktinformasjon til innbygger via oppslagstjeneste for kontaktinformasjon. Oppslagstjenesten henter kontaktinformasjon fra kontakt- og reservasjonsregisteret. Innbygger er ansvarlig for at kontaktinformasjonen i registrene er oppdatert, og at de ikke legger inn skjermingsverdig kontaktinformasjon.
+
+Når avsender har hentet kontaktinformasjon til innbygger, adresseres postforsendelsen helt frem til innbygger. Dette kan gjøres enten som digital post som krypteres ende-til-ende og adresseres til innbyggers digitale postkasse, eller som post som krypteres til utskrift- og posttjenesten og adresseres til innbyggers postadresse. Begge typer post sendes til meldingsformidler for videre transport.
+

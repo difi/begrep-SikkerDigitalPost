@@ -2,30 +2,28 @@
 layout: default
 title: Sikker digital post 
 headtitle: Sikker digital post
+
+name: sdp
+next: innledning
+
 ---
 
-<div class="jumbotron">
-  <h1>Teknisk spesifikasjon</h1>
+h2. Sikker Digital Post
 
-  <p>Skal du implementere en integrasjon mot Sikker digital post?</p>
-  <p><a href="spesifikasjon.html" class="btn btn-primary btn-lg" role="button">Les mer her</a></p>
-</div>
+Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Sikker Digital Post":http://www.difi.no/digital-forvaltning/felles-it-losninger-fra-difi/sikker-post.
 
+Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":Aktorer, "Meldingsformidler":Aktorer og "Postkasselverandører":Aktorer.
 
+Dokumentasjonen skal hovedsakelig fungere som en implementasjonguide for integrasjon mellom avsendere og postkasseleverandører gjennom meldingsformidleren. 
+Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mellom partene, hvordan de skal bygges opp og definisjon av begreper.
 
-<div class="jumbotron">
-  <h1>Hva er Sikker digital post?</h1>
-  <p>Dersom du ønsker en introduksjon til sikker digital post før du kaster deg over den tekniske spesifikasjonen.</p>
-  <p><a href="EksepederePost" class="btn btn-primary btn-lg" role="button">Les mer om det å ekspedere post i sikker digital posttjeneste</a></p>
- 
- <h1>Hvordan kommer jeg igang?</h1>
-  <p>Planlegger du å ta i bruk Sikker digital post så kom igang i dag.</p>
-  <p><a href="https://samarbeid.difi.no/sikker-digital-post" class="btn btn-primary btn-lg" role="button">Les mer på samarbeidsportalen</a></p>
-</div>
+Katalogen er bygd opp av følgende kapitler:
 
-<div class="jumbotron">
-  <h1>Fortsatt spørsmål?</h1>
-
-  <p>Send oss en e-post da vel!</p>
-  <p><a href="mailto:idporten@difi.no" class="btn btn-primary btn-lg" role="button">ID-porten Forvaltning</a></p>
-</div>
+table(table table-striped).
+| "Innledning":innledning/ | Mer om sikker digital post og oppbyggingen av spesifikasjonen |
+| "Forretningslag":forretningslag/ | Aktører, prosesser og overordnet meldingsstruktur/format |
+| "Transportlag":transportlag/ | Rammeverk for overføring av meldinger |
+| "Forretningsmeldinger":meldinger/ | Detaljering av forretningsmeldinger |
+| "Feilhåndtering":feilhandtering/ | Generelt om feilhåndtering|
+| "Sikkerhet":sikkerhet/ | Overordnet om sikkerhet |
+| "Begreper":begrep/ | Begreper benyttet i Sikker Digital Post |

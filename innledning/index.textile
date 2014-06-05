@@ -1,0 +1,29 @@
+---
+layout: default
+title: Innledning
+headtitle: Sikker digital post
+
+name: innledning
+
+children:
+ - name: arkitektur
+ - name: organisering
+
+next: arkitektur
+prev: sdp
+
+---
+
+h2. {{ page.title }}
+
+Sikker digital posttjeneste er en felles løsning for offentlige virksomheter for å sende brev digitalt til innbyggere. 
+Løsningen består av fem sentral komponenter (aktører) foruten avsendere (Offentlige virksomheter) og mottakere (Innbyggere). Disse aktørene er:
+
+* *Oppslagstjeneste for kontaktinformasjon:* Offentlig virksomheters (avsenders) grensesnitt mot kontakt- og reservasjonsregisteret.
+* *Kontakt- og reservasjonsregistre:* Register for innbyggernes digitale kontaktinformasjon og reservasjonsstatus. Offentlig virksomhet har tilgang via Oppslagstjeneste for kontaktinformasjon.
+* *Meldingsformidler*: Offentlig virksomheters grensesnitt mot posttjenesten og som har ansvaret for å formidle post til innbygger, enten som digitale brev til innbyggers selvvalgte digitale postkasse, eller som papirbrev til innbyggers postadresse.
+* *Digital postkasse*: Innbyggernes grensesnitt mot posttjenesten og som har ansvaret for å gjøre tilgjengelig og oppbevare innbyggers digitale brev fra det offentlige.
+* *Utskrift- og posttjeneste*:  Ivaretar sikker digital posttjeneste som en totalleverandør for post til innbygger fra det offentlige, ved å sende papirbrev til innbygger som ikke kan eller ønsker å motta digitale brev.
+
+
+
