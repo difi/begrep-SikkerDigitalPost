@@ -36,6 +36,6 @@ h3. Attributter
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |_. Kommentar |
 | "StandardBusinessDocumentHeader":StandardBusinessDocumentHeader | 1..1 | sh:StandardBusinessDocument | Informasjon for å formidle postforsendelsen |
-| "Melding":Melding/ | 0..1 | "Melding":Melding/ | Forretningsmelding identifisert i "DocumentIdentification":DocumentIdentification |
+| "Melding":../../meldinger/ | 0..1 | "Melding":../../meldinger/ | Forretningsmelding identifisert i "DocumentIdentification":DocumentIdentification |
 
 
