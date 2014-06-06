@@ -4,11 +4,13 @@ title: VarslingfeiletKvittering
 headtitle: Begrepskatalog for Sikker digital post - 
 group: Melding
 
-name: Varslingfeiletkvittering
+id: Varslingfeiletkvittering
 
 next: Feil
 prev: Forretningsmeldinger
 ---
+
+h3. {{page.title}}
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}

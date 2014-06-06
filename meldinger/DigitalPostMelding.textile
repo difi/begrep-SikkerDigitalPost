@@ -4,12 +4,14 @@ title: DigitalpostMelding
 headtitle: Begrepskatalog for Sikker digital post - 
 group: Melding
 
-name: Digitalpostmelding
+id: Digitalpostmelding
 
 next: Leveringskvittering
 prev: Forretningsmeldinger
 
 ---
+
+h3. {{page.title}}
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}

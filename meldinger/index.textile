@@ -3,14 +3,14 @@ layout: default
 title: Forretningsmeldinger i Sikker Digital Post
 headtitle: Sikker digital post
 
-name: Forretningsmeldinger
+id: Forretningsmeldinger
 
 children:
- - name: Digitalpost
- - name: Leveringskvittering
- - name: Åpningskvittering
- - name: Varslingfeiletkvittering
- - name: Feil
+ - id: Digitalpost
+ - id: Leveringskvittering
+ - id: Åpningskvittering
+ - id: Varslingfeiletkvittering
+ - id: Feil
 
 next: Digitalpost
 prev: sdp
