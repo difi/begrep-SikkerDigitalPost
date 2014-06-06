@@ -3,7 +3,7 @@ layout: default
 title: Sikker digital post 
 headtitle: Sikker digital post
 
-name: sdp
+id: sdp
 next: innledning
 
 ---
