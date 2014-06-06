@@ -5,8 +5,7 @@ headtitle: Sikker digital post
 
 id: innledning
 
-next: arkitektur
-prev: sdp
+next: inndeling
 
 ---
 

@@ -1,0 +1,14 @@
+---
+layout: default
+title: Inndeling
+headtitle: Sikker digital post
+
+id: inndeling
+
+next: Forretninglag
+
+---
+
+h2. Inndeling
+
+Kort om inndeling av dokumentasjonen
