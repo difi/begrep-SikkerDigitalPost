@@ -3,10 +3,9 @@ layout: default
 title: Innledning
 headtitle: Sikker digital post
 
-name: innledning
+id: innledning
 
-
-next: sdp
+next: arkitektur
 prev: sdp
 
 ---
