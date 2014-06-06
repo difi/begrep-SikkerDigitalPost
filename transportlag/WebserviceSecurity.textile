@@ -2,17 +2,25 @@
 layout: default
 title: WebserviceSecurity
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Melding
+group: transportlag
+
+id: WebserviceSecurity
+
+next: transportlag
+prev: SignalMessage
+
 ---
 
 h2. {{page.title}}
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Informasjonsbærer i SOAP-meldinger for å gi melding integritet og konfidensialit
+- Definisjon := Informasjonsbærer i SOAP-meldinger for å gi melding integritet
 - Datatype := Soap header
 - Kjelde := "OASIS":https://www.oasis-open.org/committees/download.php/21255/wss-v1.1-spec-errata-os-SOAPMessageSecurity.pdf
 - Kommentar := Informasjonsbærer brukt for å sikre integritet i meldingen fra punkt til punkt.
+
+Det er kun implementert signering av SOAP meldingene, ikke kryptering.
 
 h3. Eigenskapar
 

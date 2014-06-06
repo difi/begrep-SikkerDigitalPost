@@ -1,7 +1,14 @@
 ---
 layout: default
 title: Messaging
-headtitle: Sikker digital post - Standard Business Document
+headtitle: Sikker digital post - Messaging
+group: transportlag
+
+id: Messaging
+
+next: UserMessage
+prev: KvitteringsForespoersel
+
 ---
 
 h2. {{page.title}}

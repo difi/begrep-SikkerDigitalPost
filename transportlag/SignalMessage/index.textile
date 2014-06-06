@@ -1,7 +1,14 @@
 ---
 layout: default
 title: SignalMessage
-headtitle: Sikker digital post - Standard Business Document
+headtitle: Sikker digital post - SignalMessage
+group: transportlag
+
+id: SignalMessage
+
+next: PullRequest
+prev: UserMessage
+
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:"/index.html" }}":{{page.url  | remove:"/index.html"}}

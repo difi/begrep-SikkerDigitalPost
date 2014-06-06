@@ -1,8 +1,39 @@
 ---
 layout: default
-title: Placeholder
+title: Transportlag
 headtitle: Sikker digital post
+
+group: transportlag
+
+id: transportlag
+
+next: Meldingsidentifikatorer
+prev: forretningslag
+
+children:
+ - id: Meldingsidentifikatorer
+ - id: Meldingsutveksling 
+ - id: transportmeldingsstruktur
+ - id: FormidleDigitalPostForsendelse
+ - id: KvitteringsForespoersel
+ - id: Messaging
+ - id: UserMessage
+ - id: SignalMessage
+ - id: WebserviceSecurity
 
 ---
 
-h2. Content to come
+
+Transportlaget er bygd opp av følgende kapitler:
+
+table(table table-striped).
+| "Meldingsidentifikatorer":Meldingsidentifikatorer | Identifikatorer for transport av meldinger |
+| "Meldingsutveksling":Meldingsutveksling/ | Beskrivelse av den tekniske meldingsutvekslingen |
+| "Meldingsformat":Meldingsformat | Meldingsformatet på de tekniske meldingene som sendes  |
+| "ebMS pmode: Formidle digital post":Meldingsutveksling/FormidleDigitalPostForsendelse | ebMS pmodes for formidling av Digital Post |
+| "ebMS pmode: Kvitteringsforespørsel":Meldingsutveksling/KvitteringsForespoersel | ebMS pmodes for henting av kvitteringer |
+| "eb:Messaging":Messaging | beskrivelse av ebMS Messaging headeren |
+| "eb:Usermessage":UserMessage/ | ebMS UserMessage brukt for transport av forretningsmeldinger |
+| "eb:SignalMessage":SignalMessage/ | ebMS Signalmessage brukt for henting av kvitteringer og signalering av feil |
+| "Webservice security header":WebserviceSecurity | Beskrivelse av kravene til Webservice security instillingene |
+

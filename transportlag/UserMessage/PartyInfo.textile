@@ -2,7 +2,13 @@
 layout: default
 title: PartInfo
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Melding
+group: transportlag
+
+id: PartInfo
+
+next: CollabortationInfo
+prev: MessageInfo
+
 ---
 
 h2. {{page.title}}

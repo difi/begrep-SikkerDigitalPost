@@ -3,6 +3,13 @@ layout: default
 title: Error
 headtitle: Begrepskatalog for Sikker digital post - 
 group: SikkerDigitalPost/Melding
+group: transportlag
+
+id: Error
+
+next: SignalMessage
+prev: Receipt
+
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

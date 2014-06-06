@@ -1,19 +1,27 @@
 ---
 layout: default
 title: UserMessage
-headtitle: Sikker digital post - Standard Business Document
+headtitle: Sikker digital post - UserMessage
+group: transportlag
+
+id: UserMessage
+
+next: mpc
+prev: transportmeldingsstruktur
+
 ---
 
 h2. {{page.title}}
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:"/index.html" }}":{{page.url}}
 - Term := {{page.title}}
-- Definisjon := ebMS 3.0 relaterte metadata om en forretningmelding
+- Definisjon := ebMS 3.0 relaterte metadata om en transporten av forretningsmeldingen
 - Kilde := "ebMS 3.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html
 
 h3. eb:Messaging
 
-UserMessage blir brukt når innholdet i SOAP-meldingen er en forretningsmelding. I sikker digial post er type forretningsmelding definert i "meldingen":../Melding. eb:UserMessage skal bygges opp ved å tolke innholdet i meldingen som skal formidles, samt settinger angitt i "P-Modes":../Meldingsutveksling
+UserMessage blir brukt når innholdet i SOAP-meldingen er en forretningsmelding. I sikker digial post er type forretningsmelding definert i "meldingen":../../meldinger. 
+eb:UserMessage skal bygges opp ved å tolke innholdet i meldingen som skal formidles, samt settinger angitt i "P-Modes":../Meldingsutveksling/
 
 h3. Attributter
 
@@ -27,4 +35,4 @@ table(table table-striped).
 
 h3. Eksempel
 
-* "SOAP forretningsmelding fra avsender til meldingsformidler":../eksempler/soap/1_request_forretningsmelding_fra_postavsender_til_meldingsformidler.xml
+* "SOAP forretningsmelding fra avsender til meldingsformidler":../../eksempler/soap/1_request_forretningsmelding_fra_postavsender_til_meldingsformidler.xml

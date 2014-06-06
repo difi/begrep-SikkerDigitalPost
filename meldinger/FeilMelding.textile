@@ -17,6 +17,10 @@ h3. {{page.title}}
 - Definisjon := En "Melding":index til "Avsender":../begrep/Avsender om en forretningsfeil knyttet til innsendt Digital Post.
 - Kilde := DIFI
 
+h3. Beskrivelse
+
+Denne meldingen beskriver de forretningsfeil som oppstår i forretningsprosessen mellom Behandlingsansvarlig og Postkasseleverandør.
+
 
 h3. Attributer
 

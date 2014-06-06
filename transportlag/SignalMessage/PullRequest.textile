@@ -2,7 +2,13 @@
 layout: default
 title: PullRequest
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost/Melding
+group: transportlag
+
+id: PullRequest
+
+next: Receipt
+prev: SignalMessage
+
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

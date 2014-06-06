@@ -2,7 +2,13 @@
 layout: default
 title: Message Partition Channel (mpc)
 headtitle: Begrepskatalog for Sikker digital post - 
-group: SikkerDigitalPost
+group: transportlag
+
+id: mpc
+
+next: MessageInfo
+prev: UserMessage
+
 ---
 
 h2. {{page.title}}

@@ -2,6 +2,12 @@
 layout: default
 title: Meldingsformat
 headtitle: Sikker digital post - Begreper
+group: transportlag
+
+id: transportmeldingsstruktur
+
+next: transportlag
+
 ---
 
 h2. Meldingsformat
