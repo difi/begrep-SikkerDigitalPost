@@ -4,7 +4,7 @@ title: DigitalpostMelding
 headtitle: Begrepskatalog for Sikker digital post - 
 group: Melding
 
-id: Digitalpostmelding
+id: Digitalpost
 
 next: Leveringskvittering
 prev: Forretningsmeldinger

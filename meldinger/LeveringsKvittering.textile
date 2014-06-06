@@ -7,7 +7,7 @@ group: Melding
 id: Leveringskvittering
 
 next: Åpningskvittering
-prev: Forretningsmeldinger
+prev: Digitalpost
 
 ---
 

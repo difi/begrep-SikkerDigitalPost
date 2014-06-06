@@ -19,6 +19,8 @@ h3. {{page.title}}
 - Kommentar := Avtalen om varsling/påminnelse er satt igjennom "Digitalpostmelding":DigitalPostMelding. Varslingene som er bestilt vil utføres av Postkasseleverandør så lenge Innbygger ikke allerede har gjort seg kjent med posten. 
 Innbygger gjør seg kjent med posten ved å logge seg på postkasseløsningen og se at det har kommet ny post. 
 Dersom Postkasseleverandør opplever problemer med å utføre varslingen som avtalt vil Postkasseleverandør sende Varslingfeiletkvittering. 
+
+
 Årsaken til at postkasseleverandør ikke klarer å sende en slik melding kan være en av følgende:
 
 * Kontaktinformasjonen oppgitt er ikke på riktig format
