@@ -26,9 +26,11 @@ Bruk av "ÅpningsKvittering":AapningsKvittering er priset for "Avsender":../Send
 
 h3. Anbefalt bruk
 
-Åpningskvittering er en funksjonalitet som forventes brukt av Avsendere kun etter en grundig og dokumentert vurdering.
-Funksjonaliteten vil kunne oppleves som påtrengende for Innbygger da man ikke får tilgang til å lese den posten man har mottatt uten å sende godta at kvitteringen blir sendt.
-Dersom Avsender vurdere å bruke denne funksjonaliteten kan man gjerne ta kontakt med Sentralforvalter for mer informasjon.
+Åpningskvittering er en funksjonalitet som brukes av Avsendere kun etter en grundig og dokumentert vurdering.
+Funksjonaliteten vil kunne oppleves som påtrengende for Innbygger da man ikke får tilgang til å lese den posten man har mottatt uten å godta at kvitteringen blir sendt.
+Dersom Avsender vurdere å bruke denne funksjonaliteten kan man ta kontakt med Sentralforvalter for mer informasjon.
+
+
 
 
 
