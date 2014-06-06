@@ -4,10 +4,10 @@ title: Forretningsmeldingsstruktur
 headtitle: Sikker digital post - Begreper
 group: forretningslag
 
-name: Forretningsmeldingsstruktur
+id: Forretningsmeldingsstruktur
 
 next: Forretninglag
-prev: Tilstand
+
 ---
 
 h2. Forretningsmeldingsformat

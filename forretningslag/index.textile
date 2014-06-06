@@ -4,9 +4,9 @@ title: Forretninglag
 headtitle: Sikker digital post
 group: forretningslag
 
-name: Forretninglag
+id: Forretninglag
 
-prev: sdp
+next: Aktører
 
 children:
  - name: Aktører

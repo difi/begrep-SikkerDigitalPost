@@ -4,10 +4,9 @@ title: Forretningsprosess for Sikker digital post
 headtitle: Sikker digital post
 group: forretningslag
 
-name: Forretningsprosess
+id: Forretningsprosess
 
 next: Tilstand
-prev: Aktører
 
 ---
 
