@@ -17,7 +17,18 @@ prev: Forretningsmeldinger
 - Kommentar := Åpningskvitteringer blir bare sendt dersom dette er bestilt av "Avsender":../Sender i "digital post meldingen":DigitalPostMelding ved å spesifisere dette i "digitalpostinfo":../begrep/DigitalPostInfo.
 "Mottaker":Mottaker må aksepteres at det sendes en "ÅpningsKvittering":AapningsKvittering til "Avsender":../Sender for å få lest den digital posten. 
 Mangel på "ÅpningsKvittering":AapningsKvittering betyr at "Mottaker":../begrep/Mottaker ikke har lest dokumentet.
+
 Bruk av "ÅpningsKvittering":AapningsKvittering er priset for "Avsender":../Sender.
+
+Åpningskvittering vil være påkrevd helt frem til Innbygger har akseptert at kvitteringen sendes til Avsender. Det vil si at Åpningskvittering kan komme lang tid etter at "digital post meldingen":DigitalPostMelding blir sendt.
+
+h3. Anbefalt bruk
+
+Åpningskvittering er en funksjonalitet som forventes brukt av Avsendere kun etter en grundig og dokumentert vurdering.
+Funksjonaliteten vil kunne oppleves som påtrengende for Innbygger da man ikke får tilgang til å lese den posten man har mottatt uten å sende godta at kvitteringen blir sendt.
+Dersom Avsender vurdere å bruke denne funksjonaliteten kan man gjerne ta kontakt med Sentralforvalter for mer informasjon.
+
+
 
 
 h3. Attributer

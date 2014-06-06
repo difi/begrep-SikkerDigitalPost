@@ -18,6 +18,7 @@ prev: Forretningsmeldinger
 Innbygger gjør seg kjent med posten ved å logge seg på postkasseløsningen og se at det har kommet ny post. 
 Dersom Postkasseleverandør opplever problemer med å utføre varslingen som avtalt vil Postkasseleverandør sende Varslingfeiletkvittering. 
 Årsaken til at postkasseleverandør ikke klarer å sende en slik melding kan være en av følgende:
+
 * Kontaktinformasjonen oppgitt er ikke på riktig format
 * e-post serveren, sms-gateway eller mobiloperatør er ikke tilgjengelig ved sendingstidspunktet slik at varslet ikke ble sendt vellykket
 * Innbygger mottok ikke e-post varselet eller sms-meldingen og feilmelding om dette ble gitt til Postkasseleverandør.
