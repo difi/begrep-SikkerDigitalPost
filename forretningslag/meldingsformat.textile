@@ -4,9 +4,9 @@ title: Forretningsmeldingsstruktur
 headtitle: Sikker digital post - Begreper
 group: forretningslag
 
-id: Forretningsmeldingsstruktur
+id: Forretningslag/Forretningsmeldingsstruktur
 
-next: Forretninglag
+next: Forretningslag/StandardBusinessDocument
 
 ---
 

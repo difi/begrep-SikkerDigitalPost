@@ -4,10 +4,9 @@ title: Dokumentpakke (ASiC)
 headtitle: Sikker digital post - ASiC
 group: forretningslag
 
-name: Dokumentpakke
+id: Forretningslag/Dokumentpakke
+next: Forretningslag/Manifest
 
-next: Manifest
-prev: BusinessScope
 ---
 
 h2. Introduksjon

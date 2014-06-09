@@ -4,10 +4,9 @@ title: DocumentIdentification
 headtitle: Begrepskatalog for Sikker digital post - 
 group: forretningslag
 
-name: DocumentIdentification
+id: Forretningslag/DocumentIdentification
+next: Forretningslag/BusinessScope
 
-next: BusinessScope
-prev: Receiver
 ---
 
 h2. {{ page.title }}

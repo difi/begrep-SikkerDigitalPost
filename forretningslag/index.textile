@@ -4,27 +4,27 @@ title: Forretninglag
 headtitle: Sikker digital post
 group: forretningslag
 
-id: Forretninglag
+id: Forretningslag
 
-next: Aktører
+next: Forretningslag/Aktører
 
 children:
- - name: Aktører
- - name: Forretningsprosess
- - name: Tilstand
- - name: Forretningsmeldingsstruktur
- - name: StandardBusinessDocument
- - name: StandardBusinessDocumentHeader
- - name: Sender
- - name: Receiver
- - name: DocumentIdentification
- - name: BusinessScope
- - name: Dokumentpakke
- - name: Manifest
- - name: Dokumentformat
- - name: HTML dokument
- - name: Sikkerhet
- - name: Dokumentpakke sikkerhet
+ - name: Forretningslag/Aktører
+ - name: Forretningslag/Forretningsprosess
+ - name: Forretningslag/Tilstand
+ - name: Forretningslag/Forretningsmeldingsstruktur
+ - name: Forretningslag/StandardBusinessDocument
+ - name: Forretningslag/StandardBusinessDocumentHeader
+ - name: Forretningslag/Sender
+ - name: Forretningslag/Receiver
+ - name: Forretningslag/DocumentIdentification
+ - name: Forretningslag/BusinessScope
+ - name: Forretningslag/Dokumentpakke
+ - name: Forretningslag/Manifest
+ - name: Forretningslag/Dokumentformater
+ - name: Forretningslag/HTML dokument
+ - name: Forretningslag/Sikkerhet
+ - name: Forretningslag/Dokumentpakke sikkerhet
 
 ---
 

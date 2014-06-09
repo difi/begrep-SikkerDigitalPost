@@ -4,10 +4,9 @@ title: FormidleDigitalPostForsendelse
 headtitle: Sikker digital post
 group: transportlag
 
-id: FormidleDigitalPostForsendelse
+id: Transportlag/Meldingsutveksling/FormidleDigitalPostForsendelse
 
-next: KvitteringsForespoersel
-prev: Meldingsutveksling
+next: Transportlag/Meldingsutveksling/KvitteringsForespoersel
 
 ---
 

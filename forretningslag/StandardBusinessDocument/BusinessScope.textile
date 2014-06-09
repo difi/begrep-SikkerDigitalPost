@@ -4,10 +4,9 @@ title: BusinessScope
 headtitle: Begrepskatalog for Sikker digital post - 
 group: forretningslag
 
-name: BusinessScope
+id: Forretningslag/BusinessScope
+next: Forretningslag/Dokumentpakke
 
-next: Dokumentpakke
-prev: DocumentIdentification
 ---
 
 h2. {{ page.title }}

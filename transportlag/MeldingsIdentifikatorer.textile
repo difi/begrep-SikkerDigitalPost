@@ -4,10 +4,9 @@ title: Meldingsidentifikatorer
 headtitle: Sikker digital post - Standard Business Document Header
 group: transportlag
 
-id: Meldingsidentifikatorer
+id: Transportlag/Meldingsidentifikatorer
 
-next: transportmeldingsstruktur
-prev: transportlag
+next: Transportlag/Meldingsutveksling
 
 ---
 

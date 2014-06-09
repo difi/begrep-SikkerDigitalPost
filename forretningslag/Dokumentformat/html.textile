@@ -4,10 +4,10 @@ title: HTML dokument
 headtitle: Begrepskatalog for Sikker digital post - 
 group: forretningslag
 
-name: HTML dokument
+id: Forretningslag/HTML dokument
 
-next: Sikkerhet
-prev: Dokumentformater
+next: Forretningslag/Sikkerhet
+
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

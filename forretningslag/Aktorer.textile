@@ -4,9 +4,9 @@ title: Aktører og Roller
 headtitle: Sikker digital post - Aktører og Identifikatorer
 group: forretningslag
 
-id: Aktører
+id: Forretningslag/Aktører
 
-next: Forretningsprosess
+next: Forretningslag/Forretningsprosess
 
 ---
 

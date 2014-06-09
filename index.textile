@@ -4,8 +4,17 @@ title: Sikker digital post
 headtitle: Sikker digital post
 
 id: sdp
-next: innledning
+next: Innledning
 
+children:
+ - name: Innledning
+ - name: Forretningslag
+ - name: Transportlag
+ - name: Forretningsmeldinger
+ - name: Feilhandtering
+ - name: Sikkerhet
+ - name: Begreper
+ 
 ---
 
 h2. Sikker Digital Post

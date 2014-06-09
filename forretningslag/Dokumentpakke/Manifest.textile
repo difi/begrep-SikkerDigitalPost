@@ -4,10 +4,10 @@ title: Manifest
 headtitle: Begrepskatalog for Sikker digital post - 
 group: forretningslag
 
-name: Manifest
+id: Forretningslag/Manifest
 
-next: Dokumentformater
-prev: Dokumentpakke
+next: Forretningslag/Dokumentformater
+
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

@@ -5,24 +5,22 @@ headtitle: Sikker digital post
 
 group: transportlag
 
-id: transportlag
+id: Transportlag
 
-next: Meldingsidentifikatorer
-prev: forretningslag
+next: Transportlag/Meldingsidentifikatorer
 
 children:
- - id: Meldingsidentifikatorer
- - id: Meldingsutveksling 
- - id: transportmeldingsstruktur
- - id: FormidleDigitalPostForsendelse
- - id: KvitteringsForespoersel
- - id: Messaging
- - id: UserMessage
- - id: SignalMessage
- - id: WebserviceSecurity
+ - name: Transportlag/Meldingsidentifikatorer
+ - name: Transportlag/Meldingsutveksling 
+ - name: Transportlag/Meldingsutveksling/FormidleDigitalPostForsendelse
+ - name: Transportlag/Meldingsutveksling/KvitteringsForesporsel
+ - name: Transportlag/Transportmeldingsstruktur
+ - name: Transportlag/Messaging
+ - name: Transportlag/UserMessage
+ - name: Transportlag/SignalMessage
+ - name: Transportlag/WebserviceSecurity
 
 ---
-
 
 Transportlaget er bygd opp av følgende kapitler:
 

@@ -4,10 +4,10 @@ title: Receiver
 headtitle: Sikker digital post - Standard Business Document
 group: forretningslag
 
-name: Receiver
+id: Forretningslag/Receiver
 
-next: DocumentIdentification
-prev: Sender
+next: Forretningslag/DocumentIdentification
+
 ---
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}

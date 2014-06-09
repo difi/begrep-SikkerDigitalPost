@@ -4,10 +4,9 @@ title: Dokumentformater
 headtitle: Sikker digital post
 group: forretningslag
 
-name: Dokumentformater
+id: Forretningslag/Dokumentformater
 
-next: HTML dokument
-prev: Manifest
+next: Forretningslag/HTML dokument
 ---
 
 h2. Innledning

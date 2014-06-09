@@ -4,7 +4,7 @@ title: Meldingsformat
 headtitle: Sikker digital post - Begreper
 group: transportlag
 
-id: transportmeldingsstruktur
+id: Transportlag/Transportmeldingsstruktur
 
 next: transportlag
 

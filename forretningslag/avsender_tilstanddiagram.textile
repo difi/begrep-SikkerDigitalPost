@@ -4,9 +4,9 @@ title: Tilstand for Sikker digital postforsendelse
 headtitle: Sikker digital post
 group: forretningslag
 
-id: Tilstand
+id: Forretningslag/Tilstand
 
-next: Forretningsmeldingsstruktur
+next: Forretningslag/Forretningsmeldingsstruktur
 
 ---
 

@@ -4,10 +4,9 @@ title: KvitteringsForespoersel
 headtitle: Sikker digital post
 group: transportlag
 
-id: KvitteringsForespoersel
+id: Transportlag/Meldingsutveksling/KvitteringsForespoersel
 
-next: transportlag
-prev: FormidleDigitalPostForsendelse
+next: Transportlag/Transportmeldingsstruktur
 
 ---
 h2. {{page.title}}

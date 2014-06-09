@@ -1,13 +1,12 @@
 ---
 layout: default
-title: StandardBusinessDocument
+title: Standard Business Document
 headtitle: Sikker digital post - Standard Business Document
 group: forretningslag
 
-name: StandardBusinessDocument
+id: Forretningslag/StandardBusinessDocument
 
-next: StandardBusinessDocumentHeader
-prev: Forretningsmeldingsstruktur
+next: Forretningslag/StandardBusinessDocumentHeader
 
 ---
 
