@@ -10,18 +10,17 @@ next: Forretningslag/Forretningsprosess
 
 ---
 
-h2. Aktører og roller
+h2. Aktører
 
-Tabellen under inneholder en oversikt over hovedaktørene/rollene i prosessen med å utveksle Sikker Digital Post:
+Tabellen under inneholder en oversikt over hovedaktørene i prosessen med å utveksle Sikker Digital Post:
 
 table(table table-striped).
 |_. Aktør |_. URN |_. Identifikator |_. Beskrivelse |
-|_. Behandlingsansvarlig | urn:sdp:behandlingsansvarlig | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Offentlig virksomhet som skal sende en post til en Mottaker. |
-|_. Databehandler  | urn:sdp:databehandler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Virksomhet (offentlig eller privat) som har en kontraktfestet avtale med Behandlingsansvarlig med formål å dekke hele eller deler av prosessen med å formidle en Sikker Digital Post fra Behandlingsansvarlig til Meldingsformidler. Det kan være felere databehandlere som har ansvar for forskjellige steg i prosessen med å formidle en Sikker Digital Post |
-|_. Meldingsformidler | urn:sdp:meldingsformidler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for formidling, sporing og rapportering av postforsendelser.  |
-|_. Postkasse | urn:sdp:postkasse | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for å tilgjengeliggjøre og oppbevare post til innbygger, samt å varsle innbygger når det er kommet ny post. |
-|_. Sentralforvalter | urn:sdp:sentralforvalter | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for forvaltning/kontroll av forholdet mellom behandlingsansvarlig, eventuelle databehandlere, meldingsformidler og postbokser |
-|_. Mottaker | urn:sdp:mottaker | "personidentifikator":/Felles/personidentifikator | Mottaker av postforsendelsen, en Innbygger | 
+| Offentlig virksomhet | urn:sdp:offentligvirksomhet | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Offentlig virksomhet eller annen virksomhet som en offentlig oppgave på vegne av en offentlig virksomhet |
+| Tilbyder av meldingsformidler | urn:sdp:forvalter-meldingsformidler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Virksomhet (offentlig eller privat) som tilbyr en meldingsformidlingstjeneste, enten direkte eller via underleverandør |
+| Tilbyder av postkassetjeneste | urn:sdp:forvalter-postkasse | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Virksomhet (offentlig eller privat) som tilbyr postkassetjenester, enten direkte eller via underleverandører |
+| Sentralforvalter | urn:sdp:sentralforvalter | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for forvaltning/kontroll av forholdet mellom offentlig virksomheter, mottaker og tilbydere av meldingsformidler/postkassetjeneste |
+| Mottaker | urn:sdp:mottaker | "personidentifikator":/Felles/personidentifikator | Mottaker av postforsendelsen, en Innbygger | 
 
 Begrepene *Ansvarlig enhet* og *Teknisk Avsender* har også blitt brukt:
 
@@ -30,3 +29,12 @@ Begrepene *Ansvarlig enhet* og *Teknisk Avsender* har også blitt brukt:
 Eksempel: Behandlingsansvarlig er Nav og Ansvarlig enhet er NAV Hjelpemiddelsentral Oslo og Akershus. 
 
 - *Teknisk Avsender* er blitt brukt som et begrep for en databehandler som leverer ebMS 3.0/MSH tjenester som en underleverandør til en databehandler. Dette begrepet er nå erstattet med mulighet for flere databehandlere.
+
+h2. Roller
+
+table(table table-striped).
+|_. Rolle |_. URN |_. Identifikator |_. Beskrivelse |
+| Behandlingsansvarlig | urn:sdp:behandlingsansvarlig | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Offentlig virksomhet som produserer informasjon/brev/post som skal fomidles |
+| Databehandler | urn:sdp:databehandler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Virksomhet (offentlig eller privat) som har en kontraktfestet avtale med Behandlingsansvarlig med formål å dekke hele eller deler av prosessen med å formidle en Sikker Digital Post fra Behandlingsansvarlig til Meldingsformidler. Det kan være felere databehandlere som har ansvar for forskjellige steg i prosessen med å formidle en Sikker Digital Post |
+| Meldingsformidler | urn:sdp:meldingsformidler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for formidling, sporing og rapportering av postforsendelser. |
+| Postkasse | urn:sdp:postkasse | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for å tilgjengeliggjøre og oppbevare post til mottaker, samt å varsle mottaker når det er kommet ny post. |
