@@ -1,23 +1,27 @@
 ---
 layout: default
-title: Forretningsmeldinger i Sikker Digital Post
+title: Forretningsmeldinger
 headtitle: Sikker digital post
 
 id: Forretningsmeldinger
 
 children:
- - id: Digitalpost
- - id: Leveringskvittering
- - id: Åpningskvittering
- - id: Varslingfeiletkvittering
- - id: Feil
+ - name: Forretningsmeldinger/Digitalpost
+ - name: Forretningsmeldinger/Leveringskvittering
+ - name: Forretningsmeldinger/Åpningskvittering
+ - name: Forretningsmeldinger/Varslingfeiletkvittering
+ - name: Forretningsmeldinger/Feil
 
-next: Digitalpost
-prev: sdp
+next: Forretningsmeldinger/Digitalpost
 
 ---
 
 h2. Forretningsmeldingene i Sikker Digital Post
+
+Alle meldinger er beskrevet i "Standard Business Document":../forretningslag/StandardBusinessDocument/. Denne klassen inneholder to klasser:
+ 
+* Det ene er "StandardBusinessDocumentHeader":../forretningslag/StandardBusinessDocument/StandardBusinessDocumentHeader som er felles for alle meldinger. 
+* Den andre er Meldingsklassen som enten er av typen Digitalpost, Feil eller Kvittering. Kvittering kan være av typen VarslingfeiletKvittering, Åpningskvittering eller LeveringsKvittering.
 
 h3. Klassediagram
 
@@ -28,7 +32,7 @@ Meldingen er en av følgende typer beskrevet i diagrammet under.
 
 h3. Meldingstypene
 
-Meldingstypen er definert i "DocumentIdentification":../DocumentIdentification og er en av følgende: 
+Meldingstypen er definert i "DocumentIdentification":../forretningslag/StandardBusinessDocument/DocumentIdentification og er en av følgende: 
 
 table(table table-striped).
 |_. Type |_. Beskrivelse |
@@ -40,8 +44,8 @@ table(table table-striped).
 
 h3. Felles meldingsatributt
 
-Alle meldingene består av et felles attributt uavhengig av "meldingstypen":#meldingstypene.
-Resten av attributtene er definert i de enkelte "meldingstypene, se over":#meldingstypene.
+Alle meldingene består av et felles attributt uavhengig av meldingstypen.
+Resten av attributtene er definert i de enkelte meldingstypene, se over.
 
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
@@ -57,5 +61,5 @@ Det er satt følgende krav til signaturen av forretningsmeldingene:
 * Sertifikat for validering av signatur skal inkluderes i Signatur elementet
 * Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. 
 * Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmlenc#sha256":http://www.w3.org/2001/04/xmlenc#sha256
-* Signature skal være en signatur av Meldingen og signatur av "StandardBusinessDocumentHeader":../StandardBusinessDocumentHeader.
-* BØR være signert av "Behandlingsansvarlig":../../Aktorer, men KAN signeres av "Databehandler":../../Aktorer.
+* Signature skal være en signatur av Meldingen og signatur av "StandardBusinessDocumentHeader":../forretningslag/StandardBusinessDocument/StandardBusinessDocumentHeader.
+* BØR være signert av "Behandlingsansvarlig":../forretningslag/Aktorer, men KAN signeres av "Databehandler":../forretningslag/Aktorer.

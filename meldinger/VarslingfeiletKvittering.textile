@@ -4,17 +4,16 @@ title: VarslingfeiletKvittering
 headtitle: Begrepskatalog for Sikker digital post - 
 group: Melding
 
-id: Varslingfeiletkvittering
+id: Forretningsmeldinger/Varslingfeiletkvittering
 
-next: Feil
-prev: Forretningsmeldinger
+next: Forretningsmeldinger/Feil
 ---
 
 h3. {{page.title}}
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := En "Kvitteringsmelding":Kvitteringsmelding til Avsender om at varsling til Mottaker ikke har blitt gjort i henhold til avtale.
+- Definisjon := En "Kvitteringsmelding":Kvitteringsmelding til Avsender om at varsling til Mottaker har feilet og dermed ikke har blitt utført som forutsatt.
 - Kilde := DIFI
 - Kommentar := Avtalen om varsling/påminnelse er satt igjennom "Digitalpostmelding":DigitalPostMelding. Varslingene som er bestilt vil utføres av Postkasseleverandør så lenge Innbygger ikke allerede har gjort seg kjent med posten. 
 Innbygger gjør seg kjent med posten ved å logge seg på postkasseløsningen og se at det har kommet ny post. Dette tilfredstiller kravene til varsling/påminnelse satt igjennom "eForvaltningsforskriften &sect;8a":http://lovdata.no/dokument/SF/forskrift/2004-06-25-988/KAPITTEL_2#%C2%A78
