@@ -29,12 +29,14 @@ children:
 
 ---
 
+h2. Forretningslag
 
 Forretningslaget er bygd opp av følgende kapitler:
 
 table(table table-striped).
 | "Aktører":Aktorer | Aktørene i sikker digital post |
-| "Forretningsprosess":forretningsprosess | Beskrivelse av flyten av forretningsmeldinger i Sikker digital post |
+| "Forretningsprosess":forretningsprosess | Prosess for sending av digital post |
+| "Forretningsprosess":forretningsprosess_kvittering | Prosess for henting av kvitteringer |
 | "Tilstand":avsender_tilstanddiagram | Tilstandsbeskrivelse for en Sikker digital post forsendelse sett fra Avsender |
 | "Forretningsmeldingsstruktur":meldingsformat | Detaljering av forretningsmeldinger |
 | "StandardBusinessDocument":StandardBusinessDocument/ | Forretningsmeldingen som sendes i Sikker digital post |

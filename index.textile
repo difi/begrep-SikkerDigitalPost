@@ -21,7 +21,7 @@ h2. Sikker Digital Post
 
 Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Sikker Digital Post":http://www.difi.no/digital-forvaltning/felles-it-losninger-fra-difi/sikker-post.
 
-Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":Aktorer, "Meldingsformidler":Aktorer og "Postkasselverandører":Aktorer.
+Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":forretningslag/Aktorer, "Meldingsformidler":forretningslag/Aktorer og "Postkasselverandører":forretningslag/Aktorer.
 
 Dokumentasjonen skal hovedsakelig fungere som en implementasjonguide for integrasjon mellom avsendere og postkasseleverandører gjennom meldingsformidleren. 
 Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mellom partene, hvordan de skal bygges opp og definisjon av begreper.
