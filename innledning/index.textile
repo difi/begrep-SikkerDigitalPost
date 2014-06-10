@@ -9,7 +9,7 @@ next: Innledning/Arkitektur
 
 children:
  - name: Innledning/Arkitektur
- - name: Innledning/Inndeling
+ - name: Innledning/Struktur
 
 ---
 

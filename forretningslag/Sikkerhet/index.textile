@@ -1,0 +1,13 @@
+---
+layout: default
+title: Sikkerhet
+headtitle: Sikker digital post
+group: forretningslag
+
+id: Forretningslag/Sikkerhet
+
+next: Forretningslag/Dokumentpakke sikkerhet
+
+---
+
+h2. Generelt om sikkerhet i forretningslaget
