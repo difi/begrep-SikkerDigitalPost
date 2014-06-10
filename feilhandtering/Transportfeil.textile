@@ -1,13 +1,20 @@
 ---
 layout: default
-title: Meldingsutveksling - Feilhåndtering
-headtitle: Sikker digital post
+title: Transportfeil
+headtitle: Sikker digital post - Transportfeil
+group: Feilhåndtering
+
+id: Feilhåndtering/Transportfeil
+
+next: Feilhåndtering/Eksempler
+
 ---
 
-h2. Feiltyper
+h2. {{page.title}}
 
 Feil som oppstår i meldingsutvekslingen er transportfeil og ikke forretningsfeil.
-Forretningsfeil sendes som egne "StandardBusinessDocument":StandardBusinessDocument/ og er ikke beskrivet videre her.
+Forretningsfeil sendes som egne "StandardBusinessDocument":../forretningslag/StandardBusinessDocument/ og er ikke beskrivet videre her.
+
 
 h3. Feil ved meldingsutveksling
 

@@ -1,0 +1,56 @@
+---
+layout: default
+title: Forretningsfeil
+headtitle: Sikker digital post - Forretningsfeil
+group: Feilhåndtering
+
+id: Feilhåndtering/Forretningsfeil
+
+next: Feilhåndtering/Transportfeil
+
+---
+
+h2. {{page.title}}
+
+Følgende forretningsfeil kan oppstå i Sikker Digital Post.
+
+
+table(table table-striped).
+|_. Feil |_. Beskrivelse |
+|_. Manglende mottakskvittering fra Meldingsformidler | eb:Reciept uteblir fra meldingsformidler. Meldingen er dermed ikke sendt. |
+|_. Manglende "Leveringskvittering":../meldinger/LeveringsKvittering  | Postkasseleverandør har ikke tilgjengeliggjort posten. |
+|_. Mottak av "Feilmelding":../meldinger/FeilMelding | Det har oppstått problemer med tilgjengeliggjøren av psoten og Postkasseleverandør har sendt en Feilmelding |
+|_. Mottak av "Varslingfeiletkvittering":../meldinger/VarslingfeiletKvittering | Postkasseleverandør har ikke varslet Innbygger som avtalt |
+
+
+h3. Manglende mottakskvittering fra Meldingsformidler
+
+Meldingsformidler vil verifisere format og innhold på "StandardBusinessDocumentHeader":../forretningslag/StandardBusinessDocument/StandardBusinessDocumentHeader ved mottak av en "DigitalPostMelding":../meldinger/DigitalPostMelding.
+Dette gjøres for å sikre at meldingen kan rutes videre til en postkasseleverandør og garantere for at forretningskvitteringer vil kunne bli returnert til Avsender.
+
+Ved feil i "StandardBusinessDocumentHeader":../forretningslag/StandardBusinessDocument/StandardBusinessDocumentHeader vil meldingsformidler returnere en "SignalMessage med Error":../transportlag/SignalMessage/.
+
+Denne metoden for feilhåndtering fra Meldingsformidler er valgt for å gi en rask, enkel og sikker feilhåndtering fra Meldingsformidler.
+Meldingsformidler returnerer ingen forretningskvitteringer, men operer nærmere transportlaget, dette er årsaken til at feil i adresseringsinformasjonen i "StandardBusinessDocumentHeader":../forretningslag/StandardBusinessDocument/StandardBusinessDocumentHeader vil resultere i en "SignalMessage med Error":../transportlag/SignalMessage/ og ikke en egen forretningsfeil som Avsender  må hente igjennom kvitteringsgrensesnittet.
+
+h3. Manglende Leveringskvittering
+
+Postkasseleverandør skal returnere en "Leveringskvittering":../LeveringsKvittering til Avsender.
+Dersom denne uteblir lengre enn forventet bør Avsender håndtere dette igjennom feilhåndteringsprosedyrer etablert med sentralforvalter.
+(Feilhåndteringsprosedyrene etableres som del bruksvilkår og er ikke ferdigstilt pt.)
+
+h4. Hvor lenge skal en Avsender vente på en Leveringskvittering?
+
+Dette avhengiger av hva Avsender har sendt. 
+Dersom Avsender sender en prioritert digital post skal en Leveringskvittering leveres i løpet av minutter, mens dersom en Avsender sender en normaal digital post kan det ta et par timer.
+Mer tydelige beskrivelser vil bli utarbeidet i forbindelse bruksvilkårene.
+
+h3. Mottak av Feilmelding
+
+Les mer om hvordan Avsender bør håndtere en "Feilmelding":../meldinger/FeilMelding.
+
+h3. Mottak av Varslingfeiletkvittering
+
+Les mer om hvordan Avsender bør håndtere en "Varslingfeiletkvittering":../meldinger/VarslingfeiletKvittering.
+
+
