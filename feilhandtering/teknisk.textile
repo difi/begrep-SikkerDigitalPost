@@ -1,23 +1,25 @@
 ---
 layout: default
-title: Teknisk beskrivelse av feilhåndtering
+title: Feilhåndtering - teknisk gjennomgang av meldingen
 headtitle: Sikker digital post - Hvem gjør hva, når?
 group: Feilhåndtering
 
 id: Feilhåndtering/Teknisk
 
-next: Feilhåndtering/Transportfeil
+next: Feilhåndtering/Feilhåndteringsprosess
 
 ---
 
 h2. {{page.title}}
 
+Tabellen under gir en oversikt over hvordan Meldingsformidler og Postkasseleverandør håndterer feil i forskjellige deler av "meldingen":../transport/Meldingsformat.
 
 table(table table-striped).
-|_. Hvor skjer feilen? |_. Hva gjør Avsender? |_. Hva gjør Meldingsformidler? |_. Hva gjør Postkasseleverandør? |_. Hva gjør MF hvis PK svarer med soap fault? |
-| WS-security | N/A | Reject med soap fault | Reject med soap fault | MF eller PK har gjort noe feil (rette og forsøke på ny) |
-| EBMS-feil  | Rejecte med soap fault | Rejecte med soap fault | Reject med soap fault | MF eller PK har gjort noe feil (rette og forsøke på ny) |
-| Skjemavalidering |  Rejected med soap fault | Rejected med soap fault | Skal ikke skje - samme skjema | ? |
-| Feil i SBD-signatur | Rejected med soap fault | Rejected med soap fault | Skal ikke skje | ? |
-| Feil i SBD | Rejecte med soap fault | Rejecte med soap fault | Svar med SDP-feilkvittering | Skal ikke skje |
-| Feil i ASIC (signering/kryptering) | N/A | N/A | Svare med SDP-feilkvittering | Skal ikke skje |
+|_. Hvor skjer feilen? |_. Hva gjør Meldingsformidler? |_. Hva gjør Postkasseleverandør? |
+| WS-security | Reject med soap fault | Reject med soap fault til Meldingsformidler. Meldingsformidler håndterer feilen. |
+| EBMS-feil  | Reject med soap fault | Reject med soap fault til Meldingsformidler. Meldingsformidler håndterer feilen. |
+| Standard Business Document - Skjemavalidering | Reject med soap fault | Skal ikke skje da det er samme skjema |
+| Standard Business Document - signatur | Reject med soap fault | Skal ikke skje da signatur valideres av Meldingsformidler |
+| Feil i innhold i Standard Business Document Header | Reject med soap fault | Svarer med "Feilmelding":../meldinger/FeilMelding |
+| Feil i innhold i Standard Business Document | N/A | Svarer med "Feilmelding":../meldinger/FeilMelding |
+| ASiC (signering/kryptering) | N/A | Svarer med "Feilmelding":../meldinger/FeilMelding |

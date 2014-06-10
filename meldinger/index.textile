@@ -11,6 +11,7 @@ children:
  - name: Forretningsmeldinger/Åpningskvittering
  - name: Forretningsmeldinger/Varslingfeiletkvittering
  - name: Forretningsmeldinger/Feil
+ - name: Forretningsmeldinger/FlyttetDigitalpost 
 
 next: Forretningsmeldinger/Digitalpost
 
@@ -27,7 +28,7 @@ h3. Klassediagram
 
 Meldingen er en av følgende typer beskrevet i diagrammet under.
 
-!{width:40%;display: block;margin-left: auto;margin-right: auto;}meldingene.jpg!:meldingene.jpg
+!{width:40%;display: block;margin-left: auto;margin-right: auto;}../forretningslag/StandardBusinessDocument/uml_diagram.jpg!:../forretningslag/StandardBusinessDocument/uml_diagram.jpg
 
 
 h3. Meldingstypene
@@ -41,6 +42,7 @@ table(table table-striped).
 | "ÅpningsKvittering":AapningsKvittering | Kvittering fra Innbygger for at digital post er åpnet |
 | "Varslingfeilet":VarslingfeiletKvittering | Kvittering for at en spesifisert varsling ikke har blitt sendt |
 | "Feil":FeilMelding | Generel feilkvittering |
+| "FlyttetDigitalpost":FlyttetDigitalPostMelding | For flytting av post fra en postkasse til en annen. Brukes kun i mellom postkasseleverandørene |
 
 h3. Felles meldingsatributt
 

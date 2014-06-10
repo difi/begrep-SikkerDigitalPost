@@ -6,7 +6,7 @@ group: Melding
 
 id: Forretningsmeldinger/Feil
 
-
+next: Forretningsmeldinger/FlyttetDigitalpost
 
 ---
 
