@@ -22,7 +22,6 @@ Dokumentasjonen av feilhåndtering er delt opp i følgende kapitler:
 table(table table-striped).
 | "Forretningsfeil":Forretningsfeil | Hva er en forretningsfeil og hvordan skal den håndteres? |
 | "Transportfeil":Transportfeil | Hvilke tekniske feil kan oppstå og hvordan skal disse håndteres? |
-| "Teknisk":teknisk | I hvilken del av meldingen skjer feilen? og hvem gjør hva? |
-| "Transportfeil":Transportfeil | Hvilke tekniske feil kan oppstå og hvordan skal disse håndteres? |
+| "En teknisk gjennomgang av meldingen i forhold til feilhåndtering":teknisk | I hvilken del av meldingen skjer feilen? og hvem gjør hva? |
 
 
