@@ -2,7 +2,6 @@
 <xsd:schema
 	xmlns="http://begrep.difi.no/sdp/schema_v10"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:enc="http://www.w3.org/2001/04/xmlenc#"
 	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
 	targetNamespace="http://begrep.difi.no/sdp/schema_v10" elementFormDefault="qualified" version="1.0">
 
@@ -10,11 +9,7 @@
 	<xsd:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="w3/xenc-schema.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="w3/xmldsig-core-schema.xsd"/>
 
-
 	<xsd:element name="digitalPost" type="DigitalPost" />
-	<xsd:element name="tilbaketrekking" type="Tilbaketrekking" />
-
-
 
 	<xsd:complexType name="DigitalPost" >
 		<xsd:annotation>
@@ -47,21 +42,6 @@
 					<xsd:element name="dokumentpakkefingeravtrykk" type="ds:ReferenceType" minOccurs="1" maxOccurs="1" />
 				</xsd:sequence>
 			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-
-	<xsd:complexType name="Tilbaketrekking">
-		<xsd:annotation>
-			<xsd:documentation>
-				Meldingen sendes dersom det oppdages alvorlig feil i en DigitalPost. Dette kan f.eks. være
-				dersom DigitalPost er sendt til feil Mottaker. Ved feilforsendelser tilbyr postkasseleverandørene
-				mulighet for, på bakgrunn av konversasjonsId, at dokumenter kan trekkes tilbake av avsender. Hvis
-				tilbaketrekking skjer innen virkningsdato er inntruffet, vil dokumentet bli fjernet fra
-				mottakerens postkasse.
-			</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="Melding" />
 		</xsd:complexContent>
 	</xsd:complexType>
 
@@ -167,7 +147,6 @@
 			<xsd:maxLength value="160"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-
 
 	<!-- typer nedenfor er for fysisk post -->
 
