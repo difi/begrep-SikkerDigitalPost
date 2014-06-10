@@ -4,14 +4,14 @@ title: Sikker digital post
 headtitle: Sikker digital post
 
 id: sdp
-next: Innledning
+next: Oversikt
 
 children:
- - name: Innledning
+ - name: Oversikt
  - name: Forretningslag
  - name: Transportlag
  - name: Forretningsmeldinger
- - name: Feilhandtering
+ - name: Feilhåndtering
  - name: Sikkerhet
  - name: Begreper
  
@@ -29,7 +29,7 @@ Den skal dekke teknisk dokumentasjon og beskrivelse av meldingene som sendes mel
 Katalogen er bygd opp av følgende kapitler:
 
 table(table table-striped).
-| "Innledning":innledning/ | Mer om sikker digital post og oppbyggingen av spesifikasjonen |
+| "Oversikt":innledning/ | Mer om sikker digital post og oppbyggingen av spesifikasjonen |
 | "Forretningslag":forretningslag/ | Aktører, prosesser og overordnet meldingsstruktur/format |
 | "Transportlag":transportlag/ | Rammeverk for overføring av meldinger |
 | "Forretningsmeldinger":meldinger/ | Detaljering av forretningsmeldinger |

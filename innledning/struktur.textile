@@ -3,7 +3,7 @@ layout: default
 title: Struktur på dokumentasjonen
 headtitle: Sikker digital post
 
-id: Innledning/Struktur
+id: Oversikt/Struktur
 
 next: Forretningslag
 

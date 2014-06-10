@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Innledning
+title: Oversikt
 headtitle: Sikker digital post
 
-id: Innledning
+id: Oversikt
 
 next: Innledning/Arkitektur
 
 children:
- - name: Innledning/Arkitektur
- - name: Innledning/Struktur
+ - name: Oversikt/Arkitektur
+ - name: Oversikt/Struktur
 
 ---
 
-h2. Innledning
+h2. Oversikt
 
 Sikker digital posttjeneste er en felles løsning for offentlige virksomheter for å sende brev digitalt til innbyggere. 
 Løsningen består av fem sentral komponenter (aktører) foruten avsendere (Offentlige virksomheter) og mottakere (Innbyggere). Disse aktørene er:

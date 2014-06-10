@@ -3,9 +3,9 @@ layout: default
 title: Arkitektur
 headtitle: Sikker digital post
 
-id: Innledning/Arkitektur
+id: Oversikt/Arkitektur
 
-next: Innledning/Inndeling
+next: Oversikt/Struktur
 
 ---
 

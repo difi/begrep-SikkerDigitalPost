@@ -1,0 +1,23 @@
+---
+layout: default
+title: Teknisk beskrivelse av feilhåndtering
+headtitle: Sikker digital post - Hvem gjør hva, når?
+group: Feilhåndtering
+
+id: Feilhåndtering/Teknisk
+
+next: Feilhåndtering/Transportfeil
+
+---
+
+h2. {{page.title}}
+
+
+table(table table-striped).
+|_. Hvor skjer feilen? |_. Hva gjør Avsender? |_. Hva gjør Meldingsformidler? |_. Hva gjør Postkasseleverandør? |_. Hva gjør MF hvis PK svarer med soap fault? |
+| WS-security | N/A | Reject med soap fault | Reject med soap fault | MF eller PK har gjort noe feil (rette og forsøke på ny) |
+| EBMS-feil  | Rejecte med soap fault | Rejecte med soap fault | Reject med soap fault | MF eller PK har gjort noe feil (rette og forsøke på ny) |
+| Skjemavalidering |  Rejected med soap fault | Rejected med soap fault | Skal ikke skje - samme skjema | ? |
+| Feil i SBD-signatur | Rejected med soap fault | Rejected med soap fault | Skal ikke skje | ? |
+| Feil i SBD | Rejecte med soap fault | Rejecte med soap fault | Svar med SDP-feilkvittering | Skal ikke skje |
+| Feil i ASIC (signering/kryptering) | N/A | N/A | Svare med SDP-feilkvittering | Skal ikke skje |

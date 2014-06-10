@@ -4,10 +4,9 @@ title: Datatyper for Sikker digital post
 headtitle: Sikker digital post
 
 
-name: Begreper
+id: Begreper
 
 
-prev: sdp
 
 
 ---
