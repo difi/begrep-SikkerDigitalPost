@@ -10,7 +10,7 @@ prev: Begreper
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Informasjon relatert til presentasjon og behandling av en sikker digital post melding
+- Definisjon := Informasjon til Postkasseleverandør for å presentere og behandle en sikker digital post melding
 - Kilde := DIFI
 - Kommentar := Dette er informasjon om den Digitalpostforsendelsen som vil bli brukt av Postkasseleverandør for å presentere og behandle den digitale posten.
 Den ikkeSensitiveTittelen vil bli brukt i dialogen med Innbygger dersom ikke Innbygger er autentisert på tilstrekkelig nivå. 
