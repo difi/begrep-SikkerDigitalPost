@@ -4,22 +4,42 @@ title: Feilmelding
 headtitle: Begrepskatalog for Sikker digital post - 
 group: Melding
 
-id: Feil
+id: Forretningsmeldinger/Feil
 
-next: Forretningsmeldinger
-prev: Forretningsmeldinger
+
+
 ---
 
 h3. {{page.title}}
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := En "Melding":index til "Avsender":../begrep/Avsender om en forretningsfeil knyttet til innsendt Digital Post.
+- Definisjon := En feilmelding fra postkasseleverandør med informasjon om en forretningsfeil knyttet til en digital post forsendelse.
 - Kilde := DIFI
 
 h3. Beskrivelse
 
-Denne meldingen beskriver de forretningsfeil som oppstår i forretningsprosessen mellom Behandlingsansvarlig og Postkasseleverandør.
+Feilmelding sendes fra Postkasseleverandør når det oppstår en uventet feil som ikke kan håndteres av postkasseleverandør innenfor SLA krav.
+Feilene kategoriseres overordnet i to typer, enten som klient feil som Avsender må rette opp i eller som server feil som oppstår hos postkasseleverandør.
+
+h4. Håndtering av klient feil
+
+Feil kategorisert som klientfeil vil komme dersom Avsender har sendt en digital postmelding som ikke kan behandles av Postkasseleverandør.
+Dette kan være feil som f.eks:
+
+* Adresseringen til Mottaker er feil
+* Postkasseleverandør kan ikke dekryptere dokumentpakken
+* Varslingreglene bryter med forretningsregler
+* Virkningsdato er satt for langt frem i tid
+
+Generelt vil dette være alle feil med "Digitalpostmelding":DigitalPostMelding og "Dokumentpakken":../forretningslag/Dokumentpakke.
+
+Feilen må utbedres og ny "Digitalpostmelding":DigitalPostMelding må sendes.
+
+h4. Håndtering av server feil
+
+Feil kategorisert som serverfeil vil oppstå dersom postkasseleverandør har interne feil som stopper behandlingen av den digitale postmeldingen.
+ 
 
 
 h3. Attributer

@@ -4,10 +4,9 @@ title: LeveringsKvittering
 headtitle: Begrepskatalog for Sikker digital post - 
 group: Melding
 
-id: Leveringskvittering
+id: Forretningsmeldinger/Leveringskvittering
 
-next: Åpningskvittering
-prev: Digitalpost
+next: Forretningsmeldinger/Åpningskvittering
 
 ---
 
@@ -15,13 +14,17 @@ h3. {{page.title}}
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := En "Kvitteringsmelding":KvitteringsMelding fra "Postkassleverandør":../Aktorer til "Sender":../forretningslag/Sender om at posten vil leveres til "Mottaker":../begrep/Mottaker.
+- Definisjon := Kvittering på at postkassen har tatt ansvar for å tilgjengeliggjøre melding til mottaker. Sendes til Avsender via meldingsformideler.
 - Kilde := DIFI
-- Kommentar := Denne kvitteringen kan "Behandlingsansvarlig":../Aktorer oppbevare som en garanti på at posten er levert til "Mottaker":../begrep/Mottaker. Kvitteringen sendes fra "Postkassleverandør":../Aktorer når posten forsendelsen er validert og de garanterer for at posten vil bli tilgjengeliggjort.
+- Kommentar := Denne kvitteringen kan "Behandlingsansvarlig":../Aktorer oppbevare som en garanti på at posten er levert til "Mottaker":../begrep/Mottaker. 
+Kvitteringen sendes fra "Postkassleverandør":../Aktorer når postforsendelsen er validert og de garanterer for at posten vil bli tilgjengeliggjort.
 Kvitteringen vil bli sendt så fort "Postkassleverandør":../Aktorer kan garantere dette, det vil si at "Leveringskvitteringen":LeveringsKvittering vil bli sendt før "virkningsdato":/Felles/virkningsdato 
 
 Det anbefales at "Behandlingsansvarlig":../Aktorer arkiverer denne kvitteringen som bevis på at "posten":DigitalPostMelding er levert til "Mottaker":../begrep/Mottaker.
 
 h3. Attributer
 
-se "Kvitteringsmelding":KvitteringsMelding
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
+| tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
