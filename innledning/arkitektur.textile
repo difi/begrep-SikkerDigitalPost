@@ -15,7 +15,7 @@ Dette er en overodrnet beskrivelse av den underliggende virksomhetsarkitekturen 
 
 Figuren under viser en detaljering av posttjenesteaktørene, og flyten av informasjonsobjekter mellom aktørene. 
 
-!(img-responsive)arkitektur.png(Figuren viser en detaljering av posttjenesteaktørene, og flyten av informasjonsobjekter mellom aktørene)!
+"!(img-responsive)arkitektur.png(Figuren viser en detaljering av posttjenesteaktørene, og flyten av informasjonsobjekter mellom aktørene)!":arkitektur.png
 
 Offentlige virksomheter (avsendere) henter kontaktinformasjon til innbygger via oppslagstjeneste for kontaktinformasjon. Oppslagstjenesten henter kontaktinformasjon fra kontakt- og reservasjonsregisteret. Innbygger er ansvarlig for at kontaktinformasjonen i registrene er oppdatert, og at de ikke legger inn skjermingsverdig kontaktinformasjon.
 

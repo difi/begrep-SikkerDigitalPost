@@ -15,8 +15,7 @@ h2. Tilstand for Sikker digital postforsendelse
 Under er en beskrivelse av tilstanden for en forsendelse sett fra et Avsender system.
 Målsetningen med tilstandsdiagrammet er å gi Avsendere en forståelse av hvilke prosesser og rutiner som bør etableres ved integrasjon mot Sikker digital post.
 
-
-!{width:30%;display: block;margin-left: auto;margin-right: auto;}tilstander_avsender.png!
+"!(img-responsive)tilstander_avsender.png(Utkast til tilstandsdiagram for prosess hos avsender)!":tilstander_avsender.png
 
 h3. Tilstander
 
