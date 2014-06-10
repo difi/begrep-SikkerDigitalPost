@@ -1,36 +1,36 @@
 ---
 layout: default
-title: Forretningsprosess for Sikker digital post
+title: Forretningsprosess for sending av digital post
 headtitle: Sikker digital post
 group: forretningslag
 
 id: Forretningslag/Forretningsprosess
 
-next: Forretningslag/Tilstand
+next: Forretningslag/Forretningsprosess_kvittering
 
 ---
 
 
-h2. Forretningsprosess
+h2. Prosess for sending av digital post
 
-"Meldingen":../StandardBusinessDocument/Melding/ i Sikker Digital Post flyter mellom "Aktørene":../Aktorer slik det beskrives i flyt diagrammet under.
-Meldingsflytdiagrammet under kan med fordel lese i sammenheng med tilstandsdiagrammet for sikker digital post.
+"Meldingen":../meldinger/ i Sikker Digital Post flyter mellom "Aktørene":Aktorer slik det beskrives i flyt diagrammet under.
+Figuren viser normalflyten for en DigitalpostMelding. Meldingen sendes til meldingsformidleren som videresender til postkassen. 
+Postkassen sender en LeveringsKvittering etter validering og kontroll av meldingen. Avsender henter så LeveringsKvittering fra meldingsformidleren.
+
+Meldingsflytdiagrammet under kan med fordel lese i sammenheng med "tilstandsdiagrammet":avsender_tilstanddiagram for sikker digital post.
 
 Ovordnet er meldingsflyten slik:
 
-# Avsender sender en "Digital post Melding":../StandardBusinessDocument/Melding/DigitalPostMelding via Meldingsformidler til Postkasse
-# Postkasse sender en eller fler "Kvitteringsmeldinger":../StandardBusinessDocument/Melding/KvitteringsMelding til Meldingsformidler
-# Avsender henter "Kvitteringsmeldinger":../StandardBusinessDocument/Melding/KvitteringsMelding fra Meldingsformidler
+# Avsender sender en "Digital post Melding":../meldinger/DigitalPostMelding via Meldingsformidler til Postkasse
+# Postkasse sender en eller fler "Kvitteringsmeldinger":../meldinger/KvitteringsMelding til Meldingsformidler
+# Avsender henter "Kvitteringsmeldinger":../meldinger/KvitteringsMelding fra Meldingsformidler
 
-"!{width:50%;display: block;margin-left: auto;margin-right: auto;}meldingsflyt.png!":meldingsflyt.png
+"!{width:50%;display: block;margin-left: auto;margin-right: auto;}DigitalpostMelding.png!":DigitalpostMelding.png
 
 table(table table-striped).
 |_. Prosess |_. Fra |_. Til |_. Beskrivelse |
-| "Digital post Melding":../StandardBusinessDocument/Melding/DigitalPostMelding | "Behandlingsansvarlig eller en delegert Databehandler":../StandardBusinessDocument/Sender | "Meldingsformidler":../Aktorer | Avsender mottar en transportkvittering fra Meldingsformidler. Med Transportkvitteringen garanterer Meldingsformidler for at meldingen vil bli videresendt til korrekt postkasse eller printleverandør |
-| Digital post forsendelse | "Meldingsformidler":../Aktorer | "Postkasseleverandør":../StandardBusinessDocument/Receiver | Meldingsformidler mellomlagrer meldingen inntil Postkasseleverandør kvitter positivt på at meldingen er mottatt. |
-| "Leveringskvittering":../StandardBusinessDocument/Melding/LeveringsKvittering | "Postkasseleverandør":../StandardBusinessDocument/Sender | "Meldingsformidler":../Aktorer | Postkassleverandør vil etter validering av "Digital post Melding":../StandardBusinessDocument/Melding/DigitalPostMelding levere en kvittering som bekreftet/garanterer at meldingen blir levert til Innbygger. |
-| "Åpningskvittering":../StandardBusinessDocument/Melding/AapningsKvittering  | "Postkasseleverandør":../StandardBusinessDocument/Sender | "Meldingsformidler":../Aktorer | Dette er en kvittering som kun sendes dersom Avsender har spesifisert dette i "Digital post Melding":../StandardBusinessDocument/Melding/DigitalPostMelding. Meldingen kommer når innbygger leser posten første gang.  |
-| "VarslingfeiletKvittering":../StandardBusinessDocument/Melding/VarslingfeiletKvittering  | "Postkasseleverandør":../StandardBusinessDocument/Sender | "Meldingsformidler":../Aktorer | Dette er en kvittering som kun sendes dersom Avsender har spesifisert varsling i "Digital post Melding":../StandardBusinessDocument/Melding/DigitalPostMelding og Postkasseleverandør ikke klarer å gjennomføre varslingen i henhold til denne avtalen. |
-| "FeilMelding":../StandardBusinessDocument/Melding/FeilMelding  | "Postkasseleverandør":../StandardBusinessDocument/Sender | "Meldingsformidler":../Aktorer | Dette er forretningsfeilmelding sendt fra postkasseleverandør for å beskrive en feil som har oppstått med behandlingen av "Digital post Melding":../StandardBusinessDocument/Melding/DigitalPostMelding. Feilmeldingen må behandles etter avtalte avviksrutiner.  |
-| PullRequest | "Behandlingsansvarlig eller en delegert Databehandler":../StandardBusinessDocument/Sender | "Meldingsformidler":../Aktorer | Forespørsel om å hente kvittering. Meldingsformidler vil levere neste kvittering i køen uavhengig av hvilken kvitteringstype som ligger i køen. |
+| "DigitalpostMelding":../meldinger/DigitalPostMelding | "Behandlingsansvarlig eller en delegert Databehandler":StandardBusinessDocument/Sender | "Meldingsformidler":Aktorer | Avsender mottar en transportkvittering fra Meldingsformidler. Med Transportkvitteringen garanterer Meldingsformidler for at meldingen vil bli videresendt til korrekt postkasse eller printleverandør |
+| DigitalpostMelding | "Meldingsformidler":Aktorer | "Postkasseleverandør":StandardBusinessDocument/Receiver | Meldingsformidler mellomlagrer meldingen inntil Postkasseleverandør kvitterer positivt på at meldingen er mottatt. |
+| "Leveringskvittering":StandardBusinessDocument/Melding/LeveringsKvittering | "Postkasseleverandør":StandardBusinessDocument/Sender | "Meldingsformidler":Aktorer | Postkassleverandør vil etter validering av "Digital post Melding":../meldinger/DigitalPostMelding levere en kvittering som bekreftet/garanterer at meldingen blir levert til Innbygger. |
+| eb:PullRequest | "Behandlingsansvarlig eller en delegert Databehandler":StandardBusinessDocument/Sender | "Meldingsformidler":Aktorer | Forespørsel om å hente kvittering. Meldingsformidler vil levere neste kvittering i køen uavhengig av hvilken kvitteringstype som ligger i køen.  |
 
