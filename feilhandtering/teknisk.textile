@@ -6,7 +6,7 @@ group: Feilhåndtering
 
 id: Feilhåndtering/Teknisk
 
-next: Feilhåndtering/Transportfeil
+next: Feilhåndtering/Feilhåndteringsprosess
 
 ---
 
