@@ -39,5 +39,5 @@ table(table table-striped).
 | "StandardBusinessDocument":StandardBusinessDocument/ | Forretningsmeldingen som sendes i Sikker digital post |
 | "Dokumentpakke":Dokumentpakke/ | Dokumentpakken med posten til Innbygger |
 | "Dokumentformat":Dokumentformat/ | Beskrivelse av de dokumentformatene som kan brukes i Sikker digital post |
-| "Sikkerhet":sikkerhet | sikkerhet i forhold til forretningsmeldingene og forretningsprosessen |
+| "Sikkerhet":Sikkerhet/ | sikkerhet i forhold til forretningsmeldingene og forretningsprosessen |
 
