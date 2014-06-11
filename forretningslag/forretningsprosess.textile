@@ -10,27 +10,27 @@ next: Forretningslag/Forretningsprosess_kvittering
 
 ---
 
-
 h2. Prosess for sending av digital post
 
 "Meldingen":../meldinger/ i Sikker Digital Post flyter mellom "Aktørene":Aktorer slik det beskrives i flyt diagrammet under.
-Figuren viser normalflyten for en DigitalpostMelding. Meldingen sendes til meldingsformidleren som videresender til postkassen. 
-Postkassen sender en LeveringsKvittering etter validering og kontroll av meldingen. Avsender henter så LeveringsKvittering fra meldingsformidleren.
-
-Meldingsflytdiagrammet under kan med fordel lese i sammenheng med "tilstandsdiagrammet":avsender_tilstanddiagram for sikker digital post.
 
 Ovordnet er meldingsflyten slik:
 
-# Avsender sender en "Digital post Melding":../meldinger/DigitalPostMelding via Meldingsformidler til Postkasse
+# Avsender[1] sender en "Digital post Melding":../meldinger/DigitalPostMelding via Meldingsformidler til Postkasse
 # Postkasse sender en eller fler "Kvitteringsmeldinger":../meldinger/KvitteringsMelding til Meldingsformidler
 # Avsender henter "Kvitteringsmeldinger":../meldinger/KvitteringsMelding fra Meldingsformidler
 
-"!{width:50%;display: block;margin-left: auto;margin-right: auto;}DigitalpostMelding.png!":DigitalpostMelding.png
+(Meldinger prefikset *eb:* i diagrammet tilhører transportlaget, men er tatt med for å vise sammenhengen)
+
+"!(img-responsive)DigitalpostMelding.png(Prosess for sending av digital post)!":DigitalpostMelding.png
 
 table(table table-striped).
 |_. Prosess |_. Fra |_. Til |_. Beskrivelse |
-| "DigitalpostMelding":../meldinger/DigitalPostMelding | "Behandlingsansvarlig eller en delegert Databehandler":StandardBusinessDocument/Sender | "Meldingsformidler":Aktorer | Avsender mottar en transportkvittering fra Meldingsformidler. Med Transportkvitteringen garanterer Meldingsformidler for at meldingen vil bli videresendt til korrekt postkasse eller printleverandør |
-| DigitalpostMelding | "Meldingsformidler":Aktorer | "Postkasseleverandør":StandardBusinessDocument/Receiver | Meldingsformidler mellomlagrer meldingen inntil Postkasseleverandør kvitterer positivt på at meldingen er mottatt. |
-| "Leveringskvittering":StandardBusinessDocument/Melding/LeveringsKvittering | "Postkasseleverandør":StandardBusinessDocument/Sender | "Meldingsformidler":Aktorer | Postkassleverandør vil etter validering av "Digital post Melding":../meldinger/DigitalPostMelding levere en kvittering som bekreftet/garanterer at meldingen blir levert til Innbygger. |
-| eb:PullRequest | "Behandlingsansvarlig eller en delegert Databehandler":StandardBusinessDocument/Sender | "Meldingsformidler":Aktorer | Forespørsel om å hente kvittering. Meldingsformidler vil levere neste kvittering i køen uavhengig av hvilken kvitteringstype som ligger i køen.  |
+| "DigitalpostMelding":../meldinger/DigitalPostMelding | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Avsender sender alltid sine meldinger til meldingsformidler. Transportkvittering fra meldingsformidler indikerer at denne har tatt over ansvaret for videre formidling av meldingen |
+| DigitalpostMelding | "Meldingsformidler":Aktorer | "Postkasse":Aktorer | Meldingsformidler mellomlagrer meldingen inntil Postkassen har levert en "LeveringsKvittering":StandardBusinessDocument/Melding/LeveringsKvittering |
+| "Leveringskvittering":StandardBusinessDocument/Melding/LeveringsKvittering | "Postkasse":Aktorer | "Meldingsformidler":Aktorer | Postkassen sender en "LeveringsKvittering":StandardBusinessDocument/Melding/LeveringsKvittering for å signalisere at postkassen har mottatt og behandlet meldingen, og postkassen tar ansvar for å levere denne til Mottaker |
+| HentKvittering | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Avsender sender forespørsel til Meldingsformidler om å få levert ventende kvitteringer[2] |
 
+fn1. Avsender bør også ha et aktivt forhold til statusen til en melding. Meldingsflytdiagrammet kan med fordel ses i sammenheng med "tilstandsdiagrammet":avsender_tilstanddiagram for sikker digital post.
+
+fn2. Dette kan være andre typer kvitteringer enn LeveringsKvittering

@@ -14,13 +14,13 @@ h2. Aktører
 
 Tabellen under inneholder en oversikt over hovedaktørene i prosessen med å utveksle Sikker Digital Post:
 
-table(table table-striped).
+table(table table-striped table-condensed).
 |_. Aktør |_. URN |_. Identifikator |_. Beskrivelse |
 | Offentlig virksomhet | urn:sdp:offentligvirksomhet | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Offentlig virksomhet eller annen virksomhet som en offentlig oppgave på vegne av en offentlig virksomhet |
 | Tilbyder av meldingsformidler | urn:sdp:forvalter-meldingsformidler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Virksomhet (offentlig eller privat) som tilbyr en meldingsformidlingstjeneste, enten direkte eller via underleverandør |
 | Tilbyder av postkassetjeneste | urn:sdp:forvalter-postkasse | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Virksomhet (offentlig eller privat) som tilbyr postkassetjenester, enten direkte eller via underleverandører |
 | Sentralforvalter | urn:sdp:sentralforvalter | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for forvaltning/kontroll av forholdet mellom offentlig virksomheter, mottaker og tilbydere av meldingsformidler/postkassetjeneste |
-| Mottaker | urn:sdp:mottaker | "personidentifikator":/Felles/personidentifikator | Mottaker av postforsendelsen, en Innbygger | 
+| Innbygger | urn:sdp:innbygger | "personidentifikator":/Felles/personidentifikator | Mottaker av postforsendelsen | 
 
 Begrepene *Ansvarlig enhet* og *Teknisk Avsender* har også blitt brukt:
 
@@ -32,9 +32,17 @@ Eksempel: Behandlingsansvarlig er Nav og Ansvarlig enhet er NAV Hjelpemiddelsent
 
 h2. Roller
 
-table(table table-striped).
-|_. Rolle |_. URN |_. Identifikator |_. Beskrivelse |
-| Behandlingsansvarlig | urn:sdp:behandlingsansvarlig | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Offentlig virksomhet som produserer informasjon/brev/post som skal fomidles |
-| Databehandler | urn:sdp:databehandler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Virksomhet (offentlig eller privat) som har en kontraktfestet avtale med Behandlingsansvarlig med formål å dekke hele eller deler av prosessen med å formidle en Sikker Digital Post fra Behandlingsansvarlig til Meldingsformidler. Det kan være felere databehandlere som har ansvar for forskjellige steg i prosessen med å formidle en Sikker Digital Post |
-| Meldingsformidler | urn:sdp:meldingsformidler | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for formidling, sporing og rapportering av postforsendelser. |
-| Postkasse | urn:sdp:postkasse | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for å tilgjengeliggjøre og oppbevare post til mottaker, samt å varsle mottaker når det er kommet ny post. |
+table(table table-striped table-condensed).
+|_. Rolle |_. URN |_. Beskrivelse |
+| Avsender[1] | urn:sdp:avsender | Offentlig virksomhet som skal sende en DigitalPostMelding til en mottaker |
+| Behandlingsansvarlig[1] | urn:sdp:behandlingsansvarlig | Offentlig virksomhet som produserer informasjon/brev/post som skal fomidles. Vil i de aller fleste tilfeller være synonymt med Avsender |
+| Databehandler[1] | urn:sdp:databehandler | Virksomhet (offentlig eller privat) som har en kontraktfestet avtale med Behandlingsansvarlig med formål å dekke hele eller deler av prosessen med å formidle en Sikker Digital Post fra Behandlingsansvarlig til Meldingsformidler. Det kan være felere databehandlere som har ansvar for forskjellige steg i prosessen med å formidle en Sikker Digital Post |
+| Meldingsformidler | urn:sdp:meldingsformidler | Ansvarlig for formidling, sporing og rapportering av postforsendelser. |
+| Postkasse[2] | urn:sdp:postkasse | Ansvarlig for å tilgjengeliggjøre og oppbevare post til mottaker, samt å varsle mottaker når det er kommet ny post. |
+| Mottaker | urn:sdp:mottaker | Innbyggeren som er mottaker av en digital post melding |
+
+fn1. Avsender-rollen kan være en sammensatt rolle bestående av Avsender, Behandlingsansvarlig og/eller en eller flere databehandlere. For å forenkle dokumentasjonen er denne kompleksiteten skjult bak rollen Avsender, med egne kommentarer i de tilfeller der flere aktører i rollen Avsender medfører utfordringer.
+
+fn2. Printleverandør for utskrift og fysisk forsendelse av post blir i dokumentasjonen håndtert som en postboks, med egne kommentarar der dette medfører utfordringer.
+
+<!-- TODO: Bør inn med figur som viser samanhengen -->
