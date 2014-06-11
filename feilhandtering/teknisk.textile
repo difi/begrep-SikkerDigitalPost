@@ -1,25 +1,52 @@
 ---
 layout: default
-title: Feilhåndtering - teknisk gjennomgang av meldingen
+title: Teknisk beskrivelse av feilhåndtering
 headtitle: Sikker digital post - Hvem gjør hva, når?
 group: Feilhåndtering
 
 id: Feilhåndtering/Teknisk
 
-next: Feilhåndtering/Feilhåndteringsprosess
+next: Feilhåndtering/Transportfeil
 
 ---
 
 h2. {{page.title}}
 
-Tabellen under gir en oversikt over hvordan Meldingsformidler og Postkasseleverandør håndterer feil i forskjellige deler av "meldingen":../transport/Meldingsformat.
+Det overordnede prinsippet for sending av en melding, er failfast - det vil si at feil skal detekteres så tidlig som mulig - da dette gir bedre og raskere feedback til avsender. Dette innebærer at Meldingsformidler kan avvise meldinger som ikke overholder XSD skjema, eller har ugyldige verdier for felter den trenger for videreformidling (eksempelvis Receiver/Sender i StandardBusinessDocumentHeader). Alle aktører skal der det er mulig benytte EBMS signalling for å indikere feilen.
+
+Postkassene bør gi en EBMS-feil og/eller SOAP Fault dersom det er transport (SOAP/EBMS) eller routing problematikk (SBDH). Ellers bør "Feil":../meldinger/FeilMelding. Dette sikrer at feilene i flyter tilbake til avsender i de tilfeller avsender har gjort feil.
 
 table(table table-striped).
-|_. Hvor skjer feilen? |_. Hva gjør Meldingsformidler? |_. Hva gjør Postkasseleverandør? |
-| WS-security | Reject med soap fault | Reject med soap fault til Meldingsformidler. Meldingsformidler håndterer feilen. |
-| EBMS-feil  | Reject med soap fault | Reject med soap fault til Meldingsformidler. Meldingsformidler håndterer feilen. |
-| Standard Business Document - Skjemavalidering | Reject med soap fault | Skal ikke skje da det er samme skjema |
-| Standard Business Document - signatur | Reject med soap fault | Skal ikke skje da signatur valideres av Meldingsformidler |
-| Feil i innhold i Standard Business Document Header | Reject med soap fault | Svarer med "Feilmelding":../meldinger/FeilMelding |
-| Feil i innhold i Standard Business Document | N/A | Svarer med "Feilmelding":../meldinger/FeilMelding |
-| ASiC (signering/kryptering) | N/A | Svarer med "Feilmelding":../meldinger/FeilMelding |
+|_. Feiltype? |_. Hva gjør Avsender? |_. Hva gjør Meldingsformidler(MF)? |_. Hva gjør Postkasseleverandør(PK? |_. Hva gjør MF hvis PK svarer med soap fault? |
+| Ugyldig XML | Manuell håndtering | HTTP 400 | HTTP 400 | Manuell håndtering |
+| WS-security | Manuell håndtering | SOAP-fault (EBMS-signal) | SOAP-fault (EBMS-signal) | Manuell håndtering |
+| EBMS-feil  | Manuell håndtering | SOAP-fault + EBMS-signal | SOAP-fault + EBMS-signal | Manuell håndtering |
+| Skjemavalidering | Manuell håndtering | SOAP-fault + EBMS-signal | SOAP-fault + EBMS-signal | Manuell håndtering |
+| Feil i SBD-signatur | Manuell håndtering | SOAP-fault + EBMS-signal | SOAP-fault + EBMS-signal | Manuell håndtering |
+| Feil i SBDH | Manuell håndtering | SOAP-fault + EBMS-signal | SOAP-fault + EBMS-signal | Manuell håndtering |
+| Feil i SBD | Manuell håndtering | SOAP-fault + EBMS-signal | "Feil":../meldinger/FeilMelding | Manuell håndtering |
+| Feil i ASIC (signering/kryptering) | Manuell håndtering | N/A | "Feil":../meldinger/FeilMelding | Manuell håndtering |
+| Intern feil i system | Prøver på ny senere | SOAP-fault + EBMS-signal (Other) | SOAP-fault + EBMS-signal (Other) | Prøver på ny senere |
+
+Responser:
+table(table table-striped).
+|_. Feiltype? |_. Respons |
+| Kan ikke validere signaturene (manglende eller feil i signatur) | EBMS error: SignatureValidation |
+| Bruk av sertifikat fra uventet utsteder | EBMS error: SignatureValidation |
+| Feil signeringsalgoritmer | EBMS error: PolicyNonCompliance |
+| Ukjent organisasjonsnummer | EMBS error: FailedAuthentication |
+| Feil bruk av eller feil verdier på felter i EBMS | EBMS Error: ValueInconsistent eller ValueNotRecognized |
+| Feil bruk av eller feil verdier på felter i SBDH | EBMS Error: ValueInconsistent eller ValueNotRecognized |
+| Feil eller manglende signatur på SBD | EBMS error: SignatureValidation | 
+| Postkasse kan ikke dekryptere dokumentpakke | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Kan ikke dekryptere" | 
+| Manglende eller feil signatur inni dokumentpakke | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Feil signatur" | 
+| Feil bruk av eller feil verdier i SBD melding | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Feil i manifest" | 
+| Feil bruk av eller feil verdier på felter | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Ugyldig verdi ... " | 
+| Sending av ukjente payloads som SOAP body | EBMS error: FeatureNotSupported |
+| Intern feil | EBMS error: Other |
+
+
+
+
+
+
