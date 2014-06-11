@@ -6,7 +6,7 @@ group: forretningslag
 
 id: Forretningslag/Dokumentpakke sikkerhet
 
-next: Transportlag
+next: Forretningsmeldinger
 
 ---
 

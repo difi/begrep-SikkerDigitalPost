@@ -6,7 +6,7 @@ group: Feilhåndtering
 
 id: Feilhåndtering/Feilhåndteringsprosess
 
-next: Feilhåndtering
+next: Begreper
 
 ---
 

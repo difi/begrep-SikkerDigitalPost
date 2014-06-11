@@ -13,7 +13,7 @@ children:
  - name: Transportlag/Meldingsidentifikatorer
  - name: Transportlag/Meldingsutveksling 
  - name: Transportlag/Meldingsutveksling/FormidleDigitalPostForsendelse
- - name: Transportlag/Meldingsutveksling/KvitteringsForesporsel
+ - name: Transportlag/Meldingsutveksling/KvitteringsForespoersel
  - name: Transportlag/Transportmeldingsstruktur
  - name: Transportlag/Messaging
  - name: Transportlag/UserMessage

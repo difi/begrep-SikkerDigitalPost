@@ -6,7 +6,7 @@ group: Melding
 
 id: Forretningsmeldinger/FlyttetDigitalpost
 
-next: Forretningsmeldinger
+next: Forretningslag/StandardBusinessDocument
 
 
 ---

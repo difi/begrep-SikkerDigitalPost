@@ -5,13 +5,19 @@ headtitle: Sikker digital post
 
 id: Oversikt/Arkitektur
 
-next: Oversikt/Melding
+next: Sikkerhet
 
 ---
 
 h2. Arkitektur
 
-Dette er en overodrnet beskrivelse av den underliggende virksomhetsarkitekturen for Sikker Digital Post. For mer informasjon bør man lese dokumentet "Arkitekturbeskrivelse for Sikker Digital Post":ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf.
+Løsningen består av fem sentral komponenter (aktører) foruten avsendere (Offentlige virksomheter) og mottakere (Innbyggere). Disse aktørene er:
+
+* *Oppslagstjeneste for kontaktinformasjon:* Offentlig virksomheters (avsenders) grensesnitt mot kontakt- og reservasjonsregisteret.
+* *Kontakt- og reservasjonsregistre:* Register for innbyggernes digitale kontaktinformasjon og reservasjonsstatus. Offentlig virksomhet har tilgang via Oppslagstjeneste for kontaktinformasjon.
+* *Meldingsformidler*: Offentlig virksomheters grensesnitt mot posttjenesten og som har ansvaret for å formidle post til innbygger, enten som digitale brev til innbyggers selvvalgte digitale postkasse, eller som papirbrev til innbyggers postadresse.
+* *Digital postkasse*: Innbyggernes grensesnitt mot posttjenesten og som har ansvaret for å gjøre tilgjengelig og oppbevare innbyggers digitale brev fra det offentlige.
+* *Utskrift- og posttjeneste*:  Ivaretar sikker digital posttjeneste som en totalleverandør for post til innbygger fra det offentlige, ved å sende papirbrev til innbygger som ikke kan eller ønsker å motta digitale brev.
 
 Figuren under viser en detaljering av posttjenesteaktørene, og flyten av informasjonsobjekter mellom aktørene. 
 

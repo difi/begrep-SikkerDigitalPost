@@ -19,16 +19,5 @@ children:
 
 h2. Forretningslag
 
-Forretningslaget er bygd opp av følgende kapitler:
-
-table(table table-striped).
-| "Aktører":Aktorer | Aktørene i sikker digital post |
-| "Forretningsprosess":forretningsprosess | Prosess for sending av digital post |
-| "Forretningsprosess":forretningsprosess_kvittering | Prosess for henting av kvitteringer |
-| "Tilstand":avsender_tilstanddiagram | Tilstandsbeskrivelse for en Sikker digital post forsendelse sett fra Avsender |
-| "Forretningsmeldingsstruktur":meldingsformat | Detaljering av forretningsmeldinger |
-| "StandardBusinessDocument":StandardBusinessDocument/ | Forretningsmeldingen som sendes i Sikker digital post |
-| "Dokumentpakke":Dokumentpakke/ | Dokumentpakken med posten til Innbygger |
-| "Dokumentformat":Dokumentformat/ | Beskrivelse av de dokumentformatene som kan brukes i Sikker digital post |
-| "Sikkerhet":Sikkerhet/ | sikkerhet i forhold til forretningsmeldingene og forretningsprosessen |
-
+Forretningslaget dokumenterer den logiske flyten av meldinger i infrastrukturen, inkludert oversikt over aktører, roller og prosesser. 
+I tillegg er det dokumentert hvilke tilstander og overganger en Avsender må forholde seg til, samt fordeling av eierskap på de forskjellige delene av en komplett melding.

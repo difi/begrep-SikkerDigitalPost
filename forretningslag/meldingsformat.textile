@@ -6,7 +6,7 @@ group: forretningslag
 
 id: Forretningslag/Forretningsmeldingsstruktur
 
-next: Forretningslag/StandardBusinessDocument
+next: Forretningslag/Dokumentpakke
 
 ---
 
@@ -30,3 +30,20 @@ table(table table-striped table-condensed).
 | Transportinformasjon | "Avsender":Aktorer | SBDH/Sender | Angitt som sender i Standard Business Document, registrert hos Sentralforvalter | Aktøren som er ansvarlig for kommunikasjon med Meldingsformidler. Bør være den samme som over, men kan være en "Databehandler":Aktorer |
 
 Meldingsformidler er ansvarlig for å validere eier-integriteten i meldingen på vegne av Sentralforvalter. Meldinger som ikke har gyldig integritet blir avvist. Integriteten blir sjekket ved å sammenligne virksomhetsidentifikator i virksomhetssertifikat med identifikator i meldingen på signaturen relatert til den delen av meldingen.
+
+h3. Standarder benyttet i strukturen
+
+* Integritet ivaretas ved at dokumentene (posten til mottaker) pakkes og signeres iht. "Associated Signature Container (ASiC)":http://www.etsi.org/deliver/etsi_ts/103100_103199/103174/02.02.01_60/ts_103174v020201p.pdf fra ETSI. Dette formatet ivaretar integriteten over tid.
+* Konfidensialitet fra avsender til mottaker ivaretas ved bruk av "Cryptographic Message Syntax (CMS)":http://tools.ietf.org/html/rfc5652 fra IETF
+* "Standard Business Document (SBD)":http://www.gs1.org/ecom/standards/guidelines#s2 fra UN/CEFACT knytter sammen den krypterte pakken med adressering, varsling og annen metadata. 
+* For transport benyttes meldingsutvekslingsrammeverk iht. "ebMS3/AS4 light client conformance profile":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/profiles/AS4-profile/v1.0/os/AS4-profile-v1.0-os.html#__RefHeading__26166_1909778835 fra OASIS. 
+
+For mer informasjon se relevante deler av dokumentasjonen.
+
+h3. Illustrasjon
+
+En komplett melding slik som den blir overført mellom to punkter i infrastrukturen kan illustreres på følgende måte:
+
+"!(img-responsive)meldingsstruktur_enkel.jpg(Figuren viser en overordnet beskrivelse av meldingen i Sikker digital post)!":meldingsstruktur_enkel.jpg
+
+

@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Teknisk beskrivelse av feilhåndtering
+title: Teknisk beskrivelse
 headtitle: Sikker digital post - Hvem gjør hva, når?
 group: Feilhåndtering
 
 id: Feilhåndtering/Teknisk
 
-next: Feilhåndtering/Transportfeil
+next: Feilhåndtering/Feilhåndteringsprosess
 
 ---
 
