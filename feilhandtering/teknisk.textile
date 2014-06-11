@@ -17,7 +17,7 @@ Det overordnede prinsippet for sending av en melding, er failfast - det vil si a
 Postkassene bør gi en EBMS-feil og/eller SOAP Fault dersom det er transport (SOAP/EBMS) eller routing problematikk (SBDH). Ellers bør "Feil":../meldinger/FeilMelding. Dette sikrer at feilene i flyter tilbake til avsender i de tilfeller avsender har gjort feil.
 
 table(table table-striped).
-|_. Feiltype? |_. Hva gjør Avsender? |_. Hva gjør Meldingsformidler(MF)? |_. Hva gjør Postkasseleverandør(PK? |_. Hva gjør MF hvis PK svarer med soap fault? |
+|_. Feiltype? |_. Hva gjør Avsender? |_. Hva gjør Meldingsformidler(MF)? |_. Hva gjør Postkasseleverandør(PK)? |_. Hva gjør MF hvis PK svarer med soap fault? |
 | Ugyldig XML | Manuell håndtering | HTTP 400 | HTTP 400 | Manuell håndtering |
 | WS-security | Manuell håndtering | SOAP-fault (EBMS-signal) | SOAP-fault (EBMS-signal) | Manuell håndtering |
 | EBMS-feil  | Manuell håndtering | SOAP-fault + EBMS-signal | SOAP-fault + EBMS-signal | Manuell håndtering |
@@ -28,7 +28,10 @@ table(table table-striped).
 | Feil i ASIC (signering/kryptering) | Manuell håndtering | N/A | "Feil":../meldinger/FeilMelding | Manuell håndtering |
 | Intern feil i system | Prøver på ny senere | SOAP-fault + EBMS-signal (Other) | SOAP-fault + EBMS-signal (Other) | Prøver på ny senere |
 
-Responser:
+h3. Feilmeldinger / kvitteringer
+
+Følgende responser kan Avsender forvente å få tilbake dersom feilen over oppstår.
+
 table(table table-striped).
 |_. Feiltype? |_. Respons |
 | Kan ikke validere signaturene (manglende eller feil i signatur) | EBMS error: SignatureValidation |
@@ -37,16 +40,12 @@ table(table table-striped).
 | Ukjent organisasjonsnummer | EMBS error: FailedAuthentication |
 | Feil bruk av eller feil verdier på felter i EBMS | EBMS Error: ValueInconsistent eller ValueNotRecognized |
 | Feil bruk av eller feil verdier på felter i SBDH | EBMS Error: ValueInconsistent eller ValueNotRecognized |
-| Feil eller manglende signatur på SBD | EBMS error: SignatureValidation | 
-| Postkasse kan ikke dekryptere dokumentpakke | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Kan ikke dekryptere" | 
-| Manglende eller feil signatur inni dokumentpakke | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Feil signatur" | 
-| Feil bruk av eller feil verdier i SBD melding | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Feil i manifest" | 
-| Feil bruk av eller feil verdier på felter | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Ugyldig verdi ... " | 
+| Feil eller manglende signatur på SBD | EBMS error: SignatureValidation |
+| Postkasse kan ikke dekryptere dokumentpakke | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Kan ikke dekryptere" |
+| Manglende eller feil signatur inni dokumentpakke | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Feil signatur" |
+| Feil bruk av eller feil verdier i SBD melding | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Feil i manifest" |
+| Feil bruk av eller feil verdier på felter | "Feil":../meldinger/FeilMelding type:KLIENT detaljer:"Ugyldig verdi ... " |
 | Sending av ukjente payloads som SOAP body | EBMS error: FeatureNotSupported |
 | Intern feil | EBMS error: Other |
-
-
-
-
 
 
