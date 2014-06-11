@@ -19,7 +19,7 @@ table(table table-striped).
 |_. Feil |_. Beskrivelse |
 |_. Manglende mottakskvittering fra Meldingsformidler | eb:Reciept uteblir fra meldingsformidler. Meldingen er dermed ikke sendt. |
 |_. Manglende "Leveringskvittering":../meldinger/LeveringsKvittering  | Postkasseleverandør har ikke tilgjengeliggjort posten. |
-|_. Mottak av "Feilmelding":../meldinger/FeilMelding | Det har oppstått problemer med tilgjengeliggjøren av psoten og Postkasseleverandør har sendt en Feilmelding |
+|_. Mottak av "Feilmelding":../meldinger/FeilMelding | Det har oppstått problemer med tilgjengeliggjøren av posten og Postkasseleverandør har sendt en Feilmelding |
 |_. Mottak av "Varslingfeiletkvittering":../meldinger/VarslingfeiletKvittering | Postkasseleverandør har ikke varslet Innbygger som avtalt |
 
 
@@ -37,12 +37,12 @@ h3. Manglende Leveringskvittering
 
 Postkasseleverandør skal returnere en "Leveringskvittering":../LeveringsKvittering til Avsender.
 Dersom denne uteblir lengre enn forventet bør Avsender håndtere dette igjennom feilhåndteringsprosedyrer etablert med sentralforvalter.
-(Feilhåndteringsprosedyrene etableres som del bruksvilkår og er ikke ferdigstilt pt.)
+(Feilhåndteringsprosedyrene etableres som del av bruksvilkår og er ikke ferdigstilt pt.)
 
 h4. Hvor lenge skal en Avsender vente på en Leveringskvittering?
 
-Dette avhengiger av hva Avsender har sendt. 
-Dersom Avsender sender en prioritert digital post skal en Leveringskvittering leveres i løpet av minutter, mens dersom en Avsender sender en normaal digital post kan det ta et par timer.
+Dette avhenger av hva Avsender har sendt. 
+Dersom Avsender sender en prioritert digital postmelding skal en Leveringskvittering leveres i løpet av minutter, mens dersom en Avsender sender en normal digital postmelding kan det ta et par timer.
 Mer tydelige beskrivelser vil bli utarbeidet i forbindelse bruksvilkårene.
 
 h3. Mottak av Feilmelding
