@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Forretningsmeldingsstruktur
+title: Struktur på melding
 headtitle: Sikker digital post - Begreper
 group: forretningslag
 
@@ -10,52 +10,23 @@ next: Forretningslag/StandardBusinessDocument
 
 ---
 
-h2. Forretningsmeldingsformat
+h2. Overordnet struktur på forretningsmeldinger
 
-Alle meldinger sendt gjennom Sikker digital post infrastrukturen har samme grunnleggende struktur.
+Alle meldinger sendt gjennom Sikker digital post infrastrukturen har samme grunnleggende struktur, og består av følgende (nestede) hovedelementer, innenfra og utover:
 
-Utgangspunktet er at man har en forretningsmelding som skal formidles gjennom infrastrukturen. 
-Forretningsmeldingen er enten en sikker digital post melding, eller en kvittering/statusmelding relatert til en slik melding. Forretningsmeldingen kan også bestå av en del strukturert informasjon (xml) og etter eller flere vedlegg. 
+* *Dokumentpakke* - dette er selve meldingen som skal sendes gjennom infrastrukturen. Denne består av et dokument med eventuelle vedlegg.
+* *Forretningsmelding* - (forretnings)informasjon til Postkasse om hvordan Dokumentpakken skal behandles.
+* *Standard Business Document* - (forretnings og ruting)informasjon til Meldingsformidler om hvordan Forretningsmeldingen skal behandles.
+* *Transportinformasjon* (AS4/SOAP) - Informasjon som transportlaget trenger for å formidle meldingen mellom to punkt.
 
-h2. Hovedstruktur
+Tabellen under angir normal ansvarsfordeling/eierskap på de forskjellige delene av forretningsmeldingen. Eier har ansvar for å ivareta integriteten for sin del av meldingen, samt håndtering av integritet i neste nivå i meldingen.
+I praksis betyr dette at eier er ansvarlig for signering av sin del.
 
-Forretningsmeldingen blir "pakket inn" i flere lag.
+table(table table-striped table-condensed).
+|_. Element |_. Eier |_. Identifikator |_. Kontroll eierskap |_. Kommentar |
+| Dokumentpakke | "Avsender":Aktorer | Manifest/Avsender | Signerte bruksvilkår med Sentralforvalter | Eierskapet til dokumentpakken blir bruk til å garantere integriteten til dokumentpakken over tid. Det kan tenkes at dokumentpakken blir signert av en "Databehandler":Aktorer. I så tilfelle bør dette klart framkomme av selve dokumentet, slik at Mottaker forstår sammenhengen. |
+| Forretningmelding | "Avsender":Aktorer | DigitalPostMelding/Avsender | Registrert hos Sentralforvalter | Vil som regel være den samme som eier av dokumentpakken. |
+| Standard Business Document | "Avsender":Aktorer | DigitalPostMelding/Avsender | Registrert hos Sentralforvalter | Skal alltid være den samme som eier av Forretningsmelding |
+| Transportinformasjon | "Avsender": Aktorer | SBDH/Sender | Angitt som sender i Standard Business Document, registrert hos Sentralforvalter | Kan være den samme som over, men det er her det er forventet at det oftest vil være en "Databehandler":Aktorer. |
 
-h3. Standard Business Document
-
-Standard Business Document standarden lager et skille mellom forretningmeldingen og informasjonen som trengst for å identifisere, addressere og rute meldingen, uavhengig av hvilket
-rammeverk som blir brukt for å utføre sendingen.
-
-h3. Forretningsmeldingsstruktur
-
-<div class="row">
-	<div class="col-md-12 list-group">
-		
-	</div>
-</div>	
-<div class="panel panel-info">
-	<div class="panel-body">
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				<a href="StandardBusinessDocument/" class="list-group-item active">Standard Business Document</a>
-			</div>
-			<div class="list-group">
-			    <a href="StandardBusinessDocument/StandardBusinessDocumentHeader" class="list-group-item">Standard Business Document Header</a>
-			    <a href="../meldinger/" class="list-group-item">Sikker digital post forretningsmelding</a>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="panel panel-info">
-	<div class="panel-body">
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				<a href="Dokumentpakke/" class="list-group-item active">Dokumentpakke</a>
-			</div>
-			<div class="list-group">
-			    <a href="Dokumentpakke/Manifest" class="list-group-item">Manifest</a>
-			    <a href="Dokumentformat/" class="list-group-item">Hoveddokument m/vedlegg</a>
-			</div>
-		</div>
-	</div>
-</div>
+Meldingsformidler er ansvarlig for å validere eier-integriteten i meldingen på vegne av Sentralforvalter. Meldinger som ikke har gyldig integritet blir avvist. Integriteten blir sjekket ved å sammenligne virksomhetsidentifikator i virksomhetssertifikat med identifikator i meldingen på signaturen relatert til den delen av meldingen.
