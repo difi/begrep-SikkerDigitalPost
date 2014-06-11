@@ -7,6 +7,14 @@ group: forretningslag
 id: Forretningslag/Dokumentpakke
 next: Forretningslag/Manifest
 
+children:
+ - name: Forretningslag/Manifest
+ - name: Forretningslag/Dokumentformater
+ - name: Forretningslag/HTML dokument
+ - name: Forretningslag/Sikkerhet
+ - name: Forretningslag/Dokumentpakke sikkerhet
+
+
 ---
 
 h2. Introduksjon

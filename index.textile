@@ -9,11 +9,14 @@ next: Oversikt
 children:
  - name: Oversikt
  - name: Forretningslag
- - name: Transportlag
+ - name: Forretningslag/Dokumentpakke
  - name: Forretningsmeldinger
+ - name: Forretningslag/StandardBusinessDocument
+ - name: Transportlag
  - name: Feilhåndtering
  - name: Sikkerhet
  - name: Begreper
+ - name: Eksempler
  
 ---
 

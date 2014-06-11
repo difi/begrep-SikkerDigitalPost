@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Sikkerhet
+title: Eksempler
 headtitle: Sikker digital post
 
-id: Sikkerhet
+id: Eksempler
 ---
 
 h2. Content to come

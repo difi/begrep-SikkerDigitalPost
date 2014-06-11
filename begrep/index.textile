@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Datatyper for Sikker digital post
+title: Begreper
 headtitle: Sikker digital post
 
 

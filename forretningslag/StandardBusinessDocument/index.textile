@@ -6,6 +6,13 @@ group: forretningslag
 
 id: Forretningslag/StandardBusinessDocument
 
+children:  
+ - name: Forretningslag/StandardBusinessDocumentHeader
+ - name: Forretningslag/Sender
+ - name: Forretningslag/Receiver
+ - name: Forretningslag/DocumentIdentification
+ - name: Forretningslag/BusinessScope
+
 next: Forretningslag/StandardBusinessDocumentHeader
 
 ---

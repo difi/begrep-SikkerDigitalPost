@@ -14,18 +14,6 @@ children:
  - name: Forretningslag/Forretningsprosess_kvittering
  - name: Forretningslag/Tilstand
  - name: Forretningslag/Forretningsmeldingsstruktur
- - name: Forretningslag/StandardBusinessDocument
- - name: Forretningslag/StandardBusinessDocumentHeader
- - name: Forretningslag/Sender
- - name: Forretningslag/Receiver
- - name: Forretningslag/DocumentIdentification
- - name: Forretningslag/BusinessScope
- - name: Forretningslag/Dokumentpakke
- - name: Forretningslag/Manifest
- - name: Forretningslag/Dokumentformater
- - name: Forretningslag/HTML dokument
- - name: Forretningslag/Sikkerhet
- - name: Forretningslag/Dokumentpakke sikkerhet
 
 ---
 
