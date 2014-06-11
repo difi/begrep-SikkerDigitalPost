@@ -12,6 +12,8 @@ next: Feilhåndtering/Transportfeil
 
 h2. {{page.title}}
 
+Forretningsfeil er feil i meldingsinnhold og format i digitalpost melding, dokumentpakke med innhold. Dette håndteres gjennom egne Feilmeldinger.
+
 Følgende forretningsfeil kan oppstå i Sikker Digital Post.
 
 

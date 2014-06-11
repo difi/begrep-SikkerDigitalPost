@@ -39,8 +39,6 @@ Feilen må utbedres og ny "Digitalpostmelding":DigitalPostMelding må sendes.
 h4. Håndtering av server feil
 
 Feil kategorisert som serverfeil vil oppstå dersom postkasseleverandør har interne feil som stopper behandlingen av den digitale postmeldingen.
- 
-
 
 h3. Attributer
 

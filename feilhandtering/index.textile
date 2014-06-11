@@ -19,12 +19,15 @@ children:
 
 h2. Feilhåndtering
 
+Feil i Sikker digital post deles i Forretningsfeil og Transportfeil. Transportfeil er feil som oppstår i meldingsutvekslingen og håndteres på ebMS laget. 
+Forretningsfeil er feil som ikke er relatert til transport og utveksling av meldinger, men feil i meldingsinnhold og format på indre melding. Dette håndteres gjennom egne Feilmeldinger.
+
 Dokumentasjonen av feilhåndtering er delt opp i følgende kapitler:
 
 table(table table-striped).
 | "Forretningsfeil":Forretningsfeil | Hva er en forretningsfeil og hvordan skal den håndteres? |
 | "Transportfeil":Transportfeil | Hvilke tekniske feil kan oppstå og hvordan skal disse håndteres? |
-| "En teknisk gjennomgang av meldingen i forhold til feilhåndtering":teknisk | I hvilken del av meldingen skjer feilen? og hvem gjør hva? |
+| "Beskrivelse av feiltyper og feilmeldinger":teknisk | I hvilken del av meldingen skjer feilen? og hvem gjør hva? |
 | "Prosess for feilhåndtering":feilhandteringsprosess | Hvordan skal Avsendere melde feil? |
 
 
