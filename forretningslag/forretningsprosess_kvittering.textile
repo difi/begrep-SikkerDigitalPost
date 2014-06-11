@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Forretningsprosess for henting av kvittering
+title: Henting av kvittering
 headtitle: Sikker digital post
 group: forretningslag
 
@@ -10,18 +10,19 @@ next: Forretningslag/Tilstand
 
 ---
 
+h2. Prosess for henting av kvitteringer og forretningsfeil
 
-h2. Prosess for henting av kvitteringer
+For å indikere statusendring på en melding etter at denne er blitt levert så skal Postkassen benytte meldinger av typen Kvitteringer. 
+Disse blir gjort tilgjengelig for Avsender via Meldingsformidler. Figuren viser flyten av denne type meldinger.
+Forretningsrelaterte feilsituasjoner[1] benytter same flyt.
 
-Figuren viser flyten for kvitteringer og feilmeldinger. 
-Postkasse sender FeilMelding eller kvittering som kan være av typen LeveringsKvittering (vist i figur over), VarslingFeiletKvittering eller ÅpningsKvittering. 
-Avsender henter feilmeldinger og kvitteringer fra meldingsformidleren.
+(Meldinger prefikset *eb:* i diagrammet tilhører transportlaget, men er tatt med for å vise sammenhengen)
 
-
-"!{width:50%;display: block;margin-left: auto;margin-right: auto;}Kvittering.png!":Kvittering.png
+"!(img-responsive)Kvittering.png(Prosess for henting av kvitteringer)!":Kvittering.png
 
 table(table table-striped).
 |_. Prosess |_. Fra |_. Til |_. Beskrivelse |
-| Kvittering/Feil | "Postkasseleverandør":StandardBusinessDocument/Sender | "Meldingsformidler":../Aktorer | Kvitteringene som sendes er: "Leveringskvittering":../meldinger/LeveringsKvittering, "Åpningskvittering":../meldinger/AapningsKvittering ,  "VarslingfeiletKvittering":../meldinger/VarslingfeiletKvittering i tillegg til eventuelle "FeilMeldinger":../meldinger/FeilMelding |
-| PullRequest | "Behandlingsansvarlig eller en delegert Databehandler":StandardBusinessDocument/Sender | "Meldingsformidler":Aktorer | Kvittering/Feil ligger tilgjengelig på en kø hos Meldingsformidler. Avsender sender en forespørsel om å hente en kvittering. Meldingsformidler vil levere neste kvittering i køen uavhengig av hvilken kvitteringstype som ligger i køen. Det er en egen kø for prioriterte meldinger. |
+| Kvittering/Feil | "Postkasse":Aktorer | "Meldingsformidler":Aktorer | Kvitteringene som sendes er: "Leveringskvittering":../meldinger/LeveringsKvittering, "Åpningskvittering":../meldinger/AapningsKvittering ,  "VarslingfeiletKvittering":../meldinger/VarslingfeiletKvittering i tillegg til eventuelle "FeilMeldinger":../meldinger/FeilMelding |
+| Hent Kvittering/Feil | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Kvittering/Feil ligger tilgjengelig på en kø hos Meldingsformidler. Avsender sender en forespørsel om å hente en kvittering. Meldingsformidler vil levere neste kvittering i køen uavhengig av hvilken kvitteringstype som ligger i køen. Det er en egen kø for prioriterte meldinger. |
 
+fn1. Dette er feilsituasjoner som vil kreve manuell oppfølging fra Avsender og av en art som ikke lar seg løse automatisk. Typisk eksempel kan være at Mottaker har skiftet postboks, og at meldingen er feilsendt.

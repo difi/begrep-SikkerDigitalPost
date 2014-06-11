@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Forretningsprosess for sending av digital post
+title: Sending av digital post
 headtitle: Sikker digital post
 group: forretningslag
 
