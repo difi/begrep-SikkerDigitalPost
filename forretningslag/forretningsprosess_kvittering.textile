@@ -22,7 +22,7 @@ Forretningsrelaterte feilsituasjoner[1] benytter same flyt.
 
 table(table table-striped).
 |_. Prosess |_. Fra |_. Til |_. Beskrivelse |
-| Kvittering/Feil | "Postkasse":Aktorer | "Meldingsformidler":Aktorer | Kvitteringene som sendes er: "Leveringskvittering":../meldinger/LeveringsKvittering, "Åpningskvittering":../meldinger/AapningsKvittering ,  "VarslingfeiletKvittering":../meldinger/VarslingfeiletKvittering i tillegg til eventuelle "FeilMeldinger":../meldinger/FeilMelding |
-| Hent Kvittering/Feil | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Kvittering/Feil ligger tilgjengelig på en kø hos Meldingsformidler. Avsender sender en forespørsel om å hente en kvittering. Meldingsformidler vil levere neste kvittering i køen uavhengig av hvilken kvitteringstype som ligger i køen. Det er en egen kø for prioriterte meldinger. |
+| Kvittering/Feilmelding | "Postkasse":Aktorer | "Meldingsformidler":Aktorer | Kvitteringene som sendes er: "Leveringskvittering":../meldinger/LeveringsKvittering, "Åpningskvittering":../meldinger/AapningsKvittering ,  "VarslingfeiletKvittering":../meldinger/VarslingfeiletKvittering i tillegg til eventuelle "Feilmeldinger":../meldinger/FeilMelding |
+| Hent Kvittering/Feilmelding | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Kvittering/Feilmelding ligger tilgjengelig på en kø hos Meldingsformidler. Avsender sender en forespørsel om å hente en kvittering. Meldingsformidler vil levere neste kvittering i køen uavhengig av hvilken kvitteringstype som ligger i køen. Det er en egen kø for prioriterte meldinger. |
 
 fn1. Dette er feilsituasjoner som vil kreve manuell oppfølging fra Avsender og av en art som ikke lar seg løse automatisk. Typisk eksempel kan være at Mottaker har skiftet postboks, og at meldingen er feilsendt.
