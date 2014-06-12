@@ -12,11 +12,11 @@ next: Forretningslag/Forretningsprosess_kvittering
 
 h2. Prosess for sending av digital post
 
-"Meldingen":../meldinger/ i Sikker Digital Post flyter mellom "Aktørene":Aktorer slik det beskrives i flyt diagrammet under.
+"Meldingen":../meldinger/ i Sikker digital post flyter mellom "Aktørene":Aktorer slik det beskrives i flyt diagrammet under.
 
 Ovordnet er meldingsflyten slik:
 
-# Avsender[1] sender en "Digital post Melding":../meldinger/DigitalPostMelding via Meldingsformidler til Postkasse
+# Avsender[1] sender en "Digital postmelding":../meldinger/DigitalPostMelding via Meldingsformidler til Postkasse
 # Postkasse sender en eller fler "Kvitteringsmeldinger":../meldinger/KvitteringsMelding til Meldingsformidler
 # Avsender henter "Kvitteringsmeldinger":../meldinger/KvitteringsMelding fra Meldingsformidler
 
@@ -26,11 +26,11 @@ Ovordnet er meldingsflyten slik:
 
 table(table table-striped).
 |_. Prosess |_. Fra |_. Til |_. Beskrivelse |
-| "DigitalpostMelding":../meldinger/DigitalPostMelding | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Avsender sender alltid sine meldinger til meldingsformidler. Transportkvittering fra meldingsformidler indikerer at denne har tatt over ansvaret for videre formidling av meldingen |
-| DigitalpostMelding | "Meldingsformidler":Aktorer | "Postkasse":Aktorer | Meldingsformidler mellomlagrer meldingen inntil Postkassen har levert en "LeveringsKvittering":StandardBusinessDocument/Melding/LeveringsKvittering |
-| "Leveringskvittering":StandardBusinessDocument/Melding/LeveringsKvittering | "Postkasse":Aktorer | "Meldingsformidler":Aktorer | Postkassen sender en "LeveringsKvittering":StandardBusinessDocument/Melding/LeveringsKvittering for å signalisere at postkassen har mottatt og behandlet meldingen, og postkassen tar ansvar for å levere denne til Mottaker |
+| "DigitalPostmelding":../meldinger/DigitalPostMelding | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Avsender sender alltid sine meldinger til meldingsformidler. Transportkvittering fra meldingsformidler indikerer at denne har tatt over ansvaret for videre formidling av meldingen |
+| DigitalPostmelding | "Meldingsformidler":Aktorer | "Postkasse":Aktorer | Meldingsformidler mellomlagrer meldingen inntil Postkassen har levert en "Leveringskvittering":StandardBusinessDocument/Melding/LeveringsKvittering |
+| "Leveringskvittering":StandardBusinessDocument/Melding/LeveringsKvittering | "Postkasse":Aktorer | "Meldingsformidler":Aktorer | Postkassen sender en "Leveringskvittering":StandardBusinessDocument/Melding/LeveringsKvittering for å signalisere at postkassen har mottatt og behandlet meldingen, og postkassen tar ansvar for å levere denne til Mottaker |
 | HentKvittering | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Avsender sender forespørsel til Meldingsformidler om å få levert ventende kvitteringer[2] |
 
 fn1. Avsender bør også ha et aktivt forhold til statusen til en melding. Meldingsflytdiagrammet kan med fordel ses i sammenheng med "tilstandsdiagrammet":avsender_tilstanddiagram for sikker digital post.
 
-fn2. Dette kan være andre typer kvitteringer enn LeveringsKvittering
+fn2. Dette kan være andre typer kvitteringer enn Leveringskvittering
