@@ -25,7 +25,7 @@ children:
 Transportlaget er bygd opp av følgende kapitler:
 
 table(table table-striped).
-| "Meldingsidentifikatorer":Meldingsidentifikatorer | Identifikatorer for transport av meldinger |
+| "Meldingsidentifikatorer":MeldingsIdentifikatorer | Identifikatorer for transport av meldinger |
 | "Meldingsutveksling":Meldingsutveksling/ | Beskrivelse av den tekniske meldingsutvekslingen |
 | "Meldingsformat":Meldingsformat | Meldingsformatet på de tekniske meldingene som sendes  |
 | "ebMS pmode: Formidle digital post":Meldingsutveksling/FormidleDigitalPostForsendelse | ebMS pmodes for formidling av Digital Post |
