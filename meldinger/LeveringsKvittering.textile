@@ -16,11 +16,11 @@ h3. {{page.title}}
 - Term := {{page.title}}
 - Definisjon := Kvittering på at postkassen har tatt ansvar for å tilgjengeliggjøre melding til mottaker. Sendes til Avsender via meldingsformideler.
 - Kilde := DIFI
-- Kommentar := Denne kvitteringen kan "Behandlingsansvarlig":../Aktorer oppbevare som en garanti på at posten er levert til "Mottaker":../begrep/Mottaker. 
-Kvitteringen sendes fra "Postkassleverandør":../Aktorer når postforsendelsen er validert og de garanterer for at posten vil bli tilgjengeliggjort.
-Kvitteringen vil bli sendt så fort "Postkassleverandør":../Aktorer kan garantere dette, det vil si at "Leveringskvitteringen":LeveringsKvittering vil bli sendt før "virkningsdato":/Felles/virkningsdato 
+- Kommentar := Denne kvitteringen kan "Behandlingsansvarlig":../forretningslag/Aktorer oppbevare som en garanti på at posten er levert til "Mottaker":../begrep/Mottaker. 
+Kvitteringen sendes fra "Postkassleverandør":../forretningslag/Aktorer når postforsendelsen er validert og de garanterer for at posten vil bli tilgjengeliggjort.
+Kvitteringen vil bli sendt så fort "Postkassleverandør":../forretningslag/Aktorer kan garantere dette, det vil si at "Leveringskvitteringen":LeveringsKvittering vil bli sendt før "virkningsdato":/Felles/virkningsdato 
 
-Det anbefales at "Behandlingsansvarlig":../Aktorer arkiverer denne kvitteringen som bevis på at "posten":DigitalPostMelding er levert til "Mottaker":../begrep/Mottaker.
+Det anbefales at "Behandlingsansvarlig":../forretningslag/Aktorer arkiverer denne kvitteringen som bevis på at "posten":DigitalPostMelding er levert til "Mottaker":../begrep/Mottaker.
 
 h3. Attributer
 

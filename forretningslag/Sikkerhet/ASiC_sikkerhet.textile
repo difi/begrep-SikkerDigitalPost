@@ -167,7 +167,7 @@ Her skal verdiene være i henhold til "Use of the Advanced Encryption Standard (
 
 Ved bruk av aes256-CBC skal padding gjøres i henhold til "kapittel 6.3 i CMS spesifikasjonen":ietf5_6_3
 
-Integriteten til den krypterte dokumentpakken ivaretas av "Dokumentpakkefingeravtrykk":../StandardBusinessDocument/Melding/Dokumentpakkefingeravtrykk som ligger i en signert melding.
+Integriteten til den krypterte dokumentpakken ivaretas av "Dokumentpakkefingeravtrykk":../../begrep/Dokumentpakkefingeravtrykk som ligger i en signert melding.
 
 Det er avsenders ansvar å generere en AES-nøkkel med tilstrekkelig tilfeldighet. Kilden bør være en sertifisert generator for tilfeldige tall (TRNG).
 

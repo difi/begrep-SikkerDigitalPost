@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HTML dokument
+title: html
 headtitle: Begrepskatalog for Sikker digital post - 
 group: forretningslag
 

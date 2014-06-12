@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DigitalpostMelding
+title: DigitalPostMelding
 headtitle: Begrepskatalog for Sikker digital post - 
 group: Melding
 
@@ -18,7 +18,7 @@ h3. {{page.title}}
 - Definisjon := En digital post med tilhørende "Dokumentpakke":../forretningslag/Dokumentpakke/
 - Kilde := DIFI
 - Kommentar := Digital post melding med tilhørende Dokumentpakke er postforsendelsen "Avsender":../begrep/Avsender sender til "Mottaker":../begrep/Mottaker.
-Denne inneholder informasjon om hvilken Avsender som er "Behandlingsansvarlig":../Aktorer, en knytning til dokumentpakken igjennom "Dokumentpakkefingeravtrykk":../begrep/Dokumentpakkefingeravtrykk
+Denne inneholder informasjon om hvilken Avsender som er "Behandlingsansvarlig":../forretningslag/Aktorer, en knytning til dokumentpakken igjennom "Dokumentpakkefingeravtrykk":../begrep/Dokumentpakkefingeravtrykk
 og informasjon om behandlingsregler som "Postkasseleverandør":../forretningslag/Aktorer skal bruke for å tilgjengeliggjøre posten.
 
 Postkassen kvitterer for meldingen gjennom å sende "Leveringskvittering":LeveringsKvittering til avsender via meldingsformidler. Leveringskvittering for at postkassen har tatt ansvar for å tilgjengeliggjøre meldingen.
