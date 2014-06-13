@@ -16,13 +16,13 @@ next: Forretningslag/DocumentIdentification
 - Kilde := GS1
 - Kommentar := Regler for hvem som opptrer som "Receiver":Receiver er beskrevet under.
 
-*For "digital post meldinger":Melding/DigitalPostMelding er "Receiver":Receiver*
+*For "digital post meldinger":../../meldinger/DigitalPostMelding er "Receiver":Receiver*
 
 * "Postkasseleverandør":../Aktorer
 
-*For "digital post kvitteringer":Melding/KvitteringsMelding er "Receiver":Receiver*
+*For "digital post kvitteringer":../../meldinger/KvitteringsMelding er "Receiver":Receiver*
 
-* Den "Aktør":../Aktorer som sto som "Sender":Sender for "digital post meldingen":Melding/DigitalPostMelding.
+* Den "Aktør":../Aktorer som sto som "Sender":Sender for "digital post meldingen":../../meldinger/DigitalPostMelding.
 
 
 

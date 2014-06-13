@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Header
+title: StandardBusinessDocumentHeader
 headtitle: Sikker digital post - Standard Business Document
 group: forretningslag
 
@@ -27,7 +27,7 @@ table(table table-striped).
 
 h3. Kommentar
 
-Sender/Receiver indikerer retning på meldingsprosessen. For eksempel i "FormidleDigitalPostForsendelse":../Meldingsutveksling/FormidleDigitalPostForsendelse prosessen så vil Sender være "Databehandler":../Aktorer og Receiver være "Postkasseleverandør":../Aktorer.
+Sender/Receiver indikerer retning på meldingsprosessen. For eksempel i "FormidleDigitalPostForsendelse":../../transportlag/Meldingsutveksling/FormidleDigitalPostForsendelse prosessen så vil Sender være "Databehandler":../Aktorer og Receiver være "Postkasse":../Aktorer.
 
 h3. XML eksempel fra Databehandler til Postkasseleverandør
 
