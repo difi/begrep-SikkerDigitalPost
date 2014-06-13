@@ -37,7 +37,7 @@ Meldingsformidler returnerer ingen forretningskvitteringer, men operer nærmere 
 
 h3. Manglende Leveringskvittering
 
-Postkasseleverandør skal returnere en "Leveringskvittering":../LeveringsKvittering til Avsender.
+Postkasseleverandør skal returnere en "Leveringskvittering":../meldinger/LeveringsKvittering til Avsender.
 Dersom denne uteblir lengre enn forventet bør Avsender håndtere dette igjennom feilhåndteringsprosedyrer etablert med sentralforvalter.
 (Feilhåndteringsprosedyrene etableres som del av bruksvilkår og er ikke ferdigstilt pt.)
 
@@ -54,5 +54,3 @@ Les mer om hvordan Avsender bør håndtere en "Feilmelding":../meldinger/FeilMel
 h3. Mottak av Varslingfeiletkvittering
 
 Les mer om hvordan Avsender bør håndtere en "Varslingfeiletkvittering":../meldinger/VarslingfeiletKvittering.
-
-
