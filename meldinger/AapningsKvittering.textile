@@ -17,7 +17,7 @@ h3. {{page.title}}
 - Definisjon := En "KvitteringsMelding":KvitteringsMelding til Avsender om at Mottaker har åpnet forsendelsen i sin postkasse.
 - Kilde := DIFI
 - Kommentar := Åpningskvitteringer blir bare sendt dersom dette er bestilt av "Avsender":../forretningslag/StandardBusinessDocument/Sender i "digital post meldingen":DigitalPostMelding ved å spesifisere dette i "digitalpostinfo":../begrep/DigitalPostInfo.
-"Mottaker":Mottaker må aksepteres at det sendes en "ÅpningsKvittering":AapningsKvittering til "Avsender":../forretningslag/StandardBusinessDocument/Sender for å få lest den digital posten. 
+"Mottaker":../begrep/Mottaker må aksepteres at det sendes en "ÅpningsKvittering":AapningsKvittering til "Avsender":../forretningslag/StandardBusinessDocument/Sender for å få lest den digital posten. 
 Mangel på "ÅpningsKvittering":AapningsKvittering betyr at "Mottaker":../begrep/Mottaker ikke har lest dokumentet.
 
 Bruk av "ÅpningsKvittering":AapningsKvittering er priset for "Avsender":../forretningslag/StandardBusinessDocument/Sender.
