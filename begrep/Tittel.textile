@@ -20,7 +20,7 @@ h4. Egenskaper
 
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| lang | 1..1 | "spraak":spraak |
+| lang | 1..1 | "spraak":/Felles/spraak |
 
 h3. Xml eksempel
 

@@ -27,7 +27,7 @@ table(table table-striped).
 
 h3. Kommentar
 
-En SDP forretningsmelding skal alltid ha en PartInfo med referanse til SoapBody (som inneholder selve "meldingen":../StandardBusinessDocument, og alternativt en til med referanse til "ASIC-E vedlegg":../Dokumentpakke. For denne skal det alltid angis PartProperties for MimeType (konstant "application/cms") og Content (konstant "sdp:Dokumentpakke").
+En SDP forretningsmelding skal alltid ha en PartInfo med referanse til SoapBody (som inneholder selve "meldingen":../../forretningslag/StandardBusinessDocument, og alternativt en til med referanse til "ASIC-E vedlegg":../../forretningslag/Dokumentpakke. For denne skal det alltid angis PartProperties for MimeType (konstant "application/cms") og Content (konstant "sdp:Dokumentpakke").
 
 h3. Xml eksempel
 

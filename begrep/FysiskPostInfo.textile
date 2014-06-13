@@ -8,7 +8,7 @@ name: FysiskpostInfo
 prev: Begreper
 ---
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":FysiskPostInfo
 - Term := {{page.title}}
 - Definisjon := Informasjon relatert til presentasjon og behandling av en sikker digital post melding
 - Kilde := DIFI
