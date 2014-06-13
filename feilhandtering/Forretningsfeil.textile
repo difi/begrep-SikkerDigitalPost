@@ -4,26 +4,15 @@ title: Forretningsfeil
 headtitle: Sikker digital post - Forretningsfeil
 group: Feilhåndtering
 
-id: Feilhåndtering/Forretningsfeil
+id: Feilhåndtering/Forretning
 
-next: Feilhåndtering/Transportfeil
+next: Feilhåndtering/Feilhåndteringsprosess
 
 ---
 
 h2. {{page.title}}
 
-Forretningsfeil er feil i meldingsinnhold og format i digitalpost melding, dokumentpakke med innhold. Dette håndteres gjennom egne Feilmeldinger.
-
-Følgende forretningsfeil kan oppstå i Sikker Digital Post.
-
-
-table(table table-striped).
-|_. Feil |_. Beskrivelse |
-|_. Manglende mottakskvittering fra Meldingsformidler | eb:Reciept uteblir fra meldingsformidler. Meldingen er dermed ikke sendt. |
-|_. Manglende "Leveringskvittering":../meldinger/LeveringsKvittering  | Postkasseleverandør har ikke tilgjengeliggjort posten. |
-|_. Mottak av "Feilmelding":../meldinger/FeilMelding | Det har oppstått problemer med tilgjengeliggjøren av posten og Postkasseleverandør har sendt en Feilmelding |
-|_. Mottak av "Varslingfeiletkvittering":../meldinger/VarslingfeiletKvittering | Postkasseleverandør har ikke varslet Innbygger som avtalt |
-
+Forretningsfeil er feil som medfører at aktørene i Sikker Digital Post ikke er i stand til å utføre en operasjon slik som spesifisert i forretningsmeldinger.
 
 h3. Manglende mottakskvittering fra Meldingsformidler
 
@@ -39,7 +28,7 @@ h3. Manglende Leveringskvittering
 
 Postkasseleverandør skal returnere en "Leveringskvittering":../meldinger/LeveringsKvittering til Avsender.
 Dersom denne uteblir lengre enn forventet bør Avsender håndtere dette igjennom feilhåndteringsprosedyrer etablert med sentralforvalter.
-(Feilhåndteringsprosedyrene etableres som del av bruksvilkår og er ikke ferdigstilt pt.)
+(Feilhåndteringsprosedyrene etableres som del av bruksvilkår)
 
 h4. Hvor lenge skal en Avsender vente på en Leveringskvittering?
 
@@ -47,10 +36,14 @@ Dette avhenger av hva Avsender har sendt.
 Dersom Avsender sender en prioritert digital postmelding skal en Leveringskvittering leveres i løpet av minutter, mens dersom en Avsender sender en normal digital postmelding kan det ta et par timer.
 Mer tydelige beskrivelser vil bli utarbeidet i forbindelse bruksvilkårene.
 
-h3. Mottak av Feilmelding
-
-Les mer om hvordan Avsender bør håndtere en "Feilmelding":../meldinger/FeilMelding.
-
-h3. Mottak av Varslingfeiletkvittering
+h3. Varslingfeilet
 
 Les mer om hvordan Avsender bør håndtere en "Varslingfeiletkvittering":../meldinger/VarslingfeiletKvittering.
+
+h3. Innholdsfeil i forretningsmeldingen
+
+Dette kan være feil relatert til innholdet i SBD som ugyldig identifikator på mottaker og/eller feil i Dokumentpakke, for eksempel relatert til dekryptering/signeringsvalidering gjort av postkassen.
+
+h3. Mer om forretningsfeil
+
+For mer informasjon om forretningsfeil, se "dokumentasjon av forretningsmeldingen Feil":../meldinger/FeilMelding

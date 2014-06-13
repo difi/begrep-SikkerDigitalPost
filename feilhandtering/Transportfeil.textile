@@ -4,85 +4,45 @@ title: Transportfeil
 headtitle: Sikker digital post - Transportfeil
 group: Feilhåndtering
 
-id: Feilhåndtering/Transportfeil
+id: Feilhåndtering/Transport
 
-next: Feilhåndtering/Teknisk
+next: Feilhåndtering/Forretning
 
 ---
 
 h2. {{page.title}}
 
-Feil som oppstår i meldingsutvekslingen er transportfeil og ikke forretningsfeil.
-Transport feil er feil som både er knyttet til transportprotokoll og meldingsutveksling i tillegg til adresseringsinformasjonen på forretningslaget. 
-Det vil si at transportfeil er knyttet til følgende deler av meldingen:
+Feil i transportlaget vil være feil relatert til transportprotokoll og meldingsutveksling. Transportlaget benytter "AS 4":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/profiles/AS4-profile/v1.0/os/AS4-profile-v1.0-os.html og feil i transportlaget skal følge
+"ebMS 3.0 spesifikasjonen for feilhåndtering":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/os/ebms_core-3.0-spec-os.html<notextile>#6.Error Handling|</notextile>outline
 
-* SOAP og WS-Security
-* eb:Messaging
-* Standard Business Document Header
+I feilsituasjoner vil tjenestene returnere en SOAP-fault. Denne vil både inneholde en ebMS 3.0 SignalMessage som inneholder informasjon om feilen og en feilkode i SOAP bodyen.
 
-
-h3. Feil ved meldingsutveksling
-
-Ved feilsituasjoner vil tjenestene returnere en SOAP-fault.
-Denne vil både inneholde en ebMS 3.0 SignalMessage som inneholder informasjon om feilen og en feilkode i SOAP bodyen.
-
-Feilmeldinger blir returnert som standard SOAP-fault uten noen WS-security-header, og er dermed verken kryptert eller signert slik som andre meldinger er. 
+Feilmeldinger kan bli returnert som standard SOAP-fault uten noen WS-security-header, og er dermed verken kryptert eller signert slik som andre meldinger er. 
 Dette er fordi feilmeldingene ikke inneholder informasjon som må integritets- eller konfidensialitetsbeskyttes, samt fordi noen feilsituasjoner gjør det umulig å kryptere og/eller signere feilmeldingen.
 
-h3. ebMS 3.0 feilhåndtering
+h3. Feilhåndtering
 
-referanse:
-[8] OASIS, "AS4 Profil of ebMS 3.0 Version 1.0":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/profiles/AS4-profile/v1.0/os/AS4-profile-v1.0-os.html 
-Kapitel 6. Error Handling beskriver i detalj feilhåndteringen.
+Nedenfor er en ikke uttømmende liste over feilsituasjoner og hvordan de kan håndterest.
 
-h4. eb:Error/@severity
+table(table table-striped).
+|_. Feiltype? |_. Hva gjør Avsender? |_. Hva gjør Meldingsformidler(MF)? |_. Hva gjør Postkasseleverandør(PK)? |_. Hva gjør MF hvis PK svarer med soap fault? |
+| WS-security | Manuell håndtering | SOAP-fault (EBMS-signal) | SOAP-fault (EBMS-signal) | Manuell håndtering |
+| EBMS-feil  | Manuell håndtering | SOAP-fault + EBMS-signal | SOAP-fault + EBMS-signal | Manuell håndtering |
+| Skjemavalidering | Manuell håndtering | SOAP-fault + EBMS-signal | SOAP-fault + EBMS-signal | Manuell håndtering |
+| Feil i SBD-signatur | Manuell håndtering | SOAP-fault + EBMS-signal | SOAP-fault + EBMS-signal | Manuell håndtering |
+| Feil i SBDH | Manuell håndtering | SOAP-fault + EBMS-signal | SOAP-fault + EBMS-signal | Manuell håndtering |
+| Intern feil i system | Prøver på ny senere | SOAP-fault + EBMS-signal (Other) | SOAP-fault + EBMS-signal (Other) | Prøver på ny senere |
 
-* ebMS Error meldinger med Severity="warning" oversendes alltid som SOAP meldinger.
-* ebMS Error meldinger med Severity="failure" oversendes alltid som SOAP Fault meldinger. 
+Følgende responser kan Avsender forvente å få tilbake dersom feilen over oppstår.
 
-
-h3. SOAP-Body fault
-
-SOAP feilen vil være enten typen Client eller Server. 
-
-h4. Client feil
-
-Client vil typisk være en request som ikke validerer. 
-For disse tilfellene må Avsender løse problemet det forsøkes å sende meldingen på nytt.
-
-h4. Server feil
-
-Server vil være en systemfeil, som vil ha en Leverandørspesifikk-generert feilkode og en feilmelding i faultString-elementet, 
-For disse tilfellene kan Avsender prøve å sende meldingen på nytt, da feilen kan være forbigående.
-
-
-h3. Eksempel
-
-<pre class="brush: bash; toolbar: false">
- 
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
-   <SOAP-ENV:Header>
-			<eb:Messaging S12:mustUnderstand="true">
-			<eb:SignalMessage>
-				<eb:MessageInfo>
-					<eb:Timestamp>2014-02-10T15:21:42.821Z</eb:Timestamp>
-					<eb:MessageId>UUID-6@sender.example.com</eb:MessageId>
-					<eb:RefToMessageId>UUID-4@receiver.example.com</eb:RefToMessageId>
-				</eb:MessageInfo>
-				<eb:Error errorCode="EBMS:0101" severity="failure">
-					<eb:Description lang="en">FailedAuthentication</eb:Description>
-					<eb:ErrorDetail>The signature in the Security header intended for the "ebms" SOAP actor, could not be validated by the Security module. </eb:ErrorDetail>
-					 <refToMessageId.....
-				</eb:Error>
-			</eb:SignalMessage>
-		</eb:Messaging>
-   </SOAP-ENV:Header>
-   <SOAP-ENV:Body>
-      <SOAP-ENV:Fault>
-         <faultcode>SOAP-ENV:Server</faultcode>
-         <faultstring xml:lang="en">Some error message</faultstring>
-      </SOAP-ENV:Fault>
-   </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
-
-</pre>
+table(table table-striped).
+|_. Feiltype? |_. Respons |
+| Kan ikke validere signaturene (manglende eller feil i signatur) | EBMS error: SignatureValidation |
+| Bruk av sertifikat fra uventet utsteder | EBMS error: SignatureValidation |
+| Feil signeringsalgoritmer | EBMS error: PolicyNonCompliance |
+| Ukjent organisasjonsnummer | EMBS error: FailedAuthentication |
+| Feil bruk av eller feil verdier på felter i EBMS | EBMS Error: ValueInconsistent eller ValueNotRecognized |
+| Feil bruk av eller feil verdier på felter i SBDH | EBMS Error: ValueInconsistent eller ValueNotRecognized |
+| Feil eller manglende signatur på SBD | EBMS error: SignatureValidation |
+| Sending av ukjente payloads som SOAP body | EBMS error: FeatureNotSupported |
+| Intern feil | EBMS error: Other |

@@ -61,9 +61,11 @@ table(table table-striped).
 
 h4. Kodeverk for feilkode
 
-feilkode kan ha følgende verdi:
+Følgende responser kan Avsender forvente å få tilbake dersom feilen over oppstår (ikke uttømmende liste):
 
 table(table table-striped).
-|_. Kodeverdi |_. Beskrivelse |
-
-(ikke detaljert)
+|_. Feiltype? |_. Respons |
+| Postkasse kan ikke dekryptere dokumentpakke | "Feil":FeilMelding type:KLIENT detaljer:"Kan ikke dekryptere" |
+| Manglende eller feil signatur inni dokumentpakke | "Feil":FeilMelding type:KLIENT detaljer:"Feil signatur" |
+| Feil bruk av eller feil verdier i SBD melding | "Feil":FeilMelding type:KLIENT detaljer:"Feil i manifest" |
+| Feil bruk av eller feil verdier på felter | "Feil":FeilMelding type:KLIENT detaljer:"Ugyldig verdi ... " |

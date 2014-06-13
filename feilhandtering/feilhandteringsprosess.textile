@@ -16,4 +16,3 @@ Prosessen for feilhåndtering i Sikker digital post er ikke etablert. Prosessen 
 Generelle bruksvilkår for felleskomponenter forvaltet av difi kan man finne på "samarbeid.difi.no":http://samarbeid.difi.no/
 
 Spørsmål om prosess for feilhåndtering kan stilles igjennom å kontakte "idporten@difi.no":mailto:idporten@difi.no
-
