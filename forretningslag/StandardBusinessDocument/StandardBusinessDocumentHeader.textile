@@ -29,6 +29,8 @@ h3. Kommentar
 
 Sender/Receiver indikerer retning på meldingsprosessen. For eksempel i "FormidleDigitalPostForsendelse":../../transportlag/Meldingsutveksling/FormidleDigitalPostForsendelse prosessen så vil Sender være "Databehandler":../Aktorer og Receiver være "Postkasse":../Aktorer.
 
+Merk også at Sikker Digital Post sin bruk av SBDH er strengere enn den offisielle standarden (BusinessScope er obligatorisk i Sikker Digital Post). Konsekvesen er at man kan få en "forretningsrelatert feilmelding":../../feilhandtering/Forretningsfeil selv om XML'en validerer mot xsd. 
+
 h3. XML eksempel fra Databehandler til Postkasseleverandør
 
 ** En melding fra "Databehandler":../Aktorer med orgnummer: 123456789 til "Postkasseleverandør":../Aktorer med orgnummer: 987654321
