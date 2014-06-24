@@ -1,69 +1,69 @@
 ﻿<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
 	<env:Header>
 		<wsse:Security env:mustUnderstand="true" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-			<wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509-b0a9208a-c164-4104-a8d7-7212575beb4c">MIIC+zCCAeOgAwIBAgIEF294wDANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDDBxEaWdpcG9zdCBUZXN0IENlcnQgQXV0aG9yaXR5MB4XDTE0MDUxMTEzMzcxMFoXDTI0MDYwNzEzMzcxMFowFDESMBAGA1UEAwwJMTIzNDU2Nzg5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv2+9wREmtW3+qAbDtEnoIEFbPj14BifKfsu9QPCqLKvIKvi4RcuC5q0A6m50ZUA4bkbktHOCygc8UhCVQ12u7/eezJGyUxdv4/NN6FW/88LqXoHFkZayrqctTuK5tXOt055A0rKhZu9iBcYWjKvaTSTdUTfhruIHj9zK2D0AUuA8ylA4Ueai7kn6CYyhJ++OYeq5RLrygf6/aI1A1efMr1OCk2XfGxl8MTIwh/uUw9HXA+afONSWzYYFXgaqRFgtmrX5IzGeJUvup2SaKNZg40fMxAMJIJvzAs5dkKMTf6gvyVjBVDKtv+b55+n5tEdS9Si3pQldL9zcbVV4tdfxeQIDAQABo0IwQDAdBgNVHQ4EFgQU4iGC0ujKblZle84sDXTuSa4S++8wHwYDVR0jBBgwFoAUuE58UdpgSYlevlft5a525pfqXO0wDQYJKoZIhvcNAQELBQADggEBACcVje2Dk7UFqRaI2Syvkrxn2he2Dyrh4tqjA+SlOFObQkRTTYVBBJKKV+8qKOWXyS3Y12ygmlKTmCimpognPEohq4uz4W2O0SviBRU/6Di7DN49fdGZDT5iWSiUyymbLlb6hu86T4ARcf/7wuDv9DZgCvW577jS8BBJmKcsdAxQWb4hbYwSOmxE71tX4lEJu1Momx5VyJe6lKl94u+0Aj9Ze975vBAF/SdoIWQPjIehKkBNpXedyQ9qaV+zmyokPH03dBT+YdG9xpkHiZgQS8+mUV2oLqMcCkdoA9WEiRCnVsOufOSgWGk5ExbU8emWrk4G/Sk4bNA/QNiQOI08V4E=</wsse:BinarySecurityToken>
-			<wsu:Timestamp wsu:Id="TS-13141d8e-a4f4-4f37-882f-e99574564dee">
-				<wsu:Created>2014-06-10T13:37:14.171Z</wsu:Created>
-				<wsu:Expires>2014-06-10T13:42:14.171Z</wsu:Expires>
+			<wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509-3931d282-4f8b-4b1f-a9eb-73431572f6c8">MIIE7jCCA9agAwIBAgIKGBj1bv99Jpi+EzANBgkqhkiG9w0BAQsFADBRMQswCQYDVQQGEwJOTzEdMBsGA1UECgwUQnV5cGFzcyBBUy05ODMxNjMzMjcxIzAhBgNVBAMMGkJ1eXBhc3MgQ2xhc3MgMyBUZXN0NCBDQSAzMB4XDTE0MDQyNDEyMzExMVoXDTE3MDQyNDIxNTkwMFowVTELMAkGA1UEBhMCTk8xGDAWBgNVBAoMD1BPU1RFTiBOT1JHRSBBUzEYMBYGA1UEAwwPUE9TVEVOIE5PUkdFIEFTMRIwEAYDVQQFEwk5ODQ2NjExODUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDLTnQryf2bmiyQ9q3ylQ6xMl7EhGIbjuziXkRTfL+M94m3ceAiko+r2piefKCiquLMK4j+UDcOapUtLC4dT4c6GhRH4FIOEn5aNS2I/njTenBypWka/VEhQUj7zvIh5G4UXIDIXYvLd7gideeMtkX24KUh2XVlh+PcqLGHirqBwVfFiTn5SKhr/ojhYYEb2xxTk3AY9nLd1MMffKQwUWmfoTos4scREYGI2R2vWxKWPcDqk+jig2DISWSJSuerz3HMYAAmp+Gjt0oFJNiyOFaFyGwT3DvqwOMQWwWXdmLh1NxMgTpghXAaXae76ucm9GDQ9E7ytf+JA096RWoi+5GtAgMBAAGjggHCMIIBvjAJBgNVHRMEAjAAMB8GA1UdIwQYMBaAFD+u9XgLkqNwIDVfWvr3JKBSAfBBMB0GA1UdDgQWBBTVyVLqcjWf1Qd0gsmCTrhXiWeqVDAOBgNVHQ8BAf8EBAMCBLAwFgYDVR0gBA8wDTALBglghEIBGgEAAwIwgbsGA1UdHwSBszCBsDA3oDWgM4YxaHR0cDovL2NybC50ZXN0NC5idXlwYXNzLm5vL2NybC9CUENsYXNzM1Q0Q0EzLmNybDB1oHOgcYZvbGRhcDovL2xkYXAudGVzdDQuYnV5cGFzcy5uby9kYz1CdXlwYXNzLGRjPU5PLENOPUJ1eXBhc3MlMjBDbGFzcyUyMDMlMjBUZXN0NCUyMENBJTIwMz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0MIGKBggrBgEFBQcBAQR+MHwwOwYIKwYBBQUHMAGGL2h0dHA6Ly9vY3NwLnRlc3Q0LmJ1eXBhc3Mubm8vb2NzcC9CUENsYXNzM1Q0Q0EzMD0GCCsGAQUFBzAChjFodHRwOi8vY3J0LnRlc3Q0LmJ1eXBhc3Mubm8vY3J0L0JQQ2xhc3MzVDRDQTMuY2VyMA0GCSqGSIb3DQEBCwUAA4IBAQCmMpAGaNplOgx3b4Qq6FLEcpnMOnPlSWBC7pQEDWx6OtNUHDm56fBoyVQYKR6LuGfalnnOKuB/sGSmO3eYlh7uDK9WA7bsNU/W8ZiwYwF6PBRui2rrqYk3kj4NLTNlyh/AOO1a2FDFHu369W0zcjj5ns7qs0K3peXtLX8pVxA8RmjwdGe69P/2r6s2A5CBj7oXZJD0Yo2dJFdsZzonT900sUi+MWzlhj3LxU5/684NWc2NI6ZPof/dyYpy3K/AFzpDLWGSmaDO66hPl7EfoJxEiX0DNBaQzNIyRFPh0ir0jM+32ZQ4goR8bAtyhKeTyA/4+Qx1WQXS3wURCC0lsbMh</wsse:BinarySecurityToken>
+			<wsu:Timestamp wsu:Id="TS-85cc5183-959d-46fd-8b56-3f465a19e9bf">
+				<wsu:Created>2014-06-24T16:27:47.445Z</wsu:Created>
+				<wsu:Expires>2014-06-24T16:32:47.445Z</wsu:Expires>
 			</wsu:Timestamp>
-			<ds:Signature Id="SIG-1b9f7b36-7fc5-4add-b07c-bb60f452d722" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+			<ds:Signature Id="SIG-32350584-4d20-46c4-8507-14bdfea00e3b" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 				<ds:SignedInfo>
 					<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
 						<ec:InclusiveNamespaces PrefixList="env" xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 					</ds:CanonicalizationMethod>
 					<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
-					<ds:Reference URI="#id-82ea2b1a-01f0-461e-a120-c79084186af3">
+					<ds:Reference URI="#id-41ef0563-db79-44e1-846a-abcf902db00b">
 						<ds:Transforms>
 							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
 								<ec:InclusiveNamespaces PrefixList="" xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 							</ds:Transform>
 						</ds:Transforms>
 						<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-						<ds:DigestValue>2PlRk4CeT2AxNj7vZGBzIa+s8+RK9svps+aQcEe8V9Q=</ds:DigestValue>
+						<ds:DigestValue>WcSDsacaejt5hOWnZwXWzN/eXRXQWIN7yP/a3zJc1TI=</ds:DigestValue>
 					</ds:Reference>
-					<ds:Reference URI="#TS-13141d8e-a4f4-4f37-882f-e99574564dee">
+					<ds:Reference URI="#TS-85cc5183-959d-46fd-8b56-3f465a19e9bf">
 						<ds:Transforms>
 							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
 								<ec:InclusiveNamespaces PrefixList="wsse env" xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 							</ds:Transform>
 						</ds:Transforms>
 						<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-						<ds:DigestValue>/y8G0ktVezFKC2Ni9WsNI4s38rh3/EtJh8cWqCWcnBE=</ds:DigestValue>
+						<ds:DigestValue>5FiT1Mgl8mzlwSytLHGLRNHDMXyxcdcbE/KbcaMEhrg=</ds:DigestValue>
 					</ds:Reference>
-					<ds:Reference URI="#id-4b2326ca-ab8e-4a4b-b4b6-a4a2ea984cfb">
+					<ds:Reference URI="#id-89edc486-3a8c-4a59-b35d-12a6b72553e2">
 						<ds:Transforms>
 							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
 								<ec:InclusiveNamespaces PrefixList="" xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 							</ds:Transform>
 						</ds:Transforms>
 						<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-						<ds:DigestValue>1k+HXtk5Q9dhyiO5RfWsmYyTDaIN13sOH8njHnFcis4=</ds:DigestValue>
+						<ds:DigestValue>4HMnR8yeP6Oy4QeHIRopofZBYp0yyizQT2XhAVKaGz8=</ds:DigestValue>
 					</ds:Reference>
-					<ds:Reference URI="cid:31718635-4128-41fe-b5e1-e355c0d7f602@meldingsformidler.sdp.difi.no">
+					<ds:Reference URI="cid:e9c14a38-32cb-417f-9f38-97ac6b64fe57@meldingsformidler.sdp.difi.no">
 						<ds:Transforms>
 							<ds:Transform Algorithm="http://docs.oasis-open.org/wss/oasis-wss-SwAProfile-1.1#Attachment-Content-Signature-Transform"/>
 						</ds:Transforms>
 						<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-						<ds:DigestValue>kZLCW3NPy62+MtrcKAicYNsOOfkMwgzi5XM/VyYazAw=</ds:DigestValue>
+						<ds:DigestValue>AVqDCCPYIKuHQTJ0d3jFm99wsJ0DDvz+Hi4x4/S7irA=</ds:DigestValue>
 					</ds:Reference>
 				</ds:SignedInfo>
-				<ds:SignatureValue>a8sLPK4AMDne+++w+w0eNcXwhDZfRxOBYzxyNOwzXfnd+wDwiCBmSl255sNSF9i+eEmAPEwMRKBANTa+iOIaXTezh0uILu3DkczMc9RWhgi+/0VmlRSB1RPbbGZCZYAMLoH0JGdNiIPITfLR/hBP8cMx362+H09+IcQPjLQqbHmWVJmknb3c4CfLsvD5oQi8Vk+PW7vwc+GES2OmN+D33YMkwcbyGPxNIlOqiiHh4fQKSUsKEasrHE9PvbJz8bPj7ELWDSMZpMf4yCH194jfJdYLmPSES45lvLs9zNHxmhrys++OJt3gZ3L2KlYBV6vSgQc/B1wUZie7jLl1TYS2rQ==</ds:SignatureValue>
-				<ds:KeyInfo Id="KI-002f402b-f16c-44c3-a926-fe9c2d98b002">
-					<wsse:SecurityTokenReference wsu:Id="STR-82ab27b7-78de-42a4-a3e0-659ac61e2378">
-						<wsse:Reference URI="#X509-b0a9208a-c164-4104-a8d7-7212575beb4c" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
+				<ds:SignatureValue>qOE+eAC+FJjlKOzx6FsT17Wd2imY5n7UuvgYe66Vtoog3q3whsutuDNcIccoCSc9CRC2cHtl1/q7TYYd3uIBqkYVeItkgSGb46XolGqARaiAQj7WsOQO5HrF3sqQEmd9M8Lk7PoQhXy2jj4FAAn+X1URDyoskwp+xz6hBSx05IDENZeaJdJqhbNn3Lr9oE379dRCYrlYhrtqXzoZia1kt1Zl6ySDZkvuEsgvz4RYte+o0OjmFPJ/vEaMugaRntQBnVym6gG3e2JZoaZWBaztcKcb7nCC1r+GmX90YSnkHfCBtqHO6fCE0AtMusr91Ate6y1H5YOxLe4AWJ/eUP9b6A==</ds:SignatureValue>
+				<ds:KeyInfo Id="KI-4585c816-e9bc-44b5-996e-3b6ebedff330">
+					<wsse:SecurityTokenReference wsu:Id="STR-8b006d96-10fd-479b-92ed-46319403df62">
+						<wsse:Reference URI="#X509-3931d282-4f8b-4b1f-a9eb-73431572f6c8" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
 					</wsse:SecurityTokenReference>
 				</ds:KeyInfo>
 			</ds:Signature>
 		</wsse:Security>
-		<eb:Messaging env:mustUnderstand="true" wsu:Id="id-4b2326ca-ab8e-4a4b-b4b6-a4a2ea984cfb" xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-			<ns6:UserMessage mpc="urn:normal" xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:ns4="http://www.w3.org/2003/05/soap-envelope" xmlns:ns5="http://www.w3.org/2000/09/xmldsig#" xmlns:ns6="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:ns7="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0" xmlns:ns8="http://www.w3.org/1999/xlink" xmlns:ns9="http://begrep.difi.no/sdp/schema_v10">
+		<eb:Messaging env:mustUnderstand="true" wsu:Id="id-89edc486-3a8c-4a59-b35d-12a6b72553e2" xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+			<ns6:UserMessage mpc="urn:normal" xmlns:ns10="http://uri.etsi.org/2918/v1.2.1#" xmlns:ns11="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:ns4="http://www.w3.org/2003/05/soap-envelope" xmlns:ns5="http://www.w3.org/2000/09/xmldsig#" xmlns:ns6="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:ns7="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0" xmlns:ns8="http://www.w3.org/1999/xlink" xmlns:ns9="http://begrep.difi.no/sdp/schema_v10">
 				<ns6:MessageInfo>
-					<ns6:Timestamp>2014-06-10T15:37:14.154+02:00</ns6:Timestamp>
-					<ns6:MessageId>5b1e0d1c-f5ff-4460-ab1f-a2715dc14186</ns6:MessageId>
+					<ns6:Timestamp>2014-06-24T18:27:47.432+02:00</ns6:Timestamp>
+					<ns6:MessageId>aeb133fa-fe7e-451e-b970-eeb9323d623c</ns6:MessageId>
 				</ns6:MessageInfo>
 				<ns6:PartyInfo>
 					<ns6:From>
-						<ns6:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:123456789</ns6:PartyId>
+						<ns6:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:984661185</ns6:PartyId>
 						<ns6:Role>urn:sdp:meldingsformidler</ns6:Role>
 					</ns6:From>
 					<ns6:To>
@@ -79,7 +79,7 @@
 				</ns6:CollaborationInfo>
 				<ns6:PayloadInfo>
 					<ns6:PartInfo/>
-					<ns6:PartInfo href="cid:31718635-4128-41fe-b5e1-e355c0d7f602@meldingsformidler.sdp.difi.no">
+					<ns6:PartInfo href="cid:e9c14a38-32cb-417f-9f38-97ac6b64fe57@meldingsformidler.sdp.difi.no">
 						<ns6:PartProperties>
 							<ns6:Property name="MimeType">application/cms</ns6:Property>
 							<ns6:Property name="Content">sdp:Dokumentpakke</ns6:Property>
@@ -89,12 +89,12 @@
 			</ns6:UserMessage>
 		</eb:Messaging>
 	</env:Header>
-	<env:Body wsu:Id="id-82ea2b1a-01f0-461e-a120-c79084186af3" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-		<ns3:StandardBusinessDocument Id="SBD-a5cdb1f5-1246-44d4-8cdf-81c1f516bddd" xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:ns4="http://www.w3.org/2003/05/soap-envelope" xmlns:ns5="http://www.w3.org/2000/09/xmldsig#" xmlns:ns6="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:ns7="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0" xmlns:ns8="http://www.w3.org/1999/xlink" xmlns:ns9="http://begrep.difi.no/sdp/schema_v10">
+	<env:Body wsu:Id="id-41ef0563-db79-44e1-846a-abcf902db00b" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+		<ns3:StandardBusinessDocument xmlns:ns3="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:ns5="http://www.w3.org/2000/09/xmldsig#" xmlns:ns9="http://begrep.difi.no/sdp/schema_v10">
 			<ns3:StandardBusinessDocumentHeader>
 				<ns3:HeaderVersion>1.0</ns3:HeaderVersion>
 				<ns3:Sender>
-					<ns3:Identifier Authority="iso6523-actorid-upis">9908:889640782</ns3:Identifier>
+					<ns3:Identifier Authority="iso6523-actorid-upis">9908:984661185</ns3:Identifier>
 				</ns3:Sender>
 				<ns3:Receiver>
 					<ns3:Identifier Authority="iso6523-actorid-upis">9908:984661185</ns3:Identifier>
@@ -102,14 +102,14 @@
 				<ns3:DocumentIdentification>
 					<ns3:Standard>urn:no:difi:sdp:1.0</ns3:Standard>
 					<ns3:TypeVersion>1.0</ns3:TypeVersion>
-					<ns3:InstanceIdentifier>6eb4bbd3-438e-4c16-82c7-17f6633bf80c</ns3:InstanceIdentifier>
+					<ns3:InstanceIdentifier>d5741276-d207-4bbb-810c-9912189087ac</ns3:InstanceIdentifier>
 					<ns3:Type>digitalPost</ns3:Type>
-					<ns3:CreationDateAndTime>2014-06-10T15:37:13.344+02:00</ns3:CreationDateAndTime>
+					<ns3:CreationDateAndTime>2014-06-24T18:27:46.791+02:00</ns3:CreationDateAndTime>
 				</ns3:DocumentIdentification>
 				<ns3:BusinessScope>
 					<ns3:Scope>
 						<ns3:Type>ConversationId</ns3:Type>
-						<ns3:InstanceIdentifier>ae986161-b2f5-40c6-be90-b9d7bbee0105</ns3:InstanceIdentifier>
+						<ns3:InstanceIdentifier>konversasjonsId-1337-1403627265874</ns3:InstanceIdentifier>
 						<ns3:Identifier>urn:no:difi:sdp:1.0</ns3:Identifier>
 					</ns3:Scope>
 				</ns3:BusinessScope>
@@ -119,38 +119,65 @@
 					<SignedInfo>
 						<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 						<SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
-						<Reference URI="#SBD-a5cdb1f5-1246-44d4-8cdf-81c1f516bddd">
+						<Reference URI="">
 							<Transforms>
 								<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
 							</Transforms>
 							<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-							<DigestValue>cvX8nPtvmu+2iEG7gd7bkpJrwxz7sO4vERTacCMI9Hg=</DigestValue>
+							<DigestValue>fJhP+agEU4eAVSY99KifB+wBN/2aO5SdNyLAn7DqCp4=</DigestValue>
 						</Reference>
 					</SignedInfo>
-					<SignatureValue>jxMrYJTSvyAoC62u8JyL5zNOxqbc9y9gvVzIgpN9Rj67vsuL6OXW6ruK0JJFj93TK3YRVq34ftT28AM7Ijco2JG7UMSS54Cgky/QSHaqUfC93UZ8H1qifakPE8wC4H9s868VHmjPQyPsnc+VtbWHYrPZj3J+pDpw25WlgVHsg4I6cjypBaVT7i1VAkvI/Ip4rw/ftPZDUDjfoawyjA9dmmNTxEcOtGYHwBGcP2u/1ziATcJiJJzV8T2oNe1DokmPb1TXbbJcyVF8Ze4CmlbITKnAA0/TMirYj/xl4PC7v6KedM2S7qxCHsAZxHQNjPDpdzX4w+rSqvGwgW0ZHmpLmw==</SignatureValue>
+					<SignatureValue>Jq20H9qOWfoVcnT3qrP3wg/uXOVkyFOIMMG9S6dQu9h1FOP9HW0GAAUeI3x7nqkcgoTOjanvDquC
+lyVyezlgtSFYUtGS60Yv2ew+Bp8sftJ5leOtiSztT7xGeGLY90V5hdX1YJ+HXxP75+Ic+xWvtM05
+TyJsk29B65vxocsvcxezG/exmQQQ66x7EiUCrxrZUCVGP52zefMaIKtcab12Hg760wsjwNB8Ue/3
+nn4wjhEc7sGcdEVKqW+yQxStR5se1pGnj9sSYWT+NdHTpsboP9iaobeZdSyXaa1YEwedupeyjQIA
+ivnCD0pDrQDQXO87H0P4SmxaHIOdIl/iEr4wKg==</SignatureValue>
 					<KeyInfo>
 						<X509Data>
-							<X509Certificate>MIIC+zCCAeOgAwIBAgIEF294wDANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDDBxEaWdpcG9zdCBUZXN0IENlcnQgQXV0aG9yaXR5MB4XDTE0MDUxMTEzMzcxMFoXDTI0MDYwNzEzMzcxMFowFDESMBAGA1UEAwwJMTIzNDU2Nzg5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv2+9wREmtW3+qAbDtEnoIEFbPj14BifKfsu9QPCqLKvIKvi4RcuC5q0A6m50ZUA4bkbktHOCygc8UhCVQ12u7/eezJGyUxdv4/NN6FW/88LqXoHFkZayrqctTuK5tXOt055A0rKhZu9iBcYWjKvaTSTdUTfhruIHj9zK2D0AUuA8ylA4Ueai7kn6CYyhJ++OYeq5RLrygf6/aI1A1efMr1OCk2XfGxl8MTIwh/uUw9HXA+afONSWzYYFXgaqRFgtmrX5IzGeJUvup2SaKNZg40fMxAMJIJvzAs5dkKMTf6gvyVjBVDKtv+b55+n5tEdS9Si3pQldL9zcbVV4tdfxeQIDAQABo0IwQDAdBgNVHQ4EFgQU4iGC0ujKblZle84sDXTuSa4S++8wHwYDVR0jBBgwFoAUuE58UdpgSYlevlft5a525pfqXO0wDQYJKoZIhvcNAQELBQADggEBACcVje2Dk7UFqRaI2Syvkrxn2he2Dyrh4tqjA+SlOFObQkRTTYVBBJKKV+8qKOWXyS3Y12ygmlKTmCimpognPEohq4uz4W2O0SviBRU/6Di7DN49fdGZDT5iWSiUyymbLlb6hu86T4ARcf/7wuDv9DZgCvW577jS8BBJmKcsdAxQWb4hbYwSOmxE71tX4lEJu1Momx5VyJe6lKl94u+0Aj9Ze975vBAF/SdoIWQPjIehKkBNpXedyQ9qaV+zmyokPH03dBT+YdG9xpkHiZgQS8+mUV2oLqMcCkdoA9WEiRCnVsOufOSgWGk5ExbU8emWrk4G/Sk4bNA/QNiQOI08V4E=</X509Certificate>
+							<X509Certificate>MIIE7jCCA9agAwIBAgIKGBj1bv99Jpi+EzANBgkqhkiG9w0BAQsFADBRMQswCQYDVQQGEwJOTzEd
+MBsGA1UECgwUQnV5cGFzcyBBUy05ODMxNjMzMjcxIzAhBgNVBAMMGkJ1eXBhc3MgQ2xhc3MgMyBU
+ZXN0NCBDQSAzMB4XDTE0MDQyNDEyMzExMVoXDTE3MDQyNDIxNTkwMFowVTELMAkGA1UEBhMCTk8x
+GDAWBgNVBAoMD1BPU1RFTiBOT1JHRSBBUzEYMBYGA1UEAwwPUE9TVEVOIE5PUkdFIEFTMRIwEAYD
+VQQFEwk5ODQ2NjExODUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDLTnQryf2bmiyQ
+9q3ylQ6xMl7EhGIbjuziXkRTfL+M94m3ceAiko+r2piefKCiquLMK4j+UDcOapUtLC4dT4c6GhRH
+4FIOEn5aNS2I/njTenBypWka/VEhQUj7zvIh5G4UXIDIXYvLd7gideeMtkX24KUh2XVlh+PcqLGH
+irqBwVfFiTn5SKhr/ojhYYEb2xxTk3AY9nLd1MMffKQwUWmfoTos4scREYGI2R2vWxKWPcDqk+ji
+g2DISWSJSuerz3HMYAAmp+Gjt0oFJNiyOFaFyGwT3DvqwOMQWwWXdmLh1NxMgTpghXAaXae76ucm
+9GDQ9E7ytf+JA096RWoi+5GtAgMBAAGjggHCMIIBvjAJBgNVHRMEAjAAMB8GA1UdIwQYMBaAFD+u
+9XgLkqNwIDVfWvr3JKBSAfBBMB0GA1UdDgQWBBTVyVLqcjWf1Qd0gsmCTrhXiWeqVDAOBgNVHQ8B
+Af8EBAMCBLAwFgYDVR0gBA8wDTALBglghEIBGgEAAwIwgbsGA1UdHwSBszCBsDA3oDWgM4YxaHR0
+cDovL2NybC50ZXN0NC5idXlwYXNzLm5vL2NybC9CUENsYXNzM1Q0Q0EzLmNybDB1oHOgcYZvbGRh
+cDovL2xkYXAudGVzdDQuYnV5cGFzcy5uby9kYz1CdXlwYXNzLGRjPU5PLENOPUJ1eXBhc3MlMjBD
+bGFzcyUyMDMlMjBUZXN0NCUyMENBJTIwMz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0MIGKBggr
+BgEFBQcBAQR+MHwwOwYIKwYBBQUHMAGGL2h0dHA6Ly9vY3NwLnRlc3Q0LmJ1eXBhc3Mubm8vb2Nz
+cC9CUENsYXNzM1Q0Q0EzMD0GCCsGAQUFBzAChjFodHRwOi8vY3J0LnRlc3Q0LmJ1eXBhc3Mubm8v
+Y3J0L0JQQ2xhc3MzVDRDQTMuY2VyMA0GCSqGSIb3DQEBCwUAA4IBAQCmMpAGaNplOgx3b4Qq6FLE
+cpnMOnPlSWBC7pQEDWx6OtNUHDm56fBoyVQYKR6LuGfalnnOKuB/sGSmO3eYlh7uDK9WA7bsNU/W
+8ZiwYwF6PBRui2rrqYk3kj4NLTNlyh/AOO1a2FDFHu369W0zcjj5ns7qs0K3peXtLX8pVxA8Rmjw
+dGe69P/2r6s2A5CBj7oXZJD0Yo2dJFdsZzonT900sUi+MWzlhj3LxU5/684NWc2NI6ZPof/dyYpy
+3K/AFzpDLWGSmaDO66hPl7EfoJxEiX0DNBaQzNIyRFPh0ir0jM+32ZQ4goR8bAtyhKeTyA/4+Qx1
+WQXS3wURCC0lsbMh</X509Certificate>
 						</X509Data>
 					</KeyInfo>
 				</Signature>
 				<ns9:avsender>
-					<ns9:organisasjon>9908:889640782</ns9:organisasjon>
+					<ns9:organisasjon authority="iso6523-actorid-upis">9908:889640782</ns9:organisasjon>
 				</ns9:avsender>
 				<ns9:mottaker>
 					<ns9:person>
-						<ns9:personidentifikator>01013300001</ns9:personidentifikator>
-						<ns9:postkasseadresse>ola.nordmann#0ABC</ns9:postkasseadresse>
+						<ns9:personidentifikator>Joni-sneve</ns9:personidentifikator>
+						<ns9:postkasseadresse>joni.sneve#251T</ns9:postkasseadresse>
 					</ns9:person>
 				</ns9:mottaker>
 				<ns9:digitalPostInfo>
-					<ns9:aapningskvittering>true</ns9:aapningskvittering>
+					<ns9:aapningskvittering>false</ns9:aapningskvittering>
 					<ns9:sikkerhetsnivaa>3</ns9:sikkerhetsnivaa>
-					<ns9:ikkeSensitivTittel lang="no">Velkommen til sikker digital post</ns9:ikkeSensitivTittel>
+					<ns9:ikkeSensitivTittel>Ikke-sensitiv tittel for forsendelsen</ns9:ikkeSensitivTittel>
+					<ns9:varsler/>
 				</ns9:digitalPostInfo>
 				<ns9:dokumentpakkefingeravtrykk>
 					<ns5:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-					<ns5:DigestValue>eDdVMnhrT05XdTQvNnB1NkMvdFZtUjUrQVhleStjVXhuYUc2V3JDSnFZOD0=</ns5:DigestValue>
+					<ns5:DigestValue>KzJreUVjbllFVFdhOWJ1Z3VWV2FvaGZ2RXpqS29VN3dpeTMwV0xNSTVUYz0=</ns5:DigestValue>
 				</ns9:dokumentpakkefingeravtrykk>
 			</ns9:digitalPost>
 		</ns3:StandardBusinessDocument>
