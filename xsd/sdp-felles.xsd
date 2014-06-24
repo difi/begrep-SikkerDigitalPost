@@ -9,7 +9,7 @@
 
 	<xsd:complexType name="Melding" abstract="true">
 		<xsd:sequence>
-			<xsd:element name="Signature" type="ds:SignatureType" minOccurs="1" maxOccurs="1" />
+			<xsd:element ref="ds:Signature" minOccurs="1" maxOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
 
