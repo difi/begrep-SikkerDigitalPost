@@ -10,6 +10,7 @@ next: Oversikt/Arkitektur
 children:
  - name: Oversikt/Arkitektur
  - name: Sikkerhet
+ - name: Sikkerhet/Sertifikathåndtering
  - name: Eksempler
 
 ---
