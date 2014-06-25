@@ -11,7 +11,7 @@ prev: Begreper
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := Hash av den krypterte "dokumentpakken":../../Dokumentpakke/
+- Definisjon := Hash av den krypterte "dokumentpakken":../forretningslag/Dokumentpakke/
 - Datatype := complexType
 - Kjelde := DIFI
 
@@ -20,8 +20,7 @@ h4. Eigenskapar
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |_. Beskrivelse |
 | "DigestMethod":http://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod | 1..1 | "ds:SignedInfo":http://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod| Referanse til Hash algoritmen brukt for lage hash  |
-| "DigestValue":http://www.w3.org/TR/xmldsig-core1/#sec-DigestValue | 1..1 | "ds:DigestValue":http://www.w3.org/TR/xmldsig-core1/#sec-DigestValue | Base64 encoded Hash av den krypterte "Dokumentpakken":../../Dokumentpakke/ |
-
+| "DigestValue":http://www.w3.org/TR/xmldsig-core1/#sec-DigestValue | 1..1 | "ds:DigestValue":http://www.w3.org/TR/xmldsig-core1/#sec-DigestValue | Base64 encoded Hash av den krypterte "Dokumentpakken":../forretningslag/Dokumentpakke/ |
 
 h4. Xml eksempel
 

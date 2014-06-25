@@ -12,7 +12,7 @@ next: Forretningsmeldinger/FlyttetDigitalpost
 
 h3. {{page.title}}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":FeilMelding
 - Term := {{page.title}}
 - Definisjon := En feilmelding fra postkasseleverandør med informasjon om en forretningsfeil knyttet til en digital post forsendelse.
 - Kilde := DIFI
@@ -56,14 +56,16 @@ feiltype kan ha følgende verdi:
 
 table(table table-striped).
 |_. Kodeverdi |_. Beskrivelse |
-| KLIENT | Feilen kommer pga. feil på input eller andre feil der "Avsender":Avsender må rette opp i årsaken til feilen  |
-| SERVER | Feilen kommer av feil på sentral infrastruktur. "Avsender":Avsender må ta kontakt med Sentralforvalter for å få rettet opp i feilen. |
+| KLIENT | Feilen kommer pga. feil på input eller andre feil der "Avsender":../begrep/Avsender må rette opp i årsaken til feilen  |
+| SERVER | Feilen kommer av feil på sentral infrastruktur. "Avsender":../begrep/Avsender må ta kontakt med Sentralforvalter for å få rettet opp i feilen. |
 
 h4. Kodeverk for feilkode
 
-feilkode kan ha følgende verdi:
+Følgende responser kan Avsender forvente å få tilbake dersom feilen over oppstår (ikke uttømmende liste):
 
 table(table table-striped).
-|_. Kodeverdi |_. Beskrivelse |
-
-(ikke detaljert)
+|_. Feiltype? |_. Respons |
+| Postkasse kan ikke dekryptere dokumentpakke | "Feil":FeilMelding type:KLIENT detaljer:"Kan ikke dekryptere" |
+| Manglende eller feil signatur inni dokumentpakke | "Feil":FeilMelding type:KLIENT detaljer:"Feil signatur" |
+| Feil bruk av eller feil verdier i SBD melding | "Feil":FeilMelding type:KLIENT detaljer:"Feil i manifest" |
+| Feil bruk av eller feil verdier på felter | "Feil":FeilMelding type:KLIENT detaljer:"Ugyldig verdi ... " |

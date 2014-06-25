@@ -21,7 +21,7 @@ Avsender sin MSH skal støtte "The AS4 Light Client Conformance Profile":http://
 Det er flere forskjellige scenarier for hvordan MSH blir tatt i bruk av (eller integrert inn i) avsender sine løsninger. 
 Det er opp til avsender om man vil fullintegrere MSH inn i eksisterende løsning, benytte seg av en standard "hyllevare" løsning med lokal integrasjon eller benytte seg av tredjepart som MSH. 
 
-Les mer om  "meldingsidentifikatorer":MeldingsIdentifikatorer
+Les mer om  "meldingsidentifikatorer":../MeldingsIdentifikatorer
 
 h3. AS4 Light Client profilen
 
@@ -41,10 +41,15 @@ Sentralt i utvekslingsmønsteret er "Message Partition Channel (mpc)":../UserMes
 
 h4. Mellomlagring av meldinger i Meldingsformidler
 
-Meldingsformidler kan mellomlagre meldinger i en tidsperiode for å skjule kompeksitet for avsender. Tidsfristene er relatert til hvor lenge meldingsformidler kan gjøre dette uten å sende feil-kvittering tilbake til avsender (merk at alle parter blir målt på SLA ihht kontrakt og at disse tidsfristene ikke påvirker dette).
+Meldingsformidler kan mellomlagre meldinger i en tidsperiode for å skjule kompeksitet for avsender. 
+Det mest aktuelle scenariet for dette er relatert til planlagt/ikke planlagt nedetid mellom eller hos leverandører av komponenter i infrastrukturen, for eksempel nedetid hos er postkasseleverandør. 
+Målsetningen er at infrastrukturen i høyest mulig grad skal fungere normalt for avsender når denne type hendelser blir håndtert.
+
+Tidsfristene er relatert til hvor lenge meldingsformidler kan gjøre dette uten å sende feil-kvittering tilbake til avsender (merk at alle parter blir målt på SLA ihht kontrakt og at disse tidsfristene ikke påvirker dette).
 
 - normal melding := Kan mellomlagre i opptil 25+5 dager
 - prioritert melding := Kan mellomlagre i opptil 24 timer
+
 
 h4. Intervall mellom kvitteringsforespørsler 
 
@@ -64,5 +69,5 @@ Duplikatsjekk skjer i henhold til AS4 standarden ved at MessageId skal være uni
 h3. Eksempler
 
 Det er utarbeidet eksempler på SOAP meldinger knyttet til flyt diagrammet over.
-Eksemplene finnes "her":../eksempler/soap/.
+Eksemplene finnes "her":../../eksempler/soap/.
 

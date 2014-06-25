@@ -6,7 +6,7 @@ group: forretningslag
 
 id: Forretningslag/Sikkerhet
 
-next: Forretningslag/Forretningsmeldinger
+next: Forretningsmeldinger
 
 ---
 

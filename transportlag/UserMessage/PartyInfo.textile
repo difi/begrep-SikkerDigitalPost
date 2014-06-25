@@ -1,6 +1,6 @@
 ---
 layout: default
-title: PartInfo
+title: PartyInfo
 headtitle: Begrepskatalog for Sikker digital post - 
 group: transportlag
 
@@ -26,11 +26,11 @@ Består av to elementer som identifiserer avsender (eb:From) og mottaker (eb:To)
 table(table table-striped).
 |_. Identifikator |_. Type |_. Kardinalitet | Kommentar |
 | PartyId | "Virksomhetsidentifikator":/Felles/virksomhetsidentifikator | 1..1 | |
-| Role | "Konstant":../Aktorer | 1..1 | Definerer rollen i meldingsutvesklingen |
+| Role | "Konstant":../../forretningslag/Aktorer | 1..1 | Definerer rollen i meldingsutvesklingen |
 
 h3. Kodeverdier for konstanten Role
 
-Role skal benytte URN som angitt i listen over "aktører":../Aktorer. Merk at avsender av en Digital Forsendelse ofte er enten en behandlingsansvarlig (produsent av meldingen) eller databehandler (som formidler meldingen etter avtale med behandlingsansvarlig)
+Role skal benytte URN som angitt i listen over "aktører":../../forretningslag/Aktorer. Merk at avsender av en Digital Forsendelse ofte er enten en behandlingsansvarlig (produsent av meldingen) eller databehandler (som formidler meldingen etter avtale med behandlingsansvarlig)
 
 h3. Xml eksempel
 

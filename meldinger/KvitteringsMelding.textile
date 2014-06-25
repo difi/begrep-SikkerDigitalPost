@@ -12,7 +12,7 @@ prev: Forretningsmeldinger
 
 h3. {{page.title}}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":KvitteringsMelding
 - Term := {{page.title}}
 - Definisjon := En kvitteringsmelding på en "digital post melding":DigitalPostMelding fra en "Avsender":../begrep/Avsender.
 - Kilde := DIFI

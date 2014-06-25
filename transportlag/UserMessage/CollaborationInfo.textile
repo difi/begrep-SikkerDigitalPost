@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CollabortationInfo
+title: CollaborationInfo
 headtitle: Begrepskatalog for Sikker digital post - 
 group: transportlag
 
