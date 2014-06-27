@@ -29,9 +29,39 @@ table(table table-striped table-condensed).
 | Standard Business Document | "Avsender":Aktorer | DigitalPostMelding/Avsender | Registrert hos Sentralforvalter | Skal alltid være den samme som eier av Forretningsmelding |
 | Transportinformasjon | "Avsender":Aktorer | SBDH/Sender | Angitt som sender i Standard Business Document, registrert hos Sentralforvalter | Aktøren som er ansvarlig for kommunikasjon med Meldingsformidler. Bør være den samme som over, men kan være en "Databehandler":Aktorer |
 
-Meldingsformidler er ansvarlig for å validere eier-integriteten i meldingen på vegne av Sentralforvalter. Meldinger som ikke har gyldig integritet blir avvist. Integriteten blir sjekket ved å sammenligne virksomhetsidentifikator i virksomhetssertifikat med identifikator i meldingen på signaturen relatert til den delen av meldingen.
+Meldingsformidler er ansvarlig for å validere eier-integriteten i meldingen på vegne av Sentralforvalter. Meldinger som ikke har gyldig integritet blir avvist. 
+Integriteten blir sjekket ved å sammenligne virksomhetsidentifikator i virksomhetssertifikat med identifikator i meldingen på signaturen relatert til den delen av meldingen, 
+og at kombinasjonen av disse stemmer med opplysninger registrert hos Sentralforvalter.
 
-h3. Standarder benyttet i strukturen
+h3. Praktiske eksempler
+
+h4. "Best practise" eksempel
+
+<code>
+Avsender (NAV) tilpasser eget fagsystem og bruker sitt eget virksomhetssertifikat
+</code>
+
+table(table table-striped table-condensed).
+|_. Felt |_. Verdi[1] |_. Signatur[1] |_. Validering |
+| Manifest/Avsender | NAV | NAV | Postboks sjekker at Dokumentpakken er signert av NAV, verdien i Manifest/Avsender er NAV og at Manifest/Avsender har samme verdi som DigitalPostMelding/Avsender |
+| DigitalPostMelding/Avsender | NAV | - | Meldingsformidler sjekker at kombinasjonen DigitalPostMelding/Avsender og SBDH/Sender er gyldig (godkjent av Sentralforvalter) |
+| SBDH/Sender | NAV | NAV | Meldingsformidler sjekker at signaturen stemmer med verdien i SBDH/Sender (skal være like) |
+| ebms/SOAP | NAV | NAV | Meldingsformidler sjekker at denne er korresponderer  med SBDH/Sender. For Postboks vil denne verdien alltid være Meldingsformidler (men den skal fortsatt valideres for å sikre at den kommer fra Meldingsformidler |
+
+h4. "Påvegne" eksempel
+
+<code>
+Avsender (Bunadsrådet) bruker en skytjeneste levert av Acos
+</code>
+
+table(table table-striped table-condensed).
+|_. Felt |_. Verdi[1] |_. Signatur[1] |_. Validering |
+| Manifest/Avsender | Bunadsrådet | Acos | Postboks sjekker at Dokumentpakken er signert av Acos, verdien i Manifest/Avsender er Bunadsrådet og at Manifest/Avsender har samme verdi som DigitalPostMelding/Avsender |
+| DigitalPostMelding/Avsender | Bunadsrådet | - | Meldingsformidler sjekker at kombinasjonen DigitalPostMelding/Avsender og SBDH/Sender er gyldig (godkjent av Sentralforvalter) |
+| SBDH/Sender | Acos | Acos | Meldingsformidler sjekker at signaturen stemmer med verdien i SBDH/Sender (skal være like) |
+| ebms/SOAP | Acos | Acos | Meldingsformidler sjekker at denne er korresponderer  med SBDH/Sender. For Postboks vil denne verdien alltid være Meldingsformidler (men den skal fortsatt valideres for å sikre at den kommer fra Meldingsformidler |
+
+h2. Standarder benyttet i strukturen
 
 * Integritet ivaretas ved at dokumentene (posten til mottaker) pakkes og signeres iht. "Associated Signature Container (ASiC)":http://www.etsi.org/deliver/etsi_ts/103100_103199/103174/02.02.01_60/ts_103174v020201p.pdf fra ETSI. Dette formatet ivaretar integriteten over tid.
 * Konfidensialitet fra avsender til mottaker ivaretas ved bruk av "Cryptographic Message Syntax (CMS)":http://tools.ietf.org/html/rfc5652 fra IETF
@@ -40,10 +70,10 @@ h3. Standarder benyttet i strukturen
 
 For mer informasjon se relevante deler av dokumentasjonen.
 
-h3. Illustrasjon
+h2. Illustrasjon
 
 En komplett melding slik som den blir overført mellom to punkter i infrastrukturen kan illustreres på følgende måte:
 
 "!(img-responsive)meldingsstruktur_enkel.jpg(Figuren viser en overordnet beskrivelse av meldingen i Sikker digital post)!":meldingsstruktur_enkel.jpg
 
-
+fn1. Det er brukt organisasjonsnavn i stedet for organisasjonsnummer for å gjøre det litt mer lesevennlig.
