@@ -15,7 +15,7 @@ h3. Generelle parametere
 table(table table-striped table-condensed).
 |_. P-Mode |_. Beskrivelse |_. Verdi |
 | PMode.ID | Unik identifikator for paramtersettet | %%"Sender":../StandardBusinessDocument/Sender%%-"FormidleDigitalPostForsendelse"-%versjon/løpenummer% |
-| PMode.Agreement | Unik identifikator for samarbeidsprotokollen | "http://begrep.difi.no {{ page.url  | remove:".html" }}":{{page.url}} |
+| PMode.Agreement | Unik identifikator for samarbeidsprotokollen | "http://begrep.difi.no/SikkerDigitalPost/1/transportlag/Meldingsutveksling/FormidleDigitalPostForsendelse":http://begrep.difi.no/SikkerDigitalPost/1/transportlag/Meldingsutveksling/FormidleDigitalPostForsendelse |
 | PMode.MEP | Message Exchange Pattern | "http://www.oasis-open.org/committees/ebxml-msg/one-way" |
 | PMode.MEPbinding | Retning på kommunikasjon, push eller pull | "http://www.oasis-open.org/committees/ebxml-msg/push" |
 | PMode.Initiator.Party | Identifikator for den som initierar sendingen | %%"Sender":../StandardBusinessDocument/Sender%% |
