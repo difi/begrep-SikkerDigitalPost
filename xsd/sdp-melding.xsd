@@ -76,19 +76,6 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="EpostVarsel">
-		<xsd:sequence>
-			<xsd:element name="epostadresse" minOccurs="1" maxOccurs="1" type="xsd:string"/>
-			<xsd:element name="varslingsTekst" minOccurs="1" maxOccurs="1" type="EpostVarselTekst"/>
-			<xsd:element name="repetisjoner" type="Repetisjoner" minOccurs="1" maxOccurs="1">
-				<xsd:unique name="UnikeEpostVarselRepetisjoner">
-					<xsd:selector xpath="sdp:dagerEtter"/>
-					<xsd:field xpath="."/>
-				</xsd:unique>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:complexType>
-
 	<xsd:complexType name="Repetisjoner">
 		<xsd:sequence>
 			<xsd:element name="dagerEtter" minOccurs="1" maxOccurs="10">
@@ -104,6 +91,19 @@
 						<xsd:maxInclusive value="25"/>
 					</xsd:restriction>
 				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="EpostVarsel">
+		<xsd:sequence>
+			<xsd:element name="epostadresse" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+			<xsd:element name="varslingsTekst" minOccurs="1" maxOccurs="1" type="EpostVarselTekst"/>
+			<xsd:element name="repetisjoner" type="Repetisjoner" minOccurs="1" maxOccurs="1">
+				<xsd:unique name="UnikeEpostVarselRepetisjoner">
+					<xsd:selector xpath="sdp:dagerEtter"/>
+					<xsd:field xpath="."/>
+				</xsd:unique>
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
