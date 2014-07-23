@@ -67,8 +67,16 @@
 					</xsd:element>
 					<xsd:element name="digitalPostInfo" type="DigitalPostInfo" minOccurs="1" maxOccurs="1"/>
 					<xsd:element name="dokumentpakkefingeravtrykk" type="ds:ReferenceType" minOccurs="1" maxOccurs="1" />
-					<xsd:element name="mottaksdato" type="xsd:date" minOccurs="1" maxOccurs="1" />
-					<xsd:element name="lest" type="xsd:boolean" minOccurs="1" maxOccurs="1" />
+					<xsd:element name="mottaksdato" type="xsd:date" minOccurs="1" maxOccurs="1" >
+						<xsd:annotation>
+							<xsd:documentation>Dato brevet ble mottatt i opprinnelig postkasse.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="aapnet" type="xsd:boolean" minOccurs="1" maxOccurs="1" >
+						<xsd:annotation>
+							<xsd:documentation>Indikerer om mottakeren har aapnet brevet eller ikke.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
