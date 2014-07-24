@@ -7,6 +7,7 @@
 	<xsd:include schemaLocation="sdp-felles.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="w3/xmldsig-core-schema.xsd"/>
 
+
 	<xsd:element name="kvittering" type="Kvittering"/>
 	<xsd:complexType name="Kvittering">
 		<xsd:complexContent>
@@ -17,19 +18,24 @@
 						<xsd:element name="levering" type="Levering"/>
 						<xsd:element name="aapning" type="Aapning"/>
 						<xsd:element name="varslingfeilet" type="Varslingfeilet"/>
+						<xsd:element name="flyttet" type="Flyttet"/>
 					</xsd:choice>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+
+
 	<xsd:complexType name="Levering">
 		<xsd:annotation>
 			<xsd:documentation>
-				Postkasseleverandøren garanterer at brevet har eller vil bli levert
+				Postkasseleverandøren garanterer at brevet er eller vil bli levert
 				til mottakers digitale postkasse.
 			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:complexType>
+
+
 	<xsd:complexType name="Aapning">
 		<xsd:annotation>
 			<xsd:documentation>
@@ -38,6 +44,7 @@
 			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:complexType>
+
 
 	<xsd:complexType name="Varslingfeilet">
 		<xsd:annotation>
@@ -56,10 +63,20 @@
 			<xsd:enumeration value="EPOST"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-
 	<xsd:simpleType name="Beskrivelse">
 		<xsd:restriction base="xsd:string">
 			<xsd:maxLength value="1000"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+
+
+	<xsd:complexType name="Flyttet">
+		<xsd:annotation>
+			<xsd:documentation>
+				Postkasseleverandøren garanterer at flytting av brevet er ferdig, og er eller vil bli
+				tilgjengelig i mottakers digitale postkasse.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:complexType>
+
 </xsd:schema>
