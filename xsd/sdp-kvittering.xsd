@@ -18,7 +18,6 @@
 						<xsd:element name="levering" type="Levering"/>
 						<xsd:element name="aapning" type="Aapning"/>
 						<xsd:element name="varslingfeilet" type="Varslingfeilet"/>
-						<xsd:element name="flyttet" type="Flyttet"/>
 					</xsd:choice>
 				</xsd:sequence>
 			</xsd:extension>
@@ -68,15 +67,5 @@
 			<xsd:maxLength value="1000"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-
-
-	<xsd:complexType name="Flyttet">
-		<xsd:annotation>
-			<xsd:documentation>
-				Postkasseleverandøren garanterer at flytting av brevet er ferdig, og er eller vil bli
-				tilgjengelig i mottakers digitale postkasse.
-			</xsd:documentation>
-		</xsd:annotation>
-	</xsd:complexType>
 
 </xsd:schema>
