@@ -3,6 +3,7 @@
 	xmlns="http://begrep.difi.no/sdp/schema_v10"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:sdp="http://begrep.difi.no/sdp/schema_v10"
 	targetNamespace="http://begrep.difi.no/sdp/schema_v10" elementFormDefault="qualified" version="1.0">
 
 	<xsd:include schemaLocation="sdp-felles.xsd"/>
@@ -45,25 +46,6 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 
-	<xsd:complexType name="Repetisjoner">
-		<xsd:sequence>
-			<xsd:element name="dagerEtter" minOccurs="1" maxOccurs="10">
-				<xsd:annotation>
-					<xsd:documentation>
-						Når varselet skal sendes, relativ til virkningsdato.
-						Verdien 0 betyr at varsel skal sendes samme dag som brevet
-						tilgjengeliggjøres i mottakers digitale postkasse.
-					</xsd:documentation>
-				</xsd:annotation>
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:nonNegativeInteger">
-						<xsd:maxInclusive value="25"/>
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:complexType>
-
 	<xsd:complexType name="DigitalPostInfo">
 		<xsd:sequence>
 			<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1"/>
@@ -94,13 +76,32 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
+	<xsd:complexType name="Repetisjoner">
+		<xsd:sequence>
+			<xsd:element name="dagerEtter" minOccurs="1" maxOccurs="10">
+				<xsd:annotation>
+					<xsd:documentation>
+						Når varselet skal sendes, relativ til virkningsdato.
+						Verdien 0 betyr at varsel skal sendes samme dag som brevet
+						tilgjengeliggjøres i mottakers digitale postkasse.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:nonNegativeInteger">
+						<xsd:maxInclusive value="25"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
 	<xsd:complexType name="EpostVarsel">
 		<xsd:sequence>
 			<xsd:element name="epostadresse" minOccurs="1" maxOccurs="1" type="xsd:string"/>
 			<xsd:element name="varslingsTekst" minOccurs="1" maxOccurs="1" type="EpostVarselTekst"/>
 			<xsd:element name="repetisjoner" type="Repetisjoner" minOccurs="1" maxOccurs="1">
 				<xsd:unique name="UnikeEpostVarselRepetisjoner">
-					<xsd:selector xpath="dagerEtter"/>
+					<xsd:selector xpath="sdp:dagerEtter"/>
 					<xsd:field xpath="."/>
 				</xsd:unique>
 			</xsd:element>
@@ -113,7 +114,7 @@
 			<xsd:element name="varslingsTekst" minOccurs="1" maxOccurs="1" type="SmsVarselTekst"/>
 			<xsd:element name="repetisjoner" type="Repetisjoner" minOccurs="1" maxOccurs="1">
 				<xsd:unique name="UnikeSmsVarselRepetisjoner">
-					<xsd:selector xpath="dagerEtter"/>
+					<xsd:selector xpath="sdp:dagerEtter"/>
 					<xsd:field xpath="."/>
 				</xsd:unique>
 			</xsd:element>
