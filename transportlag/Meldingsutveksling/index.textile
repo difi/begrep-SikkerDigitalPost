@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Meldingsutveksling i Sikker Digital Post
+title: Meldingsutveksling
 headtitle: Sikker digital post
 group: transportlag
 
@@ -41,14 +41,13 @@ Sentralt i utvekslingsmønsteret er "Message Partition Channel (mpc)":../UserMes
 
 h4. Mellomlagring av meldinger i Meldingsformidler
 
-Meldingsformidler kan mellomlagre meldinger i en tidsperiode for å skjule kompeksitet for avsender. 
-Det mest aktuelle scenariet for dette er relatert til planlagt/ikke planlagt nedetid mellom eller hos leverandører av komponenter i infrastrukturen, for eksempel nedetid hos er postkasseleverandør. 
+Meldingsformidler mellomlagrer meldinger i en tidsperiode for å skjule kompeksitet for avsender. 
+Det mest aktuelle scenariet for Digitalpost meldinger er relatert til planlagt/ikke planlagt nedetid mellom eller hos leverandører av komponenter i infrastrukturen, for eksempel nedetid hos er postkasseleverandør. 
+For kvitteringsmeldinger mellomlagrer meldingsformidler meldingene i en kø til de blir hentet av avsender.
 Målsetningen er at infrastrukturen i høyest mulig grad skal fungere normalt for avsender når denne type hendelser blir håndtert.
 
-Tidsfristene er relatert til hvor lenge meldingsformidler kan gjøre dette uten å sende feil-kvittering tilbake til avsender (merk at alle parter blir målt på SLA ihht kontrakt og at disse tidsfristene ikke påvirker dette).
-
-- normal melding := Kan mellomlagre i opptil 25+5 dager
-- prioritert melding := Kan mellomlagre i opptil 24 timer
+- normal melding := Mellomlagres i opptil 25+5 dager
+- prioritert melding := Mellomlagres i opptil 24 timer
 
 
 h4. Intervall mellom kvitteringsforespørsler 
