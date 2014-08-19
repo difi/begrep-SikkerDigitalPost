@@ -5,7 +5,7 @@ headtitle: Sikker digital post
 
 id: Sikkerhet/Sertifikathåndtering
 
-next: Eksempler
+next: Oversikt/XSDfiler 
 
 ---
 
