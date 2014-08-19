@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Skjemaer (XSD) filer
+title: Skjema (XSD) filer
 headtitle: Sikker digital post
 
 id: Oversikt/XSDfiler
