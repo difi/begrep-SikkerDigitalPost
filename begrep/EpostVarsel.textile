@@ -8,7 +8,9 @@ name: EpostVarsel
 prev: Begreper
 ---
 
-- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+{% include variables.html %}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Informasjon om hvordan man skal varsle sluttbruker på epost
 - Datatype := complexType

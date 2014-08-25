@@ -8,8 +8,11 @@ id: Forretningslag/Sender
 next: Forretningslag/Receiver
 
 ---
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+h3. {{page.title}}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Avsender som har initiert en meldingsprosess mot meldingsutvekslingsrammeverket.
 - Kilde := GS1

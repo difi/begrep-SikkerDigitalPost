@@ -7,8 +7,9 @@ group: complexType
 name: Avsender
 prev: Begreper
 ---
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Juridisk organisasjon/entitet som er Behandlingsansvarlig for innholdet i den digitale posten,
 - Datatype := complexType

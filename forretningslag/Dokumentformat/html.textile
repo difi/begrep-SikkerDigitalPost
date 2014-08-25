@@ -9,8 +9,9 @@ id: Forretningslag/HTML dokument
 next: Forretningslag/Sikkerhet
 
 ---
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := HTML fil
 - Datatype := fil

@@ -8,8 +8,9 @@ name: Dokumentpakkefingeravtrykk
 prev: Begreper
 ---
 
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Hash av den krypterte "dokumentpakken":../forretningslag/Dokumentpakke/
 - Datatype := complexType

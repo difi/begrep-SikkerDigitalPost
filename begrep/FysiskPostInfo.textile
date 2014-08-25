@@ -7,8 +7,9 @@ group: complexType
 name: FysiskpostInfo
 prev: Begreper
 ---
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":FysiskPostInfo
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Informasjon relatert til presentasjon og behandling av en sikker digital post melding
 - Kilde := DIFI

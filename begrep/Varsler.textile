@@ -7,8 +7,9 @@ group: complexType
 name: Varsler
 prev: Begreper
 ---
+{% include variables.html %}
 
-- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Informasjon om hvordan postkasseleverandør skal varsle Mottaker om den nye posten. Overstyrer Mottaker sine egne varslingspreferanser.
 - Datatype := complexType

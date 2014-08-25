@@ -10,7 +10,9 @@ next: Forretningslag/Dokumentformater
 
 ---
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+{% include variables.html %}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon :=  inneholder metadata relatert til hver fil i en forsendelse.
 - Datatype := complexType

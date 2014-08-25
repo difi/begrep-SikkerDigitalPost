@@ -9,10 +9,11 @@ id: Forretningsmeldinger/Åpningskvittering
 next: Forretningsmeldinger/Varslingfeiletkvittering
 
 ---
+{% include variables.html %}
 
 h3. {{page.title}}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := En "KvitteringsMelding":KvitteringsMelding til Avsender om at Mottaker har åpnet forsendelsen i sin postkasse.
 - Kilde := DIFI

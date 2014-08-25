@@ -8,8 +8,9 @@ name: Repetisjoner
 prev: Begreper
 
 ---
+{% include variables.html %}
 
-- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Gjentagelser etter et bestemt tidspunkt
 - Datatype := complexType

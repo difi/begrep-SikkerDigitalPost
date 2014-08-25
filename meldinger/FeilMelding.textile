@@ -10,9 +10,11 @@ next: Forretningsmeldinger/FlyttetDigitalpost
 
 ---
 
+{% include variables.html %}
+
 h3. {{page.title}}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":FeilMelding
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := En feilmelding fra postkasseleverandør med informasjon om en forretningsfeil knyttet til en digital post forsendelse.
 - Kilde := DIFI

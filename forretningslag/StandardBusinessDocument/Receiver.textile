@@ -10,7 +10,11 @@ next: Forretningslag/DocumentIdentification
 
 ---
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+{% include variables.html %}
+
+h3. {{page.title}}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Sluttmottaker i en meldingsprosess.
 - Kilde := GS1

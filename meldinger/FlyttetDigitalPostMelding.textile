@@ -11,9 +11,11 @@ next: Forretningslag/StandardBusinessDocument
 
 ---
 
+{% include variables.html %}
+
 h3. {{page.title}}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":FlyttetDigitalPostMelding
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := En digital post med tilhørende "Dokumentpakke":../forretningslag/Dokumentpakke/ som flyttes fra en postkasseleverandør til en annen
 - Kilde := DIFI

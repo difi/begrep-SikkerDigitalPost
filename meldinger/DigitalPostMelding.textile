@@ -8,12 +8,13 @@ id: Forretningsmeldinger/Digitalpost
 
 next: Forretningsmeldinger/Leveringskvittering
 
-
 ---
+
+{% include variables.html %}
 
 h3. {{page.title}}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := En digital post med tilhørende "Dokumentpakke":../forretningslag/Dokumentpakke/
 - Kilde := DIFI

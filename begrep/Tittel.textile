@@ -8,7 +8,9 @@ name: Tittel
 prev: Begreper
 ---
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+{% include variables.html %}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Beskrivende tittel for et Dokument
 - Datatype := complexType
