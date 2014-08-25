@@ -9,6 +9,8 @@ id: Transportlag/Meldingsutveksling/KvitteringsForespoersel
 next: Transportlag/Transportmeldingsstruktur
 
 ---
+{% include variables.html %}
+
 h2. {{page.title}}
 
 Mal/URI for P-Mode parametere som skal benyttes ved forretningsprosessen KvitteringsForsepoersel. Oversikten er basert på P-Mode parametere som en AS4 Light Compliant MSH skal kunne forstå, men det er ikke alle av disse som er relevante for et Sikker Digital Post. Disse er markert med - ikke relevant -
@@ -20,7 +22,7 @@ h3. Generelle parametere
 table(table table-striped table-condensed).
 |_. P-Mode |_. Beskrivelse |_. Verdi |
 | PMode.ID | Unik identifikator for paramtersettet | %%"Sender":../../forretningslag/StandardBusinessDocument/Sender%%-"KvitteringsForespoersel"-%versjon/løpenummer% |
-| PMode.Agreement | Unik identifikator for samarbeidsprotokollen | "http://begrep.difi.no {{ page.url  | remove:".html" }}":{{page.url}} |
+| PMode.Agreement | Unik identifikator for samarbeidsprotokollen | "http://begrep.difi.no/SikkerDigitalPost/1.0/transportlag/Meldingsutveksling/KvitteringsForespoersel":{{pageMinorUrl}} |
 | PMode.MEP | Message Exchange Pattern | "http://www.oasis-open.org/committees/ebxml-msg/one-way" |
 | PMode.MEPbinding | Retning på kommunikasjon, push eller pull | "http://www.oasis-open.org/committees/ebxml-msg/pull" |
 | PMode.Initiator.Party | Identifikator for den som initierar sendingen | %%"Sender":../../forretningslag/StandardBusinessDocument/Sender%% |
