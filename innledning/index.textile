@@ -9,10 +9,12 @@ next: Oversikt/Arkitektur
 
 children:
  - name: Oversikt/Arkitektur
+ - name: Oversikt/Produktstøtte
  - name: Sikkerhet
  - name: Sikkerhet/Sertifikathåndtering
+ - name: Oversikt/XSDfiler 
  - name: Eksempler
-
+ 
 ---
 
 h2. Oversikt

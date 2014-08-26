@@ -18,7 +18,7 @@
 			<xsd:element name="mottaker" type="Mottaker" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="avsender" type="Avsender" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="hoveddokument" type="Dokument" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="vedlegg" type="Dokument" minOccurs="0" maxOccurs="99"/>
+			<xsd:element name="vedlegg" type="Dokument" minOccurs="0" maxOccurs="10"/>
 		</xsd:sequence>
 	</xsd:complexType>
 

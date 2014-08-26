@@ -1,3 +1,9 @@
+---
+layout: default
+title: Generere dokumentasjon basert på skjema
+headtitle: Sikker digital post
+---
+
 h1. Generere dokumentasjon basert på XSD
 
 h2. Generere PNG på bakgrunn av XSD

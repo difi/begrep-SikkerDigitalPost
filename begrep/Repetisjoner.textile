@@ -19,6 +19,10 @@ dagerEtter=0 betyr samme dag. dagerEtter=7 betyr den syvende dagen etter en best
 
 * Det kreves at alle dagerEtter er unike.
 
+For Sikker digital post er repetisjonene knyttet opp til "virkningsdato":/Felles/virkningsdato.
+Det vil si at dagerEtter=0 betyr samme dag som "virkningsdato":/Felles/virkningsdato. dagerEtter=7 betyr den syvende dagen etter "virkningsdato":/Felles/virkningsdato. 
+
+
 h4. Eigenskapar
 
 table(table table-striped).

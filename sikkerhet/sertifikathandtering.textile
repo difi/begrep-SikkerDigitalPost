@@ -5,7 +5,7 @@ headtitle: Sikker digital post
 
 id: Sikkerhet/Sertifikathåndtering
 
-next: Eksempler
+next: Oversikt/XSDfiler 
 
 ---
 
@@ -60,7 +60,7 @@ Følgende rot sertifikater må offentlige virksomhet stole på.
 (Disse sertifikatene må legges inn i truststore)
 
 * Fra Buypass: "Buypass_Class_3_Test4_Root_CA":sertifikater/test/Buypass_Class_3_Test4_Root_CA.cer
-* Fra Commfides: "commfides cpn enterprise-norwegian sha256 ca - test.crt":https://support.commfides.com/index.php?/Knowledgebase/Article/GetAttachment/144/18301
+* Fra Commfides: "cpn root sha256 ca - test.crt":https://support.commfides.com/index.php?/Knowledgebase/Article/GetAttachment/144/18301
 
 Følgende mellomliggende CA sertifikater må offentlig virksomhet ha for å kunne verifisere sertifikatbanen til rot sertifikatet. 
 (Disse må ligge i CertStore)
@@ -74,13 +74,13 @@ Følgende rot sertifikater må offentlige virksomhet stole på.
 (Disse sertifikatene må legges inn i truststore)
 
 * Fra Buypass: "Rot - Buypass Class 3 Rot CA":http://www.buypass.no/cert/BPClass3RootCA.cer
-* Fra Commfides: "cpn enterprise sha256 class 3.crt":https://support.commfides.com/index.php?/Knowledgebase/Article/GetAttachment/142/17412
+* Fra Commfides: "cpn rootca sha256 class 3.crt":https://support.commfides.com/index.php?/Knowledgebase/Article/GetAttachment/142/17413
 
 Følgende mellomliggende CA sertifikater må offentlig virksomhet ha for å kunne verifisere sertifikatbanen til rot sertifikatet. 
 (Disse må ligge i CertStore)
 
 * Fra Buypass: "Utstedende - Buypass Class 3 CA 3":http://crt.buypass.no/crt/BPClass3CA3.cer
-* Fra Commfides: "cpn enterprise sha256 class 3.crt":https://support.commfides.com/index.php?/Knowledgebase/Article/GetAttachment/142/17413
+* Fra Commfides: "cpn enterprise sha256 class 3.crt":https://support.commfides.com/index.php?/Knowledgebase/Article/GetAttachment/142/17412
 
 
 
