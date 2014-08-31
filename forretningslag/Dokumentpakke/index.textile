@@ -5,9 +5,10 @@ headtitle: Sikker digital post - ASiC
 group: forretningslag
 
 id: Forretningslag/Dokumentpakke
-next: Forretningslag/Manifest
+next: Forretningslag/Langtidslagring
 
 children:
+ - name: Forretningslag/Langtidslagring
  - name: Forretningslag/Manifest
  - name: Forretningslag/Dokumentformater
  - name: Forretningslag/HTML dokument
