@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Manifest
+title: manifest
 headtitle: Begrepskatalog for Sikker digital post - 
 group: forretningslag
 
