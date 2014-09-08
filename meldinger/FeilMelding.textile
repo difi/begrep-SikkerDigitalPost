@@ -49,7 +49,6 @@ table(table table-striped).
 | Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
 | tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
 | feiltype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
-| feilkode | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | detaljer | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 
 h4. Kodeverk for feiltype
@@ -60,14 +59,3 @@ table(table table-striped).
 |_. Kodeverdi |_. Beskrivelse |
 | KLIENT | Feilen kommer pga. feil på input eller andre feil der "Avsender":../begrep/Avsender må rette opp i årsaken til feilen  |
 | SERVER | Feilen kommer av feil på sentral infrastruktur. "Avsender":../begrep/Avsender må ta kontakt med Sentralforvalter for å få rettet opp i feilen. |
-
-h4. Kodeverk for feilkode
-
-Følgende responser kan Avsender forvente å få tilbake dersom feilen over oppstår (ikke uttømmende liste):
-
-table(table table-striped).
-|_. Feiltype? |_. Respons |
-| Postkasse kan ikke dekryptere dokumentpakke | "Feil":FeilMelding type:KLIENT detaljer:"Kan ikke dekryptere" |
-| Manglende eller feil signatur inni dokumentpakke | "Feil":FeilMelding type:KLIENT detaljer:"Feil signatur" |
-| Feil bruk av eller feil verdier i SBD melding | "Feil":FeilMelding type:KLIENT detaljer:"Feil i manifest" |
-| Feil bruk av eller feil verdier på felter | "Feil":FeilMelding type:KLIENT detaljer:"Ugyldig verdi ... " |
