@@ -7,8 +7,9 @@ group: complexType
 name: Avsender
 prev: Begreper
 ---
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Juridisk organisasjon/entitet som er Behandlingsansvarlig for innholdet i den digitale posten,
 - Datatype := complexType
@@ -20,7 +21,7 @@ h4. Egenskaper
 
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "identifier":/Felles/virksomhetsidentifikator | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "organisasjon":/Felles/virksomhetsidentifikator | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | "avsenderidentifikator":/Felles/avsenderidentifikator | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | fakturaReferanse | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string [maks 40] |
 
@@ -28,7 +29,7 @@ h4. Xml eksempel
 
 <pre class="brush: xml; toolbar: false">
 	<avsender>
-		<identifier authority="iso6523-actorid-upis">9908:123456789</identifier>
+		<organisasjon authority="iso6523-actorid-upis">9908:123456789</organisasjon>
 		<avsenderidentifikator>12345</avsenderidentifikator>
 		<fakturaReferanse>123</fakturaReferanse>		
 	</avsender>

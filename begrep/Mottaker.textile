@@ -7,8 +7,9 @@ group: complexType
 name: Mottaker
 prev: Begreper
 ---
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Person som er mottaker av en sikker digital post
 - Kilde := DIFI

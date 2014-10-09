@@ -8,8 +8,9 @@ name: Dokument
 prev: Begreper
 ---
 
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Informasjon om et enkelt dokument.
 - Datatype := complexType

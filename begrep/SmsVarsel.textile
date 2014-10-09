@@ -8,8 +8,9 @@ name: SmsVarsel
 prev: Begreper
 
 ---
+{% include variables.html %}
 
-- Identifikator := http://begrep.difi.no/SikkerDigitalPost/{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Informasjon om hvordan man skal varsle sluttbruker på sms
 - Datatype := complexType

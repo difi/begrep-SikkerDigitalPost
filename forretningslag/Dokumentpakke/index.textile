@@ -5,9 +5,10 @@ headtitle: Sikker digital post - ASiC
 group: forretningslag
 
 id: Forretningslag/Dokumentpakke
-next: Forretningslag/Manifest
+next: Forretningslag/Langtidslagring
 
 children:
+ - name: Forretningslag/Langtidslagring
  - name: Forretningslag/Manifest
  - name: Forretningslag/Dokumentformater
  - name: Forretningslag/HTML dokument
@@ -30,9 +31,9 @@ h3. Innhold
 
 table(table table-striped).
 |_. Fil |_. Kardinalitet |_. Beskrivelse |
-| hoveddokument | 1..1 | fil |
-| "Manifest.xml":Manifest | 1..1 | "Manifest":Manifest  |
-| vedlegg | 0..99 | fil |
+| hoveddokument | 1..1 | fil - se: krav til "filnavn og dokumentformat":../Dokumentformat/  |
+| "manifest.xml":Manifest | 1..1 | "manifest":Manifest  |
+| vedlegg | 0..99 | fil - se: krav til "filnavn og dokumentformat":../Dokumentformat/ |
 | META-INF/signatures.xml | 1..1 | "XAdES":http://www.etsi.org/deliver/etsi_ts%5C101900_101999%5C101903%5C01.04.02_60%5Cts_101903v010402p.pdf signaturer av filene |
 
 h3. Eksempel

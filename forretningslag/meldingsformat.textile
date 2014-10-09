@@ -6,7 +6,7 @@ group: forretningslag
 
 id: Forretningslag/Forretningsmeldingsstruktur
 
-next: Forretningslag/Dokumentpakke
+next: Forretningslag/ForsendelsesStørrelse
 
 ---
 

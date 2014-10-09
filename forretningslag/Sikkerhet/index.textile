@@ -62,7 +62,8 @@ table(table table-striped table-condensed).
 |_. Krav |_. Felt |_. Kommentar |
 | "krav 5.1":etsi4_8 | "Algorithm requirements" | Signeringsalgoritmen skal være "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256":http://www.w3.org/2001/04/xmldsig-more#rsa-sha256. Fingeravtrykksalgoritmen i referansene skal være "http://www.w3.org/2001/04/xmlenc#sha256":http://www.w3.org/2001/04/xmlenc#sha256. Fingeravtrykksalgoritmen i CertDigest skal være "http://www.w3.org/2000/09/xmldsig#sha1":http://www.w3.org/2000/09/xmldsig#sha1. |
 | "krav 6.2.1":etsi4_10 | "Placement of the signing certificate" |. Alle sertifikater fra virkomhetsertifikatet og opp til og inkludert en tiltrodd rot skal være inkludert. |
-| "krav 6.2.2":etsi4_11 | "Canonicalization of ds:SignedInfo element" | Skal være "http://www.w3.org/2006/12/xml-c14n11":http://www.w3.org/2006/12/xml-c14n11 |
+| "krav 6.2.2":etsi4_11 | "Canonicalization of ds:SignedInfo element" | Bør være "http://www.w3.org/2006/12/xml-c14n11":http://www.w3.org/2006/12/xml-c14n11 
+Kan være "http://www.w3.org/TR/2001/REC-xml-c14n-20010315":http://www.w3.org/TR/2001/REC-xml-c14n-20010315 |
 | "krav 6.2.3":etsi4_11 | "Profile of ds:Reference element" | Alle dokumenter skal være med, og det er ikke lov med referanser utenfor dokumentpakken. |
 | "krav 6.2.4":etsi4_12 | "Transforms within ds:Reference element" | Alle fil-referansene skal være uten transform, og referansen til SignedProperties skal være "http://www.w3.org/TR/2001/REC-xml-c14n-20010315":http://www.w3.org/TR/2001/REC-xml-c14n-20010315 |
 | "krav 6.3.1":etsi4_12 | "Profile of xades:SigningCertificate element" | Ingen ytterlige begrensninger. |

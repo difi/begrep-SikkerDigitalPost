@@ -8,8 +8,11 @@ id: Forretningslag/Sender
 next: Forretningslag/Receiver
 
 ---
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+h3. {{page.title}}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Avsender som har initiert en meldingsprosess mot meldingsutvekslingsrammeverket.
 - Kilde := GS1
@@ -36,6 +39,6 @@ h3. XML eksempel
 <pre class="brush: xml; toolbar: false">
     <Sender>
 	    <!-- orgnr avsender -->
-	    <Identifier Authority="urn:oasis:names:tc:ebcore:partyid-type:iso6523:9908">9908:123456789</Identifier>
+	    <Identifier Authority="iso6523-actorid-upis">9908:123456789</Identifier>
     </Sender>
 </pre>		

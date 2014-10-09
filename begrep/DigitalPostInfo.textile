@@ -7,8 +7,9 @@ group: complexType
 name: DigitalpostInfo
 prev: Begreper
 ---
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":DigitalPostInfo
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Informasjon til Postkasseleverandør for å presentere og behandle en sikker digital post melding
 - Kilde := DIFI

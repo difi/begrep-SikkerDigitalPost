@@ -9,9 +9,11 @@ next: Forretningslag/BusinessScope
 
 ---
 
-h2. {{ page.title }}
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+h3. {{page.title}}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := inneholder identifikasjon om dokumentet
 - Kilde := "GS1":http://www.gs1.org/docs/gsmp/xml/sbdh/CEFACT_SBDH_TS_version1.3.pdf

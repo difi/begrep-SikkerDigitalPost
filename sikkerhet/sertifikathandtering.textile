@@ -66,7 +66,7 @@ Følgende mellomliggende CA sertifikater må offentlig virksomhet ha for å kunn
 (Disse må ligge i CertStore)
 
 * Fra Buypass: "Buypass_Class_3_Test4_CA_3":sertifikater/test/Buypass_Class_3_Test4_CA_3.cer
-* Fra Commfides: "commfides cpn enterprise-norwegian sha256 ca - test.crt":https://support.commfides.com/index.php?/Knowledgebase/Article/GetAttachment/144/18302
+* Fra Commfides: "commfidesenterprise-sha256.crt":https://support.commfides.com/index.php?/Knowledgebase/Article/GetAttachment/144/21388
 
 h4. For produksjon
 

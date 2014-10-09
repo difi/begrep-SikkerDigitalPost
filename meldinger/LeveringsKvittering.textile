@@ -10,9 +10,11 @@ next: Forretningsmeldinger/Åpningskvittering
 
 ---
 
+{% include variables.html %}
+
 h3. {{page.title}}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Kvittering på at postkassen har tatt ansvar for å tilgjengeliggjøre melding til mottaker. Sendes til Avsender via meldingsformideler.
 - Kilde := DIFI

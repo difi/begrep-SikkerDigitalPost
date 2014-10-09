@@ -7,8 +7,9 @@ group: complexType
 name: OrderReference
 prev: Begreper
 ---
+{% include variables.html %}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := Ordrereferanse tildelt av avsender
 - Datatype := "cac:OrderReference":https://raw.githubusercontent.com/difi/VEFAvalidatorConf/master/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonAggregateComponents-2.1.xsd

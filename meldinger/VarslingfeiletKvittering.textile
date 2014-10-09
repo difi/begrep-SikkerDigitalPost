@@ -9,9 +9,11 @@ id: Forretningsmeldinger/Varslingfeiletkvittering
 next: Forretningsmeldinger/Feil
 ---
 
+{% include variables.html %}
+
 h3. {{page.title}}
 
-- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
 - Definisjon := En "Kvitteringsmelding":KvitteringsMelding til Avsender om at varsling til Mottaker har feilet og dermed ikke har blitt utført som forutsatt.
 - Kilde := DIFI
