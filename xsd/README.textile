@@ -78,7 +78,7 @@ curl -Ls http://uri.etsi.org/01903/v1.3.2/XAdES.xsd \
 
 h4. "Difi sin oppslagstjeneste XSD":oppslag/
 
-* "oppslagstjeneste-metadata-14-05.xsd":oppslagstjeneste-metadata-14-05.xsd
+* "oppslagstjeneste-metadata-14-05.xsd":oppslag/oppslagstjeneste-metadata-14-05.xsd
 ** Original: http://begrep.difi.no/Oppslagstjenesten/xsd/oppslagstjeneste-metadata-14-05.xsd
 ** Endringer:
 <pre class="brush: bash; toolbar: false">
