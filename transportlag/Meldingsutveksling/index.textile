@@ -46,8 +46,15 @@ Det mest aktuelle scenariet for Digitalpost meldinger er relatert til planlagt/i
 For kvitteringsmeldinger mellomlagrer meldingsformidler meldingene i en kø til de blir hentet av avsender.
 Målsetningen er at infrastrukturen i høyest mulig grad skal fungere normalt for avsender når denne type hendelser blir håndtert.
 
+Normalt vil meldinger til Postkasseleverandørene mellomlagres i sekunder eller opp til noen minutter (10 til 15 minutter).
+For kvitteringsmeldinger til Avsender så er mellomlagringstiden avhengig av hvor ofte Avsender henter kvitteringene, les mer om dette i kapittelet nedenfor.
+
+Maksimal tid for mellomlagring er definert slik:
+
 - normal melding := Mellomlagres i opptil 25+5 dager
 - prioritert melding := Mellomlagres i opptil 24 timer
+
+Denne lange mellomlagringstiden er kun aktuell i spesielle tilfeller der en aktør har en feil, eller det på annen måte er behov for manuell oppfølging av en melding for å få ferdigbehandlet den.
 
 
 h4. Intervall mellom kvitteringsforespørsler 
