@@ -11,6 +11,7 @@ next: Forretningslag/Aktører
 children:
  - name: Forretningslag/Aktører
  - name: Forretningslag/Forretningsprosess
+ - name: Forretningslag/Forretningsprosess_utskrift
  - name: Forretningslag/Forretningsprosess_kvittering
  - name: Forretningslag/Tilstand
  - name: Forretningslag/Forretningsmeldingsstruktur

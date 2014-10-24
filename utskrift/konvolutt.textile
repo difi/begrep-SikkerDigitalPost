@@ -1,0 +1,34 @@
+---
+layout: default
+title: Konvolutten
+headtitle: Sikker digital post
+group: utskrift
+
+id: utskrift/Konvolutt
+
+next: Forretningsmeldinger
+
+---
+
+
+h2. krav til utformingen av brev
+
+
+* Hvit konvolutt, med et vindu, Ingen logo
+* Hvis det er mindre enn 7 ark så C5
+* Hvis det er opp til 99 ark så blir det C4
+* Alle brev får et forsideark med
+** adresse til avsender
+** returpost adressen
+** http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/ea-merket
+** http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode
+
+
+Må undersøkes og er ikke støttet pt:
+* Mulighet for logo på forsidearket
+* Logo pr Avsenderidentifikator
+
+
+LEGG UT EKSEMPEL KONVOLUTT
+
+LEGG UT EKSEMPEL PÅ FORSIDE ARK

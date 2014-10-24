@@ -1,0 +1,29 @@
+---
+layout: default
+title: Krav til brevutforming
+headtitle: Sikker digital post
+group: utskrift
+
+id: utskrift/Brev
+
+next: utskrift/Konvolutt
+
+---
+
+
+h2. krav til utformingen av brev
+
+
+* Sikker digital post støtter utskrift av PDF (inkludert PDF/A) med følgende begrensninger:
+* PDF må ha 18mm venstremarg
+** Utskriftstjenesten legger på strekkode i venstre kant av arket, som brukes for å kontrollere antall ark pr. konvolutt og ved stopp. 
+* PDF må ha A4 (stående) størrelse
+* PDF må ha standard PDF-fonter, eller embeddede fonter
+* PDF versjon må være 1.0 – 1.5
+* PDF kan ikke være passordbeskyttet
+* Utskriftskvalitet er enten 300 DPI sort/hvit eller farge.
+* Det genererer automatisk et forsideark med mottakers postadresse, som er tilrettelagt "vinduskonvolutten":konvolutt.
+* Fysisk størrelse på PDF bør holdes så lavt som mulig.
+** Det er ikke nødvendig å bruke høyoppløslige bilder o.l.
+
+LEGG UT EKSEMPEL PDF PÅ RIKTIG FORMAT

@@ -1,0 +1,17 @@
+---
+layout: default
+title: Utskrift og forsendelse
+headtitle: Sikker digital post
+
+group: utskrift
+
+id: utskrift
+
+next: utskrift/brev
+
+children:
+ - name: utskrift/Brev
+ - name: utskrift/Konvolutt 
+
+---
+

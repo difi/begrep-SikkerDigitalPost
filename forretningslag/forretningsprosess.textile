@@ -6,7 +6,7 @@ group: forretningslag
 
 id: Forretningslag/Forretningsprosess
 
-next: Forretningslag/Forretningsprosess_kvittering
+next: Forretningslag/Forretningsprosess_utskrift
 
 ---
 
@@ -27,7 +27,7 @@ Ovordnet er meldingsflyten slik:
 table(table table-striped).
 |_. Prosess |_. Fra |_. Til |_. Beskrivelse |
 | "DigitalPostmelding":../meldinger/DigitalPostMelding | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Avsender sender alltid sine meldinger til meldingsformidler. Transportkvittering fra meldingsformidler indikerer at denne har tatt over ansvaret for videre formidling av meldingen |
-| DigitalPostmelding | "Meldingsformidler":Aktorer | "Postkasse":Aktorer | Meldingsformidler mellomlagrer meldingen inntil Postkassen har levert en "Leveringskvittering":../meldinger/LeveringsKvittering |
+| DigitalPostmelding | "Meldingsformidler":Aktorer | "Postkasse":Aktorer | Meldingsformidler mellomlagrer meldingen inntil Postkassen har returnert en transportkvittering. |
 | "Leveringskvittering":../meldinger/LeveringsKvittering | "Postkasse":Aktorer | "Meldingsformidler":Aktorer | Postkassen sender en "Leveringskvittering":../meldinger/LeveringsKvittering for å signalisere at postkassen har mottatt og behandlet meldingen, og postkassen tar ansvar for å levere denne til Mottaker |
 | HentKvittering | "Avsender":Aktorer | "Meldingsformidler":Aktorer | Avsender sender forespørsel til Meldingsformidler om å få levert ventende kvitteringer[2] |
 
