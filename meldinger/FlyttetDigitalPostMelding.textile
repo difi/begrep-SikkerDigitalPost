@@ -34,4 +34,4 @@ table(table table-striped).
 | "Dokumentpakkefingeravtrykk":../begrep/Dokumentpakkefingeravtrykk | 1..1 | "sdp:Dokumentpakkefingeravtrykk":../begrep/Dokumentpakkefingeravtrykk |
 | "DigitalpostInfo":../begrep/DigitalPostInfo | 1..1 | "sdp:DigitalpostInfo":../begrep/DigitalPostInfo  |
 | mottaksdato | 1..1 | "xs:date":http://www.w3.org/TR/xmlschema-2/#date  |
-| lest | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string (TRUE / FALSE ) |
+| aapnet | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string (TRUE / FALSE ) |
