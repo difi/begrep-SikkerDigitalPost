@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Produktstøtte
-headtitle: Sikker digital post
+headtitle: Digital postkasse til innbyggere
 
 id: Oversikt/Produktstøtte
 
@@ -11,18 +11,35 @@ next: Sikkerhet
 
 h2. {{page.title}}
 
-Pr. dags dato er det ingen produkter med ferdig støtte for sikker digital post.
+Pr. dags dato er det ingen produkter med ferdig støtte for sikker digital post. Det er flere sak/arkiv leverandører som jobber å få påplass dette.
+Så ta kontakt med din leverandør for å få status på arbeidet med å etablere en integrasjon mot Digital postkasse til innbyggere.
+
 Følgende støttebibliotek er utviklet, mer informasjon om de enkelte produktene/støttebibliotekene får du ved å følge lenkene under:
 
 h3. Klientbibliotek java
 
-* "Java klient for Sikker digital post":https://github.com/difi/sikker-digital-post-java-klient
+* "Java klient for Digital postkasse til innbyggere":https://github.com/difi/sikker-digital-post-java-klient
 ** Klienten gir et enkelt funksjonelt API for å sende meldinger og hente kvitteringer.
 * "Felleskomponenter for sending av Sikker digital post":https://github.com/digipost/sdp-shared
 ** Dette er prosjekter på et lavere nivå. Disse kan brukes av avsendere dersom de kun ønsker støtte til deler av integrasjonen.
 ** Det kan være aktuelt dersom man har standard produkter som gjør deler av integrasjon.
 ** F.eks. dersom avsender har produkter for genering og kryptering av dokumentpakken eller produkter som utfører meldingsutvekslingen, så kan felleskomponetene brukes for å sy alt sammen til en fungerende integrasjon.
+* "Eksempel på bruk av java klient bibilioteket":https://github.com/difi/sdp-klient-eksempel-java-webclient
+* "Eksempel på bruk av java klient bibilioteket":https://github.com/difi/sdp-klient-eksempel-java-jetty
+
+Biblioteket er releaset som en avhengighet til "maven central":http://mvnrepository.com/artifact/no.difi.sdp/sikker-digital-post-java-klient
 
 h3. Klientbibliotek .Net
 
-Under planlegging.
+* ".Net klient for Digital postkasse til innbyggere":https://github.com/difi/sikker-digital-post-net-klient
+** Klienten gir et enkelt funksjonelt API for å sende meldinger og hente kvitteringer.
+* "Eksempel på bruk av .Net klient bibilioteket":https://github.com/difi/sikker-digital-post-net-klient-demo
+
+Biblioteket er tilgjengelig som en NuGet-pakke, mer info "her":https://github.com/difi/sikker-digital-post-net-klient#nuget-pakke
+
+h3. Verifiserte produkter med AS-4/ebMS 3.0 støtte
+
+Følgende produkter er brukt i integrasjonen mot meldingsformidler:
+
+*  "Flame Computing Enterprises CC":http://flame.co.za/
+
