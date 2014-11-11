@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Sikker digital post 
-headtitle: Sikker digital post
+title: Digital post til innbyggere
+headtitle: Digital post til innbyggere
 
 id: sdp
 next: Oversikt
@@ -19,11 +19,13 @@ children:
  
 ---
 
-h2. Sikker Digital Post
+h2. Digital postkasse til innbyggere
 
-Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Sikker Digital Post":http://www.difi.no/digital-forvaltning/felles-it-losninger-fra-difi/sikker-post.
+Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Digital post til innbyggere":http://www.difi.no/digital-forvaltning/felles-it-losninger-fra-difi/sikker-post.
 
 Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":forretningslag/Aktorer, "Meldingsformidler":forretningslag/Aktorer og "Postkasseleverandører":forretningslag/Aktorer.
+
+Ønsker du å komme igang med Digital postkasse til innbyggere så gå til "samarbeidsportalen":https://samarbeid.difi.no/ for felleskomponenter forvaltet av Difi og les hvordan du kan ta i bruk Digital postkasse til innbyggere.
 
 For dei som er interesserte i tekniske detaljar:
 
