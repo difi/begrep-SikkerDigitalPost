@@ -195,11 +195,19 @@
 				<xsd:element name="norskMottakeradresse" type="NorskPostadresse" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="utenlandskMottakeradresse" type="UtenlandskPostadresse" minOccurs="1" maxOccurs="1"/>
 			</xsd:choice>
-			<xsd:element name="posttype" default="A" minOccurs="0" maxOccurs="1">
+			<xsd:element name="posttype" minOccurs="1" maxOccurs="1">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:enumeration value="A"/>
 						<xsd:enumeration value="B"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="returHaandtering" minOccurs="1" maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="RETURNER"/>
+						<xsd:enumeration value="MAKULER"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
@@ -212,6 +220,7 @@
 		<xsd:sequence>
 			<xsd:element name="adresselinje1" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
 			<xsd:element name="adresselinje2" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="adresselinje3" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
 			<xsd:element name="postnummer" type="NorskPostnummer" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="poststed" type="Poststed" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
