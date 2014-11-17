@@ -6,7 +6,7 @@ group: Melding
 
 id: Forretningsmeldinger/PostlagtKvittering
 
-next: Forretningsmeldinger/Feil
+next: Forretningsmeldinger/ReturpostKvittering
 ---
 
 {% include variables.html %}

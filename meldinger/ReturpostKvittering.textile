@@ -1,0 +1,30 @@
+---
+layout: default
+title: ReturpostKvittering
+headtitle: Begrepskatalog for Sikker digital post - 
+group: Melding
+
+id: Forretningsmeldinger/ReturpostKvittering
+
+next: Forretningsmeldinger/Feil
+---
+
+{% include variables.html %}
+
+h3. {{page.title}}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
+- Term := {{page.title}}
+- Definisjon := En "Kvitteringsmelding":KvitteringsMelding til Avsender om at post ikke kunne leveres til Mottaker.
+- Kilde := DIFI
+- Kommentar := Dette er Kvittering på at posten har kommet i retur og har blitt makulert.
+
+Kvitteringen leveres når brevene er mottatt av EA tjenesten og makulert.
+
+h3. Attributer
+
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
+| tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
+
