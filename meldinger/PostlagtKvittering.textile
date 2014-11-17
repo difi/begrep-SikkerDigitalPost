@@ -1,0 +1,31 @@
+---
+layout: default
+title: PostlagtKvittering
+headtitle: Begrepskatalog for Sikker digital post - 
+group: Melding
+
+id: Forretningsmeldinger/PostlagtKvittering
+
+next: Forretningsmeldinger/Feil
+---
+
+{% include variables.html %}
+
+h3. {{page.title}}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
+- Term := {{page.title}}
+- Definisjon := En "Kvitteringsmelding":KvitteringsMelding til Avsender om at post sendt til Utskrift og forsendelsestjenesten er levert til postleverandør.
+- Kilde := DIFI
+- Kommentar := Dette er Kvitteringen som dokumenterer at utskrift og forsendelsestjenesten har postlagt brevet fra Avsender. 
+
+Kvitteringen leveres når brevene er gjort klar for postlegging. Postleverandøren vil kort tid etterpå komme å hente brevene som er lagt til postlegging.
+Postlegging gjøres en gang om dagen på hverdager, så denne typen kvitteringer kan forventes tilgjengelig for Avsender omtrent samme tidspunkt for alle meldinger som postlegges samme dag.
+
+h3. Attributer
+
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| Signature | 1..1 | "ds:Signature":https://www.oasis-open.org/committees/download.php/21256/wss-v1.1-spec-errata-os-SOAPMessageSecurity.htm#_Toc118717148, Enveloped XML signatur |
+| tidspunkt | 1..1 | "xs:dateTime":http://www.w3.org/TR/xmlschema-2/#dateTime |
+

@@ -6,7 +6,7 @@ group: Melding
 
 id: Forretningsmeldinger/Varslingfeiletkvittering
 
-next: Forretningsmeldinger/Feil
+next: Forretningsmeldinger/MottaksKvittering
 ---
 
 {% include variables.html %}

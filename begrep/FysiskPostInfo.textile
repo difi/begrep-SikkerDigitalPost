@@ -13,10 +13,20 @@ prev: Begreper
 - Term := {{page.title}}
 - Definisjon := Informasjon relatert til presentasjon og behandling av en sikker digital post melding
 - Kilde := DIFI
+- Kommentar := Dette er informasjon om den Digitalpostforsendelsen som vil bli brukt av Postkasseleverandør for å presentere og behandle den digitale posten.
+Den ikkeSensitiveTittelen vil bli brukt i dialogen med Innbygger dersom ikke Innbygger er autentisert på tilstrekkelig nivå. 
+Den ikkeSensitiveTittelen vil også bli brukt i varsling til Innbygger.
+Når den digitale posten er dekryptert og innbygger er autentisert på tilstrekkelig sikkerhetsnivå så vil Tittel i "Manifest-filen":../forretningslag/Dokumentpakke/Manifest brukes.
 
 h3. Attributer
 
-ikke detaljert.
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| "postMottakerAdresse":FysiskPostadresse | 1..1 | "sdp:FysiskPostadresse":FysiskPostadresse |
+| "returPostAdresse":FysiskPostadresse | 1..1 | "sdp:FysiskPostadresse":FysiskPostadresse |
+| "returPostStrategi":/Felles/returPostStrategi | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "posttype":/Felles/postType | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "utskriftstype":/Felles/utskriftstype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 
 
 h3. XSD

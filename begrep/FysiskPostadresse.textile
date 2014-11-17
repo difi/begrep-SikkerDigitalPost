@@ -1,0 +1,125 @@
+---
+layout: egenskap
+title: FysiskPostadresse
+headtitle: Begrepskatalog for Sikker digital post - 
+group: complexType
+
+name: FysiskPostadresse
+prev: Begreper
+---
+{% include variables.html %}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
+- Term := {{page.title}}
+- Definisjon := FysiskPostadresse definert for Sikker digital post
+- Datatype := complexType
+- Kilde := DIFI
+- Kommentar := FysiskPostadresse er adressen til "mottakeren":Mottaker som Post skal sendes til.
+
+h4. Attributer
+
+FysiskPostadresse er enten en norsk eller en utenlandsadresse.
+
+For Norske adresser er FysiskPostadresse definert slik:
+
+table(table table-striped).
+|_. Term |_. Kardinalitet |_. Datatype |_. Regler |
+| "navn":http://www.w3.org/TR/xmlschema-2/#string  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 130 tegn |
+| "adresselinje 1":http://www.w3.org/TR/xmlschema-2/#string | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 100 tegn |
+| "adresselinje 2":http://www.w3.org/TR/xmlschema-2/#string | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 100 tegn |
+| "adresselinje 3":http://www.w3.org/TR/xmlschema-2/#string | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 100 tegn |
+| "postnummer":http://www.w3.org/TR/xmlschema-2/#string | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | 4 siffer |
+| "poststed":http://www.w3.org/TR/xmlschema-2/#string | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 80 tegn |
+
+For utenlandske adresser er FysiskPostadresse definert slik:
+
+table(table table-striped).
+|_. Term |_. Kardinalitet |_. Datatype |_. Regler |
+| "navn":http://www.w3.org/TR/xmlschema-2/#string  | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 130 tegn |
+| "adresselinje 1":http://www.w3.org/TR/xmlschema-2/#string | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 100 tegn |
+| "adresselinje 2":http://www.w3.org/TR/xmlschema-2/#string | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 100 tegn |
+| "adresselinje 3":http://www.w3.org/TR/xmlschema-2/#string | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 100 tegn |
+| "adresselinje 4":http://www.w3.org/TR/xmlschema-2/#string | 0..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 100 tegn |
+| "land":http://www.w3.org/TR/xmlschema-2/#string | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | 80 siffer |
+| "landkode":http://www.w3.org/TR/xmlschema-2/#string | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | To-bokstavs landkode ihht "ISO 3166-1 alpha-2 standarden":http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 |
+
+
+h4. XSD eksempel
+
+<pre>
+
+	<xsd:complexType name="FysiskPostadresse">
+		<xsd:sequence>
+			<xsd:element name="navn" type="Navn" minOccurs="1" maxOccurs="1"/>
+			<xsd:choice>
+				<xsd:element name="norskMottakeradresse" type="NorskPostadresse" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="utenlandskMottakeradresse" type="UtenlandskPostadresse" minOccurs="1" maxOccurs="1"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="Navn">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="130"/>
+		</xsd:restriction>
+	</xsd:simpleType>	
+
+	<xsd:complexType name="NorskPostadresse">
+		<xsd:sequence>
+			<xsd:element name="adresselinje1" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="adresselinje2" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="adresselinje3" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="postnummer" type="norskpostnummer" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="poststed" type="Poststed" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="UtenlandskPostadresse">
+		<xsd:sequence>
+			<xsd:element name="adresselinje1" type="Adresselinje" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="adresselinje2" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="adresselinje3" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="adresselinje4" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
+			<xsd:choice>
+				<xsd:element name="land" type="Land" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="landkode" type="Landkode" minOccurs="1" maxOccurs="1"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="Adresselinje">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="100" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="norskpostnummer">
+		<xsd:restriction base="xsd:string" />
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="Poststed">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="80" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:simpleType name="Land">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="80" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:simpleType name="Landkode">
+		<xsd:annotation>
+			<xsd:documentation>
+				To-bokstavs landkode ihht ISO 3166-1 alpha-2 standarden.
+							(http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</pre>
