@@ -25,7 +25,7 @@ table(table table-striped).
 | "postMottakerAdresse":FysiskPostadresse | 1..1 | "sdp:FysiskPostadresse":FysiskPostadresse |
 | "returPostAdresse":FysiskPostadresse | 1..1 | "sdp:FysiskPostadresse":FysiskPostadresse |
 | "returPostStrategi":/Felles/returPostStrategi | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
-| "posttype":/Felles/postType | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "posttype":/Felles/posttype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | "utskriftstype":/Felles/utskriftstype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 
 
