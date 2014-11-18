@@ -15,11 +15,11 @@ h3. {{page.title}}
 
 - Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
 - Term := {{page.title}}
-- Definisjon := En "Kvitteringsmelding":KvitteringsMelding til Avsender om at post ikke kunne leveres til Mottaker.
+- Definisjon := En "Kvitteringsmelding":KvitteringsMelding fra Utskriftstjenesten til Avsender om at post ikke kunne leveres til Mottaker.
 - Kilde := DIFI
 - Kommentar := Dette er Kvittering på at posten har kommet i retur og har blitt makulert.
 
-Kvitteringen leveres når brevene er mottatt av EA tjenesten og makulert.
+Kvitteringen leveres når brevene er mottatt av utskrift og forsendelsestjenesten, registrert og makulert. Dette forutsetter at avsender har valgt å benytte denne tjenesten i feltet "returPostStrategi":http://begrep.difi.no/Felles/returPostStrategi i opprinnelig melding.
 
 h3. Attributer
 
