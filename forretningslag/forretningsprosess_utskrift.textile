@@ -14,7 +14,7 @@ MERK : UTKAST - UNDER ARBEID
 
 h2. Prosess for sending av papir post
 
-"Meldingen":../meldinger/ i Sikker digital post flyter mellom "Aktørene":Aktorer slik det beskrives i flyt diagrammet under.
+"Meldingen":../meldinger/ i Sikker digital post flyter mellom "Aktørene":Aktorer slik det beskrives i flytdiagrammet under.
 
 Ovordnet er meldingsflyten slik:
 
@@ -30,10 +30,10 @@ table(table table-striped).
 |_. Prosess |_. Fra |_. Til |_. Beskrivelse |
 | "DigitalPostmelding":../meldinger/DigitalPostMelding  | "Avsender":Aktorer	      | "Meldingsformidler":Aktorer | Avsender sender alltid sine meldinger til meldingsformidler. Transportkvittering fra meldingsformidler indikerer at denne har tatt over ansvaret for videre formidling av meldingen |
 | DigitalPostmelding                                    | "Meldingsformidler":Aktorer | "Utskriftstjeneste":Aktorer | Meldingsformidler mellomlagrer meldingen inntil Utskriftstjeneste har returnert en transportkvittering. |
-| "MottaksKvittering[2]":../meldinger/MottaksKvittering | "Utskriftstjeneste":Aktorer | "Meldingsformidler":Aktorer | Utskriftstjeneste sender en "MottaksKvittering":../meldinger/MottaksKvittering for å signalisere at utskriftstjenesten har mottatt og lagt meldingen klar til behandling. |
-| "PostlagtKvittering[3]":../meldinger/PostlagtKvittering  | "Utskriftstjeneste":Aktorer | "Meldingsformidler":Aktorer | Utskriftstjeneste sender en "PostlagtKvittering":../meldinger/PostlagtKvittering for å signalisere at posten er skrevet ut, konvolutert og postlagt. |
-| "ReturpostKvittering[5]":../meldinger/ReturpostKvittering  | "Utskriftstjeneste":Aktorer | "Meldingsformidler":Aktorer | Utskriftstjeneste sender en "ReturpostKvittering":../meldinger/ReturpostKvittering for å signalisere at posten har kommet tilbake og ikke kan leveres til innbygger. |
-| HentKvittering                                        | "Avsender":Aktorer 		  | "Meldingsformidler":Aktorer | Avsender sender forespørsel til Meldingsformidler om å få levert ventende kvitteringer[4] |
+| "MottaksKvittering":../meldinger/MottaksKvittering [2] | "Utskriftstjeneste":Aktorer | "Meldingsformidler":Aktorer | Utskriftstjeneste sender en "MottaksKvittering":../meldinger/MottaksKvittering for å signalisere at utskriftstjenesten har mottatt og lagt meldingen klar til behandling. |
+| "PostlagtKvittering":../meldinger/PostlagtKvittering [3] | "Utskriftstjeneste":Aktorer | "Meldingsformidler":Aktorer | Utskriftstjeneste sender en "PostlagtKvittering":../meldinger/PostlagtKvittering for å signalisere at posten er skrevet ut, konvolutert og postlagt. |
+| "ReturpostKvittering":../meldinger/ReturpostKvittering [4] | "Utskriftstjeneste":Aktorer | "Meldingsformidler":Aktorer | Utskriftstjeneste sender en "ReturpostKvittering":../meldinger/ReturpostKvittering for å signalisere at posten har kommet tilbake og ikke kan leveres til innbygger. |
+| HentKvittering                                        | "Avsender":Aktorer 		  | "Meldingsformidler":Aktorer | Avsender sender forespørsel til Meldingsformidler om å få levert ventende kvitteringer[5] |
 
 fn1. Avsender bør også ha et aktivt forhold til statusen til en melding. Meldingsflytdiagrammet kan med fordel ses i sammenheng med "tilstandsdiagrammet":avsender_tilstanddiagram for sikker digital post.
 
@@ -41,6 +41,6 @@ fn2. "Mottakskvittering":../meldinger/Mottakskvittering sendes så fort utskrift
 
 fn3. Utskriftstjenesten samler sammen alle utskrifter til en utskriftsjobb hver dag. Når dette er fullført og posten er postlagt vil utskriftstjenesten sende over "Postlagtkvittering":../meldinger/Postlagtkvittering. Disse vil dermed komme tilbake i daglige puljer til Avsender.
  
-fn4. Dette kan være alle typer kvitteringer, ikke bare Mottakskvitter og Postlagtkvittering
+fn4. "ReturPostkvittering":../meldinger/ReturPostkvittering blir kun dersom returpost håndtering er bestilt i "DigitalPostmelding":../meldinger/DigitalPostMelding. Returpost som er fysisk ødelagt slik at ikke posten kan identifiseres vil bli levert til returadressen oppgitt så lenge denne er leselig.
 
-fn5. "ReturPostkvittering":../meldinger/ReturPostkvittering blir kun dersom returpost håndtering er bestilt i "DigitalPostmelding":../meldinger/DigitalPostMelding. Returpost som er fysisk ødelagt slik at ikke posten kan identifiseres vil bli levert til returadressen oppgitt så lenge denne er leselig.
+fn5. Dette kan være alle typer kvitteringer, ikke bare Mottakskvitter og Postlagtkvittering
