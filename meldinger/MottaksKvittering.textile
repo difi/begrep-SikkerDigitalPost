@@ -18,7 +18,7 @@ h3. {{page.title}}
 - Definisjon := En "Kvitteringsmelding":KvitteringsMelding til Avsender om at utskrift og forsendelsestjenesten har mottatt forsendelsen og har lagt den klar for utskrift.
 - Kilde := DIFI
 - Kommentar := Denne Kvitteringen leveres tilbake så fort utskrift og forsendelsestjenesten har mottatt forsendelsen og validert at den kan skrives ut. 
-Forsendelsen vil så legges i kø og tas med i neste utskriftsjobb for denne type post. Det er vanligvis 
+Forsendelsen vil så legges i kø og tas med i neste utskriftsjobb for denne type post.
 
 
 h3. Attributer
