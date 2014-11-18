@@ -74,6 +74,7 @@
 	    <poststed>OSLO</poststed>
 	  </norskMottakeradresse>
 	  <posttype>A</posttype>
+	  <returHaandtering>RETURNER</returHaandtering>
 	  <returPostmottaker>DIFI Returpost</returPostmottaker>
 	  <returadresse>
 	    <adresselinje1>Skrivarvegen 2</adresselinje1>
