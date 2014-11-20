@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Digital post til innbyggere
-headtitle: Digital post til innbyggere
+title: Digital postkasse til innbyggere
+headtitle: Digital postkasse til innbyggere
 
 id: sdp
 next: Oversikt

@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Sending av digital post
-headtitle: Sikker digital post
+headtitle: Digital postkasse til innbyggere
 group: forretningslag
 
 id: Forretningslag/Forretningsprosess
 
-next: Forretningslag/Forretningsprosess_utskrift
+next: Forretningslag/varsling
 
 ---
 
