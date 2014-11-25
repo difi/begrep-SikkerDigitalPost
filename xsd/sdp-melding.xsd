@@ -195,26 +195,26 @@
 				<xsd:element name="norskMottakeradresse" type="NorskPostadresse" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="utenlandskMottakeradresse" type="UtenlandskPostadresse" minOccurs="1" maxOccurs="1"/>
 			</xsd:choice>
-			<xsd:element name="posttype" minOccurs="1" maxOccurs="1">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:string">
-						<xsd:enumeration value="A"/>
-						<xsd:enumeration value="B"/>
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
-			<xsd:element name="returHaandtering" minOccurs="1" maxOccurs="1">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:string">
-						<xsd:enumeration value="RETURNER"/>
-						<xsd:enumeration value="MAKULER"/>
-					</xsd:restriction>
-				</xsd:simpleType>
-			</xsd:element>
+			<xsd:element name="posttype" type="FysiskPostType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="returHaandtering" type="FysiskPostReturhaandtering" minOccurs="1" maxOccurs="1" />
 			<xsd:element name="returPostmottaker" type="Navn" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="returadresse" type="NorskPostadresse" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
+
+	<xsd:simpleType name="FysiskPostType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="FysiskPostReturhaandtering">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="RETURNER"/>
+			<xsd:enumeration value="MAKULER"/>
+		</xsd:restriction>	
+	</xsd:simpleType>
 
 	<xsd:complexType name="NorskPostadresse">
 		<xsd:sequence>
