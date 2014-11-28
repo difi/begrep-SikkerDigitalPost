@@ -43,7 +43,7 @@
 
 	<xsd:complexType name="Mottaker">
 		<xsd:sequence>
-			<xsd:element name="person" type="Person" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="person" type="Person" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
