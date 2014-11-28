@@ -68,6 +68,7 @@
 			<poststed>OSLO</poststed>
 		</norskMottakeradresse>
 		<posttype>A</posttype>
+		<printfarge>SORT_HVIT</printfarge>
 		<returHaandtering>RETURNER</returHaandtering>
 		<returPostmottaker>DIFI Returpost</returPostmottaker>
 		<returadresse>

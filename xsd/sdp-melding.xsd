@@ -198,11 +198,19 @@
 				<xsd:element name="utenlandskMottakeradresse" type="UtenlandskPostadresse" minOccurs="1" maxOccurs="1"/>
 			</xsd:choice>
 			<xsd:element name="posttype" type="FysiskPostType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="printfarge" type="Printfarge" minOccurs="1" maxOccurs="1" />
 			<xsd:element name="returHaandtering" type="FysiskPostReturhaandtering" minOccurs="1" maxOccurs="1" />
 			<xsd:element name="returPostmottaker" type="Navn" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="returadresse" type="NorskPostadresse" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
+	
+	<xsd:simpleType name="Printfarge">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="SORT_HVIT" />
+			<xsd:enumeration value="FARGE" />
+		</xsd:restriction>
+	</xsd:simpleType>
 
 	<xsd:simpleType name="FysiskPostType">
 		<xsd:restriction base="xsd:string">
