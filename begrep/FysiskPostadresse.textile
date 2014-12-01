@@ -18,9 +18,9 @@ prev: Begreper
 
 h4. Attributer
 
-FysiskPostadresse er enten en norsk eller en utenlandsadresse.
+FysiskPostadresse er enten en NorskPostadresse eller en UtenlandskPostadresse.
 
-For Norske adresser er FysiskPostadresse definert slik:
+h4. NorskPostadresse:
 
 table(table table-striped).
 |_. Term |_. Kardinalitet |_. Datatype |_. Regler |
@@ -31,7 +31,7 @@ table(table table-striped).
 | "postnummer":http://www.w3.org/TR/xmlschema-2/#string | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | 4 siffer |
 | "poststed":http://www.w3.org/TR/xmlschema-2/#string | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string | Maks 80 tegn |
 
-For utenlandske adresser er FysiskPostadresse definert slik:
+h4. UtenlandskPostadresse:
 
 table(table table-striped).
 |_. Term |_. Kardinalitet |_. Datatype |_. Regler |

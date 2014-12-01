@@ -10,6 +10,9 @@ children:
  - name: Forretningsmeldinger/Leveringskvittering
  - name: Forretningsmeldinger/Åpningskvittering
  - name: Forretningsmeldinger/Varslingfeiletkvittering
+ - name: Forretningsmeldinger/MottaksKvittering
+ - name: Forretningsmeldinger/PostlagtKvittering
+ - name: Forretningsmeldinger/ReturpostKvittering
  - name: Forretningsmeldinger/Feil
  - name: Forretningsmeldinger/FlyttetDigitalpost 
 
@@ -41,6 +44,9 @@ table(table table-striped).
 | "LeveringsKvittering":LeveringsKvittering | Kvittering på at digital post er tilgjengeliggjort |
 | "ÅpningsKvittering":AapningsKvittering | Kvittering fra Innbygger for at digital post er åpnet |
 | "Varslingfeilet":VarslingfeiletKvittering | Kvittering for at en spesifisert varsling ikke har blitt sendt |
+| "MottaksKvittering":MottaksKvittering | Kvittering fra utskrift og forsendelsestjenesten om at melding er mottatt og lagt til print |
+| "PostlagtKvittering":PostlagtKvittering | Kvittering fra utskrift og forsendelsestjenesten om at melding er postlagt |
+| "ReturpostKvittering":ReturpostKvittering | Kvittering fra utskrift og forsendelsestjenesten om at posten ikke har blitt levert til Mottaker. |
 | "Feil":FeilMelding | Generel feilkvittering |
 | "FlyttetDigitalpost":FlyttetDigitalPostMelding | For flytting av post fra en postkasse til en annen. Brukes kun i mellom postkasseleverandørene |
 

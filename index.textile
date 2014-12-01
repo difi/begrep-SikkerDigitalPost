@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Digital post til innbyggere
-headtitle: Digital post til innbyggere
+title: Digital postkasse til innbyggere
+headtitle: Digital postkasse til innbyggere
 
 id: sdp
 next: Oversikt
@@ -25,15 +25,36 @@ Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene
 
 Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":forretningslag/Aktorer, "Meldingsformidler":forretningslag/Aktorer og "Postkasseleverandører":forretningslag/Aktorer.
 
+
+"Hvordan ta i bruk digital postkasse til innbyggere?":https://samarbeid.difi.no/sikker-digital-post/hvordan-ta-i-bruk-sikker-digital-post
 Ønsker du å komme igang med Digital postkasse til innbyggere så gå til "samarbeidsportalen":https://samarbeid.difi.no/ for felleskomponenter forvaltet av Difi og les hvordan du kan ta i bruk Digital postkasse til innbyggere.
 
-For dei som er interesserte i tekniske detaljar:
 
+
+h3. Innledning
+
+Dersom du nettopp har vært der og vil ha mer detaljer så sett deg først inn i følgende:
+
+# "Arkitekturen":innledning/arkitektur
+# "Prosess for sending av digital post":forretningslag/forretningsprosess
+
+Se se videre på informasjonen i kapitlene:
+
+table(table table-striped).
+| "Oversikt":innledning/ | Mer om sikker digital post og generelle aspekter ved løsningen |
+| "Forretningslag":forretningslag/ | Aktører, prosesser og overordnet meldingsstruktur/format |
+
+
+h3. Start opp med integrasjon
+
+Dersom du skal sette opp en integrasjon mot digital postkasse til innbygger så start med å lese om hvilke produkter og biblioteker som er utviklet for å støtte deg i dette arbeidet.
+"Les mer.":/innledning/produktstotte
+
+Vil du ha tak i mer tekniske detaljar se gjerne her:
 * "Xml Eksempel på meldingar":eksempler/
 * "XML Schema Definition filer":xsd/
 
-Dokumentasjonen skal hovedsakelig fungere som en implementasjonguide for integrasjon mellom avsendere og postkasseleverandører gjennom meldingsformidleren. 
-Den skal dekke teknisk dokumentasjon, beskrivelse av meldingene som sendes mellom partene, hvordan de skal bygges opp og definisjon av begreper.
+h3. Kapiteloversikt
 
 Katalogen er bygd opp av følgende kapitler:
 
