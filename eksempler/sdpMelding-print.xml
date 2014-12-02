@@ -58,29 +58,31 @@
 		<fakturaReferanse>ØK1</fakturaReferanse>
 	</avsender>
 
-	<mottaker>
-		<person>
-			<personidentifikator>17051400000</personidentifikator>
-			<postkasseadresse>ola.nordmann#0ABC</postkasseadresse>
-		</person>
-	</mottaker>
 
 	<fysiskPostInfo>
-		<mottaker>Ola Nordmann</mottaker>
-	  <norskMottakeradresse>
-	    <adresselinje1>Grev Wedels Plass 9</adresselinje1>
-	    <adresselinje2></adresselinje2>
-	    <postnummer>0151</postnummer>
-	    <poststed>OSLO</poststed>
-	  </norskMottakeradresse>
-	  <posttype>A</posttype>
-	  <returPostmottaker>DIFI Returpost</returPostmottaker>
-	  <returadresse>
-	    <adresselinje1>Skrivarvegen 2</adresselinje1>
-	    <adresselinje2></adresselinje2>
-	    <postnummer>6863</postnummer>
-	    <poststed>LEIKANGER</poststed>
-	  </returadresse>
+		<mottaker>
+			<navn>Ola Nordmann</navn>
+			<norskAdresse>
+				<adresselinje1>Grev Wedels Plass 9</adresselinje1>
+				<adresselinje2></adresselinje2>
+				<postnummer>0151</postnummer>
+				<poststed>OSLO</poststed>
+			</norskAdresse>
+		</mottaker>
+		<posttype>A</posttype>
+		<utskriftsfarge>SORT_HVIT</utskriftsfarge>
+		<retur>
+			<postHaandtering>DIREKTE_RETUR</postHaandtering>
+			<mottaker>
+				<navn>DIFI Returpost</navn>
+				<norskAdresse>
+					<adresselinje1>Skrivarvegen 2</adresselinje1>
+					<adresselinje2></adresselinje2>
+					<postnummer>6863</postnummer>
+					<poststed>LEIKANGER</poststed>
+				</norskAdresse>
+			</mottaker>
+		</retur>
 	</fysiskPostInfo>
 
 	<dokumentpakkefingeravtrykk>
