@@ -39,7 +39,7 @@
 		<xsd:annotation>
 			<xsd:documentation>
 				For digital post: Postkasseleverandøren har levert brevet til mottakers digitale postkasse.
-				For fysisk post : Utskrift og forsendelsestjenesten har tildelt dette brevet til en utskriftsjobb.
+				For fysisk post : Utskrift og forsendelsestjenesten har startet produksjon.
 			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:complexType>
