@@ -48,7 +48,7 @@ table(table table-striped).
 h3. Start opp med integrasjon
 
 Dersom du skal sette opp en integrasjon mot digital postkasse til innbygger så start med å lese om hvilke produkter og biblioteker som er utviklet for å støtte deg i dette arbeidet.
-"Les mer.":/innledning/produktstotte
+"Les mer.":innledning/produktstotte
 
 Vil du ha tak i mer tekniske detaljar se gjerne her:
 * "Xml Eksempel på meldingar":eksempler/
