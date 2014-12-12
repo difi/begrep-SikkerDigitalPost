@@ -28,7 +28,7 @@ Dette forsidearket har adresse informasjon m.m. og innholdet vises i vinduet på
 Forsidearket kan inneholde følgende som vises i vinduet på konvolutten:
 
 ** Adresse til Mottaker. 
-*** Hentet fra "FysiskPostInfo":../begrep/FysiskpostInfo
+*** Hentet fra "FysiskPostInfo":../begrep/FysiskPostInfo
 ** returpost adressen
 *** Hentet fra "FysiskPostRetur":../begrep/FysiskPostRetur
 ** Avsender sin logo
