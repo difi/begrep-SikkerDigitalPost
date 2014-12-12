@@ -24,10 +24,12 @@ h3. Anbefalt bruk av varsling
 Som standard anbefales det at Avsender ikke spesifiserer varsling, da varsling bør styres av Mottaker selv.
 Mottaker har mulighet for å sette opp egen varslingspreferanser i postkassen.
 
-For alle brev som krever varsling i henhold til "eForvaltningsforskriften  	&sect;8a":http://lovdata.no/dokument/SF/forskrift/2004-06-25-988/KAPITTEL_2#%C2%A78, anbefales følgende instillinger brukes:
+For alle brev som krever varsling i henhold til "eForvaltningsforskriften  	&sect;8a":http://lovdata.no/dokument/SF/forskrift/2004-06-25-988/KAPITTEL_2#%C2%A78, skal følgende instillinger brukes:
 * Avsender velger selv kanal,  "EpostVarsel":EpostVarsel er tilstrekkelig.
 * Repetisjoner settes opp til: 0 og 7
 ** Dette vil medføre at Mottaker får en varsling når brevet blir levert og en påminnelse etter 7 dager dersom Mottaker ikke har skaffet seg tilgang til brevet.
+
+h3. Mer informasjon om varsling
 
 For Digital postmeldinger med varslinger spesifisert på dag 0, som kommer på kveldstid etter at varsling i postkassen er stoppet, så vil dag 0 varselet gå dagen etter. Dette vil ikke forskyve andre varslinger bestilt.
 For eksempel:
