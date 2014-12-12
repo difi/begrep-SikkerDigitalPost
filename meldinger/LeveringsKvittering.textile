@@ -30,6 +30,7 @@ h4. For Fysiskpost forsendelser
 Kvitteringen leveres når brevene er gjort klar for postlegging. Postleverandøren vil kort tid etterpå komme og hente brevene som er lagt til postlegging.
 Postlegging gjøres en gang om dagen på hverdager, så denne typen kvitteringer kan forventes tilgjengelig for Avsender omtrent på samme tidspunkt for alle meldinger som postlegges samme dag.
 
+h4. Arkivering av kvittering
 
 Det anbefales at "Behandlingsansvarlig":../forretningslag/Aktorer arkiverer denne kvitteringen som bevis på at "posten":DigitalPostMelding er levert til "Mottaker":../begrep/Mottaker.
 
