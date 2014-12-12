@@ -22,11 +22,11 @@ h3. Attributer
 
 table(table table-striped).
 |_. Identifikator |_. Kardinalitet |_. Datatype |
-| "postMottakerAdresse":FysiskPostadresse | 1..1 | "sdp:FysiskPostadresse":FysiskPostadresse |
-| "returPostAdresse":FysiskPostadresse | 1..1 | "sdp:FysiskPostadresse":FysiskPostadresse |
-| "returPostHaandtering":/Felles/returPostHaandtering | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "mottaker":FysiskPostadresse | 1..1 | "sdp:FysiskPostadresse":FysiskPostadresse |
 | "posttype":/Felles/posttype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
-| "utskriftstype":/Felles/utskriftstype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "utskriftsfarge":/Felles/utskriftstype | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+| "retur":FysiskPostRetur | 1..1 | "sdp:FysiskPostRetur":FysiskPostRetur |
+
 
 
 

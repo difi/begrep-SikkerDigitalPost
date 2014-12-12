@@ -1,0 +1,27 @@
+---
+layout: egenskap
+title: FysiskPostRetur
+headtitle: Begrepskatalog for Sikker digital post - 
+group: complexType
+
+name: FysiskPostRetur
+prev: Begreper
+---
+{% include variables.html %}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
+- Term := {{page.title}}
+- Definisjon := Informasjon som brukes ved retur av post som av en eller annen grunn ikke kan levers til mottaker.
+- Kilde := DIFI
+- Kommentar := Informasjon som brukes ved retur av post som av en eller annen grunn ikke kan levers til mottaker.
+
+h3. Attributer
+
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| "mottaker":FysiskPostadresse | 1..1 | "sdp:FysiskPostadresse":FysiskPostadresse |
+| "postHaandtering":/Felles/returPostHaandtering |  1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
+
+
+
+

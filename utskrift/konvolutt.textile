@@ -11,24 +11,35 @@ next: Forretningsmeldinger
 ---
 
 
-h2. krav til utformingen av brev
+h2. Konvolutt
 
+Beskrivelse av Konvoluttene som brukes i løsningen:
 
-* Hvit konvolutt, med et vindu, Ingen logo
-* Hvis det er mindre enn 7 ark så C5
-* Hvis det er opp til 99 ark så blir det C4
-* Alle brev får et forsideark med
-** adresse til avsender
+* Hvit konvolutt, med et vindu der tekst fra forsidearket vises
+* Ingen logo på konvolutten
+* Hvis det er mindre enn 7 ark så er konvolutten av type C5
+** Hvis det er opp til 99 ark så blir det C4
+
+h2. Forsideark
+
+For alle brev lages det et forsideark som legges ved forsendelsen. 
+Dette forsidearket har adresse informasjon m.m. og innholdet vises i vinduet på konvolutten.
+
+Forsidearket kan inneholde følgende som vises i vinduet på konvolutten:
+
+** Adresse til Mottaker. 
+*** Hentet fra "FysiskPostInfo":../begrep/FysiskpostInfo
 ** returpost adressen
-** http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/ea-merket
-** http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode
+*** Hentet fra "FysiskPostRetur":../begrep/FysiskPostRetur
+** Avsender sin logo
+*** Satt opp på Avsender sin konto i Digital Post til innbyggere
+** Merke for Elektronisk adresseoppdatering
+*** "http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/ea-merket":http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/ea-merket
+** En strekkode for håndtering av returpost
+*** "http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode":http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode
 
+h4. Eksempler
 
-Må undersøkes og er ikke støttet pt:
-* Mulighet for logo på forsidearket
-* Logo pr Avsenderidentifikator
-
-
-LEGG UT EKSEMPEL KONVOLUTT
-
-LEGG UT EKSEMPEL PÅ FORSIDE ARK
+* "Forsideark med topp justert logo":EAkode_og_logo_toppjustert.pdf
+* "Forsideark med venstre justert logo":EAkode_og_logo_venstrejustert.pdf
+* "Forsideark uten logo":Kun_EA.pdf
