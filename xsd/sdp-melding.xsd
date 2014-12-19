@@ -87,7 +87,18 @@
 
 	<xsd:complexType name="DigitalPostInfo">
 		<xsd:sequence>
-			<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1"/>
+			<xsd:choice>
+				<xsd:element name="virkningsdato" type="xsd:date" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Dag når en melding tidligst kan gjøres tilgjengelig i innbygger sin postkasse. Posten tilgjengeliggjøres da ved midnatt. Krav til når meldingen er tilgjengeliggjort er beskrevet i kontraktene med Leverandørene.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="virkningstidspunkt" type="xsd:datetime" minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>Dag og Tidspunkt for når en melding tidligst kan gjøres tilgjengelig i innbygger sin postkasse. Krav til når meldingen er tilgjengeliggjort er beskrevet i kontraktene med Leverandørene.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
 			<xsd:element name="aapningskvittering" type="xsd:boolean" default="false" minOccurs="0" maxOccurs="1"/>
 			<xsd:element name="sikkerhetsnivaa" type="Sikkerhetsnivaa" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="ikkeSensitivTittel" minOccurs="1" maxOccurs="1" type="Tittel">
