@@ -93,7 +93,7 @@
 						<xsd:documentation>Dag når en melding tidligst kan gjøres tilgjengelig i innbygger sin postkasse. Posten tilgjengeliggjøres da ved midnatt. Krav til når meldingen er tilgjengeliggjort er beskrevet i kontraktene med Leverandørene.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
-				<xsd:element name="virkningstidspunkt" type="xsd:datetime" minOccurs="0" maxOccurs="1">
+				<xsd:element name="virkningstidspunkt" type="xsd:dateTime" minOccurs="0" maxOccurs="1">
 					<xsd:annotation>
 						<xsd:documentation>Dag og Tidspunkt for når en melding tidligst kan gjøres tilgjengelig i innbygger sin postkasse. Krav til når meldingen er tilgjengeliggjort er beskrevet i kontraktene med Leverandørene.</xsd:documentation>
 					</xsd:annotation>
