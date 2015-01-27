@@ -27,7 +27,7 @@ table(table table-striped).
 | "Mottaker":../../begrep/Mottaker | 1..1 | "sdp:Mottaker":../../begrep/Mottaker |
 | "Avsender":../../begrep/Avsender | 1..1 | "sdp:Avsender":../../begrep/Avsender |
 | hoveddokument | 1..1 | "sdp:Dokument":../../begrep/Dokument |
-| vedlegg | 0..99 | "sdp:Dokument":../../begrep/Dokument |
+| vedlegg | 0..10 | "sdp:Dokument":../../begrep/Dokument |
 
 
 h3. Eksempel
