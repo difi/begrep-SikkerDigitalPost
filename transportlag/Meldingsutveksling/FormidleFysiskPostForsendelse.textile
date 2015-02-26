@@ -1,12 +1,12 @@
 ---
 layout: default
-title: FormidleDigitalPostForsendelse
+title: FormidleFysiskPostForsendelse
 headtitle: Sikker digital post
 group: transportlag
 
 id: Transportlag/Meldingsutveksling/FormidleDigitalPostForsendelse
 
-next: Transportlag/Meldingsutveksling/FormidleFysiskPostForespoersel
+next: Transportlag/Meldingsutveksling/KvitteringsForespoersel
 
 ---
 {% include variables.html %}
@@ -46,7 +46,7 @@ h3. BusinessInfo
 table(table table-striped table-condensed).
 |_. P-Mode  |_. Verdi |
 | PMode<notextile>[1]</notextile>.BusinessInfo.Service  | "urn:sdp:service:sdp" |
-| PMode<notextile>[1]</notextile>.BusinessInfo.Action  | "FormidleDigitalPost" |
+| PMode<notextile>[1]</notextile>.BusinessInfo.Action  | "FormidleFysiskPost" |
 | PMode<notextile>[1]</notextile>.BusinessInfo.Properties[]: | - ikke relevant - |
 
 h3. ErrorHandling
