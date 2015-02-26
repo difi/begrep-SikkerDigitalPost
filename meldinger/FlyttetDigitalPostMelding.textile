@@ -21,28 +21,29 @@ h3. {{page.title}}
 - Kilde := DIFI
 - Kommentar := Denne meldingstypen brukes kun imellom Postkasseleverandørene og ikke av Avsender. Den brukes dersom Innbygger velger å flytte sin post over til en annen postkasseleverandør.
 
-Den opprinnelige Dokumentpakken sendes, men pakkes inn i en ny melding med noe informasjon om statusen på posten.
-Postkasselevernadøren som sender sender denne posten står som databehandler for meldingen. 
-Konsekvensen av dette er at Postkasseleverandøren som mottar flyttet post ikke har informasjon om opprinngelig databehandler og dermed ikke kan sende kvitteringer e.l. til opprinnelig avsender.
+Det er den opprinnelige Dokumentpakken som skal sendes til ny postkasse ved flytting av post. Denne pakkes inn i en FlytteDigitalpostMelding. 
+Dette er en forretningsmelding som likner DigitalPostMelding, men med noe informasjon om statusen på posten. 
+Postkasseleverandøren som sender denne posten står som databehandler for meldingen.
 
 **Begrensinger i hvilken post som kan flyttes**
 
-Det er kun post som er tilgjengelig og ferdig behandlet i henhold til de krav Avsender har satt som kan flyttes.
+Det er kun post som er tilgjengelig og ferdig behandlet som kan flyttes.
 
-Det vil si at post i følgende tilstander ikke kan flyttes:
-* Post som har en virkningsdato frem i tid.
+Det vil si at post med følgende tilstander **ikke** kan flyttes:
+
+* Post som har en virkningsdato frem i tid. 
 ** Denne posten er ikke tilgjengelig/synlig for innbygger og kan dermed ikke flyttes.
-* Post som krever åpningskvittering, der innbygger ikke har åpnet brevet
-** Postkasseleverandøren som mottar flyttet post kan ikke sende kvitteringer til opprinnelig avsender. 
-** Dermed skal opprinnelig postkasseleverandør først sikre at åpningskvittering sendes til Avsender. Eventuelt at innbygger velger å slette posten.
-* Post der det er bestilt Varsling og varslingene ikke er ferdig utført
-** Postkasseleverandøren som mottar flyttet post kan ikke sende kvitteringer til opprinnelig avsender. 
+* Post som krever åpningskvittering, der innbygger ikke har åpnet brevet er ikke å betrakte som tilgjengelig 
+** Postkasseleverandøren som mottar flyttet post kan ikke sende kvitteringer til opprinnelig avsender.
+** Dermed skal postkasseleverandøren først sikre at åpningskvittering sendes til Avsender før det er mulig å flytte posten.
+* Post der det er bestilt Varsling og varslingene ikke er ferdig utført 
+** Postkasseleverandøren som mottar flyttet post kan ikke sende kvitteringer til opprinnelig avsender.
 ** Dermed skal opprinnelig postkasseleverandør først sikre at alle bestilte varslinger blir utført eller at Avsender blir informert om at varsling har feilet før posten kan flyttes.
 
 Det vil si at post i følgende tilstander kan flyttes:
-* Post som opprinnelig krevde åpningskvittering, som nå er åpnet (og kvittering er sendt) kan flyttes.
-* Post som opprinnelig krevde varsling, der varsling er utført.
-** Varsling er utført enten når innbygger har behandlet posten eller når alle varslinger er utført.
+* Post innbygger har behandlet.
+* Post som opprinnelig krevde varsling, der varsling er utført og avsluttet. 
+* Post som opprinnelig krevde åpningskvittering, som nå er åpnet og åpningskvittering er sendt. 
 * Post som opprinnelig ikke kom med krav om åpningskvittering og varslinger kan flyttes.
 
 
