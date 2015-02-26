@@ -23,9 +23,11 @@ h3. {{page.title}}
 
 Den opprinnelige Dokumentpakken sendes, men pakkes inn i en ny melding med noe informasjon om statusen på posten.
 Postkasselevernadøren som sender sender denne posten står som databehandler for meldingen. 
+Konsekvensen av dette er at Postkasseleverandøren som mottar flyttet post ikke har informasjon om opprinngelig databehandler og dermed ikke kan sende kvitteringer e.l. til opprinnelig avsender.
 
 **Begrensinger i hvilken post som kan flyttes**
-Det er kun post som er tilgjengelig og ferdig behandlet som kan flyttes.
+
+Det er kun post som er tilgjengelig og ferdig behandlet i henhold til de krav Avsender har satt som kan flyttes.
 
 Det vil si at post i følgende tilstander ikke kan flyttes:
 * Post som har en virkningsdato frem i tid.
@@ -38,9 +40,11 @@ Det vil si at post i følgende tilstander ikke kan flyttes:
 ** Dermed skal opprinnelig postkasseleverandør først sikre at alle bestilte varslinger blir utført eller at Avsender blir informert om at varsling har feilet før posten kan flyttes.
 
 Det vil si at post i følgende tilstander kan flyttes:
-* Post som opprinnelig krevde åpningskvittering, som nå er åpnet og kvittering er sendt kan flyttes.
-* Post som opprinnelig krevde varsling, der varsling er utført eller posten er behandlet av innbygger.
+* Post som opprinnelig krevde åpningskvittering, som nå er åpnet (og kvittering er sendt) kan flyttes.
+* Post som opprinnelig krevde varsling, der varsling er utført.
+** Varsling er utført enten når innbygger har behandlet posten eller når alle varslinger er utført.
 * Post som opprinnelig ikke kom med krav om åpningskvittering og varslinger kan flyttes.
+
 
 
 h3. Attributer
