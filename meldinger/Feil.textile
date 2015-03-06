@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Feilmelding
+title: Feil
 headtitle: Begrepskatalog for Sikker digital post - 
 group: Melding
 
