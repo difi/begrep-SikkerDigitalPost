@@ -11,9 +11,8 @@ children:
  - name: Forretningsmeldinger/Åpningskvittering
  - name: Forretningsmeldinger/Varslingfeiletkvittering
  - name: Forretningsmeldinger/MottaksKvittering
- - name: Forretningsmeldinger/PostlagtKvittering
  - name: Forretningsmeldinger/ReturpostKvittering
- - name: Forretningsmeldinger/Feilmelding
+ - name: Forretningsmeldinger/Feil
  - name: Forretningsmeldinger/FlyttetDigitalpost 
 
 next: Forretningsmeldinger/Digitalpost
