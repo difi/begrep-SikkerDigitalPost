@@ -85,5 +85,5 @@ table(table table-striped table-condensed).
 
 h3. Eksempler
 
-* "http://begrep.difi.no/SikkerDigitalPost/eksempler/soap/1_request_forretningsmelding_fra_postavsender_til_meldingsformidler":../../eksempler/soap/1_request_forretningsmelding_fra_postavsender_til_meldingsformidler
+* "http://begrep.difi.no/SikkerDigitalPost/eksempler/soap/7_request_forretningsmelding_fra_postavsender_til_meldingsformidler_fysisk_post":../../eksempler/soap/7_request_forretningsmelding_fra_postavsender_til_meldingsformidler_fysisk_post
 
