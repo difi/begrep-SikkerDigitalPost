@@ -29,9 +29,24 @@ Se "Varsel":../begrep/Varsler for mer informasjon om bruken av varsel.
 * e-post serveren, sms-gateway eller mobiloperatør er ikke tilgjengelig ved sendingstidspunktet slik at varslet ikke ble sendt vellykket
 ** Her vil postkasseleverandør gjøre forsøk på resending, men dersom feilen ikke er utbedret innenfor avtalt tidsfrist vil en Varslingfeiletkvittering sendes.
 * Innbygger mottok ikke e-post varselet eller sms-meldingen og feilmelding om dette ble gitt til Postkasseleverandør.
-** Det er begrensninger i forhold til om Postkasseleverandør får slike feilmeldinger tilbake eller ikke. Dette er avhengig av oppsett på e-post serveren Innbyggeren bruker og mobiloperatøren Innbygger er tilknyttet. Postkasseleverandør vil etter beste evne tolke de "Non-Delivery Reports":http://en.wikipedia.org/wiki/Bounce_message som mottas og gi en Varslingfeiletkvittering i de tilfeller det er helt sikker at varselet ikke ble levert.
+** Det er begrensninger i forhold til om Postkasseleverandør får slike feilmeldinger tilbake eller ikke. Dette er avhengig av oppsett på e-post serveren Innbyggeren bruker og mobiloperatøren Innbygger er tilknyttet. 
+Postkasseleverandør vil etter beste evne tolke de "Non-Delivery Reports":http://en.wikipedia.org/wiki/Bounce_message som mottas og gi en Varslingfeiletkvittering i de tilfeller det er helt sikker at varselet ikke ble levert.
 
-Ved mottak av VarslingfeiletKvittering må avsender vurdere om og hvordan dette skal følges opp mot forskriften. Posten vil være tilgjengelig i postkassen uavhengig av om varselet feilet eller ikke.
+**Avsender sin oppfølging av VarslingfeiletKvittering**
+
+Alle Avsendere/behandlingsansvarlige må selv gjøre en vurdering av hvorvidt de skal følge opp VarslingfeiletKvittering eller ikke.
+Ved mottak av VarslingfeiletKvittering må Avsender vurdere om og hvordan dette skal følges opp mot forskriften. Posten vil være tilgjengelig i postkassen uavhengig av om varselet feilet eller ikke.
+Denne vurderingen bør baseres på samme vurdering som de har gjort i forhold til fysisk post, og oppfølgingen av returpost.
+Vi i Difi antar at Avsendere/behandlingsansvarlige har svært forskjellig oppfølging av returpost.
+
+* Her er noen eksempler:
+** Avsendere som i dag har valgt å ikke følge opp returpost men makulerer alle returpost direkte kan også gjøre det samme for VarslingfeiletKvittering.
+** Avsendere som i dag følger opp all returpost, og gjør tiltak ovenfor den personen som ikke har mottatt dokumentet bør gjøre samme tiltak ovenfor denne personen når det kommer VarslingfeiletKvittering
+** Avsendere som i dag mottar og logger returpost, men ikke gjør noe aktiv oppfølging, bør logge VarslingfeiletKvittering.
+
+Denne anbefalingen og eksemplene baserer seg selvsagt på den forutsetning at Avsendere/behandlingsansvarlige har etablerte rutiner basert på en gjennomført vurdering.
+
+
 
 h3. Attributer
 
