@@ -82,6 +82,8 @@ Følgende mellomliggende CA sertifikater må offentlig virksomhet ha for å kunn
 * Fra Buypass: "Utstedende - Buypass Class 3 CA 3":http://crt.buypass.no/crt/BPClass3CA3.cer
 * Fra Commfides: "cpn enterprise sha256 class 3.crt":https://support.commfides.com/index.php?/Knowledgebase/Article/GetAttachment/142/17412
 
+I tillegg har Commfides en eldre CA (rot og mellomliggende) som aktørene i sikker digital post stoler på:
 
+* "Commfides SHA-1 Root og Intermediate":sertifikater/prod/Commfides_SHA-1_Root_og_Intermediate.zip
 
 __CA sertfikatene ligger også tilgjengelige her: "sertifikater/":sertifikater/__
