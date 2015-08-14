@@ -6,7 +6,7 @@ group: forretningslag
 
 id: Forretningslag/Forretningsprosess
 
-next: Forretningslag/varsling
+next: Forretningslag/SendForAndre
 
 ---
 

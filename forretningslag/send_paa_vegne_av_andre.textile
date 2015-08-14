@@ -1,0 +1,35 @@
+---
+layout: default
+title: Sending av digital post på vegne av andre
+headtitle: Digital postkasse til innbyggere
+group: forretningslag
+
+id: Forretningslag/SendForAndre
+
+next: Forretningslag/varsling
+
+---
+
+h2. Sending av Post på vegne av andre
+
+Her er det beskrevet hvordan en virksomhet kan sende post på vegne av andre.
+Dette er er beskrevet igjennom et par eksempler.
+
+
+H3. Eksempel: bruk av databehandler
+
+I dette eksemplet er Helfo Behandlingansvarlig og NAV er databehandler for Helfo.
+Nav har den tekniske integrasjonen og kan bruke sitt virksomhetssertifikat på vegne av Helfo dersom Helfo tillatter dette.
+Både Helfo og Nav er opprettet med kontoer hos postkasseleverandørene, Helfo som Ansvarlig postavsender og Nav som Teknisk postavsender.
+
+"!(img-responsive)helfo_eksempel.png(Bruk av databehandler)!":helfo_eksempel.png
+
+H3. Eksempel: Sending fra underliggende avdeling
+
+I dette eksemplet har Kreftregisteret ønske om at postavsender skal være er en av de underliggende prosjektene de har (Tarmkreftscreening, Masseundersøkelse mot livmorhalskreft, Mammografiprogrammet) i sin virksomhet.
+De underliggende prosjektene er ikke egne selvstendige virksomheter med eget organisasjonsnummer.
+Kreftregisteret er teknisk avsender og bruker sitt virksomhetssertifikat for alle de underliggende prosjektene som er postavsender.
+Både Kreftregisteret og de underliggende prosjektene er opprettet med kontoer hos postkasseleverandørene. 
+Kreftregisteret bruker "avsenderidentifikator":/Felles/avsenderidentifikator for å skille på hvilket prosjekt som er postavsender.
+
+"!(img-responsive)helfo_eksempel.png(Bruk av avsenderidentifikator)!":helfo_eksempel.png
