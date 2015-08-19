@@ -46,4 +46,4 @@ Dette kan være feil relatert til innholdet i SBD som ugyldig identifikator på 
 
 h3. Mer om forretningsfeil
 
-For mer informasjon om forretningsfeil, se "dokumentasjon av forretningsmeldingen Feil":../meldinger/FeilMelding
+For mer informasjon om forretningsfeil, se "dokumentasjon av forretningsmeldingen Feil":../meldinger/Feil
