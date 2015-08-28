@@ -7,7 +7,7 @@ group: utskrift
 
 id: utskrift
 
-next: utskrift/brev
+next: utskrift/Brev
 
 children:
  - name: utskrift/Brev
@@ -25,10 +25,10 @@ Post til innbygger adresseres til innbyggers "postadresse":../begrep/FysiskPosta
 "Postadresse":../begrep/FysiskPostadresse henter Avsender fra folkeregisteret eller annet egnet register.
 Brevene som sendes må tilfredstille "krav til utforming av brev":brev og vil bli lagt i en konvolutt i henhold til beskrivelsen "her":konvolutt.
 
-Tjenesten tilbyr:
+*Tjenesten tilbyr*
 
-- både sending av "A- og B- post":Felles/posttype, 
-- "valg av farge eller sort/hvit utskrift":Felles/utskriftstype 
-- "håndtering av returpost":/Felles/returPostHaandtering.
+* sending av "A- og B- post":/Felles/posttype, 
+* "valg av farge eller sort/hvit utskrift":/Felles/utskriftstype 
+* "håndtering av returpost":/Felles/returPostHaandtering.
 
 Se også: "Prosessbeskrivelse for sending av papir post":../forretningslag/forretningsprosess_utskrift.
