@@ -15,3 +15,20 @@ children:
 
 ---
 
+h2. Utskrift og forsendelse
+
+En tjeneste som tilbyr en papirposttjeneste ved å skrive ut posten på papir, konvoluttere og sende papirpost til postmottaker. 
+Tjenesten bidrar til at Sikker digital posttjeneste fungerer som en totalleverandør for avsendervirksomhetene vedrørende post til innbyggere.
+Tjenesten kan brukes for å sende forsendelser av brev til mottakere som har reservert seg eller ikke registrert/oppdatert sin kontaktinformasjon.
+
+Post til innbygger adresseres til innbyggers "postadresse":../begrep/FysiskPostadresse og sendes til utskrifts- og forsendelsestjenesten via meldingsformidler.
+"Postadresse":../begrep/FysiskPostadresse henter Avsender fra folkeregisteret eller annet egnet register.
+Brevene som sendes må tilfredstille "krav til utforming av brev":brev og vil bli lagt i en konvolutt i henhold til beskrivelsen "her":konvolutt.
+
+Tjenesten tilbyr:
+
+- både sending av "A- og B- post":Felles/posttype, 
+- "valg av farge eller sort/hvit utskrift":Felles/utskriftstype 
+- "håndtering av returpost":/Felles/returPostHaandtering.
+
+Se også: "Prosessbeskrivelse for sending av papir post":../forretningslag/forretningsprosess_utskrift.
