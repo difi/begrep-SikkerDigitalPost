@@ -12,11 +12,11 @@ next: Forretningslag/varsling
 
 h2. Sending av Post på vegne av andre
 
-Her er det beskrevet hvordan en virksomhet kan sende post på vegne av andre.
-Dette er er beskrevet igjennom et par eksempler.
+Digital post til innbyggere har støtte for at en virksomhet kan sende post på vegne av en annen.
+Dette kan brukes både dersom en virksomhet har en databehandler som skal sende post på deres vegne eller i de tilfeller at en virksomhet har underliggende enheter/virksomheter.
+Her er det beskrevet noen eksempler på hvordan en virksomhet kan sende post på vegne av andre.
 
-
-H3. Eksempel: bruk av databehandler
+h3. Eksempel - bruk av databehandler
 
 I dette eksemplet er Helfo Behandlingansvarlig og NAV er databehandler for Helfo.
 Nav har den tekniske integrasjonen og kan bruke sitt virksomhetssertifikat på vegne av Helfo dersom Helfo tillatter dette.
@@ -24,7 +24,7 @@ Både Helfo og Nav er opprettet med kontoer hos postkasseleverandørene, Helfo s
 
 "!(img-responsive)helfo_eksempel.png(Bruk av databehandler)!":helfo_eksempel.png
 
-H3. Eksempel: Sending fra underliggende avdeling
+h3. Eksempel - Sending fra underliggende avdeling
 
 I dette eksemplet har Kreftregisteret ønske om at postavsender skal være er en av de underliggende prosjektene de har (Tarmkreftscreening, Masseundersøkelse mot livmorhalskreft, Mammografiprogrammet) i sin virksomhet.
 De underliggende prosjektene er ikke egne selvstendige virksomheter med eget organisasjonsnummer.
