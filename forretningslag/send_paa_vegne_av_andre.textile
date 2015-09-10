@@ -32,4 +32,4 @@ Kreftregisteret er teknisk avsender og bruker sitt virksomhetssertifikat for all
 Både Kreftregisteret og de underliggende prosjektene er opprettet med kontoer hos postkasseleverandørene. 
 Kreftregisteret bruker "avsenderidentifikator":/Felles/avsenderidentifikator for å skille på hvilket prosjekt som er postavsender.
 
-"!(img-responsive)helfo_eksempel.png(Bruk av avsenderidentifikator)!":helfo_eksempel.png
+"!(img-responsive)kreftregister_eksempel.png(Bruk av avsenderidentifikator)!":kreftregister_eksempel.png
