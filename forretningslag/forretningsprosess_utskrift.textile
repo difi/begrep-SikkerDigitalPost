@@ -10,7 +10,6 @@ next: Forretningslag/Forretningsprosess_kvittering
 
 ---
 
-MERK : UTKAST - UNDER ARBEID
 
 h2. Prosess for sending av papir post
 

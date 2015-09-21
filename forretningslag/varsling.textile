@@ -6,7 +6,7 @@ group: forretningslag
 
 id: Forretningslag/varsling
 
-next: Forretningslag/Forretningsprosess_utskrift
+next: Forretningslag/Forretningsprosess_kvittering
 
 ---
 

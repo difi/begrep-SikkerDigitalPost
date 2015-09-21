@@ -7,9 +7,10 @@ group: utskrift
 
 id: utskrift
 
-next: utskrift/Brev
+next: Forretningslag/Forretningsprosess_utskrift
 
 children:
+ - name: Forretningslag/Forretningsprosess_utskrift
  - name: utskrift/Brev
  - name: utskrift/Konvolutt 
 
