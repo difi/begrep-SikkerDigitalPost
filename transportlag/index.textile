@@ -9,18 +9,27 @@ id: Transportlag
 
 next: Transportlag/Meldingsutveksling
 
+children:
+ - name: Transportlag/Meldingsutveksling 
+ - name: Transportlag/Meldingsidentifikatorer
+ - name: Transportlag/mpc
+ - name: Transportlag/Transportmeldingsstruktur
+ - name: Transportlag/WebserviceSecurity
+
 ---
 
 h2. Transport av meldinger i sikker digital post
 
-* "Les om meldingsutvekslingsrammeverket som brukes og generelle":Meldingsutveksling/
+Følgende informasjon er nødvendig å vite om transport infrastrukturen som brukes:
+
+* "Meldingsutvekslingsrammeverket som brukes og generelle":Meldingsutveksling/
 * "Identifikatorer for transport av meldinger":MeldingsIdentifikatorer 
 * "Meldingsformatet på de tekniske meldingene som sendes":Meldingsformat
 * "Bruk av meldingskøer":UserMessage/mpc
 * "Hvordan er meldingen sikret under transport - Webservice security":WebserviceSecurity
 
 
-Transportlaget er bygd opp av følgende kapitler:
+Mer detaljert informasjon om meldingsutvekslingrammeverket som brukes:
 
 table(table table-striped).
 | "ebMS pmode: Formidle digital post":Meldingsutveksling/FormidleDigitalPostForsendelse | ebMS pmodes for formidling av Digital Post |
