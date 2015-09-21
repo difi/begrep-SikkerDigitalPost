@@ -7,7 +7,7 @@ group: transportlag
 id: MessageInfo
 
 next: PartInfo
-prev: mpc
+prev: Transportlag/mpc
 
 ---
 

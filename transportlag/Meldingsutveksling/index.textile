@@ -6,7 +6,7 @@ group: transportlag
 
 id: Transportlag/Meldingsutveksling
 
-next: Transportlag/Meldingsutveksling/FormidleDigitalPostForsendelse
+next: Transportlag/Meldingsidentifikatorer
 
 ---
 

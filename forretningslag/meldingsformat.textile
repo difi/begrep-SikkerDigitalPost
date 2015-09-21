@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Struktur på melding
-headtitle: Sikker digital post - Begreper
+headtitle: Sikker digital post
 group: forretningslag
 
 id: Forretningslag/Forretningsmeldingsstruktur
@@ -69,11 +69,5 @@ h2. Standarder benyttet i strukturen
 * For transport benyttes meldingsutvekslingsrammeverk iht. "ebMS3/AS4 light client conformance profile":http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/profiles/AS4-profile/v1.0/os/AS4-profile-v1.0-os.html#__RefHeading__26166_1909778835 fra OASIS. 
 
 For mer informasjon se relevante deler av dokumentasjonen.
-
-h2. Illustrasjon
-
-En komplett melding slik som den blir overført mellom to punkter i infrastrukturen kan illustreres på følgende måte:
-
-"!(img-responsive)meldingsstruktur_enkel.jpg(Figuren viser en overordnet beskrivelse av meldingen i Sikker digital post)!":meldingsstruktur_enkel.jpg
 
 fn1. Det er brukt organisasjonsnavn i stedet for organisasjonsnummer for å gjøre det litt mer lesevennlig.

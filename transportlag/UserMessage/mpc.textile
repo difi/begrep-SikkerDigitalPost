@@ -1,13 +1,12 @@
 ---
 layout: default
-title: Message Partition Channel (mpc)
-headtitle: Begrepskatalog for Sikker digital post - 
+title: Meldingskøer
+headtitle: Sikker digital post
 group: transportlag
 
-id: mpc
+id: Transportlag/mpc
 
-next: MessageInfo
-prev: UserMessage
+next: Transportlag/Transportmeldingsstruktur
 
 ---
 

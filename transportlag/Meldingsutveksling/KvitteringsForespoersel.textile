@@ -6,7 +6,7 @@ group: transportlag
 
 id: Transportlag/Meldingsutveksling/KvitteringsForespoersel
 
-next: Transportlag/Transportmeldingsstruktur
+next: Transportlag/mpc
 
 ---
 {% include variables.html %}

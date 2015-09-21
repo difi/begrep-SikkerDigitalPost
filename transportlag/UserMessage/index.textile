@@ -6,7 +6,7 @@ group: transportlag
 
 id: UserMessage
 
-next: mpc
+next: Transportlag/mpc
 prev: transportmeldingsstruktur
 
 ---
