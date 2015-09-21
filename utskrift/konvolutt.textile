@@ -38,8 +38,19 @@ Forsidearket kan inneholde følgende som vises i vinduet på konvolutten:
 ** En strekkode for håndtering av returpost
 *** "http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode":http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode
 
-h4. Eksempler
+h4. Eksempel forsideark
 
 * "Forsideark med topp justert logo":EAkode_og_logo_toppjustert.pdf
 * "Forsideark med venstre justert logo":EAkode_og_logo_venstrejustert.pdf
 * "Forsideark uten logo":Kun_EA.pdf
+
+h4. Avsender sin logo
+
+Logoen som brukes skal være på en av to format:
+
+* Format 1: (utskrift alternativ 1: logo plasseres over retur-adressen)
+** 189 - 827 piksler i bredden og 189 piksler i høyden
+* Format 2: (utskrift alternativ 2: logo plasseres til venstre for retur-adressen)
+** nøyaktig 413 piksler i bredden og 236 piksler i høyden
+
+Logoen vil skrives ut enten i farger eller svarthvit, avhengig av hva Avsender setter i "FysiskPostInfo":../begrep/FysiskPostInfo.
