@@ -23,13 +23,12 @@ table(table table-striped table-condensed).
 | Sentralforvalter | urn:sdp:sentralforvalter | "virksomhetsidentifikator":/Felles/virksomhetsidentifikator | Ansvarlig for forvaltning/kontroll av forholdet mellom offentlig virksomheter, mottaker og tilbydere av meldingsformidler/postkassetjeneste |
 | Innbygger | urn:sdp:innbygger | "personidentifikator":/Felles/personidentifikator | Mottaker av postforsendelsen | 
 
-Begrepene *Ansvarlig enhet* og *Teknisk Avsender* har også blitt brukt:
+Begrepet *Ansvarlig enhet* har også blitt brukt:
 
 - *Ansvarlig enhet* brukes av *Behandlingsansvarlig* virksomheter med et stort virkeområder som ønsker å differensiere Avsendere til Innbygger avhengig av de interne enhetene som sender posten, i de tilfeller der det ikke er mulig eller lite hensiktsmessig at interne enheten selv er identifisert som behandlingsansvarlig (ved å ha et eget sertifikat). 
 *Ansvarlig enhet* blir satt av *Behandlingsansvarlig* ved bruk av en identifikator. Dette gjøres som en del av klargjøring av en postmelding.
 Eksempel: Behandlingsansvarlig er NAV og Ansvarlig enhet er NAV Hjelpemiddelsentral Oslo og Akershus. 
 
-- *Teknisk Avsender* er blitt brukt som et begrep for en databehandler som leverer ebMS 3.0/MSH tjenester som en underleverandør til en databehandler. Dette begrepet er nå erstattet med mulighet for flere databehandlere.
 
 h2. Roller
 
