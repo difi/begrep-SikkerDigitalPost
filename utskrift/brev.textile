@@ -21,6 +21,7 @@ Sikker digital post støtter utskrift av PDF (inkludert PDF/A) med følgende beg
 * PDF må ha A4 (stående) størrelse
 * PDF må ha standard PDF-fonter, eller embeddede fonter
 * PDF versjon må være 1.0 – 1.5
+** Andre versjoner kan støttes etter avtale og testing.
 * PDF kan ikke være passordbeskyttet
 * Utskriftskvalitet er enten 300 DPI sort/hvit eller farge.
 * Det genererer automatisk et forsideark med mottakers postadresse, som er tilrettelagt konvolutten.
