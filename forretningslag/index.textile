@@ -25,4 +25,11 @@ h2. Forretningslag
 Forretningslaget dokumenterer den logiske flyten av meldinger i infrastrukturen, inkludert oversikt over aktører, roller og prosesser. 
 I tillegg er det dokumentert hvilke tilstander og overganger en Avsender må forholde seg til, samt fordeling av eierskap på de forskjellige delene av en komplett melding.
 
-
+table(table table-striped).
+| "Aktører":Aktorer | Aktører og roller |
+| "Sending av digital post":forretningsprosess | Sending av digital post til innbyggere |
+| "Sending på vegne av andre":send_paa_vegne_av_andre | Sending av digital post på vegne av andre |
+| "Kvitteringer":forretningsprosess_kvittering | Henting av kvitteringer |
+| "Varsling":varsling | Varsling i henhold til eForvaltningsforskriften |
+| "Struktur på melding":meldingsformat | ebMS Signalmessage brukt for henting av kvitteringer og signalering av feil |
+| "Pris og størrelse":meldingsstorrelse | Priser og utregning av meldingsstørrelse |
