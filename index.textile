@@ -21,38 +21,23 @@ children:
 
 h2. Digital postkasse til innbyggere
 
-Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Digital post til innbyggere":http://www.difi.no/digital-forvaltning/felles-it-losninger-fra-difi/sikker-post.
+Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Digital post til innbyggere":https://samarbeid.difi.no/digital-postkasse-til-innbyggere.
 
 Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":forretningslag/Aktorer, "Meldingsformidler":forretningslag/Aktorer og "Postkasseleverandører":forretningslag/Aktorer.
 
 
-"Hvordan ta i bruk digital postkasse til innbyggere?":https://samarbeid.difi.no/sikker-digital-post/hvordan-ta-i-bruk-sikker-digital-post
-Ønsker du å komme igang med Digital postkasse til innbyggere så gå til "samarbeidsportalen":https://samarbeid.difi.no/ for felleskomponenter forvaltet av Difi og les hvordan du kan ta i bruk Digital postkasse til innbyggere.
+h3. Hvordan ta i bruk digital postkasse til innbyggere?
 
+Ønsker du å komme igang med Digital postkasse til innbyggere så gå til "samarbeidsportalen":https://samarbeid.difi.no/ for felleskomponenter forvaltet av Difi og les hvordan du kan ta i bruk Digital postkasse til innbyggere.
 
 
 h3. Innledning
 
 Dersom du nettopp har vært der og vil ha mer detaljer så sett deg først inn i følgende:
 
-# "Arkitekturen":innledning/arkitektur
-# "Prosess for sending av digital post":forretningslag/forretningsprosess
-
-Se se videre på informasjonen i kapitlene:
-
 table(table table-striped).
-| "Oversikt":innledning/ | Mer om sikker digital post og generelle aspekter ved løsningen |
-| "Forretningslag":forretningslag/ | Aktører, prosesser og overordnet meldingsstruktur/format |
-
-
-h3. Start opp med integrasjon
-
-Dersom du skal sette opp en integrasjon mot digital postkasse til innbygger så start med å lese om hvilke produkter og biblioteker som er utviklet for å støtte deg i dette arbeidet.
-"Les mer.":innledning/produktstotte
-
-Vil du ha tak i mer tekniske detaljar se gjerne her:
-* "Xml Eksempel på meldingar":eksempler/
-* "XML Schema Definition filer":xsd/
+| "Arkitekturen":innledning/arkitektur | Oversikt over de sentrale aktørene |
+| "Prosess for sending av digital post":forretningslag/forretningsprosess | Beskrivelse av hvordan meldingen i digital post flyter mellom aktørene |
 
 h3. Kapiteloversikt
 
@@ -69,3 +54,7 @@ table(table table-striped).
 | "Feilhåndtering":feilhandtering/ | Generelt om feilhåndtering|
 | "Begreper":begrep/ | Begreper benyttet i Sikker Digital Post |
 
+
+Vil du ha tak i mer tekniske detaljar se gjerne her:
+* "Xml Eksempel på meldingar":eksempler/
+* "XML Schema Definition filer":xsd/
