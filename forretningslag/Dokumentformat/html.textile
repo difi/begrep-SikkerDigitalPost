@@ -6,7 +6,7 @@ group: forretningslag
 
 id: Forretningslag/HTML dokument
 
-next: Forretningslag/Sikkerhet
+next: Forretningslag/EHF dokument
 
 ---
 {% include variables.html %}

@@ -1,0 +1,40 @@
+---
+layout: default
+title: ehf
+headtitle: Begrepskatalog for Sikker digital post - 
+group: forretningslag
+
+id: Forretningslag/EHF dokument
+
+next: Forretningslag/Sikkerhet
+
+---
+{% include variables.html %}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
+- Term := {{page.title}}
+- Definisjon := EHF faktura fil
+- Datatype := fil
+
+Dersom en melding er levert som ren EHF vil denne vises til posttmottaker uten bruk av nettlesertillegg.
+EHF filen vil konverteres til en HTML visning i henhold til Difi sin mal for visning av EHF filer til innbyggere. 
+
+Postkasseleverandøren kan ha funksjonalitet for å maskinelt behandle EHF fakturaen for videresending direkte til nettbanken til innbygger.
+En slik tjeneste vil da være priset. Se prisoversikt på http://samarbeid.difi.no
+
+
+h3. Forutsetning ved sending av EHF filer
+
+# Det er kun støtte for å sende EHF faktura
+#* Sending av EHF kreditnota er ikke støttet i digital postkasse til innbyggere
+# Mimetype for EHF faktura skal være: "application/ehf+xml"
+# EHF filen skal alltid være hoveddokument
+#* EHF filen kan sendes som vedlegg, men da er det ikke garantert at dette vil kunne vises til innbyggere i annet enn XML format
+# Det skal kun sendes en EHF fil i en forsendelse
+# Postkasseleverandør vil kun validere EHF filen i henhold til XSD.
+#* Det er Avsender sitt ansvar at data i EHF filen er korrekt
+# Det skal ikke være embedded vedlegg i EHF filen.
+#* Eventuelle vedlegg til EHF filen skal legges som ordinære vedlegg i dokumentpakken
+#* Difi kan ikke garantere for at embedded vedlegg i EHF faktura vil vises i postkassene.
+
+

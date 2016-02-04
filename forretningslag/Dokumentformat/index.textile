@@ -14,7 +14,7 @@ h2. Innledning
 Sikker digital posttjeneste kan i utgangspunktet frakte en hver filtype fra avsender til mottaker. 
 
 Det er derimot begrenset hva postkasseløsningene håndterer. 
-I postkassene er det støtte for PDF og HTML filer og andre formater vil kun være tilgjengelig i postkassene for nedlasting til eget utstyr. 
+I postkassene er det støtte for PDF, EHF og HTML filer og andre formater vil kun være tilgjengelig i postkassene for nedlasting til eget utstyr. 
 Eksekverbare filer kan ikke sendes i Sikker digital posttjeneste.
 
 Det utføres ingen endringer i innholdet i mottatte dokumenter. 
@@ -29,5 +29,6 @@ Generelle regler for alle filer:
 Spesielle regler knyttet til de enkelte dokument formatene:
 
 * "HTML dokumenter":html
+* "EHF dokumenter":ehf
 
 
