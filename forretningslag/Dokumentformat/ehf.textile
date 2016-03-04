@@ -38,3 +38,15 @@ h3. Forutsetning ved sending av EHF filer
 #* Difi kan ikke garantere for at embedded vedlegg i EHF faktura vil vises i postkassene.
 
 
+h3. Forutsetninger for maskinell behandling av EHF fakturaen i digipost:
+
+* Det må finnes exakt en PaymentMeans.
+* Det må finnes exakt en PaymentId inne i paymentMeans
+* Det må finnes en PaymentMeanDueDate
+* Det må finnes en PayeeFinancialAccount med ID och SchemeID
+* PayeeFinancialAccount SchemeID må være IBAN
+* De två första bokstäverna i kontonumret må være NO
+* Valutan må være NOK
+
+
+
