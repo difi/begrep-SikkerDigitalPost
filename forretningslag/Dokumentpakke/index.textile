@@ -11,7 +11,9 @@ children:
  - name: Forretningslag/Langtidslagring
  - name: Forretningslag/Manifest
  - name: Forretningslag/Dokumentformater
+ - name: Forretningslag/MIME type
  - name: Forretningslag/HTML dokument
+ - name: Forretningslag/EHF dokument
  - name: Forretningslag/Sikkerhet
   
 ---
