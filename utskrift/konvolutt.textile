@@ -18,39 +18,33 @@ Beskrivelse av Konvoluttene som brukes i løsningen:
 * Hvit konvolutt, med et vindu der tekst fra forsidearket vises
 * Ingen logo på konvolutten
 * Hvis det er mindre enn 7 ark så er konvolutten av type C5
-** Hvis det er opp til 99 ark så blir det C4
+* Hvis det er fra 7 og opp til 99 ark så blir det C4
+* Alt fra og med 100 ark leveres som en eller fler bedriftspakker
 
 h2. Forsideark
 
-For alle brev lages det et forsideark som legges ved forsendelsen. 
+For alle brev lages det et forsideark som legges ved forsendelsen, hvis ikke annet er avtalt. 
 Dette forsidearket har adresse informasjon m.m. og innholdet vises i vinduet på konvolutten.
+For de virksomheter som ikke ønsker at det legges på et eget forsideark så må første side på brevet ha et blankt felt for utskrift av informasjonen som skal vises i vinduet på konvolutten.
+Størrelsen på den blanke feltet er: 12,5 cm bred og 8,9 cm høy.
 
 Forsidearket kan inneholde følgende som vises i vinduet på konvolutten:
 
-** Adresse til Mottaker. 
-*** Hentet fra "FysiskPostInfo":../begrep/FysiskPostInfo
-** returpost adressen
-*** Hentet fra "FysiskPostRetur":../begrep/FysiskPostRetur
-** Avsender sin logo
-*** Satt opp på Avsender sin konto i Digital Post til innbyggere
-** Merke for Elektronisk adresseoppdatering
-*** "http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/ea-merket":http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/ea-merket
-** En strekkode for håndtering av returpost
-*** "http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode":http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode
+|_. Informasjonselement |_. Beskrivelse/kommentar |
+| Adresse til Mottaker | Hentet fra "FysiskPostInfo":../begrep/FysiskPostInfo |
+| returpost adressen | Hentet fra "FysiskPostRetur":../begrep/FysiskPostRetur |
+| Avsender sin logo | Satt opp på Avsender sin konto i Digital Post til innbyggere |
+| Merke for Elektronisk adresseoppdatering | "http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/ea-merket":http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/ea-merket |
+| En strekkode for håndtering av returpost | "http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode":http://www.bring.no/hele-bring/produkter-og-tjenester/brev-og-postreklame/bring-mail/oppbygging-av-strekkode |
 
 h4. Eksempel forsideark
 
-* "Forsideark med topp justert logo":EAkode_og_logo_toppjustert.pdf
-* "Forsideark med venstre justert logo":EAkode_og_logo_venstrejustert.pdf
-* "Forsideark uten logo":Kun_EA.pdf
+* "Forsideark med venstre justert logo og bruk av håndtering av returpost":LeftLogo.pdf
+* "Forsideark med venstre justert logo med direkte retur til avsender":LeftLogoIngenEa.pdf
+* "Forsideark uten logo men håndtering av returpost":IngenLogo.pdf
+* "Forsideark uten logo og med direkte retur til avsender":IngenLogoIngenEa.pdf
 
 h4. Avsender sin logo
 
-Logoen som brukes skal være på en av to format:
-
-* Format 1: (utskrift alternativ 1: logo plasseres over retur-adressen)
-** 189 - 827 piksler i bredden og 189 piksler i høyden
-* Format 2: (utskrift alternativ 2: logo plasseres til venstre for retur-adressen)
-** nøyaktig 413 piksler i bredden og 236 piksler i høyden
-
+Alle avsendere vil bli satt opp med en logo til venstre for retur-adressen dersom ikke annet avtales.
 Logoen vil skrives ut enten i farger eller svarthvit, avhengig av hva Avsender setter i "FysiskPostInfo":../begrep/FysiskPostInfo.
