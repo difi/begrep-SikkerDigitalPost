@@ -30,6 +30,7 @@ Størrelsen på den blanke feltet er: 12,5 cm bred og 8,9 cm høy.
 
 Forsidearket kan inneholde følgende som vises i vinduet på konvolutten:
 
+table(table table-striped).
 |_. Informasjonselement |_. Beskrivelse/kommentar |
 | Adresse til Mottaker | Hentet fra "FysiskPostInfo":../begrep/FysiskPostInfo |
 | returpost adressen | Hentet fra "FysiskPostRetur":../begrep/FysiskPostRetur |
