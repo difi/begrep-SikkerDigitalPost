@@ -24,7 +24,9 @@ Beskrivelse av Konvoluttene som brukes i løsningen:
 h2. Forsideark
 
 For alle brev lages det et forsideark som legges ved forsendelsen, hvis ikke annet er avtalt. 
+
 Dette forsidearket har adresse informasjon m.m. og innholdet vises i vinduet på konvolutten.
+
 For de virksomheter som ikke ønsker at det legges på et eget forsideark så må første side på brevet ha et blankt felt for utskrift av informasjonen som skal vises i vinduet på konvolutten.
 Størrelsen på den blanke feltet er: 12,5 cm bred og 8,9 cm høy.
 
