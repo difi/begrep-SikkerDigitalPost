@@ -41,7 +41,7 @@ table(table table-striped).
 h3. Begrensninger
 
 * Dokumentpakken kan inneholde et hoveddokument
-* Dokumentpakken kan inntil 10 vedlegg
+* Dokumentpakken kan ha inntil 200 vedlegg
 * Avsender kan ikke definere rekkefølgende på vedleggene, sorteringen av disse håndteres av postkassen.
 
 
