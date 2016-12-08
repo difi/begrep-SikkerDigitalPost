@@ -25,6 +25,7 @@ Uansett hvilke av disse to alternativene som brukes har tjenesten følgende begr
 ** Utskriftstjenesten legger på strekkode i venstre kant av arket, som brukes for å kontrollere antall ark pr. konvolutt og ved stopp. 
 ** Dette kravet valideres ikke, men er Avsender sitt ansvar å overholde.
 * PDF må ha A4 (stående) størrelse
+** For dokumenter som er i Letter format eller tilsvarende mer informasjon under
 * PDF må ha standard PDF-fonter, eller embeddede fonter
 * PDF versjon må være 1.0 – 1.7
 ** Andre versjoner kan støttes etter avtale og testing.
@@ -51,5 +52,7 @@ Utskriftstjenesten vil overskrive deler av eventuell informasjon som er nærmere
 Valideringen er skrudd av slik at avsender KAN sende dokumenter med mindre enn 18 mm venstremarg, dersom avsender ikke har mulighet til å overholde dette kravet.
 Noe av informasjonen i brevet vil da bli overskrevet.
 
+h2. Større ark enn A4
 
-
+Utskriftstjenesten har mulighet for å øke toleranse grensen for kontroll av formatet på PDFen. Dette er konfigurerbart per avsender, og standardverdien er satt til 10 mm i bredden og høyden. 
+Om dokumentet er større enn A4 og innenfor terkselverdi vil utskriftstjenesten kutte ned til A4. Ark større enn A4 vil kuttes på høyre side og under. Det vil ikke bli foretatt noe skalering, kun kutting.
