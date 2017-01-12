@@ -21,6 +21,4 @@ h2. Oversikt
 Sikker digital posttjeneste er en felles løsning for offentlige virksomheter for å sende brev digitalt til innbyggere. 
 Dette avsnittet er en overordnet beskrivelse av den underliggende virksomhetsarkitekturen for Sikker Digital Post. 
 
-For mer informasjon bør man lese dokumentet "Arkitekturbeskrivelse for Sikker Digital Post":ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf.
-
-
+For mer informasjon bør man lese dokumentet "Arkitekturbeskrivelse for Sikker Digital Post":ArkitekturbeskrivelseforSikkerdigitalposttjenestev1.0.pdf og "Sikkerhetsarkitektur":Sikkerhetsarkitektur.pdf.
