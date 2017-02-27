@@ -9,10 +9,6 @@ id: utskrift
 
 next: Forretningslag/Forretningsprosess_utskrift
 
-children:
- - name: Forretningslag/Forretningsprosess_utskrift
- - name: utskrift/Brev
- - name: utskrift/Konvolutt 
 
 ---
 
@@ -24,14 +20,3 @@ Tjenesten kan brukes for å sende forsendelser av brev til mottakere som har res
 
 * "Prosessbeksrivelse for sending av post til utskrift og forsendelse":../forretningslag/forretningsprosess_utskrift
 
-Post til innbygger adresseres til innbyggers "postadresse":../begrep/FysiskPostadresse og sendes til utskrifts- og forsendelsestjenesten via meldingsformidler.
-"Postadresse":../begrep/FysiskPostadresse henter Avsender fra folkeregisteret eller annet egnet register.
-Brevene som sendes må tilfredstille "krav til utforming av brev":brev og vil bli lagt i en konvolutt i henhold til beskrivelsen "her":konvolutt.
-
-*Tjenesten tilbyr*
-
-* sending av "A- og B- post":/Felles/posttype, 
-* "valg av farge eller sort/hvit utskrift":/Felles/utskriftstype 
-* "håndtering av returpost":/Felles/returPostHaandtering.
-
-Se også: "Prosessbeskrivelse for sending av papir post":../forretningslag/forretningsprosess_utskrift.
