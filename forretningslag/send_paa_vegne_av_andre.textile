@@ -6,7 +6,7 @@ group: forretningslag
 
 id: Forretningslag/SendForAndre
 
-next: Forretningslag/varsling
+next: Forretningslag/Forretningsprosess_kvittering
 
 ---
 
