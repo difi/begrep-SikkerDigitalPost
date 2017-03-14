@@ -19,47 +19,6 @@ Avsender kan med instillingene her styre både "EpostVarsel":EpostVarsel og "Sms
 Avsender kan velge selv hvilken kanal som velges, dette kan de gjøre med bakgrunn i sin egen kanalstrategi, erfaringer i forhold til åpningsgrad og kostnader.
 Bruk av "SmsVarsel":SmsVarsel vil medføre egne kostnader for Avsender.
 
-Alle varslinger som bestilles vil bli generert av postkasseleverandørene og kommer fra postkasseleverandørene som avsender.
-
-h3. Anbefalt bruk av varsling
-
-Som standard anbefales det at Avsender ikke spesifiserer varsling, da varsling bør styres av Mottaker selv.
-Mottaker har mulighet for å sette opp egen varslingspreferanser i postkassen.
-
-For alle brev som krever varsling i henhold til "eForvaltningsforskriften  	&sect;8a":http://lovdata.no/dokument/SF/forskrift/2004-06-25-988/KAPITTEL_2#%C2%A78, skal følgende instillinger brukes:
-* Avsender velger selv kanal,  "EpostVarsel":EpostVarsel er tilstrekkelig.
-* Repetisjoner settes opp til: 0 og 7
-** Dette vil medføre at Mottaker får en varsling når brevet blir levert og en påminnelse etter 7 dager dersom Mottaker ikke har skaffet seg tilgang til brevet.
-
-h3. Mer informasjon om varsling
-
-For Digital postmeldinger med varslinger spesifisert på dag 0, som kommer på kveldstid etter at varsling i postkassen er stoppet, så vil dag 0 varselet gå dagen etter. Dette vil ikke forskyve andre varslinger bestilt.
-For eksempel:
-* Forsendelse sendt kl. 23.00 24.06.2014 uten virkningsdato, blir tilgjengeliggjort i postkassen kl. 23.30 24.06.2014.
-** Forsendelsen har satt opp varsling dag 0 og 7
-*** Innbygger varsles 25.06.2014 og 01.07.2014, 
-*** Merk at det er kun dag 0 som blir forskjøvet.
-*** Eventuelt Avsender mottar en VarslingFeiletKvittering seinest enten 26.06.2014 og/eller 02.07.2015
-
-h3. Postkasseleverandøres utsending av varseler
-
-E-boks og digipost har forskjellig realisering av utsending av varslingsmeldingene. 
-Varslene sendes ikke på samme tidspunkt eller med samme intervaller hos de to leverandørene.
-Under er en beskrivelse av hvordan utsending er realisert hos de to leverandørene.
-
-h4. Digipost
-
-Det sendes ut 4 "ulike" typer varsel:
-# Digipost "bestilt" e-post-varsel om ny post. E-post går ut til den e-postadressen som er registrert på Digipostkassen. E-post er klar til å gå ut med en gang. I prod kjøres e-post jobber hver fjerde time (merk i test så kjører denne jobben hvert minutt).
-# Avsender "bestilt" e-post-varsel til KRR-registrert e-postadresse, med egendefinert innhold. E-post er klar til å gå 60 min. etter at Digipostkassen har mottatt posten. Igjen, i prod kjøres e-post jobber hver fjerde time.
-# SMS-varsel til KRR-registrert mobilnr, med egendefinert innhold. Klar til å gå ut 60 min. etter at Digipostkassen har mottatt posten. SMS sendes umiddelbart etter den er klar til å bli sendt ut.
-# Digipost generert e-post-varsel etter 7 dager om ny post. E-post går ut til den e-postadressen som er registrert på Digipostkassen. Merk at denne kan også inkludere annen post som er ikke lest og som ble mottat mindre enn 7 dager siden (maks. 2 dager). Denne referer vi til som en "påminnelse". Denne er ikke relatert til en eventuell e-post som avsender bestiller til å gå ut 7 dager etter brev er mottatt av Digipost.
-
-h5. e-boks
-
-<informasjon kommer>
-
-
 h4. Eigenskapar
 
 table(table table-striped).
