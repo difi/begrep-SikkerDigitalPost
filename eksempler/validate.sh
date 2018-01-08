@@ -19,6 +19,7 @@ for eksempel in ${eksempler}/sbdh.xml; do
   validate ${eksempel} ${xsds}/SBDH20040506-02/StandardBusinessDocumentHeader.xsd || ((errors++))
 done
 
+validate ${eksempler}/utvidelser/lenke.xml ${xsds}/utvidelser/lenke.xsd || ((errors++))
 
 if (( errors > 0 )); then
   echo Fant ${errors} filer med valideringsfeil!
