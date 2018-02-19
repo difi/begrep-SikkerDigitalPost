@@ -1,0 +1,34 @@
+---
+layout: default
+title: Lenke utenfor brev
+headtitle: Sikker digital post - Lenke utenfor brev
+group: forretningslag
+
+id: Forretningslag/Utvidelser/Lenke
+next: utskrift
+
+---
+
+- Definisjon := Lenke utenfor brev
+- Mime-Type := application/vnd.difi.dpi.lenke+xml
+- Datatype := complexType
+- Kommentar := Definerer en lenke som presenteres for innbygger i postkassen. Postkasseleverandøren kan vise en standard beskrivelse og tekst på knappen dersom de ikke er definert.
+- XSD := https://begrep.difi.no/SikkerDigitalPost/xsd/utvidelser/lenke.xsd
+
+h3. Attributer
+
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |
+| url | 1..1 | HttpLenke |
+| beskrivelse | 0..1 | LenkeBeskrivelseTekst |
+| knappTekst | 0..1 | LenkeKnappTekst |
+| frist | 0..1 | xsd:dateTime |
+
+h3. Eksempel
+
+<lenke>
+    <url>https://www.avsender.no/svar</url>
+    <beskrivelse lang="no">Vennligst svar på denne viktige meldingen for videre saksbehandling.</beskrivelse>
+    <knappTekst lang="no">Svar på den viktige meldingen</knappTekst>
+    <frist>2017-10-01T12:00:00+02:00</frist>
+</lenke>

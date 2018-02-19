@@ -10,6 +10,7 @@ children:
  - name: Oversikt
  - name: Forretningslag
  - name: Forretningslag/Dokumentpakke
+ - name: Forretningslag/Utvidelser
  - name: utskrift
  - name: Forretningsmeldinger
  - name: Forretningslag/StandardBusinessDocument
@@ -47,6 +48,7 @@ table(table table-striped).
 | "Oversikt":innledning/ | Mer om sikker digital post og generelle aspekter ved løsningen |
 | "Forretningslag":forretningslag/ | Aktører, prosesser og overordnet meldingsstruktur/format |
 | "Dokumentpakke":forretningslag/Dokumentpakke | Oppbygging av selve dokumentpakken som skal til mottaker |
+| "Utvidelser":forretningslag/Utvidelser | Utvidelser som beriker dokumenter i innbyggers postkasse |
 | "Utskrift og forsendelse":utskrift/ | Mer om utskriftstjenesten knyttet til digital post |
 | "Forretningsmeldinger":meldinger/ | Oppbygging av forretningsinformasjonen for behandling av dokumentpakken |
 | "Standard Business Document":forretningslag/StandardBusinessDocument | Informasjon relatert til ruting og håndtering av forretningsmeldingen |

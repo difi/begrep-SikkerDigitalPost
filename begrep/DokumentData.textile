@@ -1,0 +1,32 @@
+---
+layout: egenskap
+title: DokumentData
+headtitle: Begrepskatalog for Sikker digital post -
+group: complexType
+
+name: DokumentData
+prev: Begreper
+---
+
+{% include variables.html %}
+
+- Identifikator := "{{ pageUrlMinor }}":{{ pageUrlMinor }}
+- Term := {{page.title}}
+- Definisjon := Strukturert data for beriket visning i innbyggers postkasse
+- Datatype := complexType
+- Kjelde := DIFI
+
+h4. Eigenskapar
+
+table(table table-striped).
+|_. Identifikator |_. Kardinalitet |_. Datatype |_. Beskrivelse |
+| href| 1..1 | xsd:string | Filnavn på data-dokumentet i dokumentpakken |
+| mime | 1..1 |  xsd:string  | Utvidelsens mime-type. "Tilgjengelig utvidelser":/forretningslag/Utvidelser |
+
+h4. Xml eksempel
+
+<pre class="brush: xml; toolbar: false">
+
+<data href="lenke.xml" mime="application/vnd.difi.dpi.lenke+xml" />
+
+</pre>

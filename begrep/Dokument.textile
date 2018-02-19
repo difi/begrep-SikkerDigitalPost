@@ -25,6 +25,7 @@ table(table table-striped).
 | href| 1..1 | xsd:string |
 | mime | 1..1 |  xsd:string  |
 | "Tittel":Tittel | 0..1 | "Tittel":Tittel |
+| "Data":DokumentData | 0..1| "DokumentData":DokumentData |
 
 h4. Xml eksempel
 
