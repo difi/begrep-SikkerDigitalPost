@@ -83,6 +83,12 @@
 				</norskAdresse>
 			</mottaker>
 		</retur>
+		<printinstruksjoner>
+			<printinstruksjon>
+				<navn>returkonvolutt</navn>
+				<verdi>true</verdi>
+			</printinstruksjon>
+		</printinstruksjoner>
 	</fysiskPostInfo>
 
 	<dokumentpakkefingeravtrykk>

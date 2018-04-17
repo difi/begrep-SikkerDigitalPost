@@ -219,9 +219,16 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="printinstruksjoner" type="Printinstruksjoner" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Liste av instruksjoner knyttet til print. Gyldige verdier avtales mellom avsender og printleverandør.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="FysiskPostadresse">
 		<xsd:annotation>
 			<xsd:documentation>
@@ -236,18 +243,18 @@
 			</xsd:choice>
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="FysiskPostRetur">
 		<xsd:sequence>
 			<xsd:element name="postHaandtering" type="FysiskPostReturhaandtering" minOccurs="1" maxOccurs="1" />
 			<xsd:element name="mottaker" type="FysiskPostadresse" minOccurs="1" maxOccurs="1" >
 				<xsd:annotation>
 					<xsd:documentation>Returpost blir adressert hit.</xsd:documentation>
-				</xsd:annotation>			
+				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:simpleType name="Utskriftsfarge">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="SORT_HVIT" />
@@ -261,14 +268,14 @@
 			<xsd:enumeration value="B"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	
+
 	<xsd:simpleType name="FysiskPostReturhaandtering">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="DIREKTE_RETUR"/>
 			<xsd:enumeration value="MAKULERING_MED_MELDING"/>
-		</xsd:restriction>	
+		</xsd:restriction>
 	</xsd:simpleType>
-	
+
 	<xsd:complexType name="NorskPostadresse">
 		<xsd:sequence>
 			<xsd:element name="adresselinje1" type="Adresselinje" minOccurs="0" maxOccurs="1"/>
@@ -333,5 +340,18 @@
 			<xsd:pattern value="[a-zA-Z]{2}"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+
+	<xsd:complexType name="Printinstruksjoner">
+		<xsd:sequence>
+			<xsd:element name="printinstruksjon" type="Printinstruksjon" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Printinstruksjon">
+		<xsd:sequence>
+			<xsd:element name="navn" type="xsd:string" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="verdi" type="xsd:string" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
 
 </xsd:schema>
