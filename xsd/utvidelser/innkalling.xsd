@@ -7,7 +7,7 @@
     <xsd:element name="innkalling">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="fra-tidspunkt" type="xsd:dateTime" minOccurs="0" maxOccurs="1"/>
+                <xsd:element name="fra-tidspunkt" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
                 <xsd:element name="til-tidspunkt" type="xsd:dateTime" minOccurs="0" maxOccurs="1"/>
                 <xsd:element name="tittel" type="Tittel" minOccurs="1" maxOccurs="1"/>
                 <xsd:element name="oppmøte-informasjon" type="Beskrivelse"  minOccurs="0" maxOccurs="1"/>
