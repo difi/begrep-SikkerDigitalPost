@@ -9,6 +9,7 @@ next: Forretningslag/Utvidelser/Lenke
 
 children:
  - name: Forretningslag/Utvidelser/Lenke
+ - name: Forretningslag/Utvidelser/Innkalling
 
 ---
 
@@ -27,3 +28,4 @@ h3. Utvidelser
 table(table table-striped).
 |_. Fil |_. Mime-Type |_. Digipost |_. e-Boks |
 | "Lenke utenfor brev":Lenke | @application/vnd.difi.dpi.lenke+xml@ | Ja | Ja |
+| "Innkalling":Innkalling | @application/vnd.difi.dpi.innkalling+xml@ | Ja | Ja |
