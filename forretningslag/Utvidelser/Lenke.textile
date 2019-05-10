@@ -5,7 +5,7 @@ headtitle: Sikker digital post - Lenke utenfor brev
 group: forretningslag
 
 id: Forretningslag/Utvidelser/Lenke
-next: utskrift
+next: Forretningslag/Utvidelser/Innkalling
 
 ---
 
@@ -29,8 +29,8 @@ h3. Eksempel
 <pre class="brush: xml; toolbar: false">
 <lenke>
     <url>https://www.avsender.no/svar</url>
-    <beskrivelse lang="no">Vennligst svar på denne viktige meldingen for videre saksbehandling.</beskrivelse>
-    <knappTekst lang="no">Svar på den viktige meldingen</knappTekst>
+    <beskrivelse lang="nb">Vennligst svar på denne viktige meldingen for videre saksbehandling.</beskrivelse>
+    <knappTekst lang="nb">Svar på den viktige meldingen</knappTekst>
     <frist>2017-10-01T12:00:00+02:00</frist>
 </lenke>
 </pre>
