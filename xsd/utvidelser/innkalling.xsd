@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://begrep.difi.no/sdp/utvidelser/innkalling"
+            xmlns="http://begrep.difi.no/sdp/utvidelser/innkalling"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
     <xsd:element name="innkalling">
         <xsd:complexType>
             <xsd:sequence>
@@ -117,7 +121,7 @@
 
     <xsd:simpleType name="Spraakkode">
         <xsd:annotation>
-            <xsd:documentation> Språkkode ihht ISO-639-1 (2 bokstaver) </xsd:documentation>
+            <xsd:documentation>Språkkode ihht ISO-639-1 (2 bokstaver)</xsd:documentation>
         </xsd:annotation>
         <xsd:restriction base="xsd:string">
             <xsd:minLength value="2"/>
