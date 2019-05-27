@@ -5,7 +5,7 @@ headtitle: Sikker digital post - Lenke utenfor brev
 group: forretningslag
 
 id: Forretningslag/Utvidelser/Lenke
-next: Forretningslag/Utvidelser/Innkalling
+next: Forretningslag/Utvidelser/Arrangement
 
 ---
 
@@ -27,7 +27,9 @@ table(table table-striped).
 h3. Eksempel
 
 <pre class="brush: xml; toolbar: false">
-<lenke>
+<lenke xmlns="http://begrep.difi.no/sdp/utvidelser/lenke"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://begrep.difi.no/sdp/utvidelser/lenke ../../xsd/utvidelser/lenke.xsd">
     <url>https://www.avsender.no/svar</url>
     <beskrivelse lang="nb">Vennligst svar på denne viktige meldingen for videre saksbehandling.</beskrivelse>
     <knappTekst lang="nb">Svar på den viktige meldingen</knappTekst>

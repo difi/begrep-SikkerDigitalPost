@@ -20,7 +20,7 @@ for eksempel in ${eksempler}/sbdh.xml; do
 done
 
 validate ${eksempler}/utvidelser/lenke.xml ${xsds}/utvidelser/lenke.xsd || ((errors++))
-validate ${eksempler}/utvidelser/innkalling.xml ${xsds}/utvidelser/innkalling.xsd || ((errors++))
+validate ${eksempler}/utvidelser/arrangement.xml ${xsds}/utvidelser/arrangement.xsd || ((errors++))
 
 if (( errors > 0 )); then
   echo Fant ${errors} filer med valideringsfeil!
