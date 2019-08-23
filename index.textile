@@ -22,6 +22,10 @@ children:
 
 h2. Digital postkasse til innbyggere
 
+table(table table-striped).
+| OBS! Disse sidene vedlikeholdes ikke lenger. Dokumentasjon og begrepskatalog er nå flyttet til "https://difi.github.io/felleslosninger/":https://difi.github.io/felleslosninger/sdp_index_innledning.html. Disse sidene eksisterer nå kun for å vise historikk i forhold til tidligere releaser av dokumentasjonen. |
+
+
 Denne delen av "begrepskatalogen":/ inneholder spesifikasjonen av grensesnittene for "Digital post til innbyggere":https://samarbeid.difi.no/digital-postkasse-til-innbyggere.
 
 Målgruppen for denne spesifikasjonen er "Avsendervirksomheter":forretningslag/Aktorer, "Meldingsformidler":forretningslag/Aktorer og "Postkasseleverandører":forretningslag/Aktorer.
