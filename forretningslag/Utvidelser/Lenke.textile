@@ -5,7 +5,7 @@ headtitle: Sikker digital post - Lenke utenfor brev
 group: forretningslag
 
 id: Forretningslag/Utvidelser/Lenke
-next: Forretningslag/Utvidelser/Arrangement
+next: Forretningslag/Utvidelser/Bevis
 
 ---
 
